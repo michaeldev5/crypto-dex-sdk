@@ -235,7 +235,7 @@ importers:
         version: 4.6.0(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@tanstack/react-table':
         specifier: 8.10.7
         version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
@@ -333,8 +333,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       viem:
         specifier: 1.19.11
         version: 1.19.11(typescript@5.3.2)(zod@3.22.2)
@@ -486,7 +486,7 @@ importers:
         version: 4.6.0(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@tanstack/react-table':
         specifier: 8.10.7
         version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
@@ -584,8 +584,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       viem:
         specifier: 1.19.11
         version: 1.19.11(typescript@5.3.2)(zod@3.22.2)
@@ -664,7 +664,7 @@ importers:
         version: 4.6.0(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@tanstack/react-table':
         specifier: 8.10.7
         version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
@@ -741,8 +741,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       viem:
         specifier: 1.19.11
         version: 1.19.11(typescript@5.3.2)(zod@3.22.2)
@@ -815,7 +815,7 @@ importers:
         version: 4.6.0(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
@@ -904,8 +904,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       viem:
         specifier: 1.19.11
         version: 1.19.11(typescript@5.3.2)(zod@3.22.2)
@@ -1079,7 +1079,7 @@ importers:
         version: 4.6.0(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@zenlink-interface/amm':
         specifier: workspace:*
         version: link:../amm
@@ -1129,8 +1129,8 @@ importers:
         specifier: ^0.2.1
         version: 0.2.1(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       viem:
         specifier: 1.19.11
         version: 1.19.11(typescript@5.3.2)(zod@3.22.2)
@@ -1835,7 +1835,7 @@ importers:
     devDependencies:
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
@@ -1873,8 +1873,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       typescript:
         specifier: 5.3.2
         version: 5.3.2
@@ -1911,7 +1911,7 @@ importers:
     devDependencies:
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
@@ -1943,8 +1943,8 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       typescript:
         specifier: 5.3.2
         version: 5.3.2
@@ -1962,7 +1962,7 @@ importers:
         version: 4.6.0(react@18.2.0)
       '@reduxjs/toolkit':
         specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+        version: 1.9.7(react-redux@9.0.4)(react@18.2.0)
       '@zenlink-interface/chain':
         specifier: workspace:*
         version: link:../chain
@@ -1982,8 +1982,8 @@ importers:
         specifier: ^7.3.0
         version: 7.3.0
       react-redux:
-        specifier: ^8.1.3
-        version: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+        specifier: ^9.0.4
+        version: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       viem:
         specifier: 1.19.11
         version: 1.19.11(typescript@5.3.2)(zod@3.22.2)
@@ -7653,7 +7653,7 @@ packages:
       '@polkadot/types-codec': 10.9.1
       '@polkadot/types-create': 10.9.1
       '@polkadot/util': 12.3.2
-      '@polkadot/util-crypto': 12.3.2(@polkadot/util@12.3.2)
+      '@polkadot/util-crypto': 12.3.2(@polkadot/util@12.5.1)
       rxjs: 7.8.1
       tslib: 2.5.3
     dev: false
@@ -7818,6 +7818,24 @@ packages:
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
       '@polkadot/x-bigint': 12.3.2
       '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.3.2)(@polkadot/wasm-util@7.2.1)
+      '@scure/base': 1.1.1
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/util-crypto@12.3.2(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-pTpx+YxolY0BDT4RcGmgeKbHHD/dI6Ll9xRsqmVdIjpcVVY20uDNTyXs81ZNtfKgyod1y9JQkfNv2Dz9iEpTkQ==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': 12.3.2
+    dependencies:
+      '@noble/curves': 1.1.0
+      '@noble/hashes': 1.3.1
+      '@polkadot/networks': 12.3.2
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-crypto': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-bigint': 12.3.2
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
       '@scure/base': 1.1.1
       tslib: 2.6.2
     dev: false
@@ -8018,6 +8036,19 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@polkadot/wasm-bridge@7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2):
+    resolution: {integrity: sha512-uV/LHREDBGBbHrrv7HTki+Klw0PYZzFomagFWII4lp6Toj/VCvRh5WMzooVC+g/XsBGosAwrvBhoModabyHx+A==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+      '@polkadot/x-randomvalues': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
+      tslib: 2.6.2
+    dev: false
+
   /@polkadot/wasm-bridge@7.2.2(@polkadot/util@11.1.3)(@polkadot/x-randomvalues@11.1.3):
     resolution: {integrity: sha512-CgNENd65DVYtackOVXXRA0D1RPoCv5+77IdBCf7kNqu6LeAnR4nfTI6qjaApUdN1xRweUsQjSH7tu7VjkMOA0A==}
     engines: {node: '>=16'}
@@ -8097,6 +8128,16 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@polkadot/wasm-crypto-asmjs@7.2.1(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-z/d21bmxyVfkzGsKef/FWswKX02x5lK97f4NPBZ9XBeiFkmzlXhdSnu58/+b1sKsRAGdW/Rn/rTNRDhW0GqCAg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      tslib: 2.6.2
+    dev: false
+
   /@polkadot/wasm-crypto-asmjs@7.2.2(@polkadot/util@11.1.3):
     resolution: {integrity: sha512-wKg+cpsWQCTSVhjlHuNeB/184rxKqY3vaklacbLOMbUXieIfuDBav5PJdzS3yeiVE60TpYaHW4iX/5OYHS82gg==}
     engines: {node: '>=16'}
@@ -8155,6 +8196,22 @@ packages:
       '@polkadot/wasm-crypto-wasm': 7.2.1(@polkadot/util@12.3.2)
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
       '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.3.2)(@polkadot/wasm-util@7.2.1)
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/wasm-crypto-init@7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2):
+    resolution: {integrity: sha512-GcEXtwN9LcSf32V9zSaYjHImFw16hCyo2Xzg4GLLDPPeaAAfbFr2oQMgwyDbvBrBjLKHVHjsPZyGhXae831amw==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+      '@polkadot/x-randomvalues': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-bridge': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-crypto-asmjs': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-crypto-wasm': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
       tslib: 2.6.2
     dev: false
 
@@ -8245,6 +8302,17 @@ packages:
     dependencies:
       '@polkadot/util': 12.3.2
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/wasm-crypto-wasm@7.2.1(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-DqyXE4rSD0CVlLIw88B58+HHNyrvm+JAnYyuEDYZwCvzUWOCNos/DDg9wi/K39VAIsCCKDmwKqkkfIofuOj/lA==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
       tslib: 2.6.2
     dev: false
 
@@ -8343,6 +8411,23 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@polkadot/wasm-crypto@7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2):
+    resolution: {integrity: sha512-SA2+33S9TAwGhniKgztVN6pxUKpGfN4Tre/eUZGUfpgRkT92wIUT2GpGWQE+fCCqGQgADrNiBcwt6XwdPqMQ4Q==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+      '@polkadot/x-randomvalues': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-bridge': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-crypto-asmjs': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-crypto-init': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-crypto-wasm': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
+      tslib: 2.6.2
+    dev: false
+
   /@polkadot/wasm-crypto@7.2.2(@polkadot/util@11.1.3)(@polkadot/x-randomvalues@11.1.3):
     resolution: {integrity: sha512-1ZY1rxUTawYm0m1zylvBMFovNIHYgG2v/XoASNp/EMG5c8FQIxCbhJRaTBA983GVq4lN/IAKREKEp9ZbLLqssA==}
     engines: {node: '>=16'}
@@ -8411,6 +8496,16 @@ packages:
       '@polkadot/util': '*'
     dependencies:
       '@polkadot/util': 12.3.2
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/wasm-util@7.2.1(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-FBSn/3aYJzhN0sYAYhHB8y9JL8mVgxLy4M1kUXYbyo+8GLRQEN5rns8Vcb8TAlIzBWgVTOOptYBvxo0oj0h7Og==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
       tslib: 2.6.2
     dev: false
 
@@ -8606,6 +8701,19 @@ packages:
     dependencies:
       '@polkadot/util': 12.3.2
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
+      '@polkadot/x-global': 12.3.2
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/x-randomvalues@12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1):
+    resolution: {integrity: sha512-ywjIs8CWpvOGmq+3cGCNPOHxAjPHdBUiXyDccftx5BRVdmtbt36gK/V84bKr6Xs73FGu0jprUAOSRRsLZX/3dg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': 12.3.2
+      '@polkadot/wasm-util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
       '@polkadot/x-global': 12.3.2
       tslib: 2.6.2
     dev: false
@@ -8875,7 +8983,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@reduxjs/toolkit@1.9.7(react-redux@8.1.3)(react@18.2.0):
+  /@reduxjs/toolkit@1.9.7(react-redux@9.0.4)(react@18.2.0):
     resolution: {integrity: sha512-t7v8ZPxhhKgOKtU+uyJT13lu4vL7az5aFi4IdoDs/eS548edn2M8Ik9h8fxgvMjGoAUVFSt6ZC1P5cWmQ014QQ==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18
@@ -8888,7 +8996,7 @@ packages:
     dependencies:
       immer: 9.0.21
       react: 18.2.0
-      react-redux: 8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+      react-redux: 9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1)
       redux: 4.2.1
       redux-thunk: 2.4.2(redux@4.2.1)
       reselect: 4.1.8
@@ -9710,12 +9818,6 @@ packages:
       '@types/node': 20.10.3
     dev: false
 
-  /@types/hoist-non-react-statics@3.3.1:
-    resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
-    dependencies:
-      '@types/react': 18.2.41
-      hoist-non-react-statics: 3.3.2
-
   /@types/http-errors@2.0.1:
     resolution: {integrity: sha512-/K3ds8TRAfBvi5vfjuz8y6+GiAYBZ0x4tXv1Av6CWBWn0IlADc+ZX9pMq7oU0fNQPnBwIZl3rmeLp6SBApbxSQ==}
     dev: true
@@ -9829,6 +9931,7 @@ packages:
     resolution: {integrity: sha512-rvrT/M7Df5eykWFxn6MYt5Pem/Dbyc1N8Y0S9Mrkw2WFCRiqUgw9P7ul2NpwsXCSM1DVdENzdG9J5SreqfAIWg==}
     dependencies:
       '@types/react': 18.2.41
+    dev: true
 
   /@types/react-virtualized-auto-sizer@1.0.3:
     resolution: {integrity: sha512-xRsQJiM8BuwGiDl77yyFZqq32lLvI4msFtw7nVbw9qh9c2LvchDXezwjEWmysJkXnLZWjHJX9lT8MCPkFy5BfQ==}
@@ -17674,36 +17777,24 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /react-redux@8.1.3(@types/react-dom@18.2.17)(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1):
-    resolution: {integrity: sha512-n0ZrutD7DaX/j9VscF+uTALI3oUPa/pO4Z3soOBIjuRn/FzVu6aehhysxZCLi6y7duMf52WNZGMl7CtuK5EnRw==}
+  /react-redux@9.0.4(@types/react@18.2.41)(react@18.2.0)(redux@4.2.1):
+    resolution: {integrity: sha512-9J1xh8sWO0vYq2sCxK2My/QO7MzUMRi3rpiILP/+tDr8krBHixC6JMM17fMK88+Oh3e4Ae6/sHIhNBgkUivwFA==}
     peerDependencies:
-      '@types/react': ^16.8 || ^17.0 || ^18.0
-      '@types/react-dom': ^16.8 || ^17.0 || ^18.0
-      react: ^16.8 || ^17.0 || ^18.0
-      react-dom: ^16.8 || ^17.0 || ^18.0
-      react-native: '>=0.59'
-      redux: ^4 || ^5.0.0-beta.0
+      '@types/react': ^18.2.25
+      react: ^18.0
+      react-native: '>=0.69'
+      redux: ^5.0.0
     peerDependenciesMeta:
       '@types/react':
-        optional: true
-      '@types/react-dom':
-        optional: true
-      react-dom:
         optional: true
       react-native:
         optional: true
       redux:
         optional: true
     dependencies:
-      '@babel/runtime': 7.22.5
-      '@types/hoist-non-react-statics': 3.3.1
       '@types/react': 18.2.41
-      '@types/react-dom': 18.2.17
       '@types/use-sync-external-store': 0.0.3
-      hoist-non-react-statics: 3.3.2
       react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      react-is: 18.2.0
       redux: 4.2.1
       use-sync-external-store: 1.2.0(react@18.2.0)
 
