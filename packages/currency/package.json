@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/currency",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Zenlink Currency",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",

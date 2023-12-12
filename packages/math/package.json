@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/math",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Zenlink Math",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",

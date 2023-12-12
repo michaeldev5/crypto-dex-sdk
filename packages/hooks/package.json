@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/hooks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Zenlink Interface Hooks",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",

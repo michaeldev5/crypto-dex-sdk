@@ -1,6 +1,6 @@
 {
   "name": "zenlink-stats-api",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "start": "esno api/jobs/stats/run.ts",
     "lint": "TIMING=1 eslint --fix ."
