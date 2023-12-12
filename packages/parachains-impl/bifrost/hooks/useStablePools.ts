@@ -1,4 +1,4 @@
-import type { StableSwap } from '@zenlink-interface/amm'
+import type { StableSwap } from '@crypto-dex-sdk/amm'
 import { useMemo } from 'react'
 
 export enum StablePoolState {

@@ -1,5 +1,5 @@
-import { useSettings } from '@zenlink-interface/shared'
-import { useCurrentBlockTimestamp } from '@zenlink-interface/wagmi'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import { useCurrentBlockTimestamp } from '@crypto-dex-sdk/wagmi'
 import type { BigNumber } from 'ethers'
 import { useMemo } from 'react'
 

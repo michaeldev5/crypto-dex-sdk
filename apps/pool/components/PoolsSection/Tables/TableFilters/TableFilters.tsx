@@ -1,5 +1,5 @@
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { Network, Select, Switch, Typography, classNames } from '@zenlink-interface/ui'
+import { Network, Select, Switch, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { usePoolFilters } from 'components/PoolsFiltersProvider'
 import { SUPPORTED_CHAIN_IDS } from 'config'

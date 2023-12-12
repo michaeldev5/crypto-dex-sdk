@@ -1,7 +1,7 @@
 import { AddressZero, MaxUint256 } from '@ethersproject/constants'
-import { chainsChainIdToParachainId } from '@zenlink-interface/chain'
-import type { Amount, Currency } from '@zenlink-interface/currency'
-import type { NotificationData } from '@zenlink-interface/ui'
+import { chainsChainIdToParachainId } from '@crypto-dex-sdk/chain'
+import type { Amount, Currency } from '@crypto-dex-sdk/currency'
+import type { NotificationData } from '@crypto-dex-sdk/ui'
 import { BigNumber } from 'ethers'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import {

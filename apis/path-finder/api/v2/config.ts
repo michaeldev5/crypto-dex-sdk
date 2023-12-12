@@ -1,11 +1,11 @@
 import 'dotenv/config'
 
-import { EthereumChainId, ParachainId } from '@zenlink-interface/chain'
-import { DataFetcher } from '@zenlink-interface/smart-router'
+import { EthereumChainId, ParachainId } from '@crypto-dex-sdk/chain'
+import { DataFetcher } from '@crypto-dex-sdk/smart-router'
 import type { Chain, PublicClient } from 'viem'
 import { createPublicClient, fallback, http } from 'viem'
 import { base, moonbeam, scrollTestnet } from 'viem/chains'
-import { astar, scroll } from '@zenlink-interface/wagmi-config'
+import { astar, scroll } from '@crypto-dex-sdk/wagmi-config'
 
 export const CHAINS = [
   ParachainId.MOONBEAM,

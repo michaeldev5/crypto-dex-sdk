@@ -1,5 +1,5 @@
-import type { Status } from '@zenlink-interface/graph-client'
-import { txStatus } from '@zenlink-interface/graph-client'
+import type { Status } from '@crypto-dex-sdk/graph-client'
+import { txStatus } from '@crypto-dex-sdk/graph-client'
 import { useEffect, useState } from 'react'
 
 export function useWaitForTransaction(chainId: number, hash: string) {

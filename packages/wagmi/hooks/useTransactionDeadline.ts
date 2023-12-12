@@ -1,4 +1,4 @@
-import { useSettings } from '@zenlink-interface/shared'
+import { useSettings } from '@crypto-dex-sdk/shared'
 import { BigNumber } from 'ethers'
 import { useMemo } from 'react'
 import { useCurrentBlockTimestamp } from './useCurrentBlockTimestamp'

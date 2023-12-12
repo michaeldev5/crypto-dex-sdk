@@ -1,4 +1,4 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export const WNATIVE_ADDRESS: Record<number | string, string> = {
   [ParachainId.MOONRIVER]: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',

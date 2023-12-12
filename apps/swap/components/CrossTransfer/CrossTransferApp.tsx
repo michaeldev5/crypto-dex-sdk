@@ -1,4 +1,4 @@
-import { Link } from '@zenlink-interface/ui'
+import { Link } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import Image from 'next/legacy/image'
 

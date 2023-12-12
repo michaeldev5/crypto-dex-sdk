@@ -1,5 +1,5 @@
-import type { TokenList } from '@zenlink-interface/token-lists'
-import { DEFULT_TOKEN_LIST_MAP } from '@zenlink-interface/token-lists'
+import type { TokenList } from '@crypto-dex-sdk/token-lists'
+import { DEFULT_TOKEN_LIST_MAP } from '@crypto-dex-sdk/token-lists'
 import { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 

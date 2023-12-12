@@ -1,8 +1,8 @@
-import { formatNumber } from '@zenlink-interface/format'
-import { POOL_TYPE } from '@zenlink-interface/graph-client'
-import { Currency, NetworkIcon, RewardIcon, Typography } from '@zenlink-interface/ui'
+import { formatNumber } from '@crypto-dex-sdk/format'
+import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
+import { Currency, NetworkIcon, RewardIcon, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { isPoolEnabledFarms, useTokensFromPool } from '@zenlink-interface/shared'
+import { isPoolEnabledFarms, useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { ICON_SIZE } from './constants'
 import type { CellProps } from './types'
 

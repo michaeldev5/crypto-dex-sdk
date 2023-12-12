@@ -1,8 +1,8 @@
-import { ParachainId, chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { ApiPromise, WsProvider } from '@polkadot/api'
 import type { Address } from '@wagmi/core'
 import { fetchBalance, fetchToken } from '@wagmi/core'
-import { fetchZLKTokenInfo } from '@zenlink-interface/graph-client'
+import { fetchZLKTokenInfo } from '@crypto-dex-sdk/graph-client'
 import {
   EVM_CHAINS,
   SUBSTRATE_CHAINS,

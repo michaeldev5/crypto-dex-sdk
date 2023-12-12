@@ -10,7 +10,7 @@ import {
   PolkadotCircle,
   ShidenCircle,
   StatemineCircle,
-} from '@zenlink-interface/ui/icons/network/circle'
+} from '@crypto-dex-sdk/ui/icons/network/circle'
 import {
   AcalaNaked,
   AstarNaked,
@@ -23,7 +23,7 @@ import {
   PolkadotNaked,
   ShidenNaked,
   StatemineNaked,
-} from '@zenlink-interface/ui/icons/network/naked'
+} from '@crypto-dex-sdk/ui/icons/network/naked'
 import { Chains } from '../config/chain'
 
 export const CROSS_TRANSFER_NETWORK_NAKED_ICON: Record<Chains, (props: React.ComponentProps<'svg'>) => JSX.Element> = {

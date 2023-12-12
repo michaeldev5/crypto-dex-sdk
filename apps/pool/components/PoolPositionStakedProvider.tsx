@@ -1,12 +1,12 @@
-import type { Token, Type } from '@zenlink-interface/currency'
-import { Amount } from '@zenlink-interface/currency'
-import type { Pool, PoolFarm } from '@zenlink-interface/graph-client'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
+import type { Pool, PoolFarm } from '@crypto-dex-sdk/graph-client'
 import type { FC, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 
-import { useAccount, useFarmBalances, useFarmsRewards } from '@zenlink-interface/compat'
+import { useAccount, useFarmBalances, useFarmsRewards } from '@crypto-dex-sdk/compat'
 import { useTokenAmountDollarValues, useUnderlyingTokenBalanceFromPool } from 'lib/hooks'
-import { useTokensFromPool } from '@zenlink-interface/shared'
+import { useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { incentiveRewardToToken } from '../lib/functions'
 
 interface UserReward {

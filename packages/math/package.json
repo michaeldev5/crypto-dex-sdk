@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/math",
+  "name": "@crypto-dex-sdk/math",
   "version": "0.0.0",
   "description": "Zenlink Math",
   "author": "zenlinkpro",
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@types/big.js": "^6.2.2",
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "eslint": "^8.55.0",
     "tsup": "^8.0.1",
     "typescript": "5.3.2",

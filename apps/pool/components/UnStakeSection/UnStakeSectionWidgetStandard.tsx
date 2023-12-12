@@ -1,10 +1,10 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import type { ParachainId } from '@zenlink-interface/chain'
-import { tryParseAmount } from '@zenlink-interface/currency'
-import { formatPercent, formatUSD } from '@zenlink-interface/format'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { Percent, ZERO } from '@zenlink-interface/math'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
@@ -14,12 +14,12 @@ import {
   Input,
   Typography,
   classNames,
-} from '@zenlink-interface/ui'
-import { Widget } from '@zenlink-interface/ui/widget'
+} from '@crypto-dex-sdk/ui'
+import { Widget } from '@crypto-dex-sdk/ui/widget'
 import type { FC } from 'react'
 import { Fragment, useMemo, useState } from 'react'
-import { Checker, useAccount, useWithdrawFarmingReview } from '@zenlink-interface/compat'
-import type { Pair } from '@zenlink-interface/graph-client'
+import { Checker, useAccount, useWithdrawFarmingReview } from '@crypto-dex-sdk/compat'
+import type { Pair } from '@crypto-dex-sdk/graph-client'
 import type { PoolFarmWithIncentives } from 'lib/hooks'
 import { useFarmsFromPool, useTokenAmountDollarValues, useUnderlyingTokenBalanceFromPool } from 'lib/hooks'
 import { Trans } from '@lingui/macro'

@@ -1,4 +1,4 @@
-import { EthereumChainId } from '@zenlink-interface/chain'
+import { EthereumChainId } from '@crypto-dex-sdk/chain'
 
 export const astar = {
   id: EthereumChainId.ASTAR,

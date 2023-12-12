@@ -1,6 +1,6 @@
-import { Amount } from '@zenlink-interface/currency'
-import type { Token } from '@zenlink-interface/currency'
-import { FOUR, Fraction, JSBI, ONE, TEN, TWO, ZERO } from '@zenlink-interface/math'
+import { Amount } from '@crypto-dex-sdk/currency'
+import type { Token } from '@crypto-dex-sdk/currency'
+import { FOUR, Fraction, JSBI, ONE, TEN, TWO, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 import { CalculationError } from '../errors'
 

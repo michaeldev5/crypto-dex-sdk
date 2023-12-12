@@ -1,8 +1,8 @@
-import { Checker, PairState, usePair } from '@zenlink-interface/compat'
-import { tryParseAmount } from '@zenlink-interface/currency'
-import type { Pair } from '@zenlink-interface/graph-client'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { Button, Dots } from '@zenlink-interface/ui'
+import { Checker, PairState, usePair } from '@crypto-dex-sdk/compat'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import type { Pair } from '@crypto-dex-sdk/graph-client'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { Button, Dots } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useCallback, useMemo, useState } from 'react'
 

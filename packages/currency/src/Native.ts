@@ -1,4 +1,4 @@
-import CHAIN from '@zenlink-interface/chain'
+import CHAIN from '@crypto-dex-sdk/chain'
 import invariant from 'tiny-invariant'
 
 import { WNATIVE } from './constants'

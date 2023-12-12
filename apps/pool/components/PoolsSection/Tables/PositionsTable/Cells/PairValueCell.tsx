@@ -1,6 +1,6 @@
-import { formatUSD } from '@zenlink-interface/format'
-import { useInViewport } from '@zenlink-interface/hooks'
-import { Typography } from '@zenlink-interface/ui'
+import { formatUSD } from '@crypto-dex-sdk/format'
+import { useInViewport } from '@crypto-dex-sdk/hooks'
+import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useRef } from 'react'
 

@@ -3,7 +3,7 @@ import type { ICompact, INumber } from '@polkadot/types/types'
 import type { BN } from '@polkadot/util'
 import { useEffect, useState } from 'react'
 import { BN_ZERO, isFunction, nextTick, objectSpread } from '@polkadot/util'
-import { useIsMounted } from '@zenlink-interface/hooks'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { useApi } from './useApi'
 
 type V1Weight = INumber

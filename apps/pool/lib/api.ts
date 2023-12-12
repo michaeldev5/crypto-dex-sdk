@@ -1,4 +1,4 @@
-import type { Pool, StableSwap } from '@zenlink-interface/graph-client'
+import type { Pool, StableSwap } from '@crypto-dex-sdk/graph-client'
 import {
   liquidityPositions,
   pairById,
@@ -7,10 +7,10 @@ import {
   singleTokenLocksByChainIds,
   stableSwapById,
   stableSwapsByChainIds,
-} from '@zenlink-interface/graph-client'
+} from '@crypto-dex-sdk/graph-client'
 import stringify from 'fast-json-stable-stringify'
 import { SUPPORTED_CHAIN_IDS } from 'config'
-import { isPoolEnabledFarms } from '@zenlink-interface/shared'
+import { isPoolEnabledFarms } from '@crypto-dex-sdk/shared'
 
 export interface Pagination {
   pageIndex: number

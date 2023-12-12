@@ -1,4 +1,4 @@
-import defaultNextConfig from '@zenlink-interface/nextjs-config'
+import defaultNextConfig from '@crypto-dex-sdk/nextjs-config'
 
 const {
   SWAP_URL,
@@ -12,7 +12,7 @@ const {
 const nextConfig = {
   ...defaultNextConfig,
   transpilePackages: [
-    '@zenlink-interface/ui',
+    '@crypto-dex-sdk/ui',
   ],
   async redirects() {
     return [

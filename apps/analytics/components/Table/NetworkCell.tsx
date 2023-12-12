@@ -1,4 +1,4 @@
-import { NetworkIcon } from '@zenlink-interface/ui'
+import { NetworkIcon } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 
 import { ICON_SIZE } from './constants'

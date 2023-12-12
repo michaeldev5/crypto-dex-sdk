@@ -1,7 +1,7 @@
 import { Transition } from '@headlessui/react'
 import { Trans } from '@lingui/macro'
-import type { Amount, Currency } from '@zenlink-interface/currency'
-import { Badge, Button, Currency as CurrencyFromUi, IconButton, Tooltip, Typography, classNames } from '@zenlink-interface/ui'
+import type { Amount, Currency } from '@crypto-dex-sdk/currency'
+import { Badge, Button, Currency as CurrencyFromUi, IconButton, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { memo, useEffect, useMemo } from 'react'
 

@@ -1,9 +1,9 @@
 import { AddressZero } from '@ethersproject/constants'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { XCircleIcon } from '@heroicons/react/24/solid'
-import chain from '@zenlink-interface/chain'
-import type { Token, Type } from '@zenlink-interface/currency'
-import type { Fraction } from '@zenlink-interface/math'
+import chain from '@crypto-dex-sdk/chain'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import type { Fraction } from '@crypto-dex-sdk/math'
 import {
   Currency,
   DEFAULT_INPUT_PADDING,
@@ -15,7 +15,7 @@ import {
   SlideIn,
   Typography,
   classNames,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useCallback } from 'react'
 

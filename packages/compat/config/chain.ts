@@ -1,11 +1,11 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export {
   EVM_NETWORKS,
   isEvmNetwork,
   isSubstrateNetwork,
   SUBSTRATE_NETWORKS,
-} from '@zenlink-interface/chain'
+} from '@crypto-dex-sdk/chain'
 
 export const AMM_ENABLED_NETWORKS = [
   ParachainId.ASTAR,

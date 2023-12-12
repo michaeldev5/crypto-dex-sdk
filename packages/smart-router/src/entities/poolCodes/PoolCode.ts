@@ -1,4 +1,4 @@
-import type { RouteLeg, SplitMultiRoute } from '@zenlink-interface/amm'
+import type { RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import type { BigNumber } from 'ethers'
 import type { BasePool } from '../pools/BasePool'
 

@@ -1,5 +1,5 @@
 import { XCircleIcon } from '@heroicons/react/24/outline'
-import { Chain } from '@zenlink-interface/chain'
+import { Chain } from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
 
 import { Trans } from '@lingui/macro'

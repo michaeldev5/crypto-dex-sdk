@@ -1,9 +1,9 @@
 import { ArrowTopRightOnSquareIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import { CurrencyDollarIcon, XCircleIcon } from '@heroicons/react/24/solid'
-import chain from '@zenlink-interface/chain'
-import type { Token, Type } from '@zenlink-interface/currency'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { Currency, IconButton, NetworkIcon, Overlay, SlideIn, Typography } from '@zenlink-interface/ui'
+import chain from '@crypto-dex-sdk/chain'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { Currency, IconButton, NetworkIcon, Overlay, SlideIn, Typography } from '@crypto-dex-sdk/ui'
 import type { CSSProperties, FC } from 'react'
 import { useMemo, useState } from 'react'
 

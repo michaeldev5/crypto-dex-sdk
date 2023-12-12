@@ -1,6 +1,6 @@
-import type { BaseToken, RouteLeg, SplitMultiRoute } from '@zenlink-interface/amm'
-import { RouteStatus } from '@zenlink-interface/amm'
-import type { ParachainId } from '@zenlink-interface/chain'
+import type { BaseToken, RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
+import { RouteStatus } from '@crypto-dex-sdk/amm'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { PoolCode } from '../entities'
 import { HEXer } from '../HEXer'
 

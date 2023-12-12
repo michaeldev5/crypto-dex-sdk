@@ -1,5 +1,5 @@
 import type { BigNumber } from '@ethersproject/bignumber'
-import type { BaseToken } from '@zenlink-interface/amm'
+import type { BaseToken } from '@crypto-dex-sdk/amm'
 
 export const TYPICAL_SWAP_GAS_COST = 60_000
 export const TYPICAL_MINIMAL_LIQUIDITY = 1000

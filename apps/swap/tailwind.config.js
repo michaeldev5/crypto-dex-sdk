@@ -9,7 +9,7 @@ const tailwindConfig = {
     '../../packages/ui/{,!(node_modules)/**/}*.{js,ts,jsx,tsx}',
   ],
   darkMode: 'class',
-  presets: [require('@zenlink-interface/ui/tailwind')],
+  presets: [require('@crypto-dex-sdk/ui/tailwind')],
   theme: {
     extend: {},
   },

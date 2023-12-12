@@ -1,10 +1,10 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
-import { Amount, Token } from '@zenlink-interface/currency'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { Amount, Token } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
 import type { Address } from 'wagmi'
 import { useContractRead } from 'wagmi'
-import type { Pair } from '@zenlink-interface/amm'
+import type { Pair } from '@crypto-dex-sdk/amm'
 import { pair as pairContract } from '../abis'
 
 export function usePairTotalSupply(pair: Pair | undefined | null, chainId: ParachainId) {

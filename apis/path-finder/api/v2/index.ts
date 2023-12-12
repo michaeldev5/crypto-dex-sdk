@@ -1,14 +1,14 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { z } from 'zod'
-import type { LiquidityProviders } from '@zenlink-interface/smart-router'
+import type { LiquidityProviders } from '@crypto-dex-sdk/smart-router'
 import {
   Router,
   getAggregationExecutorAddressForChainId,
   getAggregationRouterAddressForChainId,
-} from '@zenlink-interface/smart-router'
+} from '@crypto-dex-sdk/smart-router'
 import { BigNumber } from 'ethers'
-import { Native } from '@zenlink-interface/currency'
+import { Native } from '@crypto-dex-sdk/currency'
 import { getToken } from './tokens'
 import { convertChainId, getClient, getDataFetcher } from './config'
 

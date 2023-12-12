@@ -1,5 +1,5 @@
-import type { Token } from '@zenlink-interface/currency'
-import type { StableSwapWithBase } from '@zenlink-interface/wagmi'
+import type { Token } from '@crypto-dex-sdk/currency'
+import type { StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
 import { useMemo } from 'react'
 
 export function useTokensFromStableSwap(swap?: StableSwapWithBase, useBase = true): Token[] {

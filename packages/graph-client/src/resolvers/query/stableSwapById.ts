@@ -1,5 +1,5 @@
-import { STABLE_SWAP_FEE_NUMBER } from '@zenlink-interface/amm'
-import { chainName, chainShortNameToChainId } from '@zenlink-interface/chain'
+import { STABLE_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
+import { chainName, chainShortNameToChainId } from '@crypto-dex-sdk/chain'
 import omit from 'lodash.omit'
 import { fetchStableSwapById, fetchTokensByIds } from '../../queries'
 import type { PoolFarm, StableSwap, StableSwapQueryData, TokenQueryData } from '../../types'

@@ -1,5 +1,5 @@
 import type { ColumnDef } from '@tanstack/react-table'
-import type { LiquidityPosition, POOL_TYPE } from '@zenlink-interface/graph-client'
+import type { LiquidityPosition, POOL_TYPE } from '@crypto-dex-sdk/graph-client'
 import { Trans } from '@lingui/macro'
 import { PairAPRCell } from './PairAPRCell'
 import { PairChainCell } from './PairChainCell'

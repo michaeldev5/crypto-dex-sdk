@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/polkadot-config",
+  "name": "@crypto-dex-sdk/polkadot-config",
   "version": "0.0.0",
   "description": "Zenlink Polkadot Config",
   "author": "zenlinkpro",
@@ -24,11 +24,11 @@
   "dependencies": {
     "@polkadot/api": "^10.9.1",
     "@pendulum-chain/types": "0.3.4",
-    "@zenlink-interface/chain": "workspace:*",
+    "@crypto-dex-sdk/chain": "workspace:*",
     "@zenlink-types/bifrost": "1.7.6"
   },
   "devDependencies": {
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "tsup": "^8.0.1",
     "typescript": "5.3.2"
   }

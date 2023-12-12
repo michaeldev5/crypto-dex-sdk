@@ -1,5 +1,5 @@
 import type { ColumnDef } from '@tanstack/react-table'
-import type { Pool } from '@zenlink-interface/graph-client'
+import type { Pool } from '@crypto-dex-sdk/graph-client'
 import React from 'react'
 
 import { Trans } from '@lingui/macro'

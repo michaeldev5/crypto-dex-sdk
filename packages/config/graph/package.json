@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/graph-config",
+  "name": "@crypto-dex-sdk/graph-config",
   "version": "0.0.0",
   "description": "Zenlink Graph Config",
   "author": "zenlinkpro",
@@ -22,11 +22,11 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "@zenlink-interface/chain": "workspace:*"
+    "@crypto-dex-sdk/chain": "workspace:*"
   },
   "devDependencies": {
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "tsup": "^8.0.1",
     "typescript": "5.3.2"
   }

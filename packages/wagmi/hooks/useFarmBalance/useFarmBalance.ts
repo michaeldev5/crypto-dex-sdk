@@ -1,5 +1,5 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { useMemo } from 'react'
 import type { Address, useBalance as useWagmiBalance } from 'wagmi'
 import { useContractReads } from 'wagmi'

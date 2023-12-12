@@ -1,4 +1,4 @@
-import type { ZenlinkProtocolPrimitivesAssetId } from '@zenlink-interface/format'
+import type { ZenlinkProtocolPrimitivesAssetId } from '@crypto-dex-sdk/format'
 
 export interface NodePrimitivesCurrency {
   [currencyId: string]: string | number | [string, number, string, number]

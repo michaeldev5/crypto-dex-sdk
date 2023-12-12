@@ -1,6 +1,6 @@
 import { Popover, Transition } from '@headlessui/react'
 import React, { useState } from 'react'
-import { Input, NetworkIcon, classNames } from '@zenlink-interface/ui'
+import { Input, NetworkIcon, classNames } from '@crypto-dex-sdk/ui'
 import { CHAIN_META as chains } from '../config/chain'
 
 import type { NetworkSelectorProps } from './index'

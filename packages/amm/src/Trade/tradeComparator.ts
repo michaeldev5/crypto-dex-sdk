@@ -1,4 +1,4 @@
-import type { Amount, Type as Currency } from '@zenlink-interface/currency'
+import type { Amount, Type as Currency } from '@crypto-dex-sdk/currency'
 import invariant from 'tiny-invariant'
 import type { Trade } from './Trade'
 

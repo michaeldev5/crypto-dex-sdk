@@ -1,6 +1,6 @@
-import { Chain } from '@zenlink-interface/chain'
-import { useSettings } from '@zenlink-interface/shared'
-import { Button } from '@zenlink-interface/ui'
+import { Chain } from '@crypto-dex-sdk/chain'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import { Button } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement } from 'react'
 
 import type { CheckerButton } from './types'

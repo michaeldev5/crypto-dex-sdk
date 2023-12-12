@@ -1,7 +1,7 @@
-import type { Amount, Token, Type } from '@zenlink-interface/currency'
-import type { Fraction } from '@zenlink-interface/math'
+import type { Amount, Token, Type } from '@crypto-dex-sdk/currency'
+import type { Fraction } from '@crypto-dex-sdk/math'
 import { useMemo } from 'react'
-import { isAddress } from '@zenlink-interface/format'
+import { isAddress } from '@crypto-dex-sdk/format'
 
 const alwaysTrue = () => true
 

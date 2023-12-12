@@ -1,4 +1,4 @@
-import type { ButtonProps } from '@zenlink-interface/ui'
+import type { ButtonProps } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement, ReactNode } from 'react'
 import { cloneElement } from 'react'
 

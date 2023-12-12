@@ -1,10 +1,10 @@
-import type { Pair } from '@zenlink-interface/amm'
-import type { Currency } from '@zenlink-interface/currency'
-import { usePairs as useWagmiPairs } from '@zenlink-interface/wagmi'
-import { usePairs as useBifrostPairs } from '@zenlink-interface/parachains-bifrost'
-import { usePairs as useAmplitudePairs } from '@zenlink-interface/parachains-amplitude'
+import type { Pair } from '@crypto-dex-sdk/amm'
+import type { Currency } from '@crypto-dex-sdk/currency'
+import { usePairs as useWagmiPairs } from '@crypto-dex-sdk/wagmi'
+import { usePairs as useBifrostPairs } from '@crypto-dex-sdk/parachains-bifrost'
+import { usePairs as useAmplitudePairs } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { isEvmNetwork, isSubstrateNetwork } from '../config'
 
 export enum PairState {

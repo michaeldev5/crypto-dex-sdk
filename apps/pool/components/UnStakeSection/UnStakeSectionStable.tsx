@@ -1,4 +1,4 @@
-import type { Pair, StableSwap } from '@zenlink-interface/graph-client'
+import type { Pair, StableSwap } from '@crypto-dex-sdk/graph-client'
 import type { FC } from 'react'
 import { UnStakeSectionStandard } from './UnStakeSectionStandard'
 

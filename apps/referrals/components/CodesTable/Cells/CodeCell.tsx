@@ -1,4 +1,4 @@
-import { CopyHelper, IconButton, Typography } from '@zenlink-interface/ui'
+import { CopyHelper, IconButton, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { CheckIcon, DocumentDuplicateIcon } from '@heroicons/react/24/outline'
 import type { CellProps } from './types'

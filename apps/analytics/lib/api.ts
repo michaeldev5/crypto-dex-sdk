@@ -1,10 +1,10 @@
-import type { DaySnapshot, Pool } from '@zenlink-interface/graph-client'
+import type { DaySnapshot, Pool } from '@crypto-dex-sdk/graph-client'
 import {
   daySnapshotsByChainIds,
   pairsByChainIds,
   singleTokenLocksByChainIds,
   stableSwapsByChainIds,
-} from '@zenlink-interface/graph-client'
+} from '@crypto-dex-sdk/graph-client'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 import { fromUnixTime, getUnixTime } from 'date-fns'
 import stringify from 'fast-json-stable-stringify'

@@ -1,5 +1,5 @@
 import { Transition } from '@headlessui/react'
-import { useIsSmScreen } from '@zenlink-interface/hooks'
+import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
 import classNames from 'classnames'
 import type { FC, ReactElement } from 'react'
 import { Fragment } from 'react'

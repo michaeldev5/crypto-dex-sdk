@@ -1,6 +1,6 @@
 import { AddressZero } from '@ethersproject/constants'
-import type { Token } from '@zenlink-interface/currency'
-import { Amount } from '@zenlink-interface/currency'
+import type { Token } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
 import type { Address } from 'wagmi'
 import { erc20ABI, useContractRead } from 'wagmi'

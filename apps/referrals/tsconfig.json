@@ -1,5 +1,5 @@
 {
-  "extends": "@zenlink-interface/typescript-config/nextjs.json",
+  "extends": "@crypto-dex-sdk/typescript-config/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
     "strictNullChecks": true,

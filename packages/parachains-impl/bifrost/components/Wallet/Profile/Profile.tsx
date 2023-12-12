@@ -1,13 +1,13 @@
 import { Popover } from '@headlessui/react'
-import type { ParachainId } from '@zenlink-interface/chain'
-import { useAccount, useProviderAccounts } from '@zenlink-interface/polkadot'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { useAccount, useProviderAccounts } from '@crypto-dex-sdk/polkadot'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { DEFAULT_INPUT_UNSTYLED, JazzIcon, classNames, useBreakpoint } from '@zenlink-interface/ui'
+import { DEFAULT_INPUT_UNSTYLED, JazzIcon, classNames, useBreakpoint } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useCallback, useState } from 'react'
 import ReactDOM from 'react-dom'
-import { useSettings } from '@zenlink-interface/shared'
-import { shortenAddress, shortenName } from '@zenlink-interface/format'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import { shortenAddress, shortenName } from '@crypto-dex-sdk/format'
 import { Default, Transactions, Wallet } from '..'
 
 export enum ProfileView {

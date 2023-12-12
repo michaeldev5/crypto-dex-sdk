@@ -1,8 +1,8 @@
 import type { FC } from 'react'
-import { ParachainId } from '@zenlink-interface/chain'
-import { Checker as WagmiChecker } from '@zenlink-interface/wagmi'
-import { Checker as BifrostChecker } from '@zenlink-interface/parachains-bifrost'
-import { Checker as AmplitudeChecker } from '@zenlink-interface/parachains-amplitude'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Checker as WagmiChecker } from '@crypto-dex-sdk/wagmi'
+import { Checker as BifrostChecker } from '@crypto-dex-sdk/parachains-bifrost'
+import { Checker as AmplitudeChecker } from '@crypto-dex-sdk/parachains-amplitude'
 import { isEvmNetwork } from '../../config'
 import type { CheckerButton } from './types'
 

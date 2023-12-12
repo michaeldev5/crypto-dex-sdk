@@ -1,6 +1,6 @@
-import { STABLE_SWAP_FEE_NUMBER, STANDARD_SWAP_FEE_NUMBER } from '@zenlink-interface/amm'
-import { chainName, chainShortName } from '@zenlink-interface/chain'
-import { ZENLINK_ENABLED_NETWORKS } from '@zenlink-interface/graph-config'
+import { STABLE_SWAP_FEE_NUMBER, STANDARD_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
+import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
+import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'
 import omit from 'lodash.omit'
 import { fetchTokensByIds, fetchUserPools } from '../../queries'
 import type {

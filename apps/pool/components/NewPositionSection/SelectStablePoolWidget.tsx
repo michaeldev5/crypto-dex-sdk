@@ -1,9 +1,9 @@
 import { Disclosure, RadioGroup, Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
-import { Token } from '@zenlink-interface/currency'
-import type { StableSwap } from '@zenlink-interface/graph-client'
-import { Currency, Loader, Typography, Widget, classNames } from '@zenlink-interface/ui'
+import { Token } from '@crypto-dex-sdk/currency'
+import type { StableSwap } from '@crypto-dex-sdk/graph-client'
+import { Currency, Loader, Typography, Widget, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { memo } from 'react'
 

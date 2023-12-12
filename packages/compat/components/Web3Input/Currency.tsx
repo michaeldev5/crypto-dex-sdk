@@ -1,8 +1,8 @@
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import type { Type } from '@zenlink-interface/currency'
-import { tryParseAmount } from '@zenlink-interface/currency'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { usePrices } from '@zenlink-interface/shared'
+import type { Type } from '@crypto-dex-sdk/currency'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { usePrices } from '@crypto-dex-sdk/shared'
 import {
   DEFAULT_INPUT_UNSTYLED,
   Input,
@@ -10,11 +10,11 @@ import {
   Typography,
   Currency as UICurrency,
   classNames,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useCallback, useMemo, useRef, useState } from 'react'
 import { Trans } from '@lingui/macro'
-import { formatTransactionAmount } from '@zenlink-interface/format'
+import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { useAccount, useBalance } from '../../hooks'
 import type { TokenSelectorProps } from '../TokenSelector'
 import { TokenSelector } from '../TokenSelector'

@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { u8aToHex } from '@polkadot/util'
 import { decodeAddress } from '@polkadot/util-crypto'
-import { useIsMounted } from '@zenlink-interface/hooks'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import type { Signer } from '@polkadot/types/types'
 import type { BaseWallet, Account as OnBoardAccount } from '@polkadot-onboard/core'
 import type { Connector } from '../types'

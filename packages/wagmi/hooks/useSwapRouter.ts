@@ -1,6 +1,6 @@
-import { TradeVersion } from '@zenlink-interface/amm'
-import { ParachainId } from '@zenlink-interface/chain'
-import { getAggregationRouterAddressForChainId, isAggregationRouter } from '@zenlink-interface/smart-router'
+import { TradeVersion } from '@crypto-dex-sdk/amm'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { getAggregationRouterAddressForChainId, isAggregationRouter } from '@crypto-dex-sdk/smart-router'
 import { aggregationRouter, legacySwapRouter, universalRouter } from '../abis'
 
 const swapRouters: Record<TradeVersion, Record<number, string>> = {

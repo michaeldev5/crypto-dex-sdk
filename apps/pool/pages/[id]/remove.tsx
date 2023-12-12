@@ -1,5 +1,5 @@
-import { chainShortName } from '@zenlink-interface/chain'
-import type { Pair, Pool, StableSwap } from '@zenlink-interface/graph-client'
+import { chainShortName } from '@crypto-dex-sdk/chain'
+import type { Pair, Pool, StableSwap } from '@crypto-dex-sdk/graph-client'
 import {
   POOL_TYPE,
   pairById,
@@ -8,9 +8,9 @@ import {
   singleTokenLocksByChainIds,
   stableSwapById,
   stableSwapsByChainIds,
-} from '@zenlink-interface/graph-client'
-import type { BreadcrumbLink } from '@zenlink-interface/ui'
-import { AppearOnMount } from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/graph-client'
+import type { BreadcrumbLink } from '@crypto-dex-sdk/ui'
+import { AppearOnMount } from '@crypto-dex-sdk/ui'
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useRouter } from 'next/router'
 import type { FC } from 'react'

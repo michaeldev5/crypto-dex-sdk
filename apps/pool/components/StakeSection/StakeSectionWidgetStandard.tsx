@@ -1,12 +1,12 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import type { ParachainId } from '@zenlink-interface/chain'
-import { Approve, Checker, useAccount, useStakeLiquidityStandardReview } from '@zenlink-interface/compat'
-import { tryParseAmount } from '@zenlink-interface/currency'
-import type { Pair } from '@zenlink-interface/graph-client'
-import { formatPercent, formatUSD } from '@zenlink-interface/format'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { Percent, ZERO } from '@zenlink-interface/math'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { Approve, Checker, useAccount, useStakeLiquidityStandardReview } from '@crypto-dex-sdk/compat'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import type { Pair } from '@crypto-dex-sdk/graph-client'
+import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
@@ -17,13 +17,13 @@ import {
   Tooltip,
   Typography,
   classNames,
-} from '@zenlink-interface/ui'
-import { Widget } from '@zenlink-interface/ui/widget'
+} from '@crypto-dex-sdk/ui'
+import { Widget } from '@crypto-dex-sdk/ui/widget'
 import type { FC } from 'react'
 import { Fragment, useMemo, useState } from 'react'
 import type { PoolFarmWithIncentives } from 'lib/hooks'
 import { useFarmsFromPool } from 'lib/hooks'
-import { useNotifications } from '@zenlink-interface/shared'
+import { useNotifications } from '@crypto-dex-sdk/shared'
 import { Trans } from '@lingui/macro'
 import { usePoolPosition } from '../PoolPositionProvider'
 

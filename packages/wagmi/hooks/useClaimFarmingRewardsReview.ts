@@ -1,5 +1,5 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import { useNotifications } from '@zenlink-interface/shared'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { useNotifications } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useMemo } from 'react'
 import type { SendTransactionResult } from '@wagmi/core'

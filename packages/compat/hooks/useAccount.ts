@@ -1,6 +1,6 @@
-import { useAccount as usePolkadotAccount } from '@zenlink-interface/polkadot'
+import { useAccount as usePolkadotAccount } from '@crypto-dex-sdk/polkadot'
 import { useMemo } from 'react'
-import { useSettings } from '@zenlink-interface/shared'
+import { useSettings } from '@crypto-dex-sdk/shared'
 import { useAccount as useWagmiAccount } from 'wagmi'
 import { isEvmNetwork } from '../config'
 

@@ -1,8 +1,8 @@
 import type { ApiPromise } from '@polkadot/api'
 import type { QueryableStorageMultiArg } from '@polkadot/api/types'
-import type { Token } from '@zenlink-interface/currency'
-import { Amount } from '@zenlink-interface/currency'
-import { useApis } from '@zenlink-interface/polkadot'
+import type { Token } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
+import { useApis } from '@crypto-dex-sdk/polkadot'
 import { useEffect, useMemo, useState } from 'react'
 import { addressToNodeCurrency, isNativeCurrency } from '../libs'
 

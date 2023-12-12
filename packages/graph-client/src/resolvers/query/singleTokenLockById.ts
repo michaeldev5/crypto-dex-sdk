@@ -1,4 +1,4 @@
-import { chainName, chainShortNameToChainId } from '@zenlink-interface/chain'
+import { chainName, chainShortNameToChainId } from '@crypto-dex-sdk/chain'
 import omit from 'lodash.omit'
 import { fetchSingleTokenLockById } from '../../queries'
 import type { PoolFarm, SingleTokenLock, SingleTokenLockQueryData } from '../../types'

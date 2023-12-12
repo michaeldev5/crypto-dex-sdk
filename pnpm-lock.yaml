@@ -14,7 +14,7 @@ importers:
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:packages/config/eslint
       chatgpt:
@@ -50,19 +50,19 @@ importers:
       '@vercel/node':
         specifier: ^3.0.11
         version: 3.0.11
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../packages/currency
-      '@zenlink-interface/smart-router':
+      '@crypto-dex-sdk/smart-router':
         specifier: workspace:*
         version: link:../../packages/smart-router
-      '@zenlink-interface/token-lists':
+      '@crypto-dex-sdk/token-lists':
         specifier: workspace:*
         version: link:../../packages/token-lists
-      '@zenlink-interface/wagmi-config':
+      '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../../packages/config/wagmi
       ethers:
@@ -78,10 +78,10 @@ importers:
         specifier: 3.22.2
         version: 3.22.2
     devDependencies:
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       dotenv:
@@ -102,10 +102,10 @@ importers:
       '@vercel/node':
         specifier: ^3.0.11
         version: 3.0.11
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/graph-client':
+      '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../../packages/graph-client
       date-fns:
@@ -118,10 +118,10 @@ importers:
         specifier: ^5.3.2
         version: 5.3.2
     devDependencies:
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       eslint:
@@ -142,22 +142,22 @@ importers:
       '@wagmi/core':
         specifier: 1.1.1-cjs
         version: 1.1.1-cjs(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../packages/currency
-      '@zenlink-interface/graph-client':
+      '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../../packages/graph-client
-      '@zenlink-interface/smart-router':
+      '@crypto-dex-sdk/smart-router':
         specifier: workspace:*
         version: link:../../packages/smart-router
-      '@zenlink-interface/token-lists':
+      '@crypto-dex-sdk/token-lists':
         specifier: workspace:*
         version: link:../../packages/token-lists
-      '@zenlink-interface/wagmi-config':
+      '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../../packages/config/wagmi
       axios:
@@ -179,10 +179,10 @@ importers:
         specifier: ^5.3.2
         version: 5.3.2
     devDependencies:
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       eslint:
@@ -242,55 +242,55 @@ importers:
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/compat':
+      '@crypto-dex-sdk/compat':
         specifier: workspace:*
         version: link:../../packages/compat
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../packages/currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../../packages/format
-      '@zenlink-interface/graph-client':
+      '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../../packages/graph-client
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../../packages/math
-      '@zenlink-interface/parachains-bifrost':
+      '@crypto-dex-sdk/parachains-bifrost':
         specifier: workspace:*
         version: link:../../packages/parachains-impl/bifrost
-      '@zenlink-interface/polkadot':
+      '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../../packages/polkadot
-      '@zenlink-interface/polkadot-config':
+      '@crypto-dex-sdk/polkadot-config':
         specifier: workspace:*
         version: link:../../packages/config/polkadot
-      '@zenlink-interface/redux-localstorage':
+      '@crypto-dex-sdk/redux-localstorage':
         specifier: workspace:*
         version: link:../../packages/redux/localstorage
-      '@zenlink-interface/redux-token-lists':
+      '@crypto-dex-sdk/redux-token-lists':
         specifier: workspace:*
         version: link:../../packages/redux/token-lists
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@zenlink-interface/token-lists':
+      '@crypto-dex-sdk/token-lists':
         specifier: workspace:*
         version: link:../../packages/token-lists
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@zenlink-interface/wagmi':
+      '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
       date-fns:
@@ -354,13 +354,13 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/nextjs-config':
+      '@crypto-dex-sdk/nextjs-config':
         specifier: workspace:*
         version: link:../../packages/config/nextjs
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       autoprefixer:
@@ -393,7 +393,7 @@ importers:
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
@@ -415,13 +415,13 @@ importers:
       '@types/react':
         specifier: ^18.2.41
         version: 18.2.41
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/nextjs-config':
+      '@crypto-dex-sdk/nextjs-config':
         specifier: workspace:*
         version: link:../../packages/config/nextjs
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       autoprefixer:
@@ -493,55 +493,55 @@ importers:
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/compat':
+      '@crypto-dex-sdk/compat':
         specifier: workspace:*
         version: link:../../packages/compat
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../packages/currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../../packages/format
-      '@zenlink-interface/graph-client':
+      '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../../packages/graph-client
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../../packages/math
-      '@zenlink-interface/parachains-bifrost':
+      '@crypto-dex-sdk/parachains-bifrost':
         specifier: workspace:*
         version: link:../../packages/parachains-impl/bifrost
-      '@zenlink-interface/polkadot':
+      '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../../packages/polkadot
-      '@zenlink-interface/polkadot-config':
+      '@crypto-dex-sdk/polkadot-config':
         specifier: workspace:*
         version: link:../../packages/config/polkadot
-      '@zenlink-interface/redux-localstorage':
+      '@crypto-dex-sdk/redux-localstorage':
         specifier: workspace:*
         version: link:../../packages/redux/localstorage
-      '@zenlink-interface/redux-token-lists':
+      '@crypto-dex-sdk/redux-token-lists':
         specifier: workspace:*
         version: link:../../packages/redux/token-lists
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@zenlink-interface/token-lists':
+      '@crypto-dex-sdk/token-lists':
         specifier: workspace:*
         version: link:../../packages/token-lists
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@zenlink-interface/wagmi':
+      '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
       date-fns:
@@ -605,13 +605,13 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/nextjs-config':
+      '@crypto-dex-sdk/nextjs-config':
         specifier: workspace:*
         version: link:../../packages/config/nextjs
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       autoprefixer:
@@ -671,46 +671,46 @@ importers:
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/compat':
+      '@crypto-dex-sdk/compat':
         specifier: workspace:*
         version: link:../../packages/compat
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../packages/currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../../packages/format
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../../packages/math
-      '@zenlink-interface/parachains-bifrost':
+      '@crypto-dex-sdk/parachains-bifrost':
         specifier: workspace:*
         version: link:../../packages/parachains-impl/bifrost
-      '@zenlink-interface/polkadot':
+      '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../../packages/polkadot
-      '@zenlink-interface/polkadot-config':
+      '@crypto-dex-sdk/polkadot-config':
         specifier: workspace:*
         version: link:../../packages/config/polkadot
-      '@zenlink-interface/redux-localstorage':
+      '@crypto-dex-sdk/redux-localstorage':
         specifier: workspace:*
         version: link:../../packages/redux/localstorage
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@zenlink-interface/wagmi':
+      '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
       ethers:
@@ -762,13 +762,13 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/nextjs-config':
+      '@crypto-dex-sdk/nextjs-config':
         specifier: workspace:*
         version: link:../../packages/config/nextjs
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       autoprefixer:
@@ -819,55 +819,55 @@ importers:
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/compat':
+      '@crypto-dex-sdk/compat':
         specifier: workspace:*
         version: link:../../packages/compat
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../packages/currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../../packages/format
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../packages/hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../../packages/math
-      '@zenlink-interface/parachains-bifrost':
+      '@crypto-dex-sdk/parachains-bifrost':
         specifier: workspace:*
         version: link:../../packages/parachains-impl/bifrost
-      '@zenlink-interface/polkadot':
+      '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../../packages/polkadot
-      '@zenlink-interface/polkadot-config':
+      '@crypto-dex-sdk/polkadot-config':
         specifier: workspace:*
         version: link:../../packages/config/polkadot
-      '@zenlink-interface/redux-localstorage':
+      '@crypto-dex-sdk/redux-localstorage':
         specifier: workspace:*
         version: link:../../packages/redux/localstorage
-      '@zenlink-interface/redux-token-lists':
+      '@crypto-dex-sdk/redux-token-lists':
         specifier: workspace:*
         version: link:../../packages/redux/token-lists
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../../packages/shared
-      '@zenlink-interface/smart-router':
+      '@crypto-dex-sdk/smart-router':
         specifier: workspace:*
         version: link:../../packages/smart-router
-      '@zenlink-interface/token-lists':
+      '@crypto-dex-sdk/token-lists':
         specifier: workspace:*
         version: link:../../packages/token-lists
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@zenlink-interface/wagmi':
+      '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
       echarts:
@@ -928,13 +928,13 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/nextjs-config':
+      '@crypto-dex-sdk/nextjs-config':
         specifier: workspace:*
         version: link:../../packages/config/nextjs
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       autoprefixer:
@@ -965,10 +965,10 @@ importers:
         specifier: 3.22.2
         version: 3.22.2
     devDependencies:
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       dotenv:
@@ -1004,13 +1004,13 @@ importers:
       '@ethersproject/solidity':
         specifier: ^5.7.0
         version: 5.7.0
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
       ethers:
@@ -1026,10 +1026,10 @@ importers:
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -1044,10 +1044,10 @@ importers:
 
   packages/chain:
     devDependencies:
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -1080,46 +1080,46 @@ importers:
       '@reduxjs/toolkit':
         specifier: ^1.9.7
         version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../format
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
-      '@zenlink-interface/parachains-amplitude':
+      '@crypto-dex-sdk/parachains-amplitude':
         specifier: workspace:*
         version: link:../parachains-impl/amplitude
-      '@zenlink-interface/parachains-bifrost':
+      '@crypto-dex-sdk/parachains-bifrost':
         specifier: workspace:*
         version: link:../parachains-impl/bifrost
-      '@zenlink-interface/polkadot':
+      '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../polkadot
-      '@zenlink-interface/redux-localstorage':
+      '@crypto-dex-sdk/redux-localstorage':
         specifier: workspace:*
         version: link:../redux/localstorage
-      '@zenlink-interface/router-config':
+      '@crypto-dex-sdk/router-config':
         specifier: workspace:*
         version: link:../config/router
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../shared
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../ui
-      '@zenlink-interface/wagmi':
+      '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../wagmi
       '@zenlink-types/bifrost':
@@ -1144,10 +1144,10 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -1211,14 +1211,14 @@ importers:
 
   packages/config/graph:
     dependencies:
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
     devDependencies:
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../typescript
       tsup:
@@ -1245,14 +1245,14 @@ importers:
       '@polkadot/api':
         specifier: ^10.9.1
         version: 10.9.1
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
       '@zenlink-types/bifrost':
         specifier: 1.7.6
         version: 1.7.6
     devDependencies:
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../typescript
       tsup:
@@ -1264,17 +1264,17 @@ importers:
 
   packages/config/router:
     dependencies:
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../currency
     devDependencies:
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../typescript
       tsup:
@@ -1288,11 +1288,11 @@ importers:
 
   packages/config/wagmi:
     dependencies:
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
     devDependencies:
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../typescript
       tsup:
@@ -1310,13 +1310,13 @@ importers:
       '@ethersproject/units':
         specifier: ^5.7.0
         version: 5.7.0
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../format
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
       lodash.flatmap:
@@ -1335,10 +1335,10 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       react:
@@ -1369,10 +1369,10 @@ importers:
       '@types/numeral':
         specifier: ^2.0.5
         version: 2.0.5
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       tsup:
@@ -1402,16 +1402,16 @@ importers:
       '@polkadot/util-crypto':
         specifier: ^11.1.3
         version: 11.1.3(@polkadot/util@11.1.3)
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/graph-config':
+      '@crypto-dex-sdk/graph-config':
         specifier: workspace:*
         version: link:../config/graph
-      '@zenlink-interface/wagmi-config':
+      '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../config/wagmi
       date-fns:
@@ -1433,10 +1433,10 @@ importers:
       '@types/numeral':
         specifier: ^2.0.5
         version: 2.0.5
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -1473,19 +1473,19 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../format
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       react:
@@ -1524,10 +1524,10 @@ importers:
       '@types/big.js':
         specifier: ^6.2.2
         version: 6.2.2
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -1575,31 +1575,31 @@ importers:
       '@polkadot/types-codec':
         specifier: ^10.9.1
         version: 10.9.1
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../../format
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../../math
-      '@zenlink-interface/polkadot':
+      '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../../polkadot
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../../shared
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../ui
       '@zenlink-types/bifrost':
@@ -1612,10 +1612,10 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript
       eslint:
@@ -1666,31 +1666,31 @@ importers:
       '@polkadot/types-codec':
         specifier: ^10.9.1
         version: 10.9.1
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../../format
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../../math
-      '@zenlink-interface/polkadot':
+      '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../../polkadot
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../../shared
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../ui
       '@zenlink-types/bifrost':
@@ -1703,10 +1703,10 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript
       eslint:
@@ -1790,19 +1790,19 @@ importers:
       '@polkadot/util-crypto':
         specifier: ^12.5.1
         version: 12.5.1(@polkadot/util@12.5.1)
-      '@zenlink-interface/graph-client':
+      '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../graph-client
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@zenlink-interface/polkadot-config':
+      '@crypto-dex-sdk/polkadot-config':
         specifier: workspace:*
         version: link:../config/polkadot
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../shared
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../ui
     devDependencies:
@@ -1812,10 +1812,10 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       react:
@@ -1845,22 +1845,22 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../currency
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../hooks
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../ui
       fast-json-stable-stringify:
@@ -1921,19 +1921,19 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../currency
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../../hooks
-      '@zenlink-interface/token-lists':
+      '@crypto-dex-sdk/token-lists':
         specifier: workspace:*
         version: link:../../token-lists
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript
       react:
@@ -1963,19 +1963,19 @@ importers:
       '@reduxjs/toolkit':
         specifier: ^1.9.7
         version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/graph-client':
+      '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../graph-client
-      '@zenlink-interface/locales':
+      '@crypto-dex-sdk/locales':
         specifier: workspace:*
         version: link:../locales
-      '@zenlink-interface/redux-localstorage':
+      '@crypto-dex-sdk/redux-localstorage':
         specifier: workspace:*
         version: link:../redux/localstorage
       make-plural:
@@ -1997,16 +1997,16 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../format
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -2033,19 +2033,19 @@ importers:
       '@ethersproject/solidity':
         specifier: ^5.7.0
         version: 5.7.0
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
-      '@zenlink-interface/wagmi-config':
+      '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../config/wagmi
       date-fns:
@@ -2073,13 +2073,13 @@ importers:
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/router-config':
+      '@crypto-dex-sdk/router-config':
         specifier: workspace:*
         version: link:../config/router
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -2100,19 +2100,19 @@ importers:
       '@ethersproject/address':
         specifier: ^5.7.0
         version: 5.7.0
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../format
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -2166,16 +2166,16 @@ importers:
       '@tanstack/react-table':
         specifier: 8.10.7
         version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@zenlink-interface/token-lists':
+      '@crypto-dex-sdk/token-lists':
         specifier: workspace:*
         version: link:../token-lists
       classnames:
@@ -2221,10 +2221,10 @@ importers:
       '@types/react-window':
         specifier: ^1.8.8
         version: 1.8.8
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       tailwindcss:
@@ -2275,34 +2275,34 @@ importers:
       '@uniswap/permit2-sdk':
         specifier: ^1.2.0
         version: 1.2.0
-      '@zenlink-interface/amm':
+      '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../amm
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
-      '@zenlink-interface/format':
+      '@crypto-dex-sdk/format':
         specifier: workspace:*
         version: link:../format
-      '@zenlink-interface/hooks':
+      '@crypto-dex-sdk/hooks':
         specifier: workspace:*
         version: link:../hooks
-      '@zenlink-interface/math':
+      '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
-      '@zenlink-interface/shared':
+      '@crypto-dex-sdk/shared':
         specifier: workspace:*
         version: link:../shared
-      '@zenlink-interface/smart-router':
+      '@crypto-dex-sdk/smart-router':
         specifier: workspace:*
         version: link:../smart-router
-      '@zenlink-interface/ui':
+      '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../ui
-      '@zenlink-interface/wagmi-config':
+      '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../config/wagmi
       fast-json-stable-stringify:
@@ -2333,10 +2333,10 @@ importers:
       '@wagmi/core':
         specifier: 1.3.0
         version: 1.3.0(@types/react@18.2.41)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
       eslint:
@@ -2369,22 +2369,22 @@ importers:
       '@types/express':
         specifier: ^4.17.21
         version: 4.17.21
-      '@zenlink-interface/chain':
+      '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
-      '@zenlink-interface/currency':
+      '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../../packages/currency
-      '@zenlink-interface/eslint-config':
+      '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
-      '@zenlink-interface/graph-client':
+      '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../../packages/graph-client
-      '@zenlink-interface/graph-config':
+      '@crypto-dex-sdk/graph-config':
         specifier: workspace:*
         version: link:../../packages/config/graph
-      '@zenlink-interface/typescript-config':
+      '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
       date-fns:

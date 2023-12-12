@@ -1,4 +1,4 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export const INIT_CODE_HASH: Record<string | number, string> = {
   [ParachainId.MOONRIVER]: '0x4d57d13eb6abe5cc425bd08deb1f15f0562098dddc340a700527b4d98f95f4dd',

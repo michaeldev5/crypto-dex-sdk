@@ -1,7 +1,7 @@
 import { CogIcon } from '@heroicons/react/24/outline'
-import type { ParachainId } from '@zenlink-interface/chain'
-import { isEvmNetwork } from '@zenlink-interface/compat'
-import { Dialog, IconButton, Overlay, SlideIn } from '@zenlink-interface/ui'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { isEvmNetwork } from '@crypto-dex-sdk/compat'
+import { Dialog, IconButton, Overlay, SlideIn } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useState } from 'react'
 

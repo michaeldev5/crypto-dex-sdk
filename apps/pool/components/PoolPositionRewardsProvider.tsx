@@ -1,5 +1,5 @@
-import type { Amount, Token } from '@zenlink-interface/currency'
-import type { Pool, PoolFarm } from '@zenlink-interface/graph-client'
+import type { Amount, Token } from '@crypto-dex-sdk/currency'
+import type { Pool, PoolFarm } from '@crypto-dex-sdk/graph-client'
 import type { FC, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 

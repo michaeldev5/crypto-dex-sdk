@@ -2,7 +2,7 @@ import { Listbox, Transition } from '@headlessui/react'
 import { ArrowTopRightOnSquareIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
 import useScrollPosition from '@react-hook/window-scroll'
-import { useIsMounted } from '@zenlink-interface/hooks'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import React, { Fragment } from 'react'
 
 import type { MaxWidth } from '..'

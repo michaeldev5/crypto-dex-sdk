@@ -1,6 +1,6 @@
-import type { Token, Type } from '@zenlink-interface/currency'
-import { filterTokens, useDebounce, useSortedTokensByQuery } from '@zenlink-interface/hooks'
-import type { Fraction } from '@zenlink-interface/math'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import { filterTokens, useDebounce, useSortedTokensByQuery } from '@crypto-dex-sdk/hooks'
+import type { Fraction } from '@crypto-dex-sdk/math'
 import type { FC, RefObject } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 

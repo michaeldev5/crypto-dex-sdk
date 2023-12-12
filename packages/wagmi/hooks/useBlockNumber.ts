@@ -1,5 +1,5 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { useBlockNumber as useWagmiBlockNumber } from 'wagmi'
 
 export function useBlockNumber(chainId: ParachainId) {

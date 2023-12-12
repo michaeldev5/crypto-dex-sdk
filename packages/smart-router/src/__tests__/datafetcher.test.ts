@@ -1,10 +1,10 @@
-import { ParachainId } from "@zenlink-interface/chain"
-import { USDC, USDT, WNATIVE, ZLK } from "@zenlink-interface/currency"
+import { ParachainId } from "@crypto-dex-sdk/chain"
+import { USDC, USDT, WNATIVE, ZLK } from "@crypto-dex-sdk/currency"
 import { afterAll, beforeAll, expect, describe, it } from "vitest"
 import { DataFetcher } from "../fetchers"
 import { LiquidityProviders, NativeWrapProvider } from "../liquidity-providers"
 import { Chain, createPublicClient, http } from "viem"
-import { scroll } from "@zenlink-interface/wagmi-config"
+import { scroll } from "@crypto-dex-sdk/wagmi-config"
 import { Router } from "../routers"
 import { BigNumber } from "@ethersproject/bignumber"
 

@@ -1,4 +1,4 @@
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import type { TokenPrice } from '../types'
 
 export async function fetchTokenPricesFromLifiApi(chainId: number) {

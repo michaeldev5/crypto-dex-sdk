@@ -1,9 +1,9 @@
-import { formatPercent } from '@zenlink-interface/format'
-import { Typography } from '@zenlink-interface/ui'
+import { formatPercent } from '@crypto-dex-sdk/format'
+import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useMemo } from 'react'
 
-import type { PoolFarm } from '@zenlink-interface/graph-client'
+import type { PoolFarm } from '@crypto-dex-sdk/graph-client'
 import type { CellProps } from './types'
 
 export const PoolAPRCell: FC<CellProps> = ({ row }) => {

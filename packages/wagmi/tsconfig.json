@@ -1,5 +1,5 @@
 {
-  "extends": "@zenlink-interface/typescript-config/react-library.json",
+  "extends": "@crypto-dex-sdk/typescript-config/react-library.json",
   "compilerOptions": {
     "strict": true,
     "declaration": false,

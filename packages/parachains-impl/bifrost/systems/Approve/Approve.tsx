@@ -1,5 +1,5 @@
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { classNames } from '@zenlink-interface/ui'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { classNames } from '@crypto-dex-sdk/ui'
 import type { FC, ReactNode } from 'react'
 import { useMemo } from 'react'
 import { TokenApproveButton } from './TokenApproveButton'

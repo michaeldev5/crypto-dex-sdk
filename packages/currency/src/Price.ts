@@ -1,5 +1,5 @@
-import type { BigintIsh, Rounding } from '@zenlink-interface/math'
-import { Fraction, JSBI } from '@zenlink-interface/math'
+import type { BigintIsh, Rounding } from '@crypto-dex-sdk/math'
+import { Fraction, JSBI } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 
 import { Amount } from './Amount'

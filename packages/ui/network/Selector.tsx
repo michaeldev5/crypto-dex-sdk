@@ -1,5 +1,5 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import { chainName } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { chainName } from '@crypto-dex-sdk/chain'
 import type { FC, ReactElement } from 'react'
 import { useCallback, useMemo } from 'react'
 

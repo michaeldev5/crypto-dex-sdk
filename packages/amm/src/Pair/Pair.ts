@@ -1,9 +1,9 @@
-import { Amount, Price, Token } from '@zenlink-interface/currency'
-import type { BigintIsh } from '@zenlink-interface/math'
-import { FIVE, JSBI, ONE, ZERO, _1000, _997, sqrt } from '@zenlink-interface/math'
+import { Amount, Price, Token } from '@crypto-dex-sdk/currency'
+import type { BigintIsh } from '@crypto-dex-sdk/math'
+import { FIVE, JSBI, ONE, ZERO, _1000, _997, sqrt } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { InsufficientInputAmountError, InsufficientReservesError } from '../errors'
 import { Fee } from '../Fee'
 import type { MultiPath } from '../MultiRoute'

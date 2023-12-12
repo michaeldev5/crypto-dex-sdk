@@ -1,9 +1,9 @@
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useEffect, useState } from 'react'
 import { useAccount, usePrepareSendTransaction, useSendTransaction as useSendTransaction_ } from 'wagmi'
 import type { SendTransactionResult } from '@wagmi/core'
-import { createErrorToast } from '@zenlink-interface/ui'
+import { createErrorToast } from '@crypto-dex-sdk/ui'
 import type { UseSendTransactionArgs, UseSendTransactionConfig, WagmiTransactionRequest } from '../types'
 import type { MultisigSafeConnector } from '../connectors/safe'
 

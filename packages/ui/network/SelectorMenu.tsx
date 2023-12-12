@@ -1,6 +1,6 @@
 import { CheckIcon, XCircleIcon } from '@heroicons/react/24/solid'
-import type { ParachainId } from '@zenlink-interface/chain'
-import chains from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import chains from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
 
 import { Trans } from '@lingui/macro'

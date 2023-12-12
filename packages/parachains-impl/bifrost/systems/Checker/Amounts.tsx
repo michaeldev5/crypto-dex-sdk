@@ -1,7 +1,7 @@
-import type { Amount, Type } from '@zenlink-interface/currency'
-import { ZERO } from '@zenlink-interface/math'
-import { useAccount } from '@zenlink-interface/polkadot'
-import { Button } from '@zenlink-interface/ui'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { useAccount } from '@crypto-dex-sdk/polkadot'
+import { Button } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useMemo } from 'react'
 

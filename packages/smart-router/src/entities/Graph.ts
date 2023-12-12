@@ -6,8 +6,8 @@ import type {
   NetworkInfo,
   RouteLeg,
   SplitMultiRoute,
-} from '@zenlink-interface/amm'
-import { PoolType, RouteStatus } from '@zenlink-interface/amm'
+} from '@crypto-dex-sdk/amm'
+import { PoolType, RouteStatus } from '@crypto-dex-sdk/amm'
 import { ASSERT, DEBUG, getBigNumber } from '../util'
 import type { BasePool } from './pools'
 import {

@@ -1,8 +1,8 @@
 import { t } from '@lingui/macro'
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { TransactionRequest } from '@zenlink-interface/polkadot'
-import { useAccount, useApi, useSendTransaction } from '@zenlink-interface/polkadot'
-import { useNotifications } from '@zenlink-interface/shared'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { TransactionRequest } from '@crypto-dex-sdk/polkadot'
+import { useAccount, useApi, useSendTransaction } from '@crypto-dex-sdk/polkadot'
+import { useNotifications } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useMemo } from 'react'
 

@@ -1,8 +1,8 @@
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import type { Amount, Type } from '@zenlink-interface/currency'
-import { Price } from '@zenlink-interface/currency'
-import { Dialog, Typography } from '@zenlink-interface/ui'
-import { Icon } from '@zenlink-interface/ui/currency/Icon'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import { Price } from '@crypto-dex-sdk/currency'
+import { Dialog, Typography } from '@crypto-dex-sdk/ui'
+import { Icon } from '@crypto-dex-sdk/ui/currency/Icon'
 import type { FC, ReactNode } from 'react'
 import { useMemo } from 'react'
 

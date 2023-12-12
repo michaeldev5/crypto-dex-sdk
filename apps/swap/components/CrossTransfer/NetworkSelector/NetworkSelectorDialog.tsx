@@ -2,7 +2,7 @@ import { Popover } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import React, { useState } from 'react'
 
-import { Dialog, Input, classNames } from '@zenlink-interface/ui'
+import { Dialog, Input, classNames } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
 import { CHAIN_META as chains } from '../config/chain'
 import { NetworkIcon } from '../icons/NetworkIcon'

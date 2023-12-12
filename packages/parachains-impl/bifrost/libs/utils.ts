@@ -1,5 +1,5 @@
-import type { Type } from '@zenlink-interface/currency'
-import { addressToZenlinkAssetId } from '@zenlink-interface/format'
+import type { Type } from '@crypto-dex-sdk/currency'
+import { addressToZenlinkAssetId } from '@crypto-dex-sdk/format'
 
 export function isNativeCurrency(currency: Type): boolean {
   // BNC

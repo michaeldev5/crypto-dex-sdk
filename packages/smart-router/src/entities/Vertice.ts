@@ -1,4 +1,4 @@
-import type { BaseToken } from '@zenlink-interface/amm'
+import type { BaseToken } from '@crypto-dex-sdk/amm'
 import { setTokenId } from './pools'
 import type { Edge } from './Edge'
 

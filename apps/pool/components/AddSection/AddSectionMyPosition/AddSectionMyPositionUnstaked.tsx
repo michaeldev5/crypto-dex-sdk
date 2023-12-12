@@ -1,5 +1,5 @@
-import { formatUSD } from '@zenlink-interface/format'
-import { Currency, Typography } from '@zenlink-interface/ui'
+import { formatUSD } from '@crypto-dex-sdk/format'
+import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import React from 'react'
 

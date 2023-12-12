@@ -1,8 +1,8 @@
 import { ArrowTopRightOnSquareIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-import chain from '@zenlink-interface/chain'
-import type { Token } from '@zenlink-interface/currency'
-import { shortenAddress } from '@zenlink-interface/format'
-import { Button, CopyHelper, Currency, Overlay, SlideIn, Typography, classNames } from '@zenlink-interface/ui'
+import chain from '@crypto-dex-sdk/chain'
+import type { Token } from '@crypto-dex-sdk/currency'
+import { shortenAddress } from '@crypto-dex-sdk/format'
+import { Button, CopyHelper, Currency, Overlay, SlideIn, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useMemo, useState } from 'react'
 

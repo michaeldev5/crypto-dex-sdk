@@ -1,4 +1,4 @@
-import type { AggregatorTrade, RouteLeg } from '@zenlink-interface/amm'
+import type { AggregatorTrade, RouteLeg } from '@crypto-dex-sdk/amm'
 import type { FC } from 'react'
 import { useMemo } from 'react'
 import ReactECharts from 'echarts-for-react'

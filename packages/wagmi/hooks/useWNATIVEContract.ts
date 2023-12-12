@@ -1,5 +1,5 @@
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
-import { WNATIVE_ADDRESS } from '@zenlink-interface/currency'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { WNATIVE_ADDRESS } from '@crypto-dex-sdk/currency'
 import { usePublicClient } from 'wagmi'
 import type { Address } from '@wagmi/core'
 import { getContract } from 'wagmi/actions'

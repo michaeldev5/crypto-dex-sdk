@@ -1,10 +1,10 @@
-import { formatUSD } from '@zenlink-interface/format'
-import type { Pool } from '@zenlink-interface/graph-client'
-import { Currency, Typography } from '@zenlink-interface/ui'
+import { formatUSD } from '@crypto-dex-sdk/format'
+import type { Pool } from '@crypto-dex-sdk/graph-client'
+import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { usePoolPosition } from 'components/PoolPositionProvider'
 import { Trans } from '@lingui/macro'
-import { useTokensFromPool } from '@zenlink-interface/shared'
+import { useTokensFromPool } from '@crypto-dex-sdk/shared'
 
 interface PoolPositionProps {
   pool: Pool

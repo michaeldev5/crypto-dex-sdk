@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import type { BaseToken, NetworkInfo, SplitMultiRoute } from '@zenlink-interface/amm'
-import { RouteStatus } from '@zenlink-interface/amm'
+import type { BaseToken, NetworkInfo, SplitMultiRoute } from '@crypto-dex-sdk/amm'
+import { RouteStatus } from '@crypto-dex-sdk/amm'
 import type { BasePool } from '../entities'
 import { Graph, MetaPool, StablePool, setTokenId } from '../entities'
 

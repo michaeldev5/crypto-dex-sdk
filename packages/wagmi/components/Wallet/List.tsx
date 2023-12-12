@@ -1,4 +1,4 @@
-import { useIsMounted } from '@zenlink-interface/hooks'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import type { FC, ReactNode } from 'react'
 import { useAccount, useConnect } from 'wagmi'
 

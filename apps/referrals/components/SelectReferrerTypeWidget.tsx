@@ -1,4 +1,4 @@
-import { Tab, Typography } from '@zenlink-interface/ui'
+import { Tab, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { memo } from 'react'
 import type { ReferrerType } from 'pages'

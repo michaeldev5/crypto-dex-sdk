@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/format",
+  "name": "@crypto-dex-sdk/format",
   "version": "0.0.0",
   "description": "Zenlink Format",
   "author": "zenlinkpro",
@@ -28,8 +28,8 @@
   },
   "devDependencies": {
     "@types/numeral": "^2.0.5",
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "tsup": "^8.0.1",
     "typescript": "5.3.2"
   }

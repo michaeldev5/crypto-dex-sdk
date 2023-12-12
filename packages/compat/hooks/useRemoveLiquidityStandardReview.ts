@@ -1,14 +1,14 @@
-import type { Pair } from '@zenlink-interface/amm'
-import { ParachainId } from '@zenlink-interface/chain'
-import type { Amount, Type } from '@zenlink-interface/currency'
-import type { Percent } from '@zenlink-interface/math'
-import { useRemoveLiquidityStandardReview as useWagmiRemoveLiquidityStandardReview } from '@zenlink-interface/wagmi'
+import type { Pair } from '@crypto-dex-sdk/amm'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { Percent } from '@crypto-dex-sdk/math'
+import { useRemoveLiquidityStandardReview as useWagmiRemoveLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
 import {
   useRemoveLiquidityStandardReview as useBifrostRemoveLiquidityStandardReview,
-} from '@zenlink-interface/parachains-bifrost'
+} from '@crypto-dex-sdk/parachains-bifrost'
 import {
   useRemoveLiquidityStandardReview as useAmplitudeRemoveLiquidityStandardReview,
-} from '@zenlink-interface/parachains-amplitude'
+} from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'
 

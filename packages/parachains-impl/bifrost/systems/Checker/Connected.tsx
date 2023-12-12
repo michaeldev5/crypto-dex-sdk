@@ -1,5 +1,5 @@
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { useAccount } from '@zenlink-interface/polkadot'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { useAccount } from '@crypto-dex-sdk/polkadot'
 import type { FC } from 'react'
 
 import { Wallet } from '../../components'

@@ -1,16 +1,16 @@
-import type { Pair } from '@zenlink-interface/amm'
-import { ParachainId, chainShortName } from '@zenlink-interface/chain'
-import type { Type } from '@zenlink-interface/currency'
-import { tryParseAmount } from '@zenlink-interface/currency'
-import type { BreadcrumbLink } from '@zenlink-interface/ui'
-import { AppearOnMount, Button, Dots, Loader, Widget } from '@zenlink-interface/ui'
+import type { Pair } from '@crypto-dex-sdk/amm'
+import { ParachainId, chainShortName } from '@crypto-dex-sdk/chain'
+import type { Type } from '@crypto-dex-sdk/currency'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import type { BreadcrumbLink } from '@crypto-dex-sdk/ui'
+import { AppearOnMount, Button, Dots, Loader, Widget } from '@crypto-dex-sdk/ui'
 import type { FC, ReactNode } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import useSWR, { SWRConfig } from 'swr'
-import type { Pool, StableSwap } from '@zenlink-interface/graph-client'
+import type { Pool, StableSwap } from '@crypto-dex-sdk/graph-client'
 import { PlusIcon } from '@heroicons/react/24/outline'
 import stringify from 'fast-json-stable-stringify'
-import { useCustomTokens } from '@zenlink-interface/shared'
+import { useCustomTokens } from '@crypto-dex-sdk/shared'
 import {
   Checker,
   PairState,
@@ -18,7 +18,7 @@ import {
   PoolFinderType,
   Web3Input,
   isSubstrateNetwork,
-} from '@zenlink-interface/compat'
+} from '@crypto-dex-sdk/compat'
 import { AddSectionMyPosition } from 'components/AddSection/AddSectionMyPosition'
 import { isStandardPool } from 'lib/functions'
 import { useTokens } from 'lib/state/token-lists'

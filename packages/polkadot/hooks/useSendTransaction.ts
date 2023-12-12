@@ -1,12 +1,12 @@
 import type { SubmittableExtrinsic } from '@polkadot/api/types'
 import type { ExtrinsicStatus } from '@polkadot/types/interfaces'
-import type { NotificationData } from '@zenlink-interface/ui'
+import type { NotificationData } from '@crypto-dex-sdk/ui'
 import {
   createErrorToast,
   createFailedToast,
   createSuccessToast,
   toast,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import type { Account } from './useAccounts'

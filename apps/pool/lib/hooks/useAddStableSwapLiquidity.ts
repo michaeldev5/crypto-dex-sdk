@@ -1,7 +1,7 @@
-import type { Token } from '@zenlink-interface/currency'
-import { Amount } from '@zenlink-interface/currency'
-import { ZERO } from '@zenlink-interface/math'
-import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase } from '@zenlink-interface/wagmi'
+import type { Token } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
+import { ZERO } from '@crypto-dex-sdk/math'
+import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
 import { useMemo } from 'react'
 import { calculateStableSwapTokenAmount } from 'lib/functions'
 

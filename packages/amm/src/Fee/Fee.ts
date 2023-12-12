@@ -1,4 +1,4 @@
-import { Fraction } from '@zenlink-interface/math'
+import { Fraction } from '@crypto-dex-sdk/math'
 
 // Fee - Tiers TBD
 export enum Fee {

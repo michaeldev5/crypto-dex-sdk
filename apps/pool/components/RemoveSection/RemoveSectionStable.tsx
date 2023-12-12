@@ -1,12 +1,12 @@
 import { Disclosure, Transition } from '@headlessui/react'
-import { calculateSlippageAmount } from '@zenlink-interface/amm'
-import { Approve, Checker, useAccount, useRemoveLiquidityStableReview, useStableSwapWithBase } from '@zenlink-interface/compat'
-import type { Token } from '@zenlink-interface/currency'
-import { Amount } from '@zenlink-interface/currency'
-import { formatUSD } from '@zenlink-interface/format'
-import type { StableSwap } from '@zenlink-interface/graph-client'
-import { useNotifications, usePrices, useSettings } from '@zenlink-interface/shared'
-import { Percent, ZERO } from '@zenlink-interface/math'
+import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
+import { Approve, Checker, useAccount, useRemoveLiquidityStableReview, useStableSwapWithBase } from '@crypto-dex-sdk/compat'
+import type { Token } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
+import { formatUSD } from '@crypto-dex-sdk/format'
+import type { StableSwap } from '@crypto-dex-sdk/graph-client'
+import { useNotifications, usePrices, useSettings } from '@crypto-dex-sdk/shared'
+import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
@@ -17,7 +17,7 @@ import {
   Currency as UICurrency,
   Widget,
   classNames,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { Fragment, useCallback, useMemo, useState } from 'react'
 import { usePoolPosition } from 'components'

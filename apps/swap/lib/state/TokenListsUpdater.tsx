@@ -1,5 +1,5 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { usePublicClient } from 'wagmi'
 
 import { tokenLists } from './token-lists'

@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/eslint-config",
+  "name": "@crypto-dex-sdk/eslint-config",
   "version": "0.0.0",
   "description": "Zenlink Eslint Config",
   "author": "zenlinkpro",

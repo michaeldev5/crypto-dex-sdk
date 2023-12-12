@@ -1,6 +1,6 @@
-import { useIsMounted } from '@zenlink-interface/hooks'
-import type { NotificationData } from '@zenlink-interface/ui'
-import { classNames } from '@zenlink-interface/ui'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import type { NotificationData } from '@crypto-dex-sdk/ui'
+import { classNames } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo, useReducer } from 'react'
 

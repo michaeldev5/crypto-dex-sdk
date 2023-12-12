@@ -1,8 +1,8 @@
 import { Trans } from '@lingui/macro'
-import { formatPercent, formatUSD } from '@zenlink-interface/format'
-import type { Pool } from '@zenlink-interface/graph-client'
-import { POOL_TYPE } from '@zenlink-interface/graph-client'
-import { Typography } from '@zenlink-interface/ui'
+import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
+import type { Pool } from '@crypto-dex-sdk/graph-client'
+import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
+import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useMemo } from 'react'
 

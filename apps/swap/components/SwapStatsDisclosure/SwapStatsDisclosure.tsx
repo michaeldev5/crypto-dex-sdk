@@ -1,16 +1,16 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Percent } from '@zenlink-interface/math'
-import { Loader, Skeleton, Tooltip, Typography, classNames } from '@zenlink-interface/ui'
+import { Percent } from '@crypto-dex-sdk/math'
+import { Loader, Skeleton, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import React, { useMemo, useState } from 'react'
 
-import { useSettings } from '@zenlink-interface/shared'
+import { useSettings } from '@crypto-dex-sdk/shared'
 import { AggregatorRoute, LegacyRoute, Rate, useTrade } from 'components'
 import { Trans, t } from '@lingui/macro'
-import { TradeVersion } from '@zenlink-interface/amm'
-import { formatTransactionAmount } from '@zenlink-interface/format'
+import { TradeVersion } from '@crypto-dex-sdk/amm'
+import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { warningSeverity } from '../../lib/functions'
 
 export const SwapStatsDisclosure: FC = () => {

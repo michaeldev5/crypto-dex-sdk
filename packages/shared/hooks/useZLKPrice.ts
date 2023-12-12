@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useQuery } from 'wagmi'
-import { ZLK_ADDRESS } from '@zenlink-interface/currency'
-import type { ParachainId } from '@zenlink-interface/chain'
+import { ZLK_ADDRESS } from '@crypto-dex-sdk/currency'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 
 export function useZLKPrice() {
   const queryKey = useMemo(() => ['https://token-price.zenlink.pro/api/v0'], [])

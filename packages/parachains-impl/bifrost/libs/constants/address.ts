@@ -1,4 +1,4 @@
-import { addressToZenlinkAssetId, isZenlinkAddress } from '@zenlink-interface/format'
+import { addressToZenlinkAssetId, isZenlinkAddress } from '@crypto-dex-sdk/format'
 import type { PairPrimitivesAssetId } from '../../types'
 
 export const PAIR_ADDRESSES: Record<string, { address: string, account: string }> = {

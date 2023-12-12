@@ -1,7 +1,7 @@
-import type { Pair } from '@zenlink-interface/graph-client'
+import type { Pair } from '@crypto-dex-sdk/graph-client'
 import { useMemo } from 'react'
-import { Amount, Native, Token } from '@zenlink-interface/currency'
-import { ParachainId } from '@zenlink-interface/chain'
+import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export function useTokensFromPair(pair: Pair) {
   return useMemo(() => {

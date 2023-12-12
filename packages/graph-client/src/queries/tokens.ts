@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-import type { ParachainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { CLIENTS } from '../appolo'
 import type { TokenQueryData } from '../types'
 import type { TokensQuery } from '../__generated__/types-and-hooks'

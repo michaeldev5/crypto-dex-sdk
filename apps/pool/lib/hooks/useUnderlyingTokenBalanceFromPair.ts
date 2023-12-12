@@ -1,6 +1,6 @@
-import type { Token, Type } from '@zenlink-interface/currency'
-import { Amount } from '@zenlink-interface/currency'
-import { ZERO } from '@zenlink-interface/math'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
+import { ZERO } from '@crypto-dex-sdk/math'
 import { useMemo } from 'react'
 
 interface Params {

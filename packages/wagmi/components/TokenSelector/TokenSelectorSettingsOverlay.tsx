@@ -1,5 +1,5 @@
 import { CogIcon } from '@heroicons/react/24/outline'
-import { IconButton, Overlay, SlideIn } from '@zenlink-interface/ui'
+import { IconButton, Overlay, SlideIn } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useState } from 'react'
 

@@ -1,8 +1,8 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { AdjustmentsVerticalIcon, ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
-import { useSettings } from '@zenlink-interface/shared'
-import { DEFAULT_INPUT_UNSTYLED, Input, Tab, Tooltip, Typography, classNames } from '@zenlink-interface/ui'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import { DEFAULT_INPUT_UNSTYLED, Input, Tab, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 
 export const SlippageToleranceDisclosure: FC = () => {

@@ -1,5 +1,5 @@
-import { chainName, chainShortName } from '@zenlink-interface/chain'
-import { ZENLINK_ENABLED_NETWORKS } from '@zenlink-interface/graph-config'
+import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
+import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'
 import { fetchDaySnapshots } from '../../queries'
 import type { DaySnapshot, DaySnapshotsQueryData } from '../../types'
 import { ZenlinkDayInfoOrderByInput } from '../../__generated__/types-and-hooks'

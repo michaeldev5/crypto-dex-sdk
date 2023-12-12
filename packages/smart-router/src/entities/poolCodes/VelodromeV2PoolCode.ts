@@ -1,6 +1,6 @@
-import type { RouteLeg, SplitMultiRoute } from '@zenlink-interface/amm'
+import type { RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import invariant from 'tiny-invariant'
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
 import { encodeAbiParameters, parseAbiParameters } from 'viem'
 import { HEXer } from '../../HEXer'

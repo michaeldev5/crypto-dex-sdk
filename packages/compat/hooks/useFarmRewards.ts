@@ -1,8 +1,8 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'wagmi'
-import { useFarmsRewards as useWagmiFarmsRewards } from '@zenlink-interface/wagmi'
-import { useFarmsRewards as useBifrostFarmsRewards } from '@zenlink-interface/parachains-bifrost'
-import { useFarmsRewards as useAmplitudeFarmsRewards } from '@zenlink-interface/parachains-amplitude'
+import { useFarmsRewards as useWagmiFarmsRewards } from '@crypto-dex-sdk/wagmi'
+import { useFarmsRewards as useBifrostFarmsRewards } from '@crypto-dex-sdk/parachains-bifrost'
+import { useFarmsRewards as useAmplitudeFarmsRewards } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'
 

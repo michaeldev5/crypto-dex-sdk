@@ -1,11 +1,11 @@
-import chains from '@zenlink-interface/chain'
-import { formatPercent, formatUSD } from '@zenlink-interface/format'
-import type { Pool } from '@zenlink-interface/graph-client'
-import { POOL_TYPE } from '@zenlink-interface/graph-client'
-import { AppearOnMount, Currency, Link, NetworkIcon, Typography } from '@zenlink-interface/ui'
+import chains from '@crypto-dex-sdk/chain'
+import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
+import type { Pool } from '@crypto-dex-sdk/graph-client'
+import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
+import { AppearOnMount, Currency, Link, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
-import { usePrices, useTokensFromPool } from '@zenlink-interface/shared'
+import { usePrices, useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { Trans } from '@lingui/macro'
 
 interface PoolHeaderProps {

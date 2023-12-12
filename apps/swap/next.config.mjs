@@ -1,4 +1,4 @@
-import defaultNextConfig from '@zenlink-interface/nextjs-config'
+import defaultNextConfig from '@crypto-dex-sdk/nextjs-config'
 
 // @ts-check
 /** @type {import('next').NextConfig} */
@@ -16,14 +16,14 @@ const nextConfig = {
     ]
   },
   transpilePackages: [
-    '@zenlink-interface/redux-token-lists',
-    '@zenlink-interface/redux-localstorage',
-    '@zenlink-interface/wagmi',
-    '@zenlink-interface/polkadot',
-    '@zenlink-interface/parachains-bifrost',
-    '@zenlink-interface/compat',
-    '@zenlink-interface/shared',
-    '@zenlink-interface/ui',
+    '@crypto-dex-sdk/redux-token-lists',
+    '@crypto-dex-sdk/redux-localstorage',
+    '@crypto-dex-sdk/wagmi',
+    '@crypto-dex-sdk/polkadot',
+    '@crypto-dex-sdk/parachains-bifrost',
+    '@crypto-dex-sdk/compat',
+    '@crypto-dex-sdk/shared',
+    '@crypto-dex-sdk/ui',
   ],
 }
 

@@ -1,8 +1,8 @@
-import { App, AppType } from '@zenlink-interface/ui'
-import { AppSettings, NetworkSelector, Profile, useAccount } from '@zenlink-interface/compat'
+import { App, AppType } from '@crypto-dex-sdk/ui'
+import { AppSettings, NetworkSelector, Profile, useAccount } from '@crypto-dex-sdk/compat'
 import type { FC } from 'react'
 import React from 'react'
-import { useNotifications } from '@zenlink-interface/shared'
+import { useNotifications } from '@crypto-dex-sdk/shared'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 
 export const Header: FC = () => {

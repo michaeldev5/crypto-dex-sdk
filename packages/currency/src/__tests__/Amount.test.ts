@@ -3,7 +3,7 @@ import { Native } from '../Native'
 import { Token } from '../Token'
 import { Amount } from '../Amount'
 
-import { JSBI, MAX_UINT256, Percent } from '@zenlink-interface/math'
+import { JSBI, MAX_UINT256, Percent } from '@crypto-dex-sdk/math'
 
 describe('Amount', () => {
   const ADDRESS_ONE = '0x0000000000000000000000000000000000000001'

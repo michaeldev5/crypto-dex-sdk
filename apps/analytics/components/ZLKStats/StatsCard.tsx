@@ -1,4 +1,4 @@
-import { Typography } from '@zenlink-interface/ui'
+import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC, ReactNode } from 'react'
 import React from 'react'
 

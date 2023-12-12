@@ -1,7 +1,7 @@
 import type { ApolloLink } from '@apollo/client'
 import { createHttpLink, split } from '@apollo/client'
 import { getMainDefinition } from '@apollo/client/utilities'
-import { ARCHIVE_HOST, SQUID_HOST } from '@zenlink-interface/graph-config'
+import { ARCHIVE_HOST, SQUID_HOST } from '@crypto-dex-sdk/graph-config'
 import { Kind, OperationTypeNode } from 'graphql'
 
 interface CreateLinkOption {

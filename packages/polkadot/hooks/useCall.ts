@@ -4,7 +4,7 @@ import type { StorageEntryTypeLatest } from '@polkadot/types/interfaces'
 import type { AnyFunction, Codec } from '@polkadot/types/types'
 import { useEffect, useRef, useState } from 'react'
 import { isFunction, isNull, isUndefined, nextTick } from '@polkadot/util'
-import { useIsMounted } from '@zenlink-interface/hooks'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import type { CallOptions, CallParam, CallParams } from '../types'
 import { useApi } from './useApi'
 

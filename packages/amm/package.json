@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/amm",
+  "name": "@crypto-dex-sdk/amm",
   "version": "0.0.0",
   "description": "Zenlink AMM",
   "author": "zenlinkpro",
@@ -32,17 +32,17 @@
     "@ethersproject/bignumber": "^5.7.0",
     "@ethersproject/constants": "^5.7.0",
     "@ethersproject/solidity": "^5.7.0",
-    "@zenlink-interface/chain": "workspace:*",
-    "@zenlink-interface/currency": "workspace:*",
-    "@zenlink-interface/math": "workspace:*",
+    "@crypto-dex-sdk/chain": "workspace:*",
+    "@crypto-dex-sdk/currency": "workspace:*",
+    "@crypto-dex-sdk/math": "workspace:*",
     "ethers": "^5.7.2",
     "tiny-invariant": "^1.3.1",
     "tiny-warning": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "^20.10.3",
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "eslint": "^8.55.0",
     "tsup": "^8.0.1",
     "typescript": "5.3.2"

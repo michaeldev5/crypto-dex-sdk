@@ -1,12 +1,12 @@
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import type { ParachainId } from '@zenlink-interface/chain'
-import { useAccount } from '@zenlink-interface/compat'
-import type { Amount, Type } from '@zenlink-interface/currency'
-import { Native } from '@zenlink-interface/currency'
-import { formatUSD } from '@zenlink-interface/format'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { ZERO } from '@zenlink-interface/math'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { useAccount } from '@crypto-dex-sdk/compat'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import { Native } from '@crypto-dex-sdk/currency'
+import { formatUSD } from '@crypto-dex-sdk/format'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
@@ -15,8 +15,8 @@ import {
   Typography,
   Currency as UICurrency,
   classNames,
-} from '@zenlink-interface/ui'
-import { Widget } from '@zenlink-interface/ui/widget'
+} from '@crypto-dex-sdk/ui'
+import { Widget } from '@crypto-dex-sdk/ui/widget'
 import type { FC, ReactNode } from 'react'
 import { Fragment, useState } from 'react'
 

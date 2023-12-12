@@ -1,5 +1,5 @@
-import { StableSwap } from "@zenlink-interface/amm"
-import { Amount, Token } from "@zenlink-interface/currency"
+import { StableSwap } from "@crypto-dex-sdk/amm"
+import { Amount, Token } from "@crypto-dex-sdk/currency"
 import JSBI from "jsbi"
 import { expect, describe, it } from "vitest"
 import { MetaPool } from "../entities"

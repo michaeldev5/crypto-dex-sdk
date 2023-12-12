@@ -1,11 +1,11 @@
-import type { Pool } from '@zenlink-interface/graph-client'
-import { ZERO } from '@zenlink-interface/math'
-import { Button, Link } from '@zenlink-interface/ui'
+import type { Pool } from '@crypto-dex-sdk/graph-client'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { Button, Link } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 
 import { Trans } from '@lingui/macro'
 import { usePoolPositionStaked } from 'components/PoolPositionStakedProvider'
-import { useTokensFromPool } from '@zenlink-interface/shared'
+import { useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { usePoolPosition } from '../PoolPositionProvider'
 
 interface PoolButtonsProps {

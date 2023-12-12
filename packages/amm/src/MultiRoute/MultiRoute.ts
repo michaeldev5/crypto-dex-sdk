@@ -1,7 +1,7 @@
-import type { Token } from '@zenlink-interface/currency'
-import { Amount, Price } from '@zenlink-interface/currency'
+import type { Token } from '@crypto-dex-sdk/currency'
+import { Amount, Price } from '@crypto-dex-sdk/currency'
 import invariant from 'tiny-invariant'
-import { JSBI, ONE } from '@zenlink-interface/math'
+import { JSBI, ONE } from '@crypto-dex-sdk/math'
 import { getStableSwapOutputAmount } from '../StablePool'
 import type { MultiPath } from './MultiPath'
 

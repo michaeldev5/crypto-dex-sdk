@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import type { BaseToken } from '@zenlink-interface/amm'
-import { Token } from '@zenlink-interface/currency'
+import type { BaseToken } from '@crypto-dex-sdk/amm'
+import { Token } from '@crypto-dex-sdk/currency'
 import { zeroAddress } from 'viem'
 import { getBigNumber, getNumber } from '../../util'
 import { BasePool, TYPICAL_MINIMAL_LIQUIDITY, TYPICAL_SWAP_GAS_COST } from './BasePool'

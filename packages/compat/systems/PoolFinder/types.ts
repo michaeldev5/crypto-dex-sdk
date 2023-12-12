@@ -1,6 +1,6 @@
-import type { Pair } from '@zenlink-interface/amm'
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { Type } from '@zenlink-interface/currency'
+import type { Pair } from '@crypto-dex-sdk/amm'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Type } from '@crypto-dex-sdk/currency'
 import type { ReactElement } from 'react'
 import type { PairState } from '../../hooks'
 

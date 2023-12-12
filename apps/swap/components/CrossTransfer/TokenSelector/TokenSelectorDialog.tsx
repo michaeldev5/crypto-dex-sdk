@@ -1,6 +1,6 @@
-import type { Token, Type } from '@zenlink-interface/currency'
-import { useIsSmScreen } from '@zenlink-interface/hooks'
-import type { Fraction } from '@zenlink-interface/math'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
+import type { Fraction } from '@crypto-dex-sdk/math'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import {
   Currency,
@@ -12,7 +12,7 @@ import {
   SlideIn,
   Typography,
   classNames,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useCallback } from 'react'
 import { XCircleIcon } from '@heroicons/react/24/solid'

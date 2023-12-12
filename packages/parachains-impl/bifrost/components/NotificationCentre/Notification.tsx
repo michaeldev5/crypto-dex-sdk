@@ -12,8 +12,8 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/solid'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import chains, { ParachainId, chainsChainIdToParachainId } from '@zenlink-interface/chain'
-import type { NotificationData } from '@zenlink-interface/ui'
+import chains, { ParachainId, chainsChainIdToParachainId } from '@crypto-dex-sdk/chain'
+import type { NotificationData } from '@crypto-dex-sdk/ui'
 import {
   Badge,
   Dots,
@@ -24,9 +24,9 @@ import {
   TimeAgo,
   Typography,
   classNames,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { useWaitForTransaction } from '@zenlink-interface/polkadot'
+import { useWaitForTransaction } from '@crypto-dex-sdk/polkadot'
 
 export const Notification: FC<{ data: string, showExtra?: boolean, hideStatus?: boolean }> = ({
   data,

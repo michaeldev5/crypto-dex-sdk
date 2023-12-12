@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/v2-aggregation-router-api-example",
+  "name": "@crypto-dex-sdk/v2-aggregation-router-api-example",
   "version": "0.0.0",
   "description": "Examples for Zenlink V2 Aggregation Router API",
   "license": "LGPL-2.1-or-later",
@@ -20,8 +20,8 @@
     "zod": "3.22.2"
   },
   "devDependencies": {
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "dotenv": "^16.3.1",
     "eslint": "^8.51.0",
     "esno": "^0.17.0",

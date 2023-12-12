@@ -1,5 +1,5 @@
 {
-  "extends": "@zenlink-interface/typescript-config/base.json",
+  "extends": "@crypto-dex-sdk/typescript-config/base.json",
   "compilerOptions": {
     "target": "es2020",
     "lib": ["ESNext"],

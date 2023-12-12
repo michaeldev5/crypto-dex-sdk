@@ -1,4 +1,4 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import type * as React from 'react'
 
 import { AstarCircle } from './AstarCircle'

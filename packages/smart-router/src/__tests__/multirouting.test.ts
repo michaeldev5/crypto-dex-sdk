@@ -4,7 +4,7 @@ import { expect, describe, it } from 'vitest'
 import { findMultiRouteExactIn } from "../routers"
 import { BigNumber } from "@ethersproject/bignumber"
 import { performance } from "perf_hooks"
-import { BaseToken, RouteStatus, SplitMultiRoute } from "@zenlink-interface/amm"
+import { BaseToken, RouteStatus, SplitMultiRoute } from "@crypto-dex-sdk/amm"
 
 const gasPrice = 1 * 200 * 1e-9
 

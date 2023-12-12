@@ -1,6 +1,6 @@
 import type { ApolloClientOptions, NormalizedCacheObject } from '@apollo/client'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { createLink } from './link'
 
 export const DEFAULT_CLIENT_OPTIONS: Omit<ApolloClientOptions<NormalizedCacheObject>, 'cache'> = {

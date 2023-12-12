@@ -1,9 +1,9 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { Amount, Token } from '@zenlink-interface/currency'
-import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase } from '@zenlink-interface/wagmi'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Amount, Token } from '@crypto-dex-sdk/currency'
+import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
 import type { Dispatch, SetStateAction } from 'react'
 import { useMemo } from 'react'
-import { useAddLiquidityStableReview as useWagmiAddLiquidityStableReview } from '@zenlink-interface/wagmi'
+import { useAddLiquidityStableReview as useWagmiAddLiquidityStableReview } from '@crypto-dex-sdk/wagmi'
 import { isEvmNetwork } from '../config'
 
 interface UseAddLiquidityStableReviewParams {

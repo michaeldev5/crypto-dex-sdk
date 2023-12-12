@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { ParachainId, chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import {
   DAI,
   DAI_ADDRESS,
@@ -14,7 +14,7 @@ import {
   USDT_ADDRESS,
   WBTC,
   WETH9,
-} from '@zenlink-interface/currency'
+} from '@crypto-dex-sdk/currency'
 import type { Address, PublicClient } from 'viem'
 import { gmxVault } from '../abis'
 import type { PoolCode } from '../entities'

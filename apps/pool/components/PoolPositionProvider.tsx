@@ -1,10 +1,10 @@
-import { useAccount, useBalance } from '@zenlink-interface/compat'
-import type { Amount, Type } from '@zenlink-interface/currency'
-import type { Pool } from '@zenlink-interface/graph-client'
+import { useAccount, useBalance } from '@crypto-dex-sdk/compat'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { Pool } from '@crypto-dex-sdk/graph-client'
 import type { FC, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 
-import { useTokensFromPool } from '@zenlink-interface/shared'
+import { useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { useTokenAmountDollarValues, useUnderlyingTokenBalanceFromPool } from '../lib/hooks'
 
 interface PoolPositionContext {

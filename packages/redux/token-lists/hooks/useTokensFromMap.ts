@@ -1,5 +1,5 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { Token } from '@zenlink-interface/currency'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Token } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
 
 import type { ChainTokenMap } from '../types'

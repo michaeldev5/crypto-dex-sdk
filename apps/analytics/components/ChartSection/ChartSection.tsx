@@ -1,4 +1,4 @@
-import type { ParachainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { usePoolFilters } from 'components'
 import stringify from 'fast-json-stable-stringify'
 import type { FC } from 'react'

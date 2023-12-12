@@ -1,4 +1,4 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export const ENABLED_AGGREGATION_ROUTER_CHAINS = [
   ParachainId.MOONBEAM,

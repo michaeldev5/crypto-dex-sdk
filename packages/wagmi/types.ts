@@ -1,6 +1,6 @@
 import type { UseMutationOptions } from '@tanstack/react-query'
-import type { StableSwap } from '@zenlink-interface/amm'
-import type { Amount, Token } from '@zenlink-interface/currency'
+import type { StableSwap } from '@crypto-dex-sdk/amm'
+import type { Amount, Token } from '@crypto-dex-sdk/currency'
 import type { Account } from 'viem'
 import type { Address } from 'wagmi'
 import type { SendTransactionArgs, SendTransactionResult } from 'wagmi/actions'

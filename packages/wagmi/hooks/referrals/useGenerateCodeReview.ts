@@ -1,5 +1,5 @@
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
-import { useNotifications } from '@zenlink-interface/shared'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { useNotifications } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import {

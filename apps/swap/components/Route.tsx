@@ -1,9 +1,9 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
-import type { AggregatorTrade, BaseToken, PoolType } from '@zenlink-interface/amm'
-import { TradeVersion } from '@zenlink-interface/amm'
-import chains from '@zenlink-interface/chain'
-import type { Type } from '@zenlink-interface/currency'
-import { Native, Token } from '@zenlink-interface/currency'
+import type { AggregatorTrade, BaseToken, PoolType } from '@crypto-dex-sdk/amm'
+import { TradeVersion } from '@crypto-dex-sdk/amm'
+import chains from '@crypto-dex-sdk/chain'
+import type { Type } from '@crypto-dex-sdk/currency'
+import { Native, Token } from '@crypto-dex-sdk/currency'
 import {
   AppearOnMount,
   Chip,
@@ -13,12 +13,12 @@ import {
   Skeleton,
   Tooltip,
   Typography,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { Dispatch, FC, SetStateAction } from 'react'
 import { memo, useCallback } from 'react'
 import type { UseTradeOutput } from 'lib/hooks'
 import { Trans } from '@lingui/macro'
-import { uuid } from '@zenlink-interface/math'
+import { uuid } from '@crypto-dex-sdk/math'
 import { useTrade } from './TradeProvider'
 import { Sankey } from './Charts'
 

@@ -1,4 +1,4 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export const SUPPORTED_CHAINS = [
   ParachainId.ASTAR,

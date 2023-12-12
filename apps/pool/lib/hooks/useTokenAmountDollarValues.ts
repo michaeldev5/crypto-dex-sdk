@@ -1,7 +1,7 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { Amount, Type } from '@zenlink-interface/currency'
-import { usePrices } from '@zenlink-interface/shared'
-import { ZERO } from '@zenlink-interface/math'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { ZERO } from '@crypto-dex-sdk/math'
 import { useMemo } from 'react'
 
 interface Params {

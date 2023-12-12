@@ -1,4 +1,4 @@
-import type { ParachainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
 import React, { useMemo } from 'react'
 

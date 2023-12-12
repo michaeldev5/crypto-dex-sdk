@@ -1,5 +1,5 @@
 import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk'
-import type { Token } from '@zenlink-interface/currency'
+import type { Token } from '@crypto-dex-sdk/currency'
 import type { Address } from 'wagmi'
 import { useContractRead } from 'wagmi'
 import { useMemo } from 'react'

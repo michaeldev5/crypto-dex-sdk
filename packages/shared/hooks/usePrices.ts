@@ -1,5 +1,5 @@
-import { getAddress, isAddress } from '@zenlink-interface/format'
-import { Fraction } from '@zenlink-interface/math'
+import { getAddress, isAddress } from '@crypto-dex-sdk/format'
+import { Fraction } from '@crypto-dex-sdk/math'
 import { useMemo } from 'react'
 import { useQuery } from 'wagmi'
 import { parseUnits } from 'viem'

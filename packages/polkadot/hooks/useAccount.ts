@@ -1,4 +1,4 @@
-import { useSettings } from '@zenlink-interface/shared'
+import { useSettings } from '@crypto-dex-sdk/shared'
 import { useCallback, useMemo } from 'react'
 import type { Account } from './useAccounts'
 import { useAccounts } from './useAccounts'

@@ -1,6 +1,6 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import { useAccount, useBalance } from '@zenlink-interface/compat'
-import { ZLK } from '@zenlink-interface/currency'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { useAccount, useBalance } from '@crypto-dex-sdk/compat'
+import { ZLK } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
 
 export enum Tiers {

@@ -1,5 +1,5 @@
-import { AppSettings } from '@zenlink-interface/compat'
-import { App, AppType } from '@zenlink-interface/ui'
+import { AppSettings } from '@crypto-dex-sdk/compat'
+import { App, AppType } from '@crypto-dex-sdk/ui'
 import React from 'react'
 
 export function Header() {

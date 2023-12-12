@@ -1,4 +1,4 @@
-import type { Pair } from '@zenlink-interface/graph-client'
+import type { Pair } from '@crypto-dex-sdk/graph-client'
 import type { FC } from 'react'
 import { UnStakeSectionWidgetStandard } from './UnStakeSectionWidgetStandard'
 

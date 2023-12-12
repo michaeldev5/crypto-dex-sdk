@@ -1,5 +1,5 @@
 import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline'
-import type { ButtonProps } from '@zenlink-interface/ui'
+import type { ButtonProps } from '@crypto-dex-sdk/ui'
 import {
   AppearOnMount,
   CoinbaseWalletIcon,
@@ -13,7 +13,7 @@ import {
   TalismanIcon,
   Button as UIButton,
   WalletConnectIcon,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { ReactNode } from 'react'
 import React, { useCallback, useMemo } from 'react'
 import type { Connector, WindowProvider } from 'wagmi'

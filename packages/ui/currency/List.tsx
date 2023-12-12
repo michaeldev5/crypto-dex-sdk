@@ -1,4 +1,4 @@
-import type { Type } from '@zenlink-interface/currency'
+import type { Type } from '@crypto-dex-sdk/currency'
 import type { CSSProperties, FC, ReactElement } from 'react'
 import { memo, useCallback } from 'react'
 import AutoSizer from 'react-virtualized-auto-sizer'

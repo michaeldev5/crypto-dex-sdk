@@ -1,5 +1,5 @@
 import { getAddress, isAddress } from '@ethersproject/address'
-import { addressToZenlinkAssetId, isZenlinkAddress } from '@zenlink-interface/format'
+import { addressToZenlinkAssetId, isZenlinkAddress } from '@crypto-dex-sdk/format'
 import invariant from 'tiny-invariant'
 
 import { Currency } from './Currency'

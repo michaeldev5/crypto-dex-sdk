@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
-import type { Price, Type } from '@zenlink-interface/currency'
-import { usePrices } from '@zenlink-interface/shared'
-import { Typography, classNames } from '@zenlink-interface/ui'
+import type { Price, Type } from '@crypto-dex-sdk/currency'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement, ReactNode } from 'react'
 import { useCallback, useState } from 'react'
 

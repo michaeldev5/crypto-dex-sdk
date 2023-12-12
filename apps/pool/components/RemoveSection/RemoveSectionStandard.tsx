@@ -1,4 +1,4 @@
-import { calculateSlippageAmount } from '@zenlink-interface/amm'
+import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import {
   Approve,
   Checker,
@@ -7,13 +7,13 @@ import {
   usePair,
   usePairTotalSupply,
   useRemoveLiquidityStandardReview,
-} from '@zenlink-interface/compat'
-import { Amount } from '@zenlink-interface/currency'
-import type { Pair } from '@zenlink-interface/graph-client'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { Percent } from '@zenlink-interface/math'
-import { useNotifications, useSettings } from '@zenlink-interface/shared'
-import { Button, Dots } from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/compat'
+import { Amount } from '@crypto-dex-sdk/currency'
+import type { Pair } from '@crypto-dex-sdk/graph-client'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { Percent } from '@crypto-dex-sdk/math'
+import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
+import { Button, Dots } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useMemo, useState } from 'react'
 import { Trans } from '@lingui/macro'

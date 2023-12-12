@@ -1,5 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
-import { useMediaQuery } from '@zenlink-interface/hooks'
+import { useMediaQuery } from '@crypto-dex-sdk/hooks'
 
 type Breackpoints = 'sm' | 'md' | 'lg' | 'xl' | '2xl'
 

@@ -1,5 +1,5 @@
-import { STANDARD_SWAP_FEE_NUMBER } from '@zenlink-interface/amm'
-import { chainName, chainShortNameToChainId } from '@zenlink-interface/chain'
+import { STANDARD_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
+import { chainName, chainShortNameToChainId } from '@crypto-dex-sdk/chain'
 import omit from 'lodash.omit'
 import { fetchPairById } from '../../queries'
 import type { Pair, PairQueryData, PoolFarm } from '../../types'

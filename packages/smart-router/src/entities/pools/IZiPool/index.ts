@@ -1,4 +1,4 @@
-import type { BaseToken } from '@zenlink-interface/amm'
+import type { BaseToken } from '@crypto-dex-sdk/amm'
 import { BigNumber } from '@ethersproject/bignumber'
 import invariant from 'tiny-invariant'
 import { BasePool } from '../BasePool'

@@ -1,4 +1,4 @@
-import type { ButtonProps, NotificationData } from '@zenlink-interface/ui'
+import type { ButtonProps, NotificationData } from '@crypto-dex-sdk/ui'
 import type { ReactElement } from 'react'
 
 import type { ApprovalState } from '../../hooks'

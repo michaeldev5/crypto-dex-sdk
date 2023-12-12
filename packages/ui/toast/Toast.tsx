@@ -1,4 +1,4 @@
-import type { ParachainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { nanoid } from 'nanoid'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'

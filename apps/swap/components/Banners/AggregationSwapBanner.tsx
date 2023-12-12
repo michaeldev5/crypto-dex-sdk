@@ -1,5 +1,5 @@
-import { useSettings } from '@zenlink-interface/shared'
-import { AppearOnMount, Button, IconButton, Link, Typography, classNames, useBreakpoint } from '@zenlink-interface/ui'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import { AppearOnMount, Button, IconButton, Link, Typography, classNames, useBreakpoint } from '@crypto-dex-sdk/ui'
 import { CpuChipIcon, XCircleIcon } from '@heroicons/react/24/solid'
 import { type FC, useCallback } from 'react'
 import { Trans } from '@lingui/macro'

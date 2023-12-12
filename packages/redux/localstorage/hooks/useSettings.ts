@@ -1,7 +1,7 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useDynamicObject } from '@zenlink-interface/hooks'
+import { useDynamicObject } from '@crypto-dex-sdk/hooks'
 import type { StorageContext } from '../context'
 import type { GasPrice, StorageState, WithStorageState } from '../types'
 

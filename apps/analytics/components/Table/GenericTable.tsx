@@ -1,5 +1,5 @@
 import { ArrowDownIcon, ArrowUpIcon } from '@heroicons/react/24/solid'
-import { LoadingOverlay, Table, Tooltip, Typography, classNames } from '@zenlink-interface/ui'
+import { LoadingOverlay, Table, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { ColumnDef, Table as ReactTableType } from '@tanstack/react-table'
 import { flexRender } from '@tanstack/react-table'
 import type { ReactNode } from 'react'

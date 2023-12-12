@@ -1,9 +1,9 @@
-import { ParachainId } from '@zenlink-interface/chain'
-import type { Token } from '@zenlink-interface/currency'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Token } from '@crypto-dex-sdk/currency'
 import type { FC, ReactNode } from 'react'
-import { TokenListImportChecker as WagmiTokenListImportChecker } from '@zenlink-interface/wagmi'
-import { TokenListImportChecker as BifrostTokenListImportChecker } from '@zenlink-interface/parachains-bifrost'
-import { TokenListImportChecker as AmplitudeTokenListImportChecker } from '@zenlink-interface/parachains-amplitude'
+import { TokenListImportChecker as WagmiTokenListImportChecker } from '@crypto-dex-sdk/wagmi'
+import { TokenListImportChecker as BifrostTokenListImportChecker } from '@crypto-dex-sdk/parachains-bifrost'
+import { TokenListImportChecker as AmplitudeTokenListImportChecker } from '@crypto-dex-sdk/parachains-amplitude'
 import { isEvmNetwork } from '../../config'
 
 interface TokenListImportCheckerProps {

@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/token-lists",
+  "name": "@crypto-dex-sdk/token-lists",
   "version": "0.0.0",
   "description": "Zenlink Token Lists",
   "author": "zenlinkpro",
@@ -22,17 +22,17 @@
   },
   "peerDependencies": {
     "@ethersproject/address": "^5.7.0",
-    "@zenlink-interface/currency": "workspace:*",
-    "@zenlink-interface/format": "workspace:*",
-    "@zenlink-interface/math": "workspace:*"
+    "@crypto-dex-sdk/currency": "workspace:*",
+    "@crypto-dex-sdk/format": "workspace:*",
+    "@crypto-dex-sdk/math": "workspace:*"
   },
   "devDependencies": {
     "@ethersproject/address": "^5.7.0",
-    "@zenlink-interface/currency": "workspace:*",
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/format": "workspace:*",
-    "@zenlink-interface/math": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/currency": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/format": "workspace:*",
+    "@crypto-dex-sdk/math": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "eslint": "^8.55.0",
     "tiny-invariant": "^1.3.1",
     "typescript": "5.3.2"

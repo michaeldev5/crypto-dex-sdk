@@ -1,8 +1,8 @@
-import type { Token, Type } from '@zenlink-interface/currency'
-import { useIsSmScreen } from '@zenlink-interface/hooks'
-import type { Fraction } from '@zenlink-interface/math'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
+import type { Fraction } from '@crypto-dex-sdk/math'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
-import chain from '@zenlink-interface/chain'
+import chain from '@crypto-dex-sdk/chain'
 import {
   Currency,
   DEFAULT_INPUT_PADDING,
@@ -15,15 +15,15 @@ import {
   Typography,
   Currency as UICurrency,
   classNames,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useCallback } from 'react'
 import { XCircleIcon } from '@heroicons/react/24/solid'
 import { AddressZero } from '@ethersproject/constants'
-import { TokenSelectorSettingsOverlay } from '@zenlink-interface/wagmi'
-import { COMMON_BASES } from '@zenlink-interface/router-config'
+import { TokenSelectorSettingsOverlay } from '@crypto-dex-sdk/wagmi'
+import { COMMON_BASES } from '@crypto-dex-sdk/router-config'
 import { Trans, t } from '@lingui/macro'
-import { uuid } from '@zenlink-interface/math'
+import { uuid } from '@crypto-dex-sdk/math'
 import type { BalanceMap } from '../../hooks/useBalance/types'
 import { TokenListFilterByQuery } from '../TokenListFilterByQuery'
 import { isEvmNetwork } from '../../config'

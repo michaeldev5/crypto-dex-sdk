@@ -1,9 +1,9 @@
-import { Amount, Native, Token } from '@zenlink-interface/currency'
-import type { Type } from '@zenlink-interface/currency'
-import type { Pair, Pool, SingleTokenLock, StableSwap } from '@zenlink-interface/graph-client'
-import { POOL_TYPE } from '@zenlink-interface/graph-client'
+import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
+import type { Type } from '@crypto-dex-sdk/currency'
+import type { Pair, Pool, SingleTokenLock, StableSwap } from '@crypto-dex-sdk/graph-client'
+import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
 import { useMemo } from 'react'
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export interface TokensFromPool {
   tokens: (Token | Type)[]

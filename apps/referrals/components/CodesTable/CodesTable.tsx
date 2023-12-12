@@ -1,5 +1,5 @@
 import { getCoreRowModel, useReactTable } from '@tanstack/react-table'
-import { GenericTable } from '@zenlink-interface/ui'
+import { GenericTable } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useMemo } from 'react'
 import { CODES_COLUMN } from './Cells/columns'

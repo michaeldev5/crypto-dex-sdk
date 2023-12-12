@@ -1,8 +1,8 @@
 import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
 import type { PaginationState, SortingState } from '@tanstack/react-table'
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { Pool } from '@zenlink-interface/graph-client'
-import { Table, useBreakpoint } from '@zenlink-interface/ui'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Pool } from '@crypto-dex-sdk/graph-client'
+import { Table, useBreakpoint } from '@crypto-dex-sdk/ui'
 import {
   APR_COLUMN,
   FEES_24H_COLUMN,

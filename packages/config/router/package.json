@@ -1,5 +1,5 @@
 {
-  "name": "@zenlink-interface/router-config",
+  "name": "@crypto-dex-sdk/router-config",
   "version": "0.0.0",
   "description": "Zenlink Interface Router Config",
   "author": "zenlinkpro",
@@ -24,12 +24,12 @@
     "lint": "TIMING=1 eslint ./**/*.ts* --fix"
   },
   "dependencies": {
-    "@zenlink-interface/chain": "workspace:*",
-    "@zenlink-interface/currency": "workspace:*"
+    "@crypto-dex-sdk/chain": "workspace:*",
+    "@crypto-dex-sdk/currency": "workspace:*"
   },
   "devDependencies": {
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "tsup": "8.0.1",
     "typescript": "5.3.2"
   }

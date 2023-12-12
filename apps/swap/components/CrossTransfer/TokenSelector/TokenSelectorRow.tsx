@@ -1,8 +1,8 @@
-import type { Amount, Type } from '@zenlink-interface/currency'
-import { useInViewport } from '@zenlink-interface/hooks'
-import type { Fraction } from '@zenlink-interface/math'
-import { ZERO } from '@zenlink-interface/math'
-import { Currency, Typography, classNames } from '@zenlink-interface/ui'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import { useInViewport } from '@crypto-dex-sdk/hooks'
+import type { Fraction } from '@crypto-dex-sdk/math'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { Currency, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { CSSProperties, FC } from 'react'
 import { memo, useCallback, useRef } from 'react'
 

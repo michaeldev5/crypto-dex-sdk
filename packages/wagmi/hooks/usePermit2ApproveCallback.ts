@@ -1,4 +1,4 @@
-import type { Amount, Currency } from '@zenlink-interface/currency'
+import type { Amount, Currency } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
 import type { Address } from 'wagmi'
 import { useAccount, useNetwork, useSignTypedData } from 'wagmi'

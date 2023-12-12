@@ -1,8 +1,8 @@
 import { t } from '@lingui/macro'
 import { useWallets } from '@polkadot-onboard/react'
-import { ConnectorSource, connectors, useProviderAccounts } from '@zenlink-interface/polkadot'
-import { useSettings } from '@zenlink-interface/shared'
-import type { ButtonProps } from '@zenlink-interface/ui'
+import { ConnectorSource, connectors, useProviderAccounts } from '@crypto-dex-sdk/polkadot'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import type { ButtonProps } from '@crypto-dex-sdk/ui'
 import {
   AppearOnMount,
   Menu,
@@ -11,7 +11,7 @@ import {
   TalismanIcon,
   Button as UIButton,
   WalletConnectIcon,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
 import { type ReactNode, useCallback, useEffect, useState } from 'react'
 
 const Icons: Record<string, ReactNode> = {
