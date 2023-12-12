@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/smart-router",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zenlink Smart Order Router",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -28,13 +28,13 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@ethersproject/bignumber": "^5.7.0",
-    "@ethersproject/solidity": "^5.7.0",
     "@crypto-dex-sdk/amm": "workspace:*",
     "@crypto-dex-sdk/chain": "workspace:*",
     "@crypto-dex-sdk/currency": "workspace:*",
     "@crypto-dex-sdk/math": "workspace:*",
     "@crypto-dex-sdk/wagmi-config": "workspace:*",
+    "@ethersproject/bignumber": "^5.7.0",
+    "@ethersproject/solidity": "^5.7.0",
     "date-fns": "^2.30.0",
     "ethereum-multicall": "^2.21.0",
     "ethers": "^5.7.2",
@@ -44,10 +44,10 @@
     "viem": "1.19.11"
   },
   "devDependencies": {
-    "@types/node": "^20.10.3",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/router-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/node": "^20.10.3",
     "eslint": "^8.55.0",
     "tsup": "^8.0.1",
     "typescript": "5.3.2",

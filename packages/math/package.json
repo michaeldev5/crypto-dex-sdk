@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/math",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zenlink Math",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -31,9 +31,9 @@
     "toformat": "^2.0.0"
   },
   "devDependencies": {
-    "@types/big.js": "^6.2.2",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/big.js": "^6.2.2",
     "eslint": "^8.55.0",
     "tsup": "^8.0.1",
     "typescript": "5.3.2",

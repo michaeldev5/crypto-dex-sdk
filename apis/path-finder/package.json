@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/path-finder-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zenlink Interface Path Finder Api",
   "license": "LGPL-2.1-or-later",
   "keywords": [
@@ -14,12 +14,12 @@
     "lint": "TIMING=1 eslint . --fix"
   },
   "dependencies": {
-    "@vercel/node": "^3.0.11",
     "@crypto-dex-sdk/chain": "workspace:*",
     "@crypto-dex-sdk/currency": "workspace:*",
     "@crypto-dex-sdk/smart-router": "workspace:*",
     "@crypto-dex-sdk/token-lists": "workspace:*",
     "@crypto-dex-sdk/wagmi-config": "workspace:*",
+    "@vercel/node": "^3.0.11",
     "ethers": "^5.7.2",
     "fast-json-stable-stringify": "^2.1.0",
     "viem": "1.19.11",

@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/polkadot",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zenlink Polkadot Api",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -21,6 +21,11 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@crypto-dex-sdk/graph-client": "workspace:*",
+    "@crypto-dex-sdk/hooks": "workspace:*",
+    "@crypto-dex-sdk/polkadot-config": "workspace:*",
+    "@crypto-dex-sdk/shared": "workspace:*",
+    "@crypto-dex-sdk/ui": "workspace:*",
     "@polkadot-onboard/core": "^1.1.0",
     "@polkadot-onboard/injected-wallets": "^1.1.0",
     "@polkadot-onboard/react": "^1.1.0",
@@ -41,18 +46,13 @@
     "@polkadot/types-support": "^10.9.1",
     "@polkadot/ui-keyring": "^3.6.3",
     "@polkadot/util": "^12.5.1",
-    "@polkadot/util-crypto": "^12.5.1",
-    "@crypto-dex-sdk/graph-client": "workspace:*",
-    "@crypto-dex-sdk/hooks": "workspace:*",
-    "@crypto-dex-sdk/polkadot-config": "workspace:*",
-    "@crypto-dex-sdk/shared": "workspace:*",
-    "@crypto-dex-sdk/ui": "workspace:*"
+    "@polkadot/util-crypto": "^12.5.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.41",
-    "@types/react-dom": "^18.2.17",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/react": "^18.2.41",
+    "@types/react-dom": "^18.2.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "5.3.2",

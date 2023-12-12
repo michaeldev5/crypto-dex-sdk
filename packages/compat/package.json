@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/compat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zenlink Interface Compat",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -23,13 +23,6 @@
     "viem": "1.19.11"
   },
   "dependencies": {
-    "@ethersproject/constants": "^5.7.0",
-    "@headlessui/react": "^1.7.17",
-    "@heroicons/react": "2.0.17",
-    "@lingui/core": "4.6.0",
-    "@lingui/macro": "4.6.0",
-    "@lingui/react": "4.6.0",
-    "@reduxjs/toolkit": "^1.9.7",
     "@crypto-dex-sdk/amm": "workspace:*",
     "@crypto-dex-sdk/chain": "workspace:*",
     "@crypto-dex-sdk/currency": "workspace:*",
@@ -41,6 +34,13 @@
     "@crypto-dex-sdk/polkadot": "workspace:*",
     "@crypto-dex-sdk/redux-localstorage": "workspace:*",
     "@crypto-dex-sdk/router-config": "workspace:*",
+    "@ethersproject/constants": "^5.7.0",
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "2.0.17",
+    "@lingui/core": "4.6.0",
+    "@lingui/macro": "4.6.0",
+    "@lingui/react": "4.6.0",
+    "@reduxjs/toolkit": "^1.9.7",
     "@crypto-dex-sdk/shared": "workspace:*",
     "@crypto-dex-sdk/ui": "workspace:*",
     "@crypto-dex-sdk/wagmi": "workspace:*",
@@ -51,10 +51,10 @@
     "wagmi": "1.4.7"
   },
   "devDependencies": {
-    "@types/react": "^18.2.41",
-    "@types/react-dom": "^18.2.17",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/react": "^18.2.41",
+    "@types/react-dom": "^18.2.17",
     "eslint": "^8.55.0",
     "ethers": "^5.7.2",
     "next": "14.0.3",

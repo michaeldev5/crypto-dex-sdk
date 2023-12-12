@@ -1,6 +1,6 @@
 {
   "name": "crypto-dex-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@8.6.2",
   "license": "LGPL-2.1-or-later",
   "repository": "https://github.com/michaeldev5/crypto-dex-sdk",
@@ -33,9 +33,9 @@
     "prepare": "pnpm run i18n:compile"
   },
   "devDependencies": {
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@lingui/cli": "^4.6.0",
     "@types/node": "^20.10.3",
-    "@crypto-dex-sdk/eslint-config": "workspace:*",
     "chatgpt": "^5.2.5",
     "dotenv-cli": "^7.3.0",
     "eslint": "^8.55.0",

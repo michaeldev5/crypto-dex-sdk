@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/token-price-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "lint": "TIMING=1 eslint --fix ."
   },

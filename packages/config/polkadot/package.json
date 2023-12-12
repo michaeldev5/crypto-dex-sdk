@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/polkadot-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Zenlink Polkadot Config",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -22,9 +22,9 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "@polkadot/api": "^10.9.1",
-    "@pendulum-chain/types": "0.3.4",
     "@crypto-dex-sdk/chain": "workspace:*",
+    "@pendulum-chain/types": "0.3.4",
+    "@polkadot/api": "^10.9.1",
     "@zenlink-types/bifrost": "1.7.6"
   },
   "devDependencies": {
