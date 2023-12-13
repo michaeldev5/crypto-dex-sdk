@@ -1559,6 +1559,9 @@ importers:
       '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../../math
+      '@crypto-dex-sdk/parachains-bifrost':
+        specifier: workspace:*
+        version: link:../bifrost
       '@crypto-dex-sdk/polkadot':
         specifier: workspace:*
         version: link:../../polkadot
