@@ -1,9 +1,9 @@
 import type { ZenlinkProtocolPrimitivesAssetId } from '@crypto-dex-sdk/format'
 import { addressToZenlinkAssetId, zenlinkAssetIdToAddress } from '@crypto-dex-sdk/format'
 import { ParachainId } from '@crypto-dex-sdk/chain'
+import { parseNodePrimitivesCurrency as amplitudeParseNodePrimitivesCurrency } from '@crypto-dex-sdk/parachains-amplitude/libs/formats/currency'
 import type { NodePrimitivesCurrency } from '../../types'
 import { pairAddressToAssets } from '../constants'
-import { parseNodePrimitivesCurrency as amplitudeParseNodePrimitivesCurrency } from '../../../amplitude/libs/formats/currency'
 
 export const NodeCurrencyId: Record<number, string> = {
   0: 'Native',

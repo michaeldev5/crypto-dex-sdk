@@ -1,22 +1,18 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 importers:
 
   .:
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:packages/config/eslint
       '@lingui/cli':
         specifier: ^4.6.0
         version: 4.6.0
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:packages/config/eslint
       chatgpt:
         specifier: ^5.2.5
         version: 5.2.5
@@ -47,9 +43,6 @@ importers:
 
   apis/path-finder:
     dependencies:
-      '@vercel/node':
-        specifier: ^3.0.11
-        version: 3.0.11
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
@@ -65,6 +58,9 @@ importers:
       '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../../packages/config/wagmi
+      '@vercel/node':
+        specifier: ^3.0.11
+        version: 3.0.11
       ethers:
         specifier: ^5.7.2
         version: 5.7.2
@@ -99,15 +95,15 @@ importers:
 
   apis/token-price:
     dependencies:
-      '@vercel/node':
-        specifier: ^3.0.11
-        version: 3.0.11
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
       '@crypto-dex-sdk/graph-client':
         specifier: workspace:*
         version: link:../../packages/graph-client
+      '@vercel/node':
+        specifier: ^3.0.11
+        version: 3.0.11
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -133,15 +129,6 @@ importers:
 
   apis/zenlink-stats:
     dependencies:
-      '@polkadot/api':
-        specifier: ^10.9.1
-        version: 10.9.1
-      '@vercel/node':
-        specifier: ^3.0.11
-        version: 3.0.11
-      '@wagmi/core':
-        specifier: 1.1.1-cjs
-        version: 1.1.1-cjs(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
@@ -160,6 +147,15 @@ importers:
       '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../../packages/config/wagmi
+      '@polkadot/api':
+        specifier: ^10.9.1
+        version: 10.9.1
+      '@vercel/node':
+        specifier: ^3.0.11
+        version: 3.0.11
+      '@wagmi/core':
+        specifier: 1.1.1-cjs
+        version: 1.1.1-cjs(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)
       axios:
         specifier: ^1.6.2
         version: 1.6.2
@@ -191,57 +187,6 @@ importers:
 
   apps/analytics:
     dependencies:
-      '@ethersproject/abi':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/address':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/bignumber':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/bytes':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/constants':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/contracts':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/experimental':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/providers':
-        specifier: ^5.7.2
-        version: 5.7.2
-      '@ethersproject/solidity':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@headlessui/react':
-        specifier: ^1.7.17
-        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
-      '@heroicons/react':
-        specifier: 2.0.17
-        version: 2.0.17(react@18.2.0)
-      '@lingui/core':
-        specifier: 4.6.0
-        version: 4.6.0
-      '@lingui/macro':
-        specifier: 4.6.0
-        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
-      '@lingui/react':
-        specifier: 4.6.0
-        version: 4.6.0(react@18.2.0)
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@tanstack/react-table':
-        specifier: 8.10.7
-        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
-      '@vercel/analytics':
-        specifier: ^1.1.1
-        version: 1.1.1
       '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
@@ -293,6 +238,57 @@ importers:
       '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
+      '@ethersproject/abi':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/address':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/bignumber':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/bytes':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/constants':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/contracts':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/experimental':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/providers':
+        specifier: ^5.7.2
+        version: 5.7.2
+      '@ethersproject/solidity':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@headlessui/react':
+        specifier: ^1.7.17
+        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+      '@heroicons/react':
+        specifier: 2.0.17
+        version: 2.0.17(react@18.2.0)
+      '@lingui/core':
+        specifier: 4.6.0
+        version: 4.6.0
+      '@lingui/macro':
+        specifier: 4.6.0
+        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
+      '@lingui/react':
+        specifier: 4.6.0
+        version: 4.6.0(react@18.2.0)
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+      '@tanstack/react-table':
+        specifier: 8.10.7
+        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
+      '@vercel/analytics':
+        specifier: ^1.1.1
+        version: 1.1.1
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -342,6 +338,15 @@ importers:
         specifier: 1.4.7
         version: 1.4.7(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)(zod@3.22.2)
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config/eslint
+      '@crypto-dex-sdk/nextjs-config':
+        specifier: workspace:*
+        version: link:../../packages/config/nextjs
+      '@crypto-dex-sdk/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config/typescript
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
@@ -354,15 +359,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config/eslint
-      '@crypto-dex-sdk/nextjs-config':
-        specifier: workspace:*
-        version: link:../../packages/config/nextjs
-      '@crypto-dex-sdk/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config/typescript
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
@@ -387,15 +383,15 @@ importers:
 
   apps/app:
     dependencies:
+      '@crypto-dex-sdk/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       '@heroicons/react':
         specifier: 2.0.17
         version: 2.0.17(react@18.2.0)
       '@vercel/analytics':
         specifier: ^1.1.1
         version: 1.1.1
-      '@crypto-dex-sdk/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       next:
         specifier: 14.0.3
         version: 14.0.3(@babel/core@7.22.5)(babel-plugin-macros@3.1.0)(react-dom@18.2.0)(react@18.2.0)
@@ -409,12 +405,6 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      '@types/node':
-        specifier: ^20.10.3
-        version: 20.10.3
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config/eslint
@@ -424,6 +414,12 @@ importers:
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
+      '@types/node':
+        specifier: ^20.10.3
+        version: 20.10.3
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
@@ -442,57 +438,6 @@ importers:
 
   apps/pool:
     dependencies:
-      '@ethersproject/abi':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/address':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/bignumber':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/bytes':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/constants':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/contracts':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/experimental':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/providers':
-        specifier: ^5.7.2
-        version: 5.7.2
-      '@ethersproject/solidity':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@headlessui/react':
-        specifier: ^1.7.17
-        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
-      '@heroicons/react':
-        specifier: 2.0.17
-        version: 2.0.17(react@18.2.0)
-      '@lingui/core':
-        specifier: 4.6.0
-        version: 4.6.0
-      '@lingui/macro':
-        specifier: 4.6.0
-        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
-      '@lingui/react':
-        specifier: 4.6.0
-        version: 4.6.0(react@18.2.0)
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@tanstack/react-table':
-        specifier: 8.10.7
-        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
-      '@vercel/analytics':
-        specifier: ^1.1.1
-        version: 1.1.1
       '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
@@ -544,6 +489,57 @@ importers:
       '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
+      '@ethersproject/abi':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/address':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/bignumber':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/bytes':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/constants':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/contracts':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/experimental':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/providers':
+        specifier: ^5.7.2
+        version: 5.7.2
+      '@ethersproject/solidity':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@headlessui/react':
+        specifier: ^1.7.17
+        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+      '@heroicons/react':
+        specifier: 2.0.17
+        version: 2.0.17(react@18.2.0)
+      '@lingui/core':
+        specifier: 4.6.0
+        version: 4.6.0
+      '@lingui/macro':
+        specifier: 4.6.0
+        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
+      '@lingui/react':
+        specifier: 4.6.0
+        version: 4.6.0(react@18.2.0)
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+      '@tanstack/react-table':
+        specifier: 8.10.7
+        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
+      '@vercel/analytics':
+        specifier: ^1.1.1
+        version: 1.1.1
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -593,6 +589,15 @@ importers:
         specifier: 1.4.7
         version: 1.4.7(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)(zod@3.22.2)
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config/eslint
+      '@crypto-dex-sdk/nextjs-config':
+        specifier: workspace:*
+        version: link:../../packages/config/nextjs
+      '@crypto-dex-sdk/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config/typescript
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
@@ -605,15 +610,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config/eslint
-      '@crypto-dex-sdk/nextjs-config':
-        specifier: workspace:*
-        version: link:../../packages/config/nextjs
-      '@crypto-dex-sdk/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config/typescript
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
@@ -638,39 +634,6 @@ importers:
 
   apps/referrals:
     dependencies:
-      '@ethersproject/address':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/constants':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/providers':
-        specifier: ^5.7.2
-        version: 5.7.2
-      '@headlessui/react':
-        specifier: ^1.7.17
-        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
-      '@heroicons/react':
-        specifier: 2.0.17
-        version: 2.0.17(react@18.2.0)
-      '@lingui/core':
-        specifier: 4.6.0
-        version: 4.6.0
-      '@lingui/macro':
-        specifier: 4.6.0
-        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
-      '@lingui/react':
-        specifier: 4.6.0
-        version: 4.6.0(react@18.2.0)
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@tanstack/react-table':
-        specifier: 8.10.7
-        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
-      '@vercel/analytics':
-        specifier: ^1.1.1
-        version: 1.1.1
       '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
@@ -713,6 +676,39 @@ importers:
       '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
+      '@ethersproject/address':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/constants':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/providers':
+        specifier: ^5.7.2
+        version: 5.7.2
+      '@headlessui/react':
+        specifier: ^1.7.17
+        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+      '@heroicons/react':
+        specifier: 2.0.17
+        version: 2.0.17(react@18.2.0)
+      '@lingui/core':
+        specifier: 4.6.0
+        version: 4.6.0
+      '@lingui/macro':
+        specifier: 4.6.0
+        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
+      '@lingui/react':
+        specifier: 4.6.0
+        version: 4.6.0(react@18.2.0)
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+      '@tanstack/react-table':
+        specifier: 8.10.7
+        version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
+      '@vercel/analytics':
+        specifier: ^1.1.1
+        version: 1.1.1
       ethers:
         specifier: ^5.7.2
         version: 5.7.2
@@ -750,6 +746,15 @@ importers:
         specifier: 1.4.7
         version: 1.4.7(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)(zod@3.22.2)
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config/eslint
+      '@crypto-dex-sdk/nextjs-config':
+        specifier: workspace:*
+        version: link:../../packages/config/nextjs
+      '@crypto-dex-sdk/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config/typescript
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
@@ -762,15 +767,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config/eslint
-      '@crypto-dex-sdk/nextjs-config':
-        specifier: workspace:*
-        version: link:../../packages/config/nextjs
-      '@crypto-dex-sdk/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config/typescript
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
@@ -789,36 +785,6 @@ importers:
 
   apps/swap:
     dependencies:
-      '@ethersproject/address':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/constants':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/providers':
-        specifier: ^5.7.2
-        version: 5.7.2
-      '@headlessui/react':
-        specifier: ^1.7.17
-        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
-      '@heroicons/react':
-        specifier: 2.0.17
-        version: 2.0.17(react@18.2.0)
-      '@lingui/core':
-        specifier: 4.6.0
-        version: 4.6.0
-      '@lingui/macro':
-        specifier: 4.6.0
-        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
-      '@lingui/react':
-        specifier: 4.6.0
-        version: 4.6.0(react@18.2.0)
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@vercel/analytics':
-        specifier: ^1.1.1
-        version: 1.1.1
       '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../../packages/amm
@@ -870,6 +836,36 @@ importers:
       '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../../packages/wagmi
+      '@ethersproject/address':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/constants':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/providers':
+        specifier: ^5.7.2
+        version: 5.7.2
+      '@headlessui/react':
+        specifier: ^1.7.17
+        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+      '@heroicons/react':
+        specifier: 2.0.17
+        version: 2.0.17(react@18.2.0)
+      '@lingui/core':
+        specifier: 4.6.0
+        version: 4.6.0
+      '@lingui/macro':
+        specifier: 4.6.0
+        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
+      '@lingui/react':
+        specifier: 4.6.0
+        version: 4.6.0(react@18.2.0)
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+      '@vercel/analytics':
+        specifier: ^1.1.1
+        version: 1.1.1
       echarts:
         specifier: ^5.4.3
         version: 5.4.3
@@ -916,6 +912,15 @@ importers:
         specifier: 3.22.2
         version: 3.22.2
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config/eslint
+      '@crypto-dex-sdk/nextjs-config':
+        specifier: workspace:*
+        version: link:../../packages/config/nextjs
+      '@crypto-dex-sdk/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config/typescript
       '@types/node':
         specifier: ^20.10.3
         version: 20.10.3
@@ -928,15 +933,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config/eslint
-      '@crypto-dex-sdk/nextjs-config':
-        specifier: workspace:*
-        version: link:../../packages/config/nextjs
-      '@crypto-dex-sdk/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config/typescript
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
@@ -989,6 +985,15 @@ importers:
 
   packages/amm:
     dependencies:
+      '@crypto-dex-sdk/chain':
+        specifier: workspace:*
+        version: link:../chain
+      '@crypto-dex-sdk/currency':
+        specifier: workspace:*
+        version: link:../currency
+      '@crypto-dex-sdk/math':
+        specifier: workspace:*
+        version: link:../math
       '@ethersproject/abi':
         specifier: ^5.7.0
         version: 5.7.0
@@ -1004,15 +1009,6 @@ importers:
       '@ethersproject/solidity':
         specifier: ^5.7.0
         version: 5.7.0
-      '@crypto-dex-sdk/chain':
-        specifier: workspace:*
-        version: link:../chain
-      '@crypto-dex-sdk/currency':
-        specifier: workspace:*
-        version: link:../currency
-      '@crypto-dex-sdk/math':
-        specifier: workspace:*
-        version: link:../math
       ethers:
         specifier: ^5.7.2
         version: 5.7.2
@@ -1023,15 +1019,15 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3
     devDependencies:
-      '@types/node':
-        specifier: ^20.10.3
-        version: 20.10.3
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/node':
+        specifier: ^20.10.3
+        version: 20.10.3
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -1059,27 +1055,6 @@ importers:
 
   packages/compat:
     dependencies:
-      '@ethersproject/constants':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@headlessui/react':
-        specifier: ^1.7.17
-        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
-      '@heroicons/react':
-        specifier: 2.0.17
-        version: 2.0.17(react@18.2.0)
-      '@lingui/core':
-        specifier: 4.6.0
-        version: 4.6.0
-      '@lingui/macro':
-        specifier: 4.6.0
-        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
-      '@lingui/react':
-        specifier: 4.6.0
-        version: 4.6.0(react@18.2.0)
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
       '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../amm
@@ -1122,6 +1097,27 @@ importers:
       '@crypto-dex-sdk/wagmi':
         specifier: workspace:*
         version: link:../wagmi
+      '@ethersproject/constants':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@headlessui/react':
+        specifier: ^1.7.17
+        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+      '@heroicons/react':
+        specifier: 2.0.17
+        version: 2.0.17(react@18.2.0)
+      '@lingui/core':
+        specifier: 4.6.0
+        version: 4.6.0
+      '@lingui/macro':
+        specifier: 4.6.0
+        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
+      '@lingui/react':
+        specifier: 4.6.0
+        version: 4.6.0(react@18.2.0)
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
       '@zenlink-types/bifrost':
         specifier: 1.7.6
         version: 1.7.6
@@ -1138,18 +1134,18 @@ importers:
         specifier: 1.4.7
         version: 1.4.7(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)(zod@3.22.2)
     devDependencies:
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -1239,15 +1235,15 @@ importers:
 
   packages/config/polkadot:
     dependencies:
+      '@crypto-dex-sdk/chain':
+        specifier: workspace:*
+        version: link:../../chain
       '@pendulum-chain/types':
         specifier: 0.3.4
         version: 0.3.4(@polkadot/api@10.9.1)
       '@polkadot/api':
         specifier: ^10.9.1
         version: 10.9.1
-      '@crypto-dex-sdk/chain':
-        specifier: workspace:*
-        version: link:../../chain
       '@zenlink-types/bifrost':
         specifier: 1.7.6
         version: 1.7.6
@@ -1304,12 +1300,6 @@ importers:
 
   packages/currency:
     dependencies:
-      '@ethersproject/address':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/units':
-        specifier: ^5.7.0
-        version: 5.7.0
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
@@ -1319,6 +1309,12 @@ importers:
       '@crypto-dex-sdk/math':
         specifier: workspace:*
         version: link:../math
+      '@ethersproject/address':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/units':
+        specifier: ^5.7.0
+        version: 5.7.0
       lodash.flatmap:
         specifier: ^4.5.0
         version: 4.5.0
@@ -1326,6 +1322,12 @@ importers:
         specifier: ^1.3.1
         version: 1.3.1
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:../config/eslint
+      '@crypto-dex-sdk/typescript-config':
+        specifier: workspace:*
+        version: link:../config/typescript
       '@types/lodash.flatmap':
         specifier: ^4.5.9
         version: 4.5.9
@@ -1335,12 +1337,6 @@ importers:
       '@types/react-dom':
         specifier: ^18.2.17
         version: 18.2.17
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:../config/eslint
-      '@crypto-dex-sdk/typescript-config':
-        specifier: workspace:*
-        version: link:../config/typescript
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1366,15 +1362,15 @@ importers:
         specifier: ^2.0.6
         version: 2.0.6
     devDependencies:
-      '@types/numeral':
-        specifier: ^2.0.5
-        version: 2.0.5
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/numeral':
+        specifier: ^2.0.5
+        version: 2.0.5
       tsup:
         specifier: ^8.0.1
         version: 8.0.1(ts-node@10.9.1)(typescript@5.3.2)
@@ -1387,6 +1383,18 @@ importers:
       '@apollo/client':
         specifier: ^3.8.8
         version: 3.8.8(graphql@16.8.1)
+      '@crypto-dex-sdk/amm':
+        specifier: workspace:*
+        version: link:../amm
+      '@crypto-dex-sdk/chain':
+        specifier: workspace:*
+        version: link:../chain
+      '@crypto-dex-sdk/graph-config':
+        specifier: workspace:*
+        version: link:../config/graph
+      '@crypto-dex-sdk/wagmi-config':
+        specifier: workspace:*
+        version: link:../config/wagmi
       '@graphql-codegen/cli':
         specifier: ^5.0.0
         version: 5.0.0(@babel/core@7.22.5)(@types/node@20.10.3)(graphql@16.8.1)
@@ -1402,18 +1410,6 @@ importers:
       '@polkadot/util-crypto':
         specifier: ^11.1.3
         version: 11.1.3(@polkadot/util@11.1.3)
-      '@crypto-dex-sdk/amm':
-        specifier: workspace:*
-        version: link:../amm
-      '@crypto-dex-sdk/chain':
-        specifier: workspace:*
-        version: link:../chain
-      '@crypto-dex-sdk/graph-config':
-        specifier: workspace:*
-        version: link:../config/graph
-      '@crypto-dex-sdk/wagmi-config':
-        specifier: workspace:*
-        version: link:../config/wagmi
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -1427,18 +1423,18 @@ importers:
         specifier: ^4.5.0
         version: 4.5.0
     devDependencies:
-      '@types/lodash.omit':
-        specifier: ^4.5.9
-        version: 4.5.9
-      '@types/numeral':
-        specifier: ^2.0.5
-        version: 2.0.5
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/lodash.omit':
+        specifier: ^4.5.9
+        version: 4.5.9
+      '@types/numeral':
+        specifier: ^2.0.5
+        version: 2.0.5
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -1467,12 +1463,6 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2(react@18.2.0)
     devDependencies:
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
@@ -1488,6 +1478,12 @@ importers:
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1521,15 +1517,15 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
     devDependencies:
-      '@types/big.js':
-        specifier: ^6.2.2
-        version: 6.2.2
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/big.js':
+        specifier: ^6.2.2
+        version: 6.2.2
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -1545,6 +1541,33 @@ importers:
 
   packages/parachains-impl/amplitude:
     dependencies:
+      '@crypto-dex-sdk/amm':
+        specifier: workspace:*
+        version: link:../../amm
+      '@crypto-dex-sdk/chain':
+        specifier: workspace:*
+        version: link:../../chain
+      '@crypto-dex-sdk/currency':
+        specifier: workspace:*
+        version: link:../../currency
+      '@crypto-dex-sdk/format':
+        specifier: workspace:*
+        version: link:../../format
+      '@crypto-dex-sdk/hooks':
+        specifier: workspace:*
+        version: link:../../hooks
+      '@crypto-dex-sdk/math':
+        specifier: workspace:*
+        version: link:../../math
+      '@crypto-dex-sdk/polkadot':
+        specifier: workspace:*
+        version: link:../../polkadot
+      '@crypto-dex-sdk/shared':
+        specifier: workspace:*
+        version: link:../../shared
+      '@crypto-dex-sdk/ui':
+        specifier: workspace:*
+        version: link:../../ui
       '@headlessui/react':
         specifier: ^1.7.17
         version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
@@ -1575,49 +1598,22 @@ importers:
       '@polkadot/types-codec':
         specifier: ^10.9.1
         version: 10.9.1
-      '@crypto-dex-sdk/amm':
-        specifier: workspace:*
-        version: link:../../amm
-      '@crypto-dex-sdk/chain':
-        specifier: workspace:*
-        version: link:../../chain
-      '@crypto-dex-sdk/currency':
-        specifier: workspace:*
-        version: link:../../currency
-      '@crypto-dex-sdk/format':
-        specifier: workspace:*
-        version: link:../../format
-      '@crypto-dex-sdk/hooks':
-        specifier: workspace:*
-        version: link:../../hooks
-      '@crypto-dex-sdk/math':
-        specifier: workspace:*
-        version: link:../../math
-      '@crypto-dex-sdk/polkadot':
-        specifier: workspace:*
-        version: link:../../polkadot
-      '@crypto-dex-sdk/shared':
-        specifier: workspace:*
-        version: link:../../shared
-      '@crypto-dex-sdk/ui':
-        specifier: workspace:*
-        version: link:../../ui
       '@zenlink-types/bifrost':
         specifier: 1.7.6
         version: 1.7.6
     devDependencies:
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -1636,6 +1632,36 @@ importers:
 
   packages/parachains-impl/bifrost:
     dependencies:
+      '@crypto-dex-sdk/amm':
+        specifier: workspace:*
+        version: link:../../amm
+      '@crypto-dex-sdk/chain':
+        specifier: workspace:*
+        version: link:../../chain
+      '@crypto-dex-sdk/currency':
+        specifier: workspace:*
+        version: link:../../currency
+      '@crypto-dex-sdk/format':
+        specifier: workspace:*
+        version: link:../../format
+      '@crypto-dex-sdk/hooks':
+        specifier: workspace:*
+        version: link:../../hooks
+      '@crypto-dex-sdk/math':
+        specifier: workspace:*
+        version: link:../../math
+      '@crypto-dex-sdk/parachains-amplitude':
+        specifier: workspace:*
+        version: link:../amplitude
+      '@crypto-dex-sdk/polkadot':
+        specifier: workspace:*
+        version: link:../../polkadot
+      '@crypto-dex-sdk/shared':
+        specifier: workspace:*
+        version: link:../../shared
+      '@crypto-dex-sdk/ui':
+        specifier: workspace:*
+        version: link:../../ui
       '@headlessui/react':
         specifier: ^1.7.17
         version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
@@ -1666,49 +1692,22 @@ importers:
       '@polkadot/types-codec':
         specifier: ^10.9.1
         version: 10.9.1
-      '@crypto-dex-sdk/amm':
-        specifier: workspace:*
-        version: link:../../amm
-      '@crypto-dex-sdk/chain':
-        specifier: workspace:*
-        version: link:../../chain
-      '@crypto-dex-sdk/currency':
-        specifier: workspace:*
-        version: link:../../currency
-      '@crypto-dex-sdk/format':
-        specifier: workspace:*
-        version: link:../../format
-      '@crypto-dex-sdk/hooks':
-        specifier: workspace:*
-        version: link:../../hooks
-      '@crypto-dex-sdk/math':
-        specifier: workspace:*
-        version: link:../../math
-      '@crypto-dex-sdk/polkadot':
-        specifier: workspace:*
-        version: link:../../polkadot
-      '@crypto-dex-sdk/shared':
-        specifier: workspace:*
-        version: link:../../shared
-      '@crypto-dex-sdk/ui':
-        specifier: workspace:*
-        version: link:../../ui
       '@zenlink-types/bifrost':
         specifier: 1.7.6
         version: 1.7.6
     devDependencies:
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -1727,6 +1726,21 @@ importers:
 
   packages/polkadot:
     dependencies:
+      '@crypto-dex-sdk/graph-client':
+        specifier: workspace:*
+        version: link:../graph-client
+      '@crypto-dex-sdk/hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      '@crypto-dex-sdk/polkadot-config':
+        specifier: workspace:*
+        version: link:../config/polkadot
+      '@crypto-dex-sdk/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@crypto-dex-sdk/ui':
+        specifier: workspace:*
+        version: link:../ui
       '@polkadot-onboard/core':
         specifier: ^1.1.0
         version: 1.1.0
@@ -1790,34 +1804,19 @@ importers:
       '@polkadot/util-crypto':
         specifier: ^12.5.1
         version: 12.5.1(@polkadot/util@12.5.1)
-      '@crypto-dex-sdk/graph-client':
-        specifier: workspace:*
-        version: link:../graph-client
-      '@crypto-dex-sdk/hooks':
-        specifier: workspace:*
-        version: link:../hooks
-      '@crypto-dex-sdk/polkadot-config':
-        specifier: workspace:*
-        version: link:../config/polkadot
-      '@crypto-dex-sdk/shared':
-        specifier: workspace:*
-        version: link:../shared
-      '@crypto-dex-sdk/ui':
-        specifier: workspace:*
-        version: link:../ui
     devDependencies:
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1833,18 +1832,6 @@ importers:
 
   packages/redux/localstorage:
     devDependencies:
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@types/node':
-        specifier: ^20.10.3
-        version: 20.10.3
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
@@ -1863,6 +1850,18 @@ importers:
       '@crypto-dex-sdk/ui':
         specifier: workspace:*
         version: link:../../ui
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+      '@types/node':
+        specifier: ^20.10.3
+        version: 20.10.3
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       fast-json-stable-stringify:
         specifier: ^2.1.0
         version: 2.1.0
@@ -1909,18 +1908,6 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
     devDependencies:
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
-      '@types/node':
-        specifier: ^20.10.3
-        version: 20.10.3
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../chain
@@ -1936,6 +1923,18 @@ importers:
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../config/typescript
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
+      '@types/node':
+        specifier: ^20.10.3
+        version: 20.10.3
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1951,18 +1950,6 @@ importers:
 
   packages/shared:
     dependencies:
-      '@lingui/core':
-        specifier: 4.6.0
-        version: 4.6.0
-      '@lingui/macro':
-        specifier: 4.6.0
-        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
-      '@lingui/react':
-        specifier: 4.6.0
-        version: 4.6.0(react@18.2.0)
-      '@reduxjs/toolkit':
-        specifier: ^1.9.7
-        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../chain
@@ -1978,6 +1965,18 @@ importers:
       '@crypto-dex-sdk/redux-localstorage':
         specifier: workspace:*
         version: link:../redux/localstorage
+      '@lingui/core':
+        specifier: 4.6.0
+        version: 4.6.0
+      '@lingui/macro':
+        specifier: 4.6.0
+        version: 4.6.0(@lingui/react@4.6.0)(babel-plugin-macros@3.1.0)
+      '@lingui/react':
+        specifier: 4.6.0
+        version: 4.6.0(react@18.2.0)
+      '@reduxjs/toolkit':
+        specifier: ^1.9.7
+        version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
       make-plural:
         specifier: ^7.3.0
         version: 7.3.0
@@ -1991,12 +1990,6 @@ importers:
         specifier: 1.4.7
         version: 1.4.7(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)(zod@3.22.2)
     devDependencies:
-      '@types/react':
-        specifier: ^18.2.41
-        version: 18.2.41
-      '@types/react-dom':
-        specifier: ^18.2.17
-        version: 18.2.17
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
@@ -2009,6 +2002,12 @@ importers:
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/react':
+        specifier: ^18.2.41
+        version: 18.2.41
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -2027,12 +2026,6 @@ importers:
 
   packages/smart-router:
     dependencies:
-      '@ethersproject/bignumber':
-        specifier: ^5.7.0
-        version: 5.7.0
-      '@ethersproject/solidity':
-        specifier: ^5.7.0
-        version: 5.7.0
       '@crypto-dex-sdk/amm':
         specifier: workspace:*
         version: link:../amm
@@ -2048,6 +2041,12 @@ importers:
       '@crypto-dex-sdk/wagmi-config':
         specifier: workspace:*
         version: link:../config/wagmi
+      '@ethersproject/bignumber':
+        specifier: ^5.7.0
+        version: 5.7.0
+      '@ethersproject/solidity':
+        specifier: ^5.7.0
+        version: 5.7.0
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -2070,9 +2069,6 @@ importers:
         specifier: 1.19.11
         version: 1.19.11(typescript@5.3.2)(zod@3.22.2)
     devDependencies:
-      '@types/node':
-        specifier: ^20.10.3
-        version: 20.10.3
       '@crypto-dex-sdk/eslint-config':
         specifier: workspace:*
         version: link:../config/eslint
@@ -2082,6 +2078,9 @@ importers:
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@types/node':
+        specifier: ^20.10.3
+        version: 20.10.3
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -2097,9 +2096,6 @@ importers:
 
   packages/token-lists:
     devDependencies:
-      '@ethersproject/address':
-        specifier: ^5.7.0
-        version: 5.7.0
       '@crypto-dex-sdk/currency':
         specifier: workspace:*
         version: link:../currency
@@ -2115,6 +2111,9 @@ importers:
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../config/typescript
+      '@ethersproject/address':
+        specifier: ^5.7.0
+        version: 5.7.0
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -2127,6 +2126,18 @@ importers:
 
   packages/ui:
     dependencies:
+      '@crypto-dex-sdk/chain':
+        specifier: workspace:*
+        version: link:../chain
+      '@crypto-dex-sdk/currency':
+        specifier: workspace:*
+        version: link:../currency
+      '@crypto-dex-sdk/hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      '@crypto-dex-sdk/token-lists':
+        specifier: workspace:*
+        version: link:../token-lists
       '@floating-ui/react':
         specifier: ^0.26.3
         version: 0.26.3(react-dom@18.2.0)(react@18.2.0)
@@ -2166,18 +2177,6 @@ importers:
       '@tanstack/react-table':
         specifier: 8.10.7
         version: 8.10.7(react-dom@18.2.0)(react@18.2.0)
-      '@crypto-dex-sdk/chain':
-        specifier: workspace:*
-        version: link:../chain
-      '@crypto-dex-sdk/currency':
-        specifier: workspace:*
-        version: link:../currency
-      '@crypto-dex-sdk/hooks':
-        specifier: workspace:*
-        version: link:../hooks
-      '@crypto-dex-sdk/token-lists':
-        specifier: workspace:*
-        version: link:../token-lists
       classnames:
         specifier: ^2.3.2
         version: 2.3.2
@@ -2209,6 +2208,12 @@ importers:
         specifier: ^1.8.10
         version: 1.8.10(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:../config/eslint
+      '@crypto-dex-sdk/typescript-config':
+        specifier: workspace:*
+        version: link:../config/typescript
       '@types/react':
         specifier: ^18.2.41
         version: 18.2.41
@@ -2221,12 +2226,6 @@ importers:
       '@types/react-window':
         specifier: ^1.8.8
         version: 1.8.8
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:../config/eslint
-      '@crypto-dex-sdk/typescript-config':
-        specifier: workspace:*
-        version: link:../config/typescript
       tailwindcss:
         specifier: ^3.3.5
         version: 3.3.5
@@ -2236,6 +2235,36 @@ importers:
 
   packages/wagmi:
     dependencies:
+      '@crypto-dex-sdk/amm':
+        specifier: workspace:*
+        version: link:../amm
+      '@crypto-dex-sdk/chain':
+        specifier: workspace:*
+        version: link:../chain
+      '@crypto-dex-sdk/currency':
+        specifier: workspace:*
+        version: link:../currency
+      '@crypto-dex-sdk/format':
+        specifier: workspace:*
+        version: link:../format
+      '@crypto-dex-sdk/hooks':
+        specifier: workspace:*
+        version: link:../hooks
+      '@crypto-dex-sdk/math':
+        specifier: workspace:*
+        version: link:../math
+      '@crypto-dex-sdk/shared':
+        specifier: workspace:*
+        version: link:../shared
+      '@crypto-dex-sdk/smart-router':
+        specifier: workspace:*
+        version: link:../smart-router
+      '@crypto-dex-sdk/ui':
+        specifier: workspace:*
+        version: link:../ui
+      '@crypto-dex-sdk/wagmi-config':
+        specifier: workspace:*
+        version: link:../config/wagmi
       '@ethersproject/abi':
         specifier: ^5.7.0
         version: 5.7.0
@@ -2275,36 +2304,6 @@ importers:
       '@uniswap/permit2-sdk':
         specifier: ^1.2.0
         version: 1.2.0
-      '@crypto-dex-sdk/amm':
-        specifier: workspace:*
-        version: link:../amm
-      '@crypto-dex-sdk/chain':
-        specifier: workspace:*
-        version: link:../chain
-      '@crypto-dex-sdk/currency':
-        specifier: workspace:*
-        version: link:../currency
-      '@crypto-dex-sdk/format':
-        specifier: workspace:*
-        version: link:../format
-      '@crypto-dex-sdk/hooks':
-        specifier: workspace:*
-        version: link:../hooks
-      '@crypto-dex-sdk/math':
-        specifier: workspace:*
-        version: link:../math
-      '@crypto-dex-sdk/shared':
-        specifier: workspace:*
-        version: link:../shared
-      '@crypto-dex-sdk/smart-router':
-        specifier: workspace:*
-        version: link:../smart-router
-      '@crypto-dex-sdk/ui':
-        specifier: workspace:*
-        version: link:../ui
-      '@crypto-dex-sdk/wagmi-config':
-        specifier: workspace:*
-        version: link:../config/wagmi
       fast-json-stable-stringify:
         specifier: ^2.1.0
         version: 2.1.0
@@ -2321,6 +2320,12 @@ importers:
         specifier: 1.4.7
         version: 1.4.7(@types/react@18.2.41)(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)(zod@3.22.2)
     devDependencies:
+      '@crypto-dex-sdk/eslint-config':
+        specifier: workspace:*
+        version: link:../config/eslint
+      '@crypto-dex-sdk/typescript-config':
+        specifier: workspace:*
+        version: link:../config/typescript
       '@types/ms':
         specifier: ^0.7.34
         version: 0.7.34
@@ -2333,12 +2338,6 @@ importers:
       '@wagmi/core':
         specifier: 1.3.0
         version: 1.3.0(@types/react@18.2.41)(react@18.2.0)(typescript@5.3.2)(viem@1.19.11)
-      '@crypto-dex-sdk/eslint-config':
-        specifier: workspace:*
-        version: link:../config/eslint
-      '@crypto-dex-sdk/typescript-config':
-        specifier: workspace:*
-        version: link:../config/typescript
       eslint:
         specifier: ^8.55.0
         version: 8.55.0
@@ -2366,9 +2365,6 @@ importers:
       '@apollo/client':
         specifier: ^3.8.8
         version: 3.8.8(graphql@16.8.1)
-      '@types/express':
-        specifier: ^4.17.21
-        version: 4.17.21
       '@crypto-dex-sdk/chain':
         specifier: workspace:*
         version: link:../../packages/chain
@@ -2387,6 +2383,9 @@ importers:
       '@crypto-dex-sdk/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config/typescript
+      '@types/express':
+        specifier: ^4.17.21
+        version: 4.17.21
       date-fns:
         specifier: ^2.30.0
         version: 2.30.0
@@ -7653,7 +7652,7 @@ packages:
       '@polkadot/types-codec': 10.9.1
       '@polkadot/types-create': 10.9.1
       '@polkadot/util': 12.3.2
-      '@polkadot/util-crypto': 12.3.2(@polkadot/util@12.3.2)
+      '@polkadot/util-crypto': 12.3.2(@polkadot/util@12.5.1)
       rxjs: 7.8.1
       tslib: 2.5.3
     dev: false
@@ -7818,6 +7817,24 @@ packages:
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
       '@polkadot/x-bigint': 12.3.2
       '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.3.2)(@polkadot/wasm-util@7.2.1)
+      '@scure/base': 1.1.1
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/util-crypto@12.3.2(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-pTpx+YxolY0BDT4RcGmgeKbHHD/dI6Ll9xRsqmVdIjpcVVY20uDNTyXs81ZNtfKgyod1y9JQkfNv2Dz9iEpTkQ==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': 12.3.2
+    dependencies:
+      '@noble/curves': 1.1.0
+      '@noble/hashes': 1.3.1
+      '@polkadot/networks': 12.3.2
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-crypto': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-bigint': 12.3.2
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
       '@scure/base': 1.1.1
       tslib: 2.6.2
     dev: false
@@ -8018,6 +8035,19 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@polkadot/wasm-bridge@7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2):
+    resolution: {integrity: sha512-uV/LHREDBGBbHrrv7HTki+Klw0PYZzFomagFWII4lp6Toj/VCvRh5WMzooVC+g/XsBGosAwrvBhoModabyHx+A==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+      '@polkadot/x-randomvalues': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
+      tslib: 2.6.2
+    dev: false
+
   /@polkadot/wasm-bridge@7.2.2(@polkadot/util@11.1.3)(@polkadot/x-randomvalues@11.1.3):
     resolution: {integrity: sha512-CgNENd65DVYtackOVXXRA0D1RPoCv5+77IdBCf7kNqu6LeAnR4nfTI6qjaApUdN1xRweUsQjSH7tu7VjkMOA0A==}
     engines: {node: '>=16'}
@@ -8097,6 +8127,16 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@polkadot/wasm-crypto-asmjs@7.2.1(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-z/d21bmxyVfkzGsKef/FWswKX02x5lK97f4NPBZ9XBeiFkmzlXhdSnu58/+b1sKsRAGdW/Rn/rTNRDhW0GqCAg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      tslib: 2.6.2
+    dev: false
+
   /@polkadot/wasm-crypto-asmjs@7.2.2(@polkadot/util@11.1.3):
     resolution: {integrity: sha512-wKg+cpsWQCTSVhjlHuNeB/184rxKqY3vaklacbLOMbUXieIfuDBav5PJdzS3yeiVE60TpYaHW4iX/5OYHS82gg==}
     engines: {node: '>=16'}
@@ -8155,6 +8195,22 @@ packages:
       '@polkadot/wasm-crypto-wasm': 7.2.1(@polkadot/util@12.3.2)
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
       '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.3.2)(@polkadot/wasm-util@7.2.1)
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/wasm-crypto-init@7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2):
+    resolution: {integrity: sha512-GcEXtwN9LcSf32V9zSaYjHImFw16hCyo2Xzg4GLLDPPeaAAfbFr2oQMgwyDbvBrBjLKHVHjsPZyGhXae831amw==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+      '@polkadot/x-randomvalues': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-bridge': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-crypto-asmjs': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-crypto-wasm': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
       tslib: 2.6.2
     dev: false
 
@@ -8245,6 +8301,17 @@ packages:
     dependencies:
       '@polkadot/util': 12.3.2
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/wasm-crypto-wasm@7.2.1(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-DqyXE4rSD0CVlLIw88B58+HHNyrvm+JAnYyuEDYZwCvzUWOCNos/DDg9wi/K39VAIsCCKDmwKqkkfIofuOj/lA==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
       tslib: 2.6.2
     dev: false
 
@@ -8343,6 +8410,23 @@ packages:
       tslib: 2.6.2
     dev: false
 
+  /@polkadot/wasm-crypto@7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2):
+    resolution: {integrity: sha512-SA2+33S9TAwGhniKgztVN6pxUKpGfN4Tre/eUZGUfpgRkT92wIUT2GpGWQE+fCCqGQgADrNiBcwt6XwdPqMQ4Q==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+      '@polkadot/x-randomvalues': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-bridge': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-crypto-asmjs': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-crypto-init': 7.2.1(@polkadot/util@12.5.1)(@polkadot/x-randomvalues@12.3.2)
+      '@polkadot/wasm-crypto-wasm': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
+      '@polkadot/x-randomvalues': 12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1)
+      tslib: 2.6.2
+    dev: false
+
   /@polkadot/wasm-crypto@7.2.2(@polkadot/util@11.1.3)(@polkadot/x-randomvalues@11.1.3):
     resolution: {integrity: sha512-1ZY1rxUTawYm0m1zylvBMFovNIHYgG2v/XoASNp/EMG5c8FQIxCbhJRaTBA983GVq4lN/IAKREKEp9ZbLLqssA==}
     engines: {node: '>=16'}
@@ -8411,6 +8495,16 @@ packages:
       '@polkadot/util': '*'
     dependencies:
       '@polkadot/util': 12.3.2
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/wasm-util@7.2.1(@polkadot/util@12.5.1):
+    resolution: {integrity: sha512-FBSn/3aYJzhN0sYAYhHB8y9JL8mVgxLy4M1kUXYbyo+8GLRQEN5rns8Vcb8TAlIzBWgVTOOptYBvxo0oj0h7Og==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
       tslib: 2.6.2
     dev: false
 
@@ -8606,6 +8700,19 @@ packages:
     dependencies:
       '@polkadot/util': 12.3.2
       '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.3.2)
+      '@polkadot/x-global': 12.3.2
+      tslib: 2.6.2
+    dev: false
+
+  /@polkadot/x-randomvalues@12.3.2(@polkadot/util@12.5.1)(@polkadot/wasm-util@7.2.1):
+    resolution: {integrity: sha512-ywjIs8CWpvOGmq+3cGCNPOHxAjPHdBUiXyDccftx5BRVdmtbt36gK/V84bKr6Xs73FGu0jprUAOSRRsLZX/3dg==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      '@polkadot/util': 12.3.2
+      '@polkadot/wasm-util': '*'
+    dependencies:
+      '@polkadot/util': 12.5.1
+      '@polkadot/wasm-util': 7.2.1(@polkadot/util@12.5.1)
       '@polkadot/x-global': 12.3.2
       tslib: 2.6.2
     dev: false
@@ -13693,7 +13800,7 @@ packages:
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1)(eslint@8.55.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.13.1)(eslint@8.55.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.55.0)
       eslint-plugin-jsx-a11y: 6.7.1(eslint@8.55.0)
       eslint-plugin-react: 7.33.2(eslint@8.55.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.55.0)
@@ -13724,7 +13831,7 @@ packages:
       enhanced-resolve: 5.15.0
       eslint: 8.55.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@8.55.0)
-      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.13.1)(eslint@8.55.0)
+      eslint-plugin-import: 2.28.1(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.55.0)
       get-tsconfig: 4.7.2
       globby: 13.2.0
       is-core-module: 2.13.0
@@ -13763,35 +13870,6 @@ packages:
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.5.5(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.28.1)(eslint@8.55.0)
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /eslint-module-utils@2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint@8.55.0):
-    resolution: {integrity: sha512-aWajIYfsqCKRDgUfjEXNN/JlrzauMuSEy5sbd7WXbtW3EH6A6MpwEh42c7qD+MqQo9QMJ6fWLAeIJynx0g6OAw==}
-    engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint: '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint:
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
-    dependencies:
-      '@typescript-eslint/parser': 6.13.1(eslint@8.55.0)(typescript@5.3.2)
-      debug: 3.2.7
-      eslint: 8.55.0
-      eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -13840,7 +13918,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint@8.55.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@8.55.0)
       get-tsconfig: 4.7.2
       is-glob: 4.0.3
       minimatch: 3.1.2
@@ -13853,7 +13931,7 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.13.1)(eslint@8.55.0):
+  /eslint-plugin-import@2.28.1(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.55.0):
     resolution: {integrity: sha512-9I9hFlITvOV55alzoKBI+K9q74kv0iKMeY6av5+umsNwayt59fz692daGyjR+oStBQgx6nwR9rXldDev3Clw+A==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -13863,7 +13941,7 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 6.13.1(eslint@8.55.0)(typescript@5.3.2)
+      '@typescript-eslint/parser': 6.11.0(eslint@8.55.0)(typescript@5.3.2)
       array-includes: 3.1.6
       array.prototype.findlastindex: 1.2.3
       array.prototype.flat: 1.3.1
@@ -13872,7 +13950,7 @@ packages:
       doctrine: 2.1.0
       eslint: 8.55.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.13.1)(eslint-import-resolver-node@0.3.9)(eslint@8.55.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.11.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.5.5)(eslint@8.55.0)
       has: 1.0.3
       is-core-module: 2.13.0
       is-glob: 4.0.3
@@ -20405,3 +20483,7 @@ packages:
     dependencies:
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
