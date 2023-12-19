@@ -20,13 +20,11 @@ msgstr ""
 msgid "Pool Not Found"
 msgstr "풀을 찾을 수 없습니다"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Disconnect"
 msgstr "연결이 끊어졌습니다"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Successfully added liquidity to the {0}/{1} pair"
 msgstr "성공적으로 {0}/{1} 페어에 유동성을 추가했습니다"
@@ -49,13 +47,11 @@ msgid "Confirm {0}"
 msgstr "{0} 확인"
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Something went wrong when trying to swap {0} for {1}"
 msgstr "{0} 를 {1} 로 교환하려고 할 때 문제가 발생했습니다"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Successfully unstaked {0} {1}"
 msgstr "{0}개의 {1}를 성공적으로 언스테이크하였습니다"
@@ -127,7 +123,6 @@ msgid "Finding Best Price"
 msgstr "최상의 가격 찾기"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Something went wrong when stake {0} {1}"
 msgstr "{0} {1} 스테이크 중에 오류가 발생했습니다"
@@ -140,7 +135,6 @@ msgstr "텔레그램 지원"
 msgid "Earn fees by providing liquidity."
 msgstr "유동성 제공으로 수수료를 벌 수 있습니다."
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Your transactions will appear here"
 msgstr "여기서 귀하의 거래 내역을 확인할 수 있습니다"
@@ -158,8 +152,6 @@ msgstr "{poolName} 안정적인 풀에서 성공적으로 유동성을 제거했
 msgid "Rewards"
 msgstr "보상"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Transactions"
@@ -174,7 +166,6 @@ msgid "Calculate based on ZLK holdings."
 msgstr "ZLK 보유 기준으로 계산하다."
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Staking {0} {1}"
 msgstr "{0}을(를) {1}에 지금 지분 증명 중입니다"
@@ -228,7 +219,6 @@ msgstr "Polkadot 생태계에서 분산 거래 프로토콜을 구축 중입니�
 msgid "Custom"
 msgstr "사용자 정의"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Explore"
 msgstr "탐색"
@@ -297,7 +287,6 @@ msgid "Affiliates"
 msgstr "제휴사"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Unstaking {0} {1}"
 msgstr "{0} {1} 언스테이킹 중"
@@ -307,8 +296,6 @@ msgstr "{0} {1} 언스테이킹 중"
 msgid "UnStake Liquidity"
 msgstr "유동성 언스테이킹"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Button.tsx
-#: packages/parachains-impl/bifrost/components/Wallet/Button.tsx
 #: packages/wagmi/components/Wallet/Button.tsx
 #: packages/wagmi/systems/Checker/Connected.tsx
 msgid "Connect Wallet"
@@ -467,7 +454,6 @@ msgid "Enable expert mode to swap with high price impact"
 msgstr "고가 영향을 미치는 스왑을 위해 전문가 모드를 활성화하세요"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Successfully claimed rewards"
 msgstr "보상을 성공적으로 청구했습니다"
@@ -556,7 +542,6 @@ msgstr "지원되지 않는 네트워크"
 msgid "Active Referral Code"
 msgstr "활성화된 추천 코드"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copied!"
 msgstr "복사됨!"
@@ -708,7 +693,6 @@ msgid "Suitable for stable pools"
 msgstr "안정적인 풀에 적합합니다"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Claiming Rewards"
 msgstr "보상 청구하기"
@@ -728,7 +712,6 @@ msgid "Referrals"
 msgstr "추천인"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Something went wrong when claim rewards"
 msgstr "보상을 청구하는 과정에서 문제가 발생했습니다"
@@ -746,7 +729,6 @@ msgid "On"
 msgstr "켜기"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStableReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Something went wrong when removing liquidity"
@@ -758,7 +740,6 @@ msgid "Custom Slippage"
 msgstr "맞춤 슬리피지"
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "{0} {1}를 {2} {3}로 교환 중입니다"
@@ -791,7 +772,6 @@ msgstr "Zenlink 제품에서 생성된 유동성, 거래량 및 수수료를 추
 #~ msgstr ""
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Successfully swapped {0} {1} for {2} {3}"
 msgstr "{0} {1} 를 {2} {3} 으로 성공적으로 교환했습니다"
@@ -892,7 +872,6 @@ msgid "Min. Received"
 msgstr "최소 수령량"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Removing liquidity from the {0}/{1} pair"
 msgstr "{0}/{1} 페어에서 유동성 제거하기"
@@ -913,7 +892,6 @@ msgstr "제출하기"
 msgid "Next"
 msgstr "다음"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copy"
 msgstr "복사하기"
@@ -965,7 +943,6 @@ msgid "Generating referral code ({code})"
 msgstr "추천 코드 생성 ({code})"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Successfully stake {0} {1}"
 msgstr "{0} {1}을(를) 성공적으로 스테이크하였습니다"
@@ -1075,7 +1052,6 @@ msgid "ZLK Price"
 msgstr "ZLK 가격"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Successfully removed liquidity from the {0}/{1} pair"
 msgstr "{0}/{1} 페어에서 유동성을 성공적으로 제거했습니다"
@@ -1165,7 +1141,6 @@ msgid "Unstaked Position"
 msgstr "언스테이크 포지션"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Something went wrong when unstake {0} {1}"
 msgstr "{0} {1} 언스테이크 시 오류가 발생했습니다"
@@ -1176,7 +1151,6 @@ msgid "Confirm Swap"
 msgstr "스왑 확인"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStableReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Something went wrong when adding liquidity"
@@ -1232,7 +1206,6 @@ msgid "Custom Tokens"
 msgstr "사용자 지정 토큰"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Adding liquidity to the {0}/{1} pair"
 msgstr "{0}/{1} 쌍에 유동성 추가하기"
@@ -1258,7 +1231,6 @@ msgstr ""
 msgid "Enter Amount"
 msgstr "금액 입력"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Clear all"
 msgstr "모두 지우기"

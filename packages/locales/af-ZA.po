@@ -20,13 +20,11 @@ msgstr ""
 msgid "Pool Not Found"
 msgstr "Swembad nie gevind nie"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Disconnect"
 msgstr "Ontkoppel"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Successfully added liquidity to the {0}/{1} pair"
 msgstr "Vloeistof is suksesvol by die {0}/{1} paar gevoeg"
@@ -49,13 +47,11 @@ msgid "Confirm {0}"
 msgstr "Bevestig {0}"
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Something went wrong when trying to swap {0} for {1}"
 msgstr "Iets het verkeerd geloop toe ons probeer om {0} vir {1} te ruil"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Successfully unstaked {0} {1}"
 msgstr "Suksesvol gedestake {0} {1}"
@@ -127,7 +123,6 @@ msgid "Finding Best Price"
 msgstr "Vind die beste prys"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Something went wrong when stake {0} {1}"
 msgstr "Iets het verkeerd gegaan met staken {0} {1}"
@@ -140,7 +135,6 @@ msgstr "Telegram-ondersteuning"
 msgid "Earn fees by providing liquidity."
 msgstr "Verdien fooie deur likiditeit te voorsien"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Your transactions will appear here"
 msgstr "Jou transaksies sal hier verskyn"
@@ -158,8 +152,6 @@ msgstr "Likiditeit suksesvol verwyder uit die stabiele {poolName}-poel"
 msgid "Rewards"
 msgstr "Belonings"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Transactions"
@@ -174,7 +166,6 @@ msgid "Calculate based on ZLK holdings."
 msgstr "Bereken gebaseer op ZLK-aanhoudings."
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Staking {0} {1}"
 msgstr "Insetting {0} {1}"
@@ -228,7 +219,6 @@ msgstr "Ons bou 'n protokol vir gede-sentraliseerde ruil in die Polkadot-ekosist
 msgid "Custom"
 msgstr "Persoonlik"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Explore"
 msgstr "Verken"
@@ -297,7 +287,6 @@ msgid "Affiliates"
 msgstr "Geaffilieerdes"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Unstaking {0} {1}"
 msgstr "Verloor {0} {1} se verdeling nie"
@@ -307,8 +296,6 @@ msgstr "Verloor {0} {1} se verdeling nie"
 msgid "UnStake Liquidity"
 msgstr "UnStake Liquidity -> Maak Vloeibaarheid Los"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Button.tsx
-#: packages/parachains-impl/bifrost/components/Wallet/Button.tsx
 #: packages/wagmi/components/Wallet/Button.tsx
 #: packages/wagmi/systems/Checker/Connected.tsx
 msgid "Connect Wallet"
@@ -467,7 +454,6 @@ msgid "Enable expert mode to swap with high price impact"
 msgstr "Aktiveer kundige modus om te ruil met 'n hoë prysimpak"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Successfully claimed rewards"
 msgstr "Suksesvolle eise van belonings"
@@ -556,7 +542,6 @@ msgstr "Nie-ondersteunde netwerk"
 msgid "Active Referral Code"
 msgstr "Aktiewe Verwysingskode"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copied!"
 msgstr "Gekopieer"
@@ -708,7 +693,6 @@ msgid "Suitable for stable pools"
 msgstr "Geskik vir stabiele polle"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Claiming Rewards"
 msgstr "Eise van Belonings"
@@ -728,7 +712,6 @@ msgid "Referrals"
 msgstr "Verwysings"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Something went wrong when claim rewards"
 msgstr "Iets het verkeerd gegaan toe eise belonings"
@@ -746,7 +729,6 @@ msgid "On"
 msgstr "Aan"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStableReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Something went wrong when removing liquidity"
@@ -758,7 +740,6 @@ msgid "Custom Slippage"
 msgstr "Persoonlike slippage"
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "Wissel {0} {1} vir {2} {3}"
@@ -791,7 +772,6 @@ msgstr "Analise platform vir die opspoor van die likiditeit, volume en fooie wat
 #~ msgstr ""
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Successfully swapped {0} {1} for {2} {3}"
 msgstr "Suksesvol gewissel {0} {1} vir {2} {3}"
@@ -892,7 +872,6 @@ msgid "Min. Received"
 msgstr "Min. Ontvang"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Removing liquidity from the {0}/{1} pair"
 msgstr "Verwyder likiditeit van die {0}/{1} paar af"
@@ -913,7 +892,6 @@ msgstr "Indien"
 msgid "Next"
 msgstr "Volgende"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copy"
 msgstr "Kopieer"
@@ -965,7 +943,6 @@ msgid "Generating referral code ({code})"
 msgstr "Genereer verwysingskode ({code})"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Successfully stake {0} {1}"
 msgstr "Staking {0} {1} ngokuphumelela"
@@ -1075,7 +1052,6 @@ msgid "ZLK Price"
 msgstr "ZLK Prys"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Successfully removed liquidity from the {0}/{1} pair"
 msgstr "Suksesvol likiditeit verwyder uit die {0}/{1} paar"
@@ -1165,7 +1141,6 @@ msgid "Unstaked Position"
 msgstr "Onverspande Posisie"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Something went wrong when unstake {0} {1}"
 msgstr "Iets het verkeerd gegaan toe {0} {1} gedevalideer is"
@@ -1176,7 +1151,6 @@ msgid "Confirm Swap"
 msgstr "Bevestig ruil"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStableReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Something went wrong when adding liquidity"
@@ -1232,7 +1206,6 @@ msgid "Custom Tokens"
 msgstr "Aangepaste Tokens."
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Adding liquidity to the {0}/{1} pair"
 msgstr "Voeg likiditeit by tot die {0}/{1} paar"
@@ -1258,7 +1231,6 @@ msgstr ""
 msgid "Enter Amount"
 msgstr "Voer bedrag in"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Clear all"
 msgstr "Maak alles skoon"

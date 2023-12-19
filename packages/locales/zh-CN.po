@@ -20,13 +20,11 @@ msgstr ""
 msgid "Pool Not Found"
 msgstr "找不到池子"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Disconnect"
 msgstr "断开连接"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Successfully added liquidity to the {0}/{1} pair"
 msgstr "成功添加流动性至 {0}/{1} 交易对"
@@ -49,13 +47,11 @@ msgid "Confirm {0}"
 msgstr "确认 {0}"
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Something went wrong when trying to swap {0} for {1}"
 msgstr "尝试将 {0} 兑换为 {1} 时出现了问题"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Successfully unstaked {0} {1}"
 msgstr "成功解除质押 {0} {1}"
@@ -127,7 +123,6 @@ msgid "Finding Best Price"
 msgstr "寻找最佳价格"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Something went wrong when stake {0} {1}"
 msgstr "抵押 {0} {1} 时出现了一些问题"
@@ -140,7 +135,6 @@ msgstr "Telegram支持"
 msgid "Earn fees by providing liquidity."
 msgstr "通过提供流动性赚取费用"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Your transactions will appear here"
 msgstr "您的交易将出现在这里"
@@ -158,8 +152,6 @@ msgstr "成功从 {poolName} 稳定池中移除流动性"
 msgid "Rewards"
 msgstr "奖励"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Transactions"
@@ -174,7 +166,6 @@ msgid "Calculate based on ZLK holdings."
 msgstr "基于ZLK持仓计算。"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Staking {0} {1}"
 msgstr "抵押 {0} {1}"
@@ -228,7 +219,6 @@ msgstr "我们正在 Polkadot 生态系统中构建去中心化交换协议"
 msgid "Custom"
 msgstr "自定义"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Explore"
 msgstr "探索"
@@ -297,7 +287,6 @@ msgid "Affiliates"
 msgstr "联属公司"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Unstaking {0} {1}"
 msgstr "取消质押 {0} {1}"
@@ -307,8 +296,6 @@ msgstr "取消质押 {0} {1}"
 msgid "UnStake Liquidity"
 msgstr "取消流动性质押"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Button.tsx
-#: packages/parachains-impl/bifrost/components/Wallet/Button.tsx
 #: packages/wagmi/components/Wallet/Button.tsx
 #: packages/wagmi/systems/Checker/Connected.tsx
 msgid "Connect Wallet"
@@ -467,7 +454,6 @@ msgid "Enable expert mode to swap with high price impact"
 msgstr "开启专家模式以进行高价格影响的兑换"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Successfully claimed rewards"
 msgstr "成功领取奖励"
@@ -556,7 +542,6 @@ msgstr "不支持的网络"
 msgid "Active Referral Code"
 msgstr "活跃推荐码"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copied!"
 msgstr "已复制！"
@@ -708,7 +693,6 @@ msgid "Suitable for stable pools"
 msgstr "适用于稳定池"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Claiming Rewards"
 msgstr "领取奖励"
@@ -728,7 +712,6 @@ msgid "Referrals"
 msgstr "推荐人"
 
 #: packages/parachains-impl/amplitude/hooks/useClaimFarmingRewardsReview.ts
-#: packages/parachains-impl/bifrost/hooks/useClaimFarmingRewardsReview.ts
 #: packages/wagmi/hooks/useClaimFarmingRewardsReview.ts
 msgid "Something went wrong when claim rewards"
 msgstr "领取奖励时出了问题"
@@ -746,7 +729,6 @@ msgid "On"
 msgstr "开启"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStableReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Something went wrong when removing liquidity"
@@ -758,7 +740,6 @@ msgid "Custom Slippage"
 msgstr "自定义滑点"
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "交换 {0} {1} 为 {2} {3}"
@@ -791,7 +772,6 @@ msgstr "Zenlink 产品流动性、成交量和费用生成的跟踪分析平台�
 #~ msgstr ""
 
 #: packages/parachains-impl/amplitude/hooks/useSwapReview.ts
-#: packages/parachains-impl/bifrost/hooks/useSwapReview.ts
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Successfully swapped {0} {1} for {2} {3}"
 msgstr "成功交换 {0} {1} 为 {2} {3}"
@@ -892,7 +872,6 @@ msgid "Min. Received"
 msgstr "最小接收量"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Removing liquidity from the {0}/{1} pair"
 msgstr "从 {0}/{1} 对中移除流动性"
@@ -913,7 +892,6 @@ msgstr "提交"
 msgid "Next"
 msgstr "下一个"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copy"
 msgstr "复制"
@@ -965,7 +943,6 @@ msgid "Generating referral code ({code})"
 msgstr "生成推荐代码（{code}）"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Successfully stake {0} {1}"
 msgstr "成功抵押 {0} {1}"
@@ -1075,7 +1052,6 @@ msgid "ZLK Price"
 msgstr "ZLK 价格"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Successfully removed liquidity from the {0}/{1} pair"
 msgstr "成功从 {0}/{1} 交易对中移除流动性"
@@ -1165,7 +1141,6 @@ msgid "Unstaked Position"
 msgstr "未质押头寸"
 
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
-#: packages/parachains-impl/bifrost/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Something went wrong when unstake {0} {1}"
 msgstr "解除 {0} {1} 的质押时出了些问题"
@@ -1176,7 +1151,6 @@ msgid "Confirm Swap"
 msgstr "确认兑换"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStableReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Something went wrong when adding liquidity"
@@ -1232,7 +1206,6 @@ msgid "Custom Tokens"
 msgstr "自定义代币"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Adding liquidity to the {0}/{1} pair"
 msgstr "向 {0}/{1} 交易对添加流动性"
@@ -1258,7 +1231,6 @@ msgstr ""
 msgid "Enter Amount"
 msgstr "输入金额"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Clear all"
 msgstr "清除全部"
