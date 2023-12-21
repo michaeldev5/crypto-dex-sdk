@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/currency",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Zenlink Currency",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -23,10 +23,6 @@
     "lint": "TIMING=1 eslint src --fix",
     "prepublishOnly": "pnpm build",
     "test": "vitest run"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@crypto-dex-sdk/chain": "workspace:*",
