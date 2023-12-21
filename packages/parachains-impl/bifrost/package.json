@@ -22,10 +22,6 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "lint": "TIMING=1 eslint . --fix"
   },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "dependencies": {
     "@crypto-dex-sdk/amm": "workspace:*",
     "@crypto-dex-sdk/chain": "workspace:*",
@@ -41,11 +37,7 @@
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "@types/react": "^18.2.41",
-    "@types/react-dom": "^18.2.17",
     "eslint": "^8.55.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "tsup": "^8.0.1",
     "typescript": "5.3.2"
   },
