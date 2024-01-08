@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/chain",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Zenlink Chain",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -18,8 +18,6 @@
     "build": "tsc",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "dev": "tsc -w",
-    "generate": "ls chains.json || curl 'https://chainid.network/chains.json' > chains.json",
-    "preinstall": "pnpm run generate",
     "lint": "TIMING=1 eslint ./index.ts --fix"
   },
   "devDependencies": {
