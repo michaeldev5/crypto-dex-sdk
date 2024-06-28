@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/smart-router",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zenlink Smart Order Router",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",

@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/typescript-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zenlink TypeScript Config",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
