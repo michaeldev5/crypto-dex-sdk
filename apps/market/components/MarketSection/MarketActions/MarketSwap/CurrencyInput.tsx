@@ -1,7 +1,7 @@
-import { type CurrencyInputProps, Web3Input } from '@zenlink-interface/compat'
-import type { Amount, Type } from '@zenlink-interface/currency'
+import { type CurrencyInputProps, Web3Input } from '@crypto-dex-sdk/compat'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { type FC, useMemo } from 'react'
-import { formatTransactionAmount } from '@zenlink-interface/format'
+import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { useUsdPctChange } from 'lib/hooks'
 import { useTrade } from './TradeProvider'
 

@@ -1,4 +1,4 @@
-import { JSBI, ONE, TWO, ZERO, _1000, _1e18, _999, maximum, minimum } from '@zenlink-interface/math'
+import { JSBI, ONE, TWO, ZERO, _1000, _1e18, _999, maximum, minimum } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 import type { ApproxParams, Market, MarketPreCompute, MarketState } from '../Market'
 import { ApproxFailError } from '../errors'

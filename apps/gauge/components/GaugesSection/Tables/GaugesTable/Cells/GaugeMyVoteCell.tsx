@@ -1,5 +1,5 @@
-import { Percent } from '@zenlink-interface/math'
-import { DEFAULT_INPUT_UNSTYLED, Input, Typography, classNames } from '@zenlink-interface/ui'
+import { Percent } from '@crypto-dex-sdk/math'
+import { DEFAULT_INPUT_UNSTYLED, Input, Typography, classNames } from '@crypto-dex-sdk/ui'
 import { VoteMode, useGaugeVotes } from 'components'
 import type { FC } from 'react'
 

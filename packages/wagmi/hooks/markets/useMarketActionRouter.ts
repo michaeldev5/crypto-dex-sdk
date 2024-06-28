@@ -1,4 +1,4 @@
-import { ParachainId } from '@zenlink-interface/chain'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { useMemo } from 'react'
 import type { Address } from 'viem'
 import { actionRouter } from '../../abis'

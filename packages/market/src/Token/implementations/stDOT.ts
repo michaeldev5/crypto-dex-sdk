@@ -1,6 +1,6 @@
-import type { Currency, Token } from '@zenlink-interface/currency'
-import { Amount } from '@zenlink-interface/currency'
-import { JSBI } from '@zenlink-interface/math'
+import type { Currency, Token } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
+import { JSBI } from '@crypto-dex-sdk/math'
 import { SYBase } from '../SYBase'
 
 export class StDOT extends SYBase {

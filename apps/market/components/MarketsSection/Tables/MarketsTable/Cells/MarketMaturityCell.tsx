@@ -1,8 +1,8 @@
-import { Typography, useBreakpoint } from '@zenlink-interface/ui'
+import { Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 
-import { getMaturityFormatDate } from '@zenlink-interface/market'
+import { getMaturityFormatDate } from '@crypto-dex-sdk/market'
 import type { CellProps } from './types'
 
 export const MarketMaturityCell: FC<CellProps> = ({ row }) => {

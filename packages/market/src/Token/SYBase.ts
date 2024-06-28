@@ -1,6 +1,6 @@
-import type { Amount, Currency } from '@zenlink-interface/currency'
-import { Token } from '@zenlink-interface/currency'
-import { type JSBI, ZERO } from '@zenlink-interface/math'
+import type { Amount, Currency } from '@crypto-dex-sdk/currency'
+import { Token } from '@crypto-dex-sdk/currency'
+import { type JSBI, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 
 export abstract class SYBase extends Token {

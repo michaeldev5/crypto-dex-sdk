@@ -1,5 +1,5 @@
-import { Amount, Token } from '@zenlink-interface/currency'
-import { JSBI, ZERO, maximum } from '@zenlink-interface/math'
+import { Amount, Token } from '@crypto-dex-sdk/currency'
+import { JSBI, ZERO, maximum } from '@crypto-dex-sdk/math'
 import { assetToSy, divDown, isCurrentExpired, mulDown, syToAsset } from '../utils'
 import type { SYBase } from './SYBase'
 import type { PT } from './PT'

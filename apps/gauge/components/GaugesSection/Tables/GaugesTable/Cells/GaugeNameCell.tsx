@@ -1,7 +1,7 @@
-import { Currency, Typography } from '@zenlink-interface/ui'
+import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 
-import { getMaturityFormatDate } from '@zenlink-interface/market'
+import { getMaturityFormatDate } from '@crypto-dex-sdk/market'
 import { ICON_SIZE } from '../../constants'
 import type { CellProps } from './types'
 

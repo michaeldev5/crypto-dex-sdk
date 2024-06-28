@@ -1,7 +1,7 @@
-import { useAccount } from '@zenlink-interface/compat'
-import type { Market } from '@zenlink-interface/market'
-import { JSBI, ZERO, _100 } from '@zenlink-interface/math'
-import { useBalance, useMarketActiveBalances, useVotingEscrow } from '@zenlink-interface/wagmi'
+import { useAccount } from '@crypto-dex-sdk/compat'
+import type { Market } from '@crypto-dex-sdk/market'
+import { JSBI, ZERO, _100 } from '@crypto-dex-sdk/math'
+import { useBalance, useMarketActiveBalances, useVotingEscrow } from '@crypto-dex-sdk/wagmi'
 import { useMemo } from 'react'
 
 const TOKENLESS_PRODUCTION = JSBI.BigInt(40)

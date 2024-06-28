@@ -17,7 +17,7 @@ import {
   ZERO,
   _100,
   _1e18,
-} from '@zenlink-interface/math'
+} from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 
 export function mulDown(a: JSBI, b: JSBI): JSBI {

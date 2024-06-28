@@ -1,9 +1,9 @@
-import type { Market, MarketRewardData } from '@zenlink-interface/market'
+import type { Market, MarketRewardData } from '@crypto-dex-sdk/market'
 import { useEffect, useMemo } from 'react'
-import { ParachainId, chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
 import { useReadContracts } from 'wagmi'
-import { JSBI } from '@zenlink-interface/math'
+import { JSBI } from '@crypto-dex-sdk/math'
 import { useBlockNumber } from '../useBlockNumber'
 import { gaugeController } from '../../abis'
 

@@ -1,4 +1,4 @@
-import { JSBI, Percent, ZERO, _1e18 } from '@zenlink-interface/math'
+import { JSBI, Percent, ZERO, _1e18 } from '@crypto-dex-sdk/math'
 import type { Market } from '../Market'
 
 interface UserVote {

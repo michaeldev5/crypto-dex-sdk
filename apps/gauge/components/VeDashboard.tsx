@@ -1,9 +1,9 @@
 import { BuildingLibraryIcon, HandRaisedIcon, InformationCircleIcon, WalletIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
-import { ParachainId } from '@zenlink-interface/chain'
-import { Amount, DOT, ZLK } from '@zenlink-interface/currency'
-import { Button, Currency, Tooltip, Typography } from '@zenlink-interface/ui'
-import { useVotingEscrow } from '@zenlink-interface/wagmi'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Amount, DOT, ZLK } from '@crypto-dex-sdk/currency'
+import { Button, Currency, Tooltip, Typography } from '@crypto-dex-sdk/ui'
+import { useVotingEscrow } from '@crypto-dex-sdk/wagmi'
 import { type FC, useMemo } from 'react'
 
 export const VeDashboard: FC = () => {

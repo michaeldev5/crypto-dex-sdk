@@ -25,10 +25,10 @@
     "lint": "TIMING=1 eslint src --fix"
   },
   "devDependencies": {
-    "@zenlink-interface/chain": "workspace:*",
-    "@zenlink-interface/eslint-config": "workspace:*",
-    "@zenlink-interface/graph-client": "workspace:*",
-    "@zenlink-interface/typescript-config": "workspace:*",
+    "@crypto-dex-sdk/chain": "workspace:*",
+    "@crypto-dex-sdk/eslint-config": "workspace:*",
+    "@crypto-dex-sdk/graph-client": "workspace:*",
+    "@crypto-dex-sdk/typescript-config": "workspace:*",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
     "esno": "^4.7.0",

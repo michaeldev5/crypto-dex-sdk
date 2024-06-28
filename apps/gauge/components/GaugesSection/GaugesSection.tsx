@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro'
-import { Button, Dots, Typography } from '@zenlink-interface/ui'
+import { Button, Dots, Typography } from '@crypto-dex-sdk/ui'
 import { VoteMode, useGaugeVotes } from 'components'
 import type { FC } from 'react'
 

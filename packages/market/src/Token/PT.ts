@@ -1,5 +1,5 @@
-import { Token } from '@zenlink-interface/currency'
-import type { JSBI } from '@zenlink-interface/math'
+import { Token } from '@crypto-dex-sdk/currency'
+import type { JSBI } from '@crypto-dex-sdk/math'
 import { isCurrentExpired } from '../utils'
 import type { SYBase } from './SYBase'
 import type { YT } from './YT'

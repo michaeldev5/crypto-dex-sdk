@@ -1,9 +1,9 @@
-import { ParachainId } from '@zenlink-interface/chain'
-import { useMarket } from '@zenlink-interface/wagmi'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { useMarket } from '@crypto-dex-sdk/wagmi'
 import { useRouter } from 'next/router'
 import type { Address } from 'viem'
-import { type Market, getMaturityFormatDate } from '@zenlink-interface/market'
-import { AppearOnMount, type BreadcrumbLink, LoadingOverlay } from '@zenlink-interface/ui'
+import { type Market, getMaturityFormatDate } from '@crypto-dex-sdk/market'
+import { AppearOnMount, type BreadcrumbLink, LoadingOverlay } from '@crypto-dex-sdk/ui'
 import {
   Layout,
   MarketAPY,
@@ -15,7 +15,7 @@ import {
   MarketStats,
 } from 'components'
 import useSWR from 'swr'
-import type { MarketGraphData } from '@zenlink-interface/graph-client'
+import type { MarketGraphData } from '@crypto-dex-sdk/graph-client'
 
 function LINKS(market: Market): BreadcrumbLink[] {
   return [

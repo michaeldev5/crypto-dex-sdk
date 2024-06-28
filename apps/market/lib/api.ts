@@ -1,5 +1,5 @@
-import type { MarketGraphData } from '@zenlink-interface/graph-client'
-import { marketById, marketsByChainIds } from '@zenlink-interface/graph-client'
+import type { MarketGraphData } from '@crypto-dex-sdk/graph-client'
+import { marketById, marketsByChainIds } from '@crypto-dex-sdk/graph-client'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 
 export async function getMarkets(): Promise<MarketGraphData[]> {

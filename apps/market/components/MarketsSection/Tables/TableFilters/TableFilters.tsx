@@ -1,5 +1,5 @@
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { Switch, Typography, classNames } from '@zenlink-interface/ui'
+import { Switch, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { Trans } from '@lingui/macro'
 import { useMarketFilters } from 'components/MarketsFiltersProvider'

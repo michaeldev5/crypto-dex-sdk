@@ -1,7 +1,7 @@
-import { Typography } from '@zenlink-interface/ui'
+import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 
-import { formatUSD } from '@zenlink-interface/format'
+import { formatUSD } from '@crypto-dex-sdk/format'
 import { useMarketFilters } from 'components'
 import type { CellProps } from './types'
 

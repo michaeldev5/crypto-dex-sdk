@@ -1,8 +1,8 @@
 import { Trans } from '@lingui/macro'
 import type { ColumnDef } from '@tanstack/react-table'
-import type { Gauge } from '@zenlink-interface/market'
+import type { Gauge } from '@crypto-dex-sdk/market'
 
-import { JSBI } from '@zenlink-interface/math'
+import { JSBI } from '@crypto-dex-sdk/math'
 import { GaugeCommunityVoteCell } from './GaugeCommunityVoteCell'
 import { GaugeMyVoteCell } from './GaugeMyVoteCell'
 import { GaugeNameCell } from './GaugeNameCell'

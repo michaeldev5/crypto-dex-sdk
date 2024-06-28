@@ -1,6 +1,6 @@
-import { AppSettings, NetworkSelector, Profile, useAccount } from '@zenlink-interface/compat'
-import { useNotifications } from '@zenlink-interface/shared'
-import { App, AppType } from '@zenlink-interface/ui'
+import { AppSettings, NetworkSelector, Profile, useAccount } from '@crypto-dex-sdk/compat'
+import { useNotifications } from '@crypto-dex-sdk/shared'
+import { App, AppType } from '@crypto-dex-sdk/ui'
 import React from 'react'
 
 import { SUPPORTED_CHAIN_IDS } from '../config'

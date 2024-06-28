@@ -1,5 +1,5 @@
-import { ZENLINK_ENABLED_NETWORKS } from '@zenlink-interface/graph-config'
-import { chainName, chainShortName } from '@zenlink-interface/chain'
+import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'
+import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
 import { MarketOrderByInput } from '../../../__generated__/market-types'
 import type { MarketGraphData, MarketQueryData } from '../../../types'
 import { fetchMarkets } from '../../../queries'

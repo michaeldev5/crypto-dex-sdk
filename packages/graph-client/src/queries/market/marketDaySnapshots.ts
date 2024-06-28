@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-import type { ParachainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { MarketDaySnapshotsQuery, MarketDaySnapshotsQueryVariables } from '../../__generated__/market-types'
 import { FactoryDayDataOrderByInput } from '../../__generated__/market-types'
 import type { MarketDaySnapshotsQueryData } from '../../types'

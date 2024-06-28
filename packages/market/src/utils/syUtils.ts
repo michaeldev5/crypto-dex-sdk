@@ -1,4 +1,4 @@
-import { JSBI, ONE, _1e18 } from '@zenlink-interface/math'
+import { JSBI, ONE, _1e18 } from '@crypto-dex-sdk/math'
 
 export function syToAsset(exchangeRate: JSBI, syAmount: JSBI): JSBI {
   return JSBI.divide(JSBI.multiply(syAmount, exchangeRate), _1e18)

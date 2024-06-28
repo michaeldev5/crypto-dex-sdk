@@ -1,10 +1,10 @@
 import type { PaginationState, SortingState } from '@tanstack/react-table'
 import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
-import type { Gauge } from '@zenlink-interface/market'
-import { GenericTable, Table, useBreakpoint } from '@zenlink-interface/ui'
+import type { Gauge } from '@crypto-dex-sdk/market'
+import { GenericTable, Table, useBreakpoint } from '@crypto-dex-sdk/ui'
 import { useGaugeVotes } from 'components'
 import { type FC, useEffect, useMemo, useState } from 'react'
-import { Percent } from '@zenlink-interface/math'
+import { Percent } from '@crypto-dex-sdk/math'
 import { PAGE_SIZE } from '../constants'
 import { COMMUNITY_VOTE_COLUMN, MY_VOTE_COLUMN, NAME_COLUMN } from './Cells/columns'
 

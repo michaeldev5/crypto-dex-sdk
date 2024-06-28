@@ -1,16 +1,16 @@
 import { HandRaisedIcon, InformationCircleIcon, WalletIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
-import { ParachainId } from '@zenlink-interface/chain'
-import { formatTransactionAmount } from '@zenlink-interface/format'
-import { usePrices } from '@zenlink-interface/shared'
-import { Button, Dots, Tooltip, Typography } from '@zenlink-interface/ui'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { formatTransactionAmount } from '@crypto-dex-sdk/format'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { Button, Dots, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import {
   type MarketPosition,
   useBoostMarketsReview,
   useMarketRewards,
   useRedeemRewardsReview,
   useYtInterestAndRewards,
-} from '@zenlink-interface/wagmi'
+} from '@crypto-dex-sdk/wagmi'
 import { type FC, useMemo } from 'react'
 
 interface PositionDashboardParams {

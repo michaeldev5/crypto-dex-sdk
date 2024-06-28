@@ -1,11 +1,11 @@
 import { Trans } from '@lingui/macro'
-import type { Market } from '@zenlink-interface/market'
-import { Button, Dialog, Dots } from '@zenlink-interface/ui'
+import type { Market } from '@crypto-dex-sdk/market'
+import { Button, Dialog, Dots } from '@crypto-dex-sdk/ui'
 import { type FC, type ReactNode, useState } from 'react'
-import type { Amount, Token } from '@zenlink-interface/currency'
-import { Approve, useAccount } from '@zenlink-interface/compat'
-import { useNotifications } from '@zenlink-interface/shared'
-import { useAddManualReview } from '@zenlink-interface/wagmi'
+import type { Amount, Token } from '@crypto-dex-sdk/currency'
+import { Approve, useAccount } from '@crypto-dex-sdk/compat'
+import { useNotifications } from '@crypto-dex-sdk/shared'
+import { useAddManualReview } from '@crypto-dex-sdk/wagmi'
 import { MarketAddManualWidget } from './MarketAddManual'
 
 interface MarketAddManualReviewModalProps {

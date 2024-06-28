@@ -1,7 +1,7 @@
-import type { Amount, Type } from '@zenlink-interface/currency'
-import { formatTransactionAmount } from '@zenlink-interface/format'
-import { ZERO } from '@zenlink-interface/math'
-import { usePrices } from '@zenlink-interface/shared'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import { formatTransactionAmount } from '@crypto-dex-sdk/format'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { usePrices } from '@crypto-dex-sdk/shared'
 import { useMemo } from 'react'
 
 interface Params {

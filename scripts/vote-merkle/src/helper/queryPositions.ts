@@ -1,5 +1,5 @@
-import { fetchVotePositions } from '@zenlink-interface/graph-client'
-import { ParachainId } from '@zenlink-interface/chain'
+import { fetchVotePositions } from '@crypto-dex-sdk/graph-client'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { getWeekEndTimestamp } from './misc'
 import type { PoolsData } from './types'
 import { UserVeBalanceList } from './types'

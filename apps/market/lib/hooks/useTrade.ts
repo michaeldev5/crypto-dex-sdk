@@ -1,9 +1,9 @@
-import { type AggregatorTrade, TradeVersion } from '@zenlink-interface/amm'
-import type { Amount, Currency } from '@zenlink-interface/currency'
-import { useDebounce } from '@zenlink-interface/hooks'
-import type { Market } from '@zenlink-interface/market'
-import { Trade } from '@zenlink-interface/market'
-import { getSwapRouterContractConfig } from '@zenlink-interface/wagmi'
+import { type AggregatorTrade, TradeVersion } from '@crypto-dex-sdk/amm'
+import type { Amount, Currency } from '@crypto-dex-sdk/currency'
+import { useDebounce } from '@crypto-dex-sdk/hooks'
+import type { Market } from '@crypto-dex-sdk/market'
+import { Trade } from '@crypto-dex-sdk/market'
+import { getSwapRouterContractConfig } from '@crypto-dex-sdk/wagmi'
 import { useMemo } from 'react'
 
 export interface UseTradeOutput {

@@ -1,10 +1,10 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
-import chains from '@zenlink-interface/chain'
-import { formatUSD } from '@zenlink-interface/format'
-import { type Market, getMaturityFormatDate } from '@zenlink-interface/market'
-import { usePrices } from '@zenlink-interface/shared'
-import { AppearOnMount, Currency, Link, NetworkIcon, Typography } from '@zenlink-interface/ui'
+import chains from '@crypto-dex-sdk/chain'
+import { formatUSD } from '@crypto-dex-sdk/format'
+import { type Market, getMaturityFormatDate } from '@crypto-dex-sdk/market'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { AppearOnMount, Currency, Link, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 
 interface MarketHeaderProps {

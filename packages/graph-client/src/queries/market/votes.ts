@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-import type { ParachainId } from '@zenlink-interface/chain'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { VotePositionData } from '../../types'
 import { MARKET_CLIENTS } from '../../appolo'
 import type { VotePositionQueryQuery } from '../../__generated__/market-types'

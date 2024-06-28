@@ -1,4 +1,4 @@
-import { JSBI } from '@zenlink-interface/math'
+import { JSBI } from '@crypto-dex-sdk/math'
 import { addWeeks, format, getUnixTime, startOfWeek } from 'date-fns'
 import type { Market } from '../Market'
 

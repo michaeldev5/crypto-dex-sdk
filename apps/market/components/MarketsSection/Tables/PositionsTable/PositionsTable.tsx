@@ -1,13 +1,13 @@
 import type { PaginationState, SortingState } from '@tanstack/react-table'
 import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
-import { GenericTable, Table, useBreakpoint } from '@zenlink-interface/ui'
-import type { MarketPosition } from '@zenlink-interface/wagmi'
+import { GenericTable, Table, useBreakpoint } from '@crypto-dex-sdk/ui'
+import type { MarketPosition } from '@crypto-dex-sdk/wagmi'
 import { useMarketFilters } from 'components'
 import { type FC, useCallback, useEffect, useMemo, useState } from 'react'
 import { getUnixTime } from 'date-fns'
-import { JSBI } from '@zenlink-interface/math'
-import { usePrices } from '@zenlink-interface/shared'
-import { ParachainId } from '@zenlink-interface/chain'
+import { JSBI } from '@crypto-dex-sdk/math'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { PAGE_SIZE } from '../constants'
 import {
   LP_BALANCE_COLUMN,

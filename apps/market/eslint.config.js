@@ -1,1 +1,1 @@
-module.exports = require('@zenlink-interface/eslint-config/nextjs')
+module.exports = require('@crypto-dex-sdk/eslint-config/nextjs')

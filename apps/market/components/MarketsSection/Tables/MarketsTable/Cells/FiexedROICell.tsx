@@ -1,8 +1,8 @@
-import { Typography } from '@zenlink-interface/ui'
+import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 
 import { useMarketFilters } from 'components/MarketsFiltersProvider'
-import { formatPercent, formatUSD } from '@zenlink-interface/format'
+import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
 import type { CellProps } from './types'
 
 export const FixedROICell: FC<CellProps> = ({ row }) => {

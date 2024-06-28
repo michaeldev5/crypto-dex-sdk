@@ -1,5 +1,5 @@
-import { Percent } from '@zenlink-interface/math'
-import { Typography } from '@zenlink-interface/ui'
+import { Percent } from '@crypto-dex-sdk/math'
+import { Typography } from '@crypto-dex-sdk/ui'
 import { useGaugeVotes } from 'components'
 import type { FC } from 'react'
 

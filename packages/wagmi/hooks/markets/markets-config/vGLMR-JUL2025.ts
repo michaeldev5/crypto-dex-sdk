@@ -1,7 +1,7 @@
-import { ParachainId } from '@zenlink-interface/chain'
-import { Token } from '@zenlink-interface/currency'
-import { PT, VGLMR, YT } from '@zenlink-interface/market'
-import { JSBI } from '@zenlink-interface/math'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Token } from '@crypto-dex-sdk/currency'
+import { PT, VGLMR, YT } from '@crypto-dex-sdk/market'
+import { JSBI } from '@crypto-dex-sdk/math'
 
 const wGLMR = new Token({
   chainId: 2004,

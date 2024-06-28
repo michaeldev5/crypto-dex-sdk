@@ -1,6 +1,6 @@
 import { Tab } from '@headlessui/react'
-import type { Market } from '@zenlink-interface/market'
-import { Widget, classNames } from '@zenlink-interface/ui'
+import type { Market } from '@crypto-dex-sdk/market'
+import { Widget, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { Trans } from '@lingui/macro'
 import { SettingsOverlay } from 'components'

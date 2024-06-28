@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
-import type { Market } from '@zenlink-interface/market'
-import { Currency, Typography } from '@zenlink-interface/ui'
-import type { YtInterestAndRewardsResult } from '@zenlink-interface/wagmi'
+import type { Market } from '@crypto-dex-sdk/market'
+import { Currency, Typography } from '@crypto-dex-sdk/ui'
+import type { YtInterestAndRewardsResult } from '@crypto-dex-sdk/wagmi'
 import { type FC, useMemo } from 'react'
 
 interface YtInterestAndRewardsProps {

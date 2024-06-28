@@ -1,5 +1,5 @@
-import type { Amount, Token } from '@zenlink-interface/currency'
-import { JSBI, ZERO } from '@zenlink-interface/math'
+import type { Amount, Token } from '@crypto-dex-sdk/currency'
+import { JSBI, ZERO } from '@crypto-dex-sdk/math'
 import { getUnixTime } from 'date-fns'
 import invariant from 'tiny-invariant'
 

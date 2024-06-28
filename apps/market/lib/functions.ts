@@ -1,4 +1,4 @@
-import { JSBI, Percent } from '@zenlink-interface/math'
+import { JSBI, Percent } from '@crypto-dex-sdk/math'
 
 const BIPS_BASE = JSBI.BigInt(10000)
 

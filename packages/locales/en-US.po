@@ -147,8 +147,8 @@ msgid "Finding Best Price"
 msgstr "Finding Best Price"
 
 #: apps/gauge/components/VeDashboard.tsx
-msgid "My VeZLK"
-msgstr "My VeZLK"
+#~ msgid "My VeZLK"
+#~ msgstr "My VeZLK"
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
@@ -336,6 +336,10 @@ msgstr "Get fee discounts"
 msgid "Farming Yield"
 msgstr "Farming Yield"
 
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MaxBoostTable.tsx
+msgid "If you LP in a pool while you are holding veZLK, your ZLK incentives and rewards for all of your LPs will be further boosted as well, by up to 250% based on your veZLK value. To obtain the maximum boost, you have to own an equivalent % supply of veZLK as your ownership % of LP in the pool."
+msgstr "If you LP in a pool while you are holding veZLK, your ZLK incentives and rewards for all of your LPs will be further boosted as well, by up to 250% based on your veZLK value. To obtain the maximum boost, you have to own an equivalent % supply of veZLK as your ownership % of LP in the pool."
+
 #: packages/compat/components/TokenSelector/TokenSelectorDialog.tsx
 msgid "Search token by address"
 msgstr "Search token by address"
@@ -458,8 +462,8 @@ msgid "Successfully approved {0}"
 msgstr "Successfully approved {0}"
 
 #: apps/gauge/components/VeDashboard.tsx
-msgid "Total VeZLK"
-msgstr "Total VeZLK"
+#~ msgid "Total VeZLK"
+#~ msgstr "Total VeZLK"
 
 #: apps/referrals/components/CodesTable/Cells/columns.tsx
 msgid "Code"
@@ -478,7 +482,6 @@ msgstr "Successfully redeemed PY interest and rewards"
 msgid "Active"
 msgstr "Active"
 
-#: apps/analytics/components/ChartSection/TVLChart.tsx
 #: apps/analytics/components/ChartSection/TVLChart.tsx
 #: apps/analytics/components/Table/columns.tsx
 #: apps/pool/components/PoolSection/PoolChart.tsx
@@ -767,6 +770,10 @@ msgstr "1. Select Network"
 msgid "Network"
 msgstr "Network"
 
+#: apps/gauge/components/VeDashboard.tsx
+msgid "Total veZLK"
+msgstr "Total veZLK"
+
 #: apps/swap/pages/index.tsx
 #~ msgid "Cross Transfer"
 #~ msgstr "Cross Transfer"
@@ -787,7 +794,6 @@ msgstr "Active Referral Code"
 msgid "ROI guaranteed in buying and holding PT until maturity."
 msgstr "ROI guaranteed in buying and holding PT until maturity."
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copied!"
 msgstr "Copied!"
@@ -1067,7 +1073,6 @@ msgid "On"
 msgstr "On"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/markets/useRemoveManualReview.ts
 #: packages/wagmi/hooks/markets/useRemoveZapReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStableReview.ts
@@ -1203,6 +1208,10 @@ msgstr "Help"
 #: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZap.tsx
 msgid "In zero price impact mode, YT will be returned to you after providing liquidity."
 msgstr "In zero price impact mode, YT will be returned to you after providing liquidity."
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "based on veZLK votes, updated every Thursday"
+msgstr "based on veZLK votes, updated every Thursday"
 
 #: packages/ui/app/Header.tsx
 msgid "Old App"
@@ -1392,6 +1401,10 @@ msgstr "Generating referral code ({code})"
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
 msgid "Successfully stake {0} {1}"
 msgstr "Successfully stake {0} {1}"
+
+#: apps/gauge/components/VeDashboard.tsx
+msgid "My veZLK"
+msgstr "My veZLK"
 
 #: apps/referrals/components/AffiliatesSection/AffiliatesSection.tsx
 msgid "Referral Codes"
@@ -1719,7 +1732,6 @@ msgid "Community Vote Summary"
 msgstr "Community Vote Summary"
 
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
-#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
 #: packages/wagmi/hooks/markets/useAddManualReview.ts
 #: packages/wagmi/hooks/markets/useAddZapReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStableReview.ts
@@ -1830,7 +1842,6 @@ msgstr "Unlocked ZLK"
 msgid "Minting PY from {0} {1}"
 msgstr "Minting PY from {0} {1}"
 
-#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Clear all"
 msgstr "Clear all"

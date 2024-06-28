@@ -1,9 +1,9 @@
-import type { CurrencyInputProps } from '@zenlink-interface/compat'
-import { tryParseAmount } from '@zenlink-interface/currency'
-import { formatTransactionAmount } from '@zenlink-interface/format'
-import { useIsMounted } from '@zenlink-interface/hooks'
-import { usePrices } from '@zenlink-interface/shared'
-import { Skeleton, Typography, classNames } from '@zenlink-interface/ui'
+import type { CurrencyInputProps } from '@crypto-dex-sdk/compat'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import { formatTransactionAmount } from '@crypto-dex-sdk/format'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { Skeleton, Typography, classNames } from '@crypto-dex-sdk/ui'
 import { type FC, useMemo } from 'react'
 
 type PricePanelProps = Pick<CurrencyInputProps, 'currency' | 'value' | 'usdPctChange'>

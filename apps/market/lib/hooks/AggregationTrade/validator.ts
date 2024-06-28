@@ -1,4 +1,4 @@
-import { PoolType } from '@zenlink-interface/amm'
+import { PoolType } from '@crypto-dex-sdk/amm'
 import { z } from 'zod'
 
 const tokenValidator = z.object({

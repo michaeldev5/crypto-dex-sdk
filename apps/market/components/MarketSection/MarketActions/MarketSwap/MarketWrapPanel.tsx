@@ -1,9 +1,9 @@
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
-import { Checker, CurrencyInput } from '@zenlink-interface/compat'
-import { type Type, tryParseAmount } from '@zenlink-interface/currency'
-import type { Market } from '@zenlink-interface/market'
+import { Checker, CurrencyInput } from '@crypto-dex-sdk/compat'
+import { type Type, tryParseAmount } from '@crypto-dex-sdk/currency'
+import type { Market } from '@crypto-dex-sdk/market'
 import { type FC, useCallback, useMemo, useState } from 'react'
-import { Button, Dots } from '@zenlink-interface/ui'
+import { Button, Dots } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
 import { MarketWrapReviewModal } from './MarketWrapReviewModal'
 
