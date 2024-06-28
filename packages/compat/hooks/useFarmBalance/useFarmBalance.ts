@@ -1,8 +1,8 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import type { Address } from 'wagmi'
 import { useFarmBalances as useWagmiFarmBalances } from '@crypto-dex-sdk/wagmi'
 import { useFarmBalances as useBifrostBalances } from '@crypto-dex-sdk/parachains-bifrost'
 import { useMemo } from 'react'
+import type { Address } from 'viem'
 import { isEvmNetwork } from '../../config'
 import type { FarmBalanceMap } from './types'
 

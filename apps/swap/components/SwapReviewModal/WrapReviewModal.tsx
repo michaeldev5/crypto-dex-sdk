@@ -1,4 +1,4 @@
-import { Trans, t } from '@lingui/macro'
+import { Trans } from '@lingui/macro'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import { Button, Dots } from '@crypto-dex-sdk/ui'
@@ -14,7 +14,7 @@ interface WrapReviewModalProps {
   input1: Amount<Type> | undefined
   wrapType: WrapType
   chainId: number | undefined
-  children({ isWritePending, setOpen }: { isWritePending: boolean, setOpen(open: boolean): void }): ReactNode
+  children: ({ isWritePending, setOpen }: { isWritePending: boolean, setOpen: (open: boolean) => void }) => ReactNode
 }
 
 export const WrapReviewModal: FC<WrapReviewModalProps> = ({ input0, input1, wrapType, chainId, children }) => {
@@ -22,7 +22,14 @@ export const WrapReviewModal: FC<WrapReviewModalProps> = ({ input0, input1, wrap
   const [, { createNotification }] = useNotifications(address)
   const [open, setOpen] = useState(false)
 
-  const { sendTransaction, isLoading: isWritePending } = useWrapCallback({
+  const {
+    request,
+    estimateGas,
+    useSendTransactionReturn: {
+      sendTransaction,
+      isPending: isWritePending,
+    },
+  } = useWrapCallback({
     amount: input0,
     chainId,
     onSuccess: (data) => {
@@ -38,18 +45,25 @@ export const WrapReviewModal: FC<WrapReviewModalProps> = ({ input0, input1, wrap
     <>
       {children({ isWritePending, setOpen })}
       <SwapReviewModalBase chainId={chainId} input0={input0} input1={input1} open={open} setOpen={setOpen}>
-        <Button disabled={isWritePending} fullWidth onClick={() => sendTransaction?.()} size="md">
-          {isWritePending
-            ? (
-              <Dots>
-                <Trans>
-                  Confirm {wrapType === WrapType.Wrap ? 'Wrap' : 'Unwrap'}
-                </Trans>
-              </Dots>
-              )
-            : wrapType === WrapType.Wrap
-              ? t`Wrap`
-              : t`Unwrap`}
+        <Button
+          disabled={isWritePending}
+          fullWidth
+          onClick={request && estimateGas ? () => sendTransaction({ ...request }) : undefined}
+          size="md"
+        >
+          {
+            isWritePending
+              ? (
+                <Dots>
+                  <Trans>
+                    Confirm {wrapType === WrapType.Wrap ? 'Wrap' : 'Unwrap'}
+                  </Trans>
+                </Dots>
+                )
+              : wrapType === WrapType.Wrap
+                ? <Trans>Wrap</Trans>
+                : <Trans>Unwrap</Trans>
+          }
         </Button>
       </SwapReviewModalBase>
     </>

@@ -1,3 +1,4 @@
+import { t } from '@lingui/macro'
 import type { Trade } from '@crypto-dex-sdk/amm'
 import { Percent } from '@crypto-dex-sdk/math'
 import type { TransactionRequest } from '@crypto-dex-sdk/polkadot'
@@ -5,7 +6,7 @@ import { useAccount, useApi, useBlockNumber, useSendTransaction } from '@crypto-
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useMemo } from 'react'
-import { t } from '@lingui/macro'
+
 import { SwapRouter } from '../SwapRouter'
 
 const SWAP_DEFAULT_SLIPPAGE = new Percent(50, 10_000) // 0.50%
@@ -15,7 +16,7 @@ interface UseSwapReviewParams {
   trade: Trade | undefined
   setOpen: Dispatch<SetStateAction<boolean>>
   setError: Dispatch<SetStateAction<string | undefined>>
-  onSuccess(): void
+  onSuccess: () => void
 }
 
 type UseSwapReview = (params: UseSwapReviewParams) => {

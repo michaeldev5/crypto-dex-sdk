@@ -4,9 +4,10 @@ import type { Token, Type } from '@crypto-dex-sdk/currency'
 import { Amount } from '@crypto-dex-sdk/currency'
 import { isZenlinkAddress } from '@crypto-dex-sdk/format'
 import { JSBI } from '@crypto-dex-sdk/math'
-import type { OrmlTokensAccountData } from '@zenlink-types/bifrost/interfaces'
 import { useAccount, useApi, useCallMulti, useNativeBalancesAll } from '@crypto-dex-sdk/polkadot'
+import type { OrmlTokensAccountData } from '@zenlink-types/bifrost/interfaces'
 import { useMemo } from 'react'
+
 import { addressToNodeCurrency, isNativeCurrency } from '../../libs'
 import type { BalanceMap } from './types'
 
@@ -72,10 +73,10 @@ export const useBalances: UseBalances = ({
         result[validatedTokens[i].address] = Amount.fromRawAmount(validatedTokens[i], '0')
 
       if (isNativeCurrency(validatedTokens[i]))
-        result[validatedTokens[i].wrapped.address] = Amount.fromRawAmount(validatedTokens[i], nativeBalancesAll?.freeBalance.toString() || '0')
+        result[validatedTokens[i].wrapped.address] = Amount.fromRawAmount(validatedTokens[i], nativeBalancesAll?.availableBalance.toString() || '0')
     }
     return result
-  }, [balances, nativeBalancesAll?.freeBalance, validatedTokens])
+  }, [balances, nativeBalancesAll?.availableBalance, validatedTokens])
 
   return useMemo(() => ({
     data: balanceMap,

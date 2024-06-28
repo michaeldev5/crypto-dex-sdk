@@ -1,6 +1,13 @@
 import { chainShortName } from '@crypto-dex-sdk/chain'
 import type { Pool as GraphPool } from '@crypto-dex-sdk/graph-client'
-import { pairById, pairsByChainIds, singleTokenLockById, singleTokenLocksByChainIds, stableSwapById, stableSwapsByChainIds } from '@crypto-dex-sdk/graph-client'
+import {
+  pairById,
+  pairsByChainIds,
+  singleTokenLockById,
+  singleTokenLocksByChainIds,
+  stableSwapById,
+  stableSwapsByChainIds,
+} from '@crypto-dex-sdk/graph-client'
 import type { BreadcrumbLink } from '@crypto-dex-sdk/ui'
 import { AppearOnMount } from '@crypto-dex-sdk/ui'
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'

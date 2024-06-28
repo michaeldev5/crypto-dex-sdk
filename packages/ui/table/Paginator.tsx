@@ -9,9 +9,9 @@ export interface PaginatorProps {
   hasPrev: boolean
   hasNext: boolean
   page: number
-  onPrev(): void
-  onNext(): void
-  onPage(page: number): void
+  onPrev: () => void
+  onNext: () => void
+  onPage: (page: number) => void
   pages?: number
   pageSize: number
   nextDisabled?: boolean
@@ -60,6 +60,7 @@ export const Paginator: FC<PaginatorProps> = ({
               <b>{page + 1}</b>
               {' '}
               of
+              {' '}
               <b>{pages}</b>
             </div>
             )

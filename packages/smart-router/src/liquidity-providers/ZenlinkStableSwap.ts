@@ -1,6 +1,6 @@
 import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { Amount, Token } from '@crypto-dex-sdk/currency'
-import { BigNumber } from 'ethers'
+import { BigNumber } from '@ethersproject/bignumber'
 import { StableSwap } from '@crypto-dex-sdk/amm'
 import JSBI from 'jsbi'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'

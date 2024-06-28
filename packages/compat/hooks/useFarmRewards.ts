@@ -1,9 +1,9 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import type { Address } from 'wagmi'
 import { useFarmsRewards as useWagmiFarmsRewards } from '@crypto-dex-sdk/wagmi'
 import { useFarmsRewards as useBifrostFarmsRewards } from '@crypto-dex-sdk/parachains-bifrost'
 import { useFarmsRewards as useAmplitudeFarmsRewards } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
+import type { Address } from 'viem'
 import { isEvmNetwork } from '../config'
 
 interface UserReward {
@@ -69,7 +69,7 @@ export const useFarmsRewards: UseFarmsRewards = ({
     if (isEvmNetwork(chainId))
       return wagmiBalances
 
-    if (chainId === ParachainId.AMPLITUDE)
+    if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeBalances
     else
       return bifrostBalances

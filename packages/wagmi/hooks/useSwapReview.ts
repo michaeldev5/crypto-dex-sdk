@@ -1,31 +1,23 @@
-import type { SendTransactionResult } from '@wagmi/core'
-import { waitForTransaction } from 'wagmi/actions'
 import type { AggregatorTrade, Trade } from '@crypto-dex-sdk/amm'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import {
-  useAccount,
-  usePrepareSendTransaction,
-  usePublicClient,
-  useSendTransaction,
-} from 'wagmi'
+import { useAccount, useEstimateGas, useSendTransaction } from 'wagmi'
 import { log } from 'next-axiom'
 import stringify from 'fast-json-stable-stringify'
 import { Percent } from '@crypto-dex-sdk/math'
 import { isAddress } from '@ethersproject/address'
-import { AddressZero } from '@ethersproject/constants'
 import { t } from '@lingui/macro'
-import type { Address } from 'viem'
-import { ProviderRpcError, UserRejectedRequestError } from 'viem'
-import { BigNumber } from 'ethers'
+import type { Abi, Address } from 'viem'
+import { encodeFunctionData, zeroAddress } from 'viem'
 import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk'
-import { calculateGasMargin } from '../calculateGasMargin'
+import type { SendTransactionData } from 'wagmi/query'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { SwapRouter } from '../SwapRouter'
 import type { WagmiTransactionRequest } from '../types'
-import type { MultisigSafeConnector } from '../connectors'
+import { config } from '../client'
 import { useRouters } from './useRouters'
 import { useTransactionDeadline } from './useTransactionDeadline'
 import { ApprovalState, useERC20ApproveCallback } from './useERC20ApproveCallback'
@@ -48,7 +40,7 @@ interface UseSwapReviewParams {
   permit2Actions?: Permit2Actions
   setOpen: Dispatch<SetStateAction<boolean>>
   setError: Dispatch<SetStateAction<string | undefined>>
-  onSuccess(): void
+  onSuccess: () => void
 }
 
 type UseSwapReview = (params: UseSwapReviewParams) => {
@@ -61,31 +53,24 @@ export const useSwapReview: UseSwapReview = ({
   chainId,
   trade,
   setOpen,
-  setError,
   onSuccess,
   enablePermit2,
   permit2Actions,
   open,
   enableNetworks,
 }) => {
-  const ethereumChainId = chainsParachainIdToChainId[chainId ?? -1]
-  const { address: account, connector } = useAccount()
-  const provider = usePublicClient({ chainId: ethereumChainId })
+  const ethereumChainId = chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1]
+  const { address: account } = useAccount()
   const [, { createNotification }] = useNotifications(account)
 
   const onSettled = useCallback(
-    async (data: SendTransactionResult | undefined) => {
-      if (!trade || !chainId || !data)
+    async (hash: SendTransactionData | undefined) => {
+      if (!trade || !chainId || !hash)
         return
 
       const ts = new Date().getTime()
-      // track issue https://github.com/wagmi-dev/wagmi/issues/2461
-      if (connector?.id === 'safe') {
-        const hash = await (connector as MultisigSafeConnector).getHashBySafeTxHash(data?.hash)
-        data.hash = hash ?? data.hash
-      }
 
-      waitForTransaction({ hash: data.hash })
+      waitForTransactionReceipt(config, { hash })
         .then((tx) => {
           log.info('swap success', {
             transactionHash: tx.transactionHash,
@@ -114,8 +99,8 @@ export const useSwapReview: UseSwapReview = ({
       createNotification({
         type: 'swap',
         chainId,
-        txHash: data.hash,
-        promise: waitForTransaction({ hash: data.hash }),
+        txHash: hash,
+        promise: waitForTransactionReceipt(config, { hash }),
         summary: {
           pending: t`Swapping ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol
             } for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol}`,
@@ -127,28 +112,25 @@ export const useSwapReview: UseSwapReview = ({
         groupTimestamp: ts,
       })
     },
-    [chainId, connector, createNotification, trade],
+    [chainId, createNotification, trade],
   )
 
   const [request, setRequest] = useState<WagmiTransactionRequest>()
-  const { config } = usePrepareSendTransaction({
-    ...request,
-    chainId: ethereumChainId,
-    enabled: !!trade && !!request,
-  })
 
-  const { sendTransaction, isLoading: isWritePending } = useSendTransaction({
-    ...config,
-    onSettled,
-    onSuccess: (data) => {
-      if (data) {
-        setOpen(false)
-        onSuccess()
-      }
+  const estimateGas = useEstimateGas({ ...request, chainId: ethereumChainId })
+  const { sendTransaction, isPending: isWritePending } = useSendTransaction({
+    mutation: {
+      onSettled,
+      onSuccess: (data) => {
+        if (data) {
+          setOpen(false)
+          onSuccess()
+        }
+      },
     },
   })
 
-  const [swapRouter] = useRouters(chainId, enableNetworks, trade?.version)
+  const swapRouter = useRouters(chainId, enableNetworks, trade?.version)
   const deadline = useTransactionDeadline(ethereumChainId, open)
   const [{ slippageTolerance }] = useSettings()
 
@@ -170,107 +152,72 @@ export const useSwapReview: UseSwapReview = ({
     [slippageTolerance],
   )
 
-  const prepare = useCallback(async () => {
-    if (
-      !trade
-      || !account
-      || !chainId
-      || !deadline
-      || (
-        isToUsePermit2
-          ? permit2Actions?.state !== ApprovalState.APPROVED
-          : approvalState !== ApprovalState.APPROVED
-      )
-    )
-      return
-
+  const prepare = useCallback(() => {
     try {
+      if (
+        !trade
+        || !account
+        || !chainId
+        || !deadline
+        || (
+          isToUsePermit2
+            ? permit2Actions?.state !== ApprovalState.APPROVED
+            : approvalState !== ApprovalState.APPROVED
+        )
+      ) {
+        return
+      }
+
       let call: SwapCall | null = null
       let value = '0x0'
 
-      if (trade) {
-        if (!swapRouter || !deadline)
-          return
-        const { methodName, args, value: _value } = SwapRouter.swapCallParameters(
-          trade,
-          {
-            allowedSlippage,
-            recipient: account,
-            deadline: deadline.toNumber(),
-            isToUsePermit2,
-            permitSingle: permit2Actions?.permitSingle,
-            signature: permit2Actions?.signature,
-          },
-        )
-        value = _value
+      if (!swapRouter || !deadline)
+        return
 
-        call = {
-          address: swapRouter.address as Address,
-          calldata: swapRouter.interface.encodeFunctionData(methodName, args) as Address,
-          value,
-        }
+      const { methodName, args, value: _value } = SwapRouter.swapCallParameters(
+        trade,
+        {
+          allowedSlippage,
+          recipient: account,
+          deadline: deadline.toNumber(),
+          isToUsePermit2,
+          permitSingle: permit2Actions?.permitSingle,
+          signature: permit2Actions?.signature,
+        },
+      )
+      value = _value
+
+      call = {
+        address: swapRouter.address as Address,
+        calldata: encodeFunctionData({
+          abi: swapRouter.abi as Abi,
+          functionName: methodName,
+          args,
+        }),
+        value,
       }
 
       if (call) {
         if (!isAddress(call.address))
           throw new Error('call address has to be an address')
-        if (call.address === AddressZero)
+        if (call.address === zeroAddress)
           throw new Error('call address cannot be zero')
 
         const tx
-          = !value || /^0x0*$/.test(value)
-            ? { account, to: call.address, data: call.calldata }
-            : {
-                account,
-                to: call.address,
-                data: call.calldata,
-                value: BigInt(value),
-              }
-
-        const estimatedCall = await provider
-          .estimateGas(tx)
-          .then((gasEstimate) => {
-            return {
-              call,
-              gasEstimate,
+        = !value || /^0x0*$/.test(value)
+          ? { account, to: call.address, data: call.calldata }
+          : {
+              account,
+              to: call.address,
+              data: call.calldata,
+              value: BigInt(value),
             }
-          })
-          .catch(() => {
-            return provider
-              .call(tx)
-              .then(() => {
-                return {
-                  call,
-                  error: new Error('Unexpected issue with estimating the gas. Please try again.'),
-                }
-              })
-              .catch((callError) => {
-                return {
-                  call,
-                  error: new Error(callError),
-                }
-              })
-          })
 
-        setRequest({
-          ...tx,
-          ...(
-            'gasEstimate' in estimatedCall
-              ? { gasLimit: calculateGasMargin(BigNumber.from(estimatedCall.gasEstimate)) }
-              : {}
-          ),
-        })
+        setRequest({ ...tx })
       }
     }
-    catch (e: unknown) {
-      if (e instanceof UserRejectedRequestError)
-        return
-      if (e instanceof ProviderRpcError)
-        setError(e.message)
-
-      console.error(e)
-    }
-  }, [account, allowedSlippage, approvalState, chainId, deadline, isToUsePermit2, permit2Actions?.permitSingle, permit2Actions?.signature, permit2Actions?.state, provider, setError, swapRouter, trade])
+    catch {}
+  }, [account, allowedSlippage, approvalState, chainId, deadline, isToUsePermit2, permit2Actions?.permitSingle, permit2Actions?.signature, permit2Actions?.state, swapRouter, trade])
 
   useEffect(() => {
     prepare()
@@ -278,7 +225,9 @@ export const useSwapReview: UseSwapReview = ({
 
   return useMemo(() => ({
     isWritePending,
-    sendTransaction,
+    sendTransaction: request && estimateGas
+      ? () => sendTransaction({ ...request })
+      : undefined,
     routerAddress: swapRouter?.address,
-  }), [isWritePending, sendTransaction, swapRouter?.address])
+  }), [estimateGas, isWritePending, request, sendTransaction, swapRouter?.address])
 }

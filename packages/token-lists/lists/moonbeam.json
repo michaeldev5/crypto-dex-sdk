@@ -298,6 +298,61 @@
       "symbol": "xcvFIL",
       "decimals": 18,
       "name": "Bifrost Voucher FIL"
+    },
+    {
+      "networkId": 300,
+      "address": "0xfFFffFFf7D3875460d4509eb8d0362c611B4E841",
+      "parachainId": 2004,
+      "ethereumChainId": 1284,
+      "assetType": 255,
+      "assetIndex": 0,
+      "symbol": "xcMANTA",
+      "decimals": 18,
+      "name": "Manta"
+    },
+    {
+      "networkId": 300,
+      "address": "0xbc7E02c4178a7dF7d3E564323a5c359dc96C4db4",
+      "parachainId": 2004,
+      "ethereumChainId": 1284,
+      "assetType": 255,
+      "assetIndex": 0,
+      "symbol": "stDOT",
+      "decimals": 10,
+      "name": "Stella stDOT"
+    },
+    {
+      "networkId": 300,
+      "address": "0xfFfFFfFf30478fAFBE935e466da114E14fB3563d",
+      "parachainId": 2004,
+      "ethereumChainId": 1284,
+      "assetType": 255,
+      "assetIndex": 0,
+      "symbol": "xcPINK",
+      "decimals": 10,
+      "name": "PINK"
+    },
+    {
+      "networkId": 300,
+      "address": "0xfFffFFFf5da2d7214D268375cf8fb1715705FdC6",
+      "parachainId": 2004,
+      "ethereumChainId": 1284,
+      "assetType": 255,
+      "assetIndex": 0,
+      "symbol": "xcDED",
+      "decimals": 10,
+      "name": "DED"
+    },
+    {
+      "networkId": 300,
+      "address": "0xFfFfFFff99dABE1a8De0EA22bAa6FD48fdE96F6c",
+      "parachainId": 2004,
+      "ethereumChainId": 1284,
+      "assetType": 255,
+      "assetIndex": 0,
+      "symbol": "xcvGLMR",
+      "decimals": 18,
+      "name": "Bifrost Voucher GLMR"
     }
   ]
 }

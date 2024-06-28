@@ -1,5 +1,6 @@
 import type { Amount, Currency, Price } from '@crypto-dex-sdk/currency'
 import type { Percent } from '@crypto-dex-sdk/math'
+
 import type { TradeVersion } from './TradeVersion'
 
 export enum PoolType {

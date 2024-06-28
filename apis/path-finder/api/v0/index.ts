@@ -1,11 +1,12 @@
+import type { VercelRequest, VercelResponse } from '@vercel/node'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Native } from '@crypto-dex-sdk/currency'
 import { Router } from '@crypto-dex-sdk/smart-router'
 import { BigNumber } from 'ethers'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import { z } from 'zod'
-import { Native } from '@crypto-dex-sdk/currency'
-import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { getToken } from './tokens'
+
 import { V2_CHAINS, getDataFetcher } from './config'
+import { getToken } from './tokens'
 
 const querySchema = z.object({
   chainId: z.coerce

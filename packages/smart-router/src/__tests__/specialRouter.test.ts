@@ -1,7 +1,7 @@
 import { ParachainId } from "@crypto-dex-sdk/chain"
 import { Native, USDC } from "@crypto-dex-sdk/currency"
 import { astar } from "@crypto-dex-sdk/wagmi-config"
-import { BigNumber, providers } from "ethers"
+import { BigNumber } from '@ethersproject/bignumber'
 import { Chain, createPublicClient, http } from "viem"
 import { afterAll, beforeAll, expect, describe, it } from "vitest"
 import { DataFetcher } from "../fetchers"

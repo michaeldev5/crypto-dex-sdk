@@ -1,5 +1,6 @@
 import type { Amount, Token } from '@crypto-dex-sdk/currency'
 import type { JSBI } from '@crypto-dex-sdk/math'
+
 import type { Fee } from '../Fee'
 import type { MultiPath } from '../MultiRoute'
 import type { Pair } from '../Pair'

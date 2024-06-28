@@ -2,10 +2,12 @@ import 'dotenv/config'
 
 import { EthereumChainId, ParachainId } from '@crypto-dex-sdk/chain'
 import { DataFetcher } from '@crypto-dex-sdk/smart-router'
+import { astar, scroll } from '@crypto-dex-sdk/wagmi-config'
 import type { Chain, PublicClient } from 'viem'
 import { createPublicClient, fallback, http } from 'viem'
 import { base, moonbeam, scrollTestnet } from 'viem/chains'
-import { astar, scroll } from '@crypto-dex-sdk/wagmi-config'
+
+export const MAX_REQUESTS_PER_MIN = 10
 
 export const CHAINS = [
   ParachainId.MOONBEAM,

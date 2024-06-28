@@ -2,10 +2,10 @@ import 'dotenv/config'
 
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { DataFetcher } from '@crypto-dex-sdk/smart-router'
+import { astar } from '@crypto-dex-sdk/wagmi-config'
 import type { PublicClient } from 'viem'
 import { createPublicClient, fallback, http } from 'viem'
 import { arbitrum } from 'viem/chains'
-import { astar } from '@crypto-dex-sdk/wagmi-config'
 
 export const V1_CHAINS = [
   ParachainId.ASTAR,

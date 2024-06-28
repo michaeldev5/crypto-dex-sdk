@@ -30,6 +30,7 @@ msgid "Successfully added liquidity to the {0}/{1} pair"
 msgstr "{0}/{1} ペアに流動性を正常に追加しました"
 
 #: apps/analytics/components/ChartSection/VolumeChart.tsx
+#: apps/market/components/MarketSection/MarketChart.tsx
 #: apps/pool/components/PoolSection/PoolChart.tsx
 msgid "Volume"
 msgstr "ボリューム"
@@ -42,6 +43,7 @@ msgstr "に"
 msgid "Fees"
 msgstr "手数料"
 
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapReviewModal.tsx
 #: apps/swap/components/SwapReviewModal/WrapReviewModal.tsx
 msgid "Confirm {0}"
 msgstr "{0} を確認"
@@ -56,6 +58,11 @@ msgstr "{0} を {1} にスワップしようとした際に何か問題が発生
 msgid "Successfully unstaked {0} {1}"
 msgstr "{0}の{1}のアンステーキングが成功しました。"
 
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+#: apps/market/components/MarketsSection/Tables/PositionsTable/Cells/columns.tsx
+msgid "Maturity"
+msgstr ""
+
 #: apps/swap/components/SettingsOverlay/AggregatorOverlay.tsx
 #: apps/swap/components/SettingsOverlay/AggregatorOverlay.tsx
 #: apps/swap/components/SettingsOverlay/AggregatorOverlay.tsx
@@ -69,6 +76,10 @@ msgstr "ファーミング報酬"
 #: packages/wagmi/systems/Checker/Network.tsx
 msgid "Switch to {0}"
 msgstr "{0} に切り替える"
+
+#: packages/wagmi/hooks/gauge/useLockVeReview.ts
+msgid "Successfully increased voting power and/or increased the lock time"
+msgstr ""
 
 #: apps/pool/components/RemoveSection/RemoveSectionWidgetStandard.tsx
 #~ msgid "No liquidity tokens found {0}"
@@ -86,6 +97,10 @@ msgstr "閉じる"
 msgid "All Pools"
 msgstr "全てのプール"
 
+#: apps/market/components/MarketSection/MarketHeader.tsx
+msgid "Maturity: {0}"
+msgstr ""
+
 #: packages/ui/app/Header.tsx
 #~ msgid "Explore Apps"
 #~ msgstr "アプリを探索する"
@@ -98,6 +113,10 @@ msgstr "全てのプール"
 msgid "Stats"
 msgstr "統計情報"
 
+#: apps/gauge/components/GaugesChart/GaugesChart.tsx
+msgid "My Vote Summary"
+msgstr ""
+
 #: apps/swap/components/CrossTransfer/index.tsx
 msgid "Tools support cross transfer token from one chain to another."
 msgstr "ツールは、一つのチェーンから他のチェーンへのクロス転送トークンをサポートしています。"
@@ -105,6 +124,10 @@ msgstr "ツールは、一つのチェーンから他のチェーンへのクロ
 #: apps/pool/components/RemoveSection/RemoveSectionStable.tsx
 msgid "No liquidity tokens found"
 msgstr "流動性トークンが見つかりません"
+
+#: apps/gauge/pages/lock.tsx
+msgid "Locked ZLK"
+msgstr ""
 
 #: apps/pool/components/StakeSection/StakeSectionWidgetStandard.tsx
 msgid "No liquidity tokens found, did you add liquidity first?"
@@ -118,9 +141,14 @@ msgstr "流動性トークンが見つかりませんでした。最初に流動
 msgid "Remove Liquidity"
 msgstr "流動性を削除する"
 
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketSwapPanel.tsx
 #: apps/swap/pages/index.tsx
 msgid "Finding Best Price"
 msgstr "最適な価格を探す"
+
+#: apps/gauge/components/VeDashboard.tsx
+msgid "My VeZLK"
+msgstr ""
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
@@ -161,9 +189,35 @@ msgstr "取引"
 msgid "Pool Composition"
 msgstr "プール構成"
 
+#: packages/wagmi/hooks/markets/useMarketSwapReview.ts
+msgid ""
+"Successfully swapped {0} {1}\n"
+"for {2} {3}"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/PositionsTable/Cells/columns.tsx
+msgid "SY"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketActions.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarkeMint.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketMintAndRedeem.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketMintReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketMintReviewModal.tsx
+msgid "Mint"
+msgstr ""
+
 #: apps/referrals/pages/index.tsx
 msgid "Calculate based on ZLK holdings."
 msgstr "ZLKホールディングに基づいて計算してください."
+
+#: apps/market/components/MarketsSection/Tables/PositionsTable/Cells/columns.tsx
+msgid "PT"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "ROI for buying and holding YT at the current price, assuming the average future APY is equivalent to the current underlying APY."
+msgstr ""
 
 #: packages/parachains-impl/amplitude/hooks/useStakeLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useStakeLiquidityReview.ts
@@ -175,6 +229,8 @@ msgid "Next: <1m"
 msgstr "次: <1m"
 
 #: apps/analytics/components/Table/columns.tsx
+#: apps/gauge/components/GaugesSection/Tables/GaugesTable/Cells/columns.tsx
+#: apps/market/components/MarketsSection/Tables/PositionsTable/Cells/columns.tsx
 #: apps/pool/components/PoolsSection/Tables/PoolsTable/Cells/columns.tsx
 #: apps/pool/components/PoolsSection/Tables/PositionsTable/Cells/columns.tsx
 msgid "Name"
@@ -188,6 +244,14 @@ msgstr "{0} の承認中に問題が発生しました"
 msgid "New Position"
 msgstr "新しいポジション"
 
+#: packages/wagmi/hooks/markets/useAddManualReview.ts
+#: packages/wagmi/hooks/markets/useAddZapReview.ts
+msgid "Successfully added liquidity to the {0} {1} market"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketChart.tsx
+#: apps/market/components/MarketSection/MarketStats.tsx
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
 #: apps/pool/components/PoolSection/PoolStats.tsx
 msgid "Liquidity"
 msgstr "流動性"
@@ -196,6 +260,27 @@ msgstr "流動性"
 #: apps/pool/components/UnStakeSection/UnStakeSectionWidgetStandard.tsx
 msgid "APR"
 msgstr "APR"
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "Long Yield ROI"
+msgstr ""
+
+#: apps/gauge/components/GaugesSection/GaugesSection.tsx
+#: apps/gauge/pages/lock.tsx
+#: apps/gauge/pages/lock.tsx
+#: apps/gauge/pages/lock.tsx
+#: apps/gauge/pages/lock.tsx
+#: apps/market/components/MarketSection/MarketRewards/MarketLPRewards.tsx
+#: apps/market/components/MarketSection/MarketRewards/MarketRewards.tsx
+#: apps/market/components/MarketsSection/PositionDashboard.tsx
+#: apps/market/components/MarketsSection/PositionDashboard.tsx
+msgid "Confirm"
+msgstr ""
+
+#: packages/wagmi/hooks/markets/useRemoveManualReview.ts
+#: packages/wagmi/hooks/markets/useRemoveZapReview.ts
+msgid "Successfully removed liquidity from the {0} {1} market"
+msgstr ""
 
 #: packages/ui/toast/ToastCompleted.tsx
 msgid "Transaction Completed"
@@ -214,6 +299,7 @@ msgstr "このネットワークでは、デフォルトのプールタイプの
 msgid "We are building a protocol for decentralized exchange in Polkadot ecosystem."
 msgstr "私たちはPolkadotエコシステム内の分散型取引プロトコルを構築しています。"
 
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/pool/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 msgid "Custom"
@@ -227,6 +313,7 @@ msgstr "探索する"
 msgid "Show"
 msgstr "表示する"
 
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 msgid "Custom ({slippageTolerance}%)"
 msgstr "カスタム ({slippageTolerance}%)"
@@ -242,6 +329,10 @@ msgstr "参照コード（{code}）の設定時に問題が発生しました"
 #: apps/referrals/components/SelectReferrerTypeWidget.tsx
 msgid "Get fee discounts"
 msgstr "手数料割引を受ける"
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "Farming Yield"
+msgstr ""
 
 #: packages/compat/components/TokenSelector/TokenSelectorDialog.tsx
 msgid "Search token by address"
@@ -260,6 +351,20 @@ msgstr "私のステーキングしたポジション"
 msgid "Audit"
 msgstr "監査"
 
+#: packages/wagmi/hooks/gauge/useLockVeReview.ts
+msgid "Something went wrong when increasing voting power"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAdd.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemove.tsx
+msgid "Manual"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZap.tsx
+msgid "Zero Price Impact Mode"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/SwapStatsDisclosure.tsx
 #: apps/swap/components/SwapStatsDisclosure/SwapStatsDisclosure.tsx
 msgid "Finding best price..."
 msgstr "最良の価格を見つけています.."
@@ -282,6 +387,11 @@ msgstr "Twitterサポート"
 msgid "Holders"
 msgstr "保持者"
 
+#: apps/market/components/MarketSection/MarketChart.tsx
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "Underlying APY"
+msgstr ""
+
 #: apps/referrals/components/SelectReferrerTypeWidget.tsx
 msgid "Affiliates"
 msgstr "アフィリエイト"
@@ -290,6 +400,10 @@ msgstr "アフィリエイト"
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Unstaking {0} {1}"
 msgstr "{0} {1} のステーキング解除"
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "scaled to PT proportion in pool"
+msgstr ""
 
 #: apps/pool/components/UnStakeSection/UnStakeSectionWidgetStandard.tsx
 #: apps/pool/components/UnStakeSection/UnStakeSectionWidgetStandard.tsx
@@ -301,13 +415,33 @@ msgstr "リクイディティのステーキング解除"
 msgid "Connect Wallet"
 msgstr "ウォレット接続"
 
+#: apps/market/pages/index.tsx
+msgid "PT can be redeemed for the underlying asset after maturity."
+msgstr ""
+
 #: apps/referrals/components/TradersSection/TraderSection.tsx
 msgid "You will receive a 20% discount on your swapping fees"
 msgstr "スワップ手数料が20％割引になります"
 
+#: apps/gauge/pages/index.tsx
+msgid "veZLK enables protocol governance by allowing ZLK holders to channel protocol incentives to desired pools."
+msgstr ""
+
 #: packages/ui/app/Header.tsx
 msgid "Get fee discounts and earn rebates"
 msgstr "手数料割引を受け取り、リベートを獲得する"
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "Zenlink LP Yield"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "Fixed ROI"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/PositionsTable/Cells/columns.tsx
+msgid "YT"
+msgstr ""
 
 #: apps/analytics/components/ZLKStats/index.tsx
 msgid "ZLK Circulating Supply"
@@ -317,13 +451,26 @@ msgstr "ZLK流通供給量"
 msgid "Successfully approved {0}"
 msgstr "承認済み {0}"
 
+#: apps/gauge/components/VeDashboard.tsx
+msgid "Total VeZLK"
+msgstr ""
+
 #: apps/referrals/components/CodesTable/Cells/columns.tsx
 msgid "Code"
 msgstr "コード"
 
+#: apps/gauge/components/GaugesSection/GaugesSection.tsx
 #: apps/referrals/components/TradersSection/TraderSection.tsx
 msgid "Update"
 msgstr "更新"
+
+#: packages/wagmi/hooks/markets/useRedeemRewardsReview.ts
+msgid "Successfully redeemed PY interest and rewards"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/TableFilters/TableFilters.tsx
+msgid "Active"
+msgstr ""
 
 #: apps/analytics/components/ChartSection/TVLChart.tsx
 #: apps/analytics/components/ChartSection/TVLChart.tsx
@@ -341,7 +488,12 @@ msgstr "トランザクション保留中"
 msgid "Discord Support"
 msgstr "Discord サポート"
 
+#: apps/market/components/MarketsSection/PositionDashboard.tsx
+msgid "My Current Balance"
+msgstr ""
+
 #: apps/analytics/components/Table/columns.tsx
+#: apps/market/components/MarketSection/MarketStats.tsx
 #: apps/pool/components/PoolSection/PoolStats.tsx
 #: apps/pool/components/PoolsSection/Tables/PoolsTable/Cells/columns.tsx
 msgid "Volume (24h)"
@@ -351,10 +503,36 @@ msgstr "取引高 (24時間)"
 msgid "Top Pools"
 msgstr "トッププール"
 
+#: apps/gauge/pages/lock.tsx
+msgid "Additional Lock Time"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemove.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveZapReview.tsx
+msgid "Zap Out"
+msgstr ""
+
+#: apps/market/pages/index.tsx
+msgid "All yield is streamed to YT until maturity."
+msgstr ""
+
+#: packages/wagmi/hooks/markets/useMintPyReview.ts
+msgid "Something went wrong when minting PY"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "APY Breakdown"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/TableFilters/TableFiltersSearchMarket.tsx
+msgid "Filter markets"
+msgstr ""
+
 #: apps/pool/components/PoolSection/PoolHeader.tsx
 #~ msgid "Fees:{0}"
 #~ msgstr ""
 
+#: apps/market/components/MarketsSection/MarketsSection.tsx
 #: apps/pool/components/PoolsSection/PoolsSection.tsx
 msgid "My Positions"
 msgstr "マイポジション"
@@ -366,6 +544,11 @@ msgstr "ダークテーマ"
 #: apps/referrals/components/DiscountTable/Cells/columns.tsx
 msgid "Discount"
 msgstr "ディスカウント"
+
+#: apps/gauge/pages/index.tsx
+#: apps/gauge/pages/lock.tsx
+msgid "Lock"
+msgstr ""
 
 #: packages/ui/app/Header.tsx
 msgid "Missing features or prefer the old app?"
@@ -381,6 +564,7 @@ msgstr "農場が見つかりませんでした。"
 msgid "Trade at your own risk!"
 msgstr "自己責任で取引してください！"
 
+#: apps/market/components/MarketSection/MarketComposition.tsx
 #: apps/pool/components/PoolSection/PoolComposition.tsx
 msgid "Total Assets:"
 msgstr "総資産："
@@ -401,9 +585,17 @@ msgstr "初期配布"
 msgid "Stake your liquidity tokens to receive incentive rewards on top of your pool fee rewards"
 msgstr "プール手数料報酬に加えてインセンティブリワードを受け取るために、流動性トークンをステーキングしてください。"
 
+#: apps/gauge/pages/index.tsx
+msgid "Gauge"
+msgstr ""
+
 #: packages/ui/app/Footer.tsx
 msgid "Wiki/Docs"
 msgstr "Wiki/ドキュメント"
+
+#: apps/market/components/MarketsSection/PositionDashboard.tsx
+msgid "Claim All"
+msgstr ""
 
 #: apps/pool/components/PoolSection/PoolButtons.tsx
 msgid "Trade"
@@ -418,6 +610,10 @@ msgstr "最適化されたルート"
 msgid "No tokens found on"
 msgstr "{0}上でトークンが見つかりません"
 
+#: apps/gauge/pages/lock.tsx
+msgid "Update your Lock"
+msgstr ""
+
 #: packages/compat/components/TokenSelector/TokenSelectorImportRow.tsx
 msgid "{0} appear on the active token list(s)."
 msgstr "{0} がアクティブなトークンリストに表示されます。"
@@ -426,12 +622,20 @@ msgstr "{0} がアクティブなトークンリストに表示されます。"
 #: apps/pool/components/RemoveSection/RemoveSectionWidgetStandard.tsx
 #: apps/pool/components/StakeSection/StakeSectionWidgetStandard.tsx
 #: apps/pool/components/UnStakeSection/UnStakeSectionWidgetStandard.tsx
-msgid "Balance:{0}"
+#~ msgid "Balance:{0}"
+#~ msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapReviewModal.tsx
+msgid "Confirm Wrap"
 msgstr ""
 
 #: packages/compat/components/Web3Input/Currency.tsx
 msgid "Balance: 0"
 msgstr "バランス：0"
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "Est. Daily Pool Rewards"
+msgstr ""
 
 #: apps/pool/pages/add.tsx
 msgid "Select Tokens"
@@ -445,8 +649,17 @@ msgstr "トークンを選択"
 msgid "Confirm submit"
 msgstr "送信を確認"
 
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "scaled to underlying asset proportion in pool"
+msgstr ""
+
 #: apps/pool/components/RemoveSection/RemoveSectionWidgetStandard.tsx
 msgid "No liquidity tokens found{0}"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+#: apps/market/pages/index.tsx
+msgid "Market"
 msgstr ""
 
 #: apps/swap/pages/index.tsx
@@ -467,6 +680,11 @@ msgstr "まだサポートされていません。"
 msgid "My Liquidity Position"
 msgstr "私の流動性ポジション"
 
+#: apps/market/components/MarketSection/MarketRewards/MarketLPRewards.tsx
+#: apps/market/components/MarketsSection/PositionDashboard.tsx
+msgid "If you lock veZLK before LPing, your LP will be automatically boosted. If you lock veZLK after LPing, you will have to manually apply the boost."
+msgstr ""
+
 #: apps/pool/components/SettingsOverlay/CustomTokensOverlay.tsx
 #: apps/swap/components/SettingsOverlay/CustomTokensOverlay.tsx
 msgid "No custom tokens found"
@@ -484,6 +702,11 @@ msgstr "リファラルコードを共有するためのものがないようで
 msgid "Approving {0}"
 msgstr "承認中 {0}"
 
+#: apps/gauge/components/GaugesChart/GaugesChart.tsx
+#: apps/gauge/components/GaugesSection/Tables/GaugesTable/Cells/columns.tsx
+msgid "My Vote"
+msgstr ""
+
 #: packages/ui/app/Header.tsx
 msgid "Products"
 msgstr "商品"
@@ -497,6 +720,10 @@ msgstr "残高不足"
 #: apps/pool/components/RemoveSection/RemoveSectionStable.tsx
 msgid "All"
 msgstr "全部"
+
+#: apps/market/components/MarketsSection/PositionDashboard.tsx
+msgid "Boost All"
+msgstr ""
 
 #: apps/referrals/components/TradersSection/TraderSection.tsx
 msgid "Set"
@@ -542,6 +769,11 @@ msgstr "サポートされていないネットワーク"
 msgid "Active Referral Code"
 msgstr "アクティブなリファラルコード"
 
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "ROI guaranteed in buying and holding PT until maturity."
+msgstr ""
+
+#: packages/parachains-impl/bifrost/components/Wallet/Profile/Default.tsx
 #: packages/wagmi/components/Wallet/Profile/Default.tsx
 msgid "Copied!"
 msgstr "コピーしました！"
@@ -550,10 +782,14 @@ msgstr "コピーしました！"
 msgid "Successfully added liquidity to the {poolName} stable pool"
 msgstr "{poolName} ステーブルプールに流動性を正常に追加しました"
 
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapPanel.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapReviewModal.tsx
 #: apps/swap/components/SwapReviewModal/WrapReviewModal.tsx
 msgid "Unwrap"
 msgstr "開封する"
 
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/pool/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
@@ -584,6 +820,7 @@ msgstr "リンク"
 msgid "Aggregation Swap"
 msgstr ""
 
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/pool/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 msgid "Slippage tolerance is the utmost percentage of slippage a user is willing to execute a trade with; if the actual slippage falls outside of the user-designated range, the transaction will revert."
@@ -596,6 +833,10 @@ msgstr "報酬APR"
 #: packages/ui/app/Header.tsx
 msgid "Core"
 msgstr "コア"
+
+#: packages/wagmi/hooks/gauge/useVoteReview.ts
+msgid "Successfully voted for the selected markets"
+msgstr ""
 
 #: apps/swap/components/SwapStatsDisclosure/SwapStatsDisclosure.tsx
 msgid "Optimized Route"
@@ -636,15 +877,29 @@ msgstr "リファラルコード ({code}) を正常に生成しました"
 msgid "Standard"
 msgstr "標準"
 
+#: apps/gauge/pages/lock.tsx
+msgid "Increase your veZLK balance by locking more ZLK and/or increasing the lock time of your locked ZLK blance."
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketComposition.tsx
 #: apps/pool/components/PoolSection/PoolComposition.tsx
 #: apps/pool/components/PoolSection/PoolRewards/FarmingRewards.tsx
 msgid "Token"
 msgstr "トークン"
 
+#: packages/wagmi/hooks/markets/useRedeemPyReview.ts
+msgid "Redeeming PY from {0} {1}"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "The maturity date of the yield contract."
+msgstr ""
+
 #: apps/referrals/components/SelectReferrerTypeWidget.tsx
 msgid "Earn rebates"
 msgstr "リベートを獲得する"
 
+#: apps/market/components/SettingsOverlay/SettingsOverlay.tsx
 #: apps/swap/components/SettingsOverlay/SettingsOverlay.tsx
 msgid "Settings"
 msgstr "設定"
@@ -653,15 +908,28 @@ msgstr "設定"
 #~ msgid "Confirm{0}"
 #~ msgstr ""
 
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketSwapPanel.tsx
 #: apps/swap/pages/index.tsx
 msgid "No trade found"
 msgstr "取引が見つかりませんでした"
+
+#: apps/gauge/components/VeDashboard.tsx
+msgid "Claimable Rewards"
+msgstr ""
 
 #: apps/referrals/components/AffiliatesSection/GenerateCodeModal.tsx
 #: apps/referrals/components/AffiliatesSection/GenerateCodeModal.tsx
 #: apps/referrals/components/TradersSection/SetCodeModal.tsx
 msgid "Enter a code"
 msgstr "コードを入力してください"
+
+#: apps/gauge/components/GaugesSection/GaugesSection.tsx
+msgid "Unused veZLK"
+msgstr ""
+
+#: packages/wagmi/hooks/gauge/useVoteReview.ts
+msgid "Voting for the selected markets"
+msgstr ""
 
 #: apps/referrals/pages/index.tsx
 msgid "Trading fee discount"
@@ -671,6 +939,20 @@ msgstr "取引手数料割引"
 msgid "These tokens don\\'t"
 msgstr "これらのトークンはありません"
 
+#: apps/gauge/pages/lock.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketMintAndRedeem.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketRedeem.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketRedeemReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketRedeemReviewModal.tsx
+#: apps/market/components/MarketSection/MarketRewards/MarketRewardsReviewModal.tsx
+#: apps/market/components/MarketSection/MarketRewards/MarketRewardsReviewModal.tsx
+msgid "Redeem"
+msgstr ""
+
+#: apps/pool/components/RemoveSection/RemoveSectionStable.tsx
+#: apps/pool/components/RemoveSection/RemoveSectionWidgetStandard.tsx
+#: apps/pool/components/StakeSection/StakeSectionWidgetStandard.tsx
+#: apps/pool/components/UnStakeSection/UnStakeSectionWidgetStandard.tsx
 #: packages/compat/components/Web3Input/Currency.tsx
 msgid "Balance: {0}"
 msgstr "残高：{0}"
@@ -683,6 +965,23 @@ msgstr "商品を追跡するための分析プラットフォーム"
 #: packages/compat/components/TokenSelector/TokenSelectorDialog.tsx
 msgid "Select Token"
 msgstr "トークンを選択してください"
+
+#: apps/market/components/MarketSection/MarketComposition.tsx
+msgid "Market Composition"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAdd.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZapReviewModal.tsx
+msgid "Zap In"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketStats.tsx
+msgid "Underlying APY (24h)"
+msgstr ""
+
+#: apps/market/components/MarketsSection/PositionDashboard.tsx
+msgid "My Claimable Yield & Rewards"
+msgstr ""
 
 #: apps/pool/components/AddSection/AddSectionStable.tsx
 msgid "you can add liquidity using one asset or multiple assets"
@@ -705,6 +1004,11 @@ msgstr "コードの確認"
 msgid "Get fee discounts and earn rebates through the referral program."
 msgstr "紹介プログラムを通じて手数料割引を受け取り、リベートを獲得する。"
 
+#: packages/wagmi/hooks/markets/useRemoveManualReview.ts
+#: packages/wagmi/hooks/markets/useRemoveZapReview.ts
+msgid "Removing liquidity from the {0} {1} market"
+msgstr ""
+
 #: apps/referrals/pages/index.tsx
 #: packages/ui/app/Footer.tsx
 #: packages/ui/app/Header.tsx
@@ -720,6 +1024,10 @@ msgstr "報酬を請求する際に何か問題が発生しました。"
 msgid "Filter tokens"
 msgstr "トークンをフィルターする"
 
+#: packages/wagmi/hooks/markets/useRedeemPyReview.ts
+msgid "Something went wrong when redeeming PY"
+msgstr ""
+
 #: apps/pool/components/NewPositionSection/SelectPoolTypeWidget.tsx
 msgid "2. Select Type"
 msgstr "2. タイプを選択"
@@ -729,11 +1037,15 @@ msgid "On"
 msgstr "オン"
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
+#: packages/parachains-impl/bifrost/hooks/useRemoveLiquidityStandardReview.ts
+#: packages/wagmi/hooks/markets/useRemoveManualReview.ts
+#: packages/wagmi/hooks/markets/useRemoveZapReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStableReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Something went wrong when removing liquidity"
 msgstr "流動性を削除する際に何かがうまくいかなかった"
 
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/pool/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 msgid "Custom Slippage"
@@ -748,10 +1060,38 @@ msgstr "{0} {1} を {2} {3} に交換する"
 msgid "ZLK Market Cap"
 msgstr "ZLKの時価総額"
 
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/pool/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 msgid "Slippage is the difference between the expected value of output from a trade and the actual value due to asset volatility and liquidity depth."
 msgstr "スリッページとは、資産のボラティリティと流動性深度による取引からの出力の予想値と実際の値との差です。"
+
+#: packages/wagmi/hooks/markets/useMarketSwapReview.ts
+msgid ""
+"Something went wrong when trying to swap {0} \n"
+"for {1}"
+msgstr ""
+
+#: packages/wagmi/hooks/markets/useRedeemPyReview.ts
+msgid "Successfully redeemed PY from {0} {1}"
+msgstr ""
+
+#: packages/wagmi/hooks/gauge/useRedeemVeReview.ts
+msgid "Redeeming unlocked ZLK"
+msgstr ""
+
+#: packages/wagmi/hooks/markets/useAddManualReview.ts
+#: packages/wagmi/hooks/markets/useAddZapReview.ts
+msgid "Adding liquidity to the {0} {1} market"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketRewards/MarketRewards.tsx
+msgid "Redeem All"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketStats.tsx
+msgid "Implied APY (24h)"
+msgstr ""
 
 #: apps/analytics/pages/index.tsx
 #: packages/ui/app/Footer.tsx
@@ -767,6 +1107,10 @@ msgstr "アナリティクス"
 msgid "Analytics platform for tracking the liquidity, volume, and fees generated by Zenlink products."
 msgstr "Zenlink製品によって生成される流動性、ボリューム、および手数料を追跡するためのアナリティクスプラットフォーム。"
 
+#: apps/gauge/components/VeDashboard.tsx
+msgid "DOT rewards distributed every 4-5 weeks."
+msgstr ""
+
 #: packages/wagmi/systems/Checker/Network.tsx
 #~ msgid "Switch to{0}"
 #~ msgstr ""
@@ -775,6 +1119,10 @@ msgstr "Zenlink製品によって生成される流動性、ボリューム、�
 #: packages/wagmi/hooks/useSwapReview.ts
 msgid "Successfully swapped {0} {1} for {2} {3}"
 msgstr "{0} {1} を {2} {3} に正常に交換しました"
+
+#: apps/market/components/MarketSection/MarketRewards/YtInterestAndRewards.tsx
+msgid "YT Interest And Rewards"
+msgstr ""
 
 #: packages/ui/app/Footer.tsx
 msgid "Blog"
@@ -787,6 +1135,18 @@ msgstr "オフ"
 #: apps/referrals/components/DiscountTable/Cells/columns.tsx
 msgid "Position Size"
 msgstr "ポジションサイズ"
+
+#: apps/market/components/MarketSection/MarketRewards/MarketLPRewards.tsx
+msgid "Boosted"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketRewards/MarketLPRewards.tsx
+msgid "Market LP Rewards"
+msgstr ""
+
+#: packages/wagmi/hooks/gauge/useVoteReview.ts
+msgid "Something went wrong when voting for the selected markets"
+msgstr ""
 
 #: apps/referrals/components/AffiliatesSection/GenerateCodeModal.tsx
 msgid "Checking code"
@@ -808,13 +1168,25 @@ msgstr "監査報告書"
 msgid "Help"
 msgstr "ヘルプ"
 
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZap.tsx
+msgid "In zero price impact mode, YT will be returned to you after providing liquidity."
+msgstr ""
+
 #: packages/ui/app/Header.tsx
 msgid "Old App"
 msgstr "古いアプリ"
 
+#: apps/gauge/components/GaugesChart/GaugesChart.tsx
+msgid "Community"
+msgstr ""
+
 #: packages/ui/network/SelectorMenu.tsx
 msgid "{0} Selected"
 msgstr "{0} 選択されました"
+
+#: apps/gauge/components/GaugesSection/GaugesSection.tsx
+msgid "Cancel"
+msgstr ""
 
 #: packages/compat/components/AppSettings/DefaultPanel.tsx
 msgid "Light theme"
@@ -850,6 +1222,10 @@ msgstr "ステーク流動性"
 msgid "From"
 msgstr "From"
 
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddManualReviewModal.tsx
+msgid "Add Manual"
+msgstr ""
+
 #: apps/swap/pages/index.tsx
 msgid "Swap Anyway"
 msgstr "とにかくスワップする"
@@ -862,23 +1238,45 @@ msgstr "プールタイプ"
 #~ msgid "Approve {0}"
 #~ msgstr "承認する {0}"
 
+#: apps/market/components/Rate.tsx
 #: apps/pool/components/Rate.tsx
 #: apps/swap/components/Rate.tsx
 msgid "Rate"
 msgstr "レート"
 
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/SwapStatsDisclosure.tsx
 #: apps/swap/components/SwapStatsDisclosure/SwapStatsDisclosure.tsx
 msgid "Min. Received"
 msgstr "最小受取額"
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "The average future APY that the Zenlink Market is implying by trading at the current YT/PT price plus any underlying asset appreciation with respect to a common base asset."
+msgstr ""
 
 #: packages/parachains-impl/amplitude/hooks/useRemoveLiquidityStandardReview.ts
 #: packages/wagmi/hooks/useRemoveLiquidityStandardReview.ts
 msgid "Removing liquidity from the {0}/{1} pair"
 msgstr "{0}/{1} ペアから流動性を削除する"
 
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+#~ msgid "Long Yield APY"
+#~ msgstr ""
+
+#: packages/wagmi/hooks/gauge/useRedeemVeReview.ts
+msgid "Something went wrong when redeeming unlocked ZLK"
+msgstr ""
+
 #: apps/swap/pages/index.tsx
 msgid "High Price Impact"
 msgstr "高い価格インパクト"
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "My APY"
+msgstr ""
+
+#: apps/gauge/pages/lock.tsx
+msgid "Current veZLK"
+msgstr ""
 
 #: apps/pool/components/NewPositionSection/SelectPoolTypeWidget.tsx
 msgid "Suitable for regular pairs"
@@ -896,25 +1294,41 @@ msgstr "次へ"
 msgid "Copy"
 msgstr "コピー"
 
+#: apps/market/components/MarketSection/MarketComposition.tsx
 #: apps/pool/components/PoolSection/PoolComposition.tsx
 #: apps/pool/components/PoolSection/PoolRewards/FarmingRewards.tsx
 msgid "Amount"
 msgstr "金額"
 
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapPanel.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapReviewModal.tsx
 #: apps/swap/components/SwapReviewModal/WrapReviewModal.tsx
 msgid "Wrap"
 msgstr "ラップ"
 
+#: apps/gauge/components/VeDashboard.tsx
 #: apps/pool/components/PoolSection/PoolMyRewards/PoolMyRewardsDesktop.tsx
 msgid "Claim"
 msgstr "請求する"
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "PT Yield"
+msgstr ""
 
 #: packages/wagmi/systems/Approve/TokenApproveButton.tsx
 msgid "Status:"
 msgstr "ステータス："
 
+#: packages/wagmi/hooks/markets/useRedeemRewardsReview.ts
+msgid "Something went wrong when redeeming interest and rewards"
+msgstr ""
+
 #: apps/pool/components/PoolSection/PoolHeader.tsx
 msgid "Fee:{0}%"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "Upon maturity, the PT can be redeemed for the underlying asset, while YT will stop accruing yield."
 msgstr ""
 
 #: packages/wagmi/components/NotificationCentre/NotificationCentre.tsx
@@ -951,6 +1365,31 @@ msgstr "{0} {1} をステーキングしました。"
 msgid "Referral Codes"
 msgstr "リファラルコード"
 
+#: packages/wagmi/hooks/markets/useBoostMarketsReview.ts
+msgid "Something went wrong when boosting LP balance"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapReviewModal.tsx
+msgid "Confirm Unwrap"
+msgstr ""
+
+#: apps/market/components/MarketsSection/MarketsSection.tsx
+msgid "All Markets"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "Rewards accrued in the SY contract over past 7D, annualised."
+msgstr ""
+
+#: apps/gauge/pages/lock.tsx
+msgid "Redeem Unlocked ZLK"
+msgstr ""
+
+#: apps/gauge/pages/lock.tsx
+#: apps/gauge/pages/lock.tsx
+msgid "Current Lockup Expiry"
+msgstr ""
+
 #: apps/pool/components/PoolSection/PoolButtons.tsx
 msgid "Deposit"
 msgstr "入金"
@@ -958,6 +1397,10 @@ msgstr "入金"
 #: apps/analytics/components/ZLKStats/DistributionSection/CirculatingDistribution.tsx
 msgid "Circulating Distribution"
 msgstr "流通配布"
+
+#: apps/market/components/MarketSection/MarketRewards/MarketLPRewards.tsx
+msgid "Boost"
+msgstr ""
 
 #: packages/compat/components/TokenSelector/TokenSelectorImportRow.tsx
 #: packages/compat/components/TokenSelector/TokenSelectorImportRow.tsx
@@ -970,6 +1413,11 @@ msgstr "インポート"
 msgid "Select Network"
 msgstr "ネットワークを選択してください。"
 
+#: apps/gauge/components/GaugesSection/GaugesSection.tsx
+msgid "Vote"
+msgstr ""
+
+#: apps/market/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/pool/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 #: apps/swap/components/SettingsOverlay/SlippageToleranceDisclosure.tsx
 msgid "Slippage Tolerance"
@@ -979,6 +1427,11 @@ msgstr "スリッページ許容度"
 msgid "Cross-chain"
 msgstr "クロスチェーン"
 
+#: apps/market/components/MarketSection/MarketActions/MarketActions.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddManual.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddManualReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZap.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZapReviewModal.tsx
 #: apps/pool/components/AddSection/AddSectionReviewModalStandard.tsx
 msgid "Add"
 msgstr "追加"
@@ -986,6 +1439,14 @@ msgstr "追加"
 #: apps/pool/components/NewPositionSection/SelectStablePoolWidget.tsx
 msgid "3. Select Pool"
 msgstr "3. プールを選択"
+
+#: apps/gauge/pages/index.tsx
+msgid "View and cast your veZLK votes from this page. Select your desired pool and enter the quantity of veZLK votes you wish to cast."
+msgstr ""
+
+#: packages/wagmi/hooks/markets/useMintPyReview.ts
+msgid "Successfully minted PY from {0} {1}"
+msgstr ""
 
 #: packages/compat/components/TokenSelector/TokenSelectorImportRow.tsx
 msgid "Import Token"
@@ -1003,6 +1464,16 @@ msgstr "ユーザーの流動性ポジションを解消する場合は、まず
 msgid "Successfully Setted referral code ({code})"
 msgstr "リファラルコード ({code}) の設定に成功しました"
 
+#: packages/wagmi/hooks/markets/useMarketSwapReview.ts
+msgid ""
+"Swapping {0} {1} \n"
+"for {2} {3}"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "Underlying Yield"
+msgstr ""
+
 #: packages/ui/app/Footer.tsx
 msgid "Developers"
 msgstr "開発者"
@@ -1015,6 +1486,7 @@ msgstr "ティア"
 msgid "Pool your liquidity to generate LP tokens"
 msgstr "流動性をプールしてLPトークンを生成します。"
 
+#: apps/market/components/MarketSection/MarketRewards/MarketRewards.tsx
 #: apps/pool/components/PoolSection/PoolActionBar/PoolActionBar.tsx
 #: apps/pool/components/PoolSection/PoolActionBar/PoolActionBarPositionRewards.tsx
 #: apps/pool/components/PoolSection/PoolMyRewards/PoolMyRewards.tsx
@@ -1070,6 +1542,18 @@ msgstr "総焼却量"
 msgid "My Position"
 msgstr "私のポジション"
 
+#: apps/market/components/MarketSection/MarketAPY.tsx
+msgid "Trade Fee Yield"
+msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/PositionsTable/Cells/columns.tsx
+msgid "LP"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveManualReviewModal.tsx
+msgid "Remove Manual"
+msgstr ""
+
 #: apps/swap/components/ReferralsLinkButton.tsx
 msgid "Get fee discounts and earn rebates."
 msgstr "手数料割引を受けてリベートを獲得する。"
@@ -1095,6 +1579,14 @@ msgstr "1日あたり {0} {1}"
 #~ msgid "{0}{1}"
 #~ msgstr ""
 
+#: packages/wagmi/hooks/markets/useRedeemRewardsReview.ts
+msgid "Redeeming interest and rewards"
+msgstr ""
+
+#: apps/gauge/components/GaugesSection/Tables/GaugesTable/Cells/columns.tsx
+msgid "Community Vote"
+msgstr ""
+
 #: packages/compat/components/TokenSelector/TokenSelectorImportRow.tsx
 msgid "This token doesn\\'t"
 msgstr "このトークンは存在しません"
@@ -1113,6 +1605,10 @@ msgstr "選択"
 msgid "Adding liquidity to the {poolName} stable pool"
 msgstr "{poolName} ステーブルプールに流動性を追加する"
 
+#: apps/market/components/MarketSection/MarketChart.tsx
+msgid "APY"
+msgstr ""
+
 #: apps/pool/components/PoolSection/PoolHeader.tsx
 msgid "Best APR:"
 msgstr "最高年利率："
@@ -1121,6 +1617,26 @@ msgstr "最高年利率："
 msgid "Powered By Zenlink"
 msgstr "Zenlinkで動作しています"
 
+#: apps/market/components/MarketSection/MarketChart.tsx
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "Implied APY"
+msgstr ""
+
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddManual.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddManualReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZap.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketAdd/MarketAddZapReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarkeMint.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketMintReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketRedeem.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketMintAndRedeem/MarketRedeemReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveManual.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveManualReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveZap.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveZapReview.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketSwapPanel.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketWrapPanel.tsx
+#: apps/market/components/MarketSection/MarketRewards/MarketRewardsReviewModal.tsx
 #: apps/pool/components/AddSection/AddSectionReviewModalStable.tsx
 #: apps/pool/components/AddSection/AddSectionReviewModalStandard.tsx
 #: apps/pool/components/AddSection/AddSectionStable.tsx
@@ -1140,27 +1656,51 @@ msgstr "取引を確認する"
 msgid "Unstaked Position"
 msgstr "ステーキングされていないポジション"
 
+#: apps/market/components/MarketSection/MarketActions/MarketActions.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveManual.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveManualReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveZap.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketRemove/MarketRemoveZapReview.tsx
+msgid "Remove"
+msgstr ""
+
 #: packages/parachains-impl/amplitude/hooks/useWithdrawFarmingReview.ts
 #: packages/wagmi/hooks/useWithdrawFarmingReview.ts
 msgid "Something went wrong when unstake {0} {1}"
 msgstr "ステーキング解除中に何かがうまくいかなかった {0} {1}"
 
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketSwapReviewModal.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketSwapReviewModal.tsx
 #: apps/swap/components/SwapReviewModal/SwapReviewModal.tsx
 #: apps/swap/components/SwapReviewModal/SwapReviewModalBase.tsx
 msgid "Confirm Swap"
 msgstr "スワップを確認する"
 
+#: apps/gauge/components/GaugesChart/GaugesChart.tsx
+msgid "Community Vote Summary"
+msgstr ""
+
 #: packages/parachains-impl/amplitude/hooks/useAddLiquidityStandardReview.ts
+#: packages/parachains-impl/bifrost/hooks/useAddLiquidityStandardReview.ts
+#: packages/wagmi/hooks/markets/useAddManualReview.ts
+#: packages/wagmi/hooks/markets/useAddZapReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStableReview.ts
 #: packages/wagmi/hooks/useAddLiquidityStandardReview.ts
 msgid "Something went wrong when adding liquidity"
 msgstr "流動性を追加する際に問題が発生しました"
+
+#: packages/wagmi/hooks/gauge/useLockVeReview.ts
+msgid "Increasing voting power and/or increasing the lock time"
+msgstr ""
 
 #: apps/referrals/components/AffiliatesSection/AffiliatesSection.tsx
 #: apps/referrals/components/AffiliatesSection/GenerateCodeModal.tsx
 msgid "Generate Referral Code"
 msgstr "リファラルコードを生成する"
 
+#: apps/market/components/MarketSection/MarketActions/MarketActions.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketSwapPanel.tsx
+#: apps/market/components/MarketSection/MarketActions/MarketSwap/MarketSwapReviewModal.tsx
 #: apps/swap/components/SwapReviewModal/SwapReviewModal.tsx
 #: apps/swap/pages/index.tsx
 #: apps/swap/pages/index.tsx
@@ -1190,6 +1730,7 @@ msgstr "詳細を表示"
 msgid "Removing liquidity from the {poolName} stable pool"
 msgstr "{poolName} ステーブルプールから流動性を削除する"
 
+#: apps/market/components/MarketSection/MarketComposition.tsx
 #: apps/pool/components/PoolSection/PoolComposition.tsx
 #: apps/pool/components/PoolsSection/Tables/PositionsTable/Cells/columns.tsx
 msgid "Value"
@@ -1198,6 +1739,10 @@ msgstr "バリュー"
 #: apps/referrals/components/TradersSection/SetCodeModal.tsx
 msgid "Enter Referral Code"
 msgstr "紹介コードを入力してください"
+
+#: packages/wagmi/hooks/markets/useBoostMarketsReview.ts
+msgid "Boosting LP balance"
+msgstr ""
 
 #: apps/pool/components/SettingsOverlay/CustomTokensOverlay.tsx
 #: apps/swap/components/SettingsOverlay/CustomTokensOverlay.tsx
@@ -1231,6 +1776,15 @@ msgstr ""
 msgid "Enter Amount"
 msgstr "金額を入力してください"
 
+#: apps/gauge/pages/lock.tsx
+msgid "Unlocked ZLK"
+msgstr ""
+
+#: packages/wagmi/hooks/markets/useMintPyReview.ts
+msgid "Minting PY from {0} {1}"
+msgstr ""
+
+#: packages/parachains-impl/bifrost/components/Wallet/Profile/Transactions.tsx
 #: packages/wagmi/components/Wallet/Profile/Transactions.tsx
 msgid "Clear all"
 msgstr "全ての項目をクリア"
@@ -1243,9 +1797,25 @@ msgstr "流動性をアンステークする。"
 msgid "Simulate Swap"
 msgstr ""
 
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+msgid "Current APY in the underlying protocol"
+msgstr ""
+
 #: packages/ui/network/SelectorMenu.tsx
 #~ msgid "{0}Selected"
 #~ msgstr ""
+
+#: apps/market/components/MarketsSection/Tables/MarketsTable/Cells/columns.tsx
+#~ msgid "Fixed APY"
+#~ msgstr ""
+
+#: packages/wagmi/hooks/gauge/useRedeemVeReview.ts
+msgid "Successfully redeemed unlocked ZLK"
+msgstr ""
+
+#: packages/wagmi/hooks/markets/useBoostMarketsReview.ts
+msgid "Successfully boosted LP balance"
+msgstr ""
 
 #: apps/pool/components/PoolSection/PoolHeader.tsx
 msgid "Best Rewards: {0}"

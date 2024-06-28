@@ -1,4 +1,5 @@
 import type { Token } from '@crypto-dex-sdk/currency'
+
 import type { Pair } from '../Pair'
 import type { StableSwap } from '../StablePool'
 

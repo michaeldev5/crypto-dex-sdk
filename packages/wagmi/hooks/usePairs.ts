@@ -1,11 +1,12 @@
 import { FACTORY_ADDRESS, Pair, computePairAddress } from '@crypto-dex-sdk/amm'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Type as Currency, Token, Type } from '@crypto-dex-sdk/currency'
 import { Amount } from '@crypto-dex-sdk/currency'
-import { useMemo } from 'react'
-import type { Address } from 'wagmi'
-import { useContractReads } from 'wagmi'
+import { useEffect, useMemo } from 'react'
+import type { Address } from 'viem'
+import { useReadContracts } from 'wagmi'
 import { pair } from '../abis'
+import { useBlockNumber } from './useBlockNumber'
 
 export enum PairState {
   LOADING,
@@ -52,11 +53,12 @@ export function usePairs(
   currencies: [Currency | undefined, Currency | undefined][],
   config?: { enabled?: boolean },
 ): UsePairsReturn {
+  const blockNumber = useBlockNumber(chainId)
   const [validatedCurrencies, [tokensA, tokensB]] = useMemo(() => getPairs(currencies), [currencies])
 
   const contracts = useMemo(
     () => validatedCurrencies.map(([currencyA, currencyB]) => ({
-      chainId: chainsParachainIdToChainId[chainId ?? -1],
+      chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
       address: computePairAddress({
         factoryAddress: FACTORY_ADDRESS[currencyA.chainId],
         tokenA: currencyA.wrapped,
@@ -68,11 +70,12 @@ export function usePairs(
     [chainId, validatedCurrencies],
   )
 
-  const { data, isLoading, isError } = useContractReads({
-    contracts,
-    enabled: config?.enabled !== undefined ? config.enabled && contracts.length > 0 : contracts.length > 0,
-    watch: !(typeof config?.enabled !== 'undefined' && !config?.enabled),
-  })
+  const { data, isLoading, isError, refetch } = useReadContracts({ contracts })
+
+  useEffect(() => {
+    if (config?.enabled && blockNumber && contracts.length > 0)
+      refetch()
+  }, [blockNumber, config?.enabled, contracts.length, refetch])
 
   return useMemo(() => {
     if (contracts.length === 0)

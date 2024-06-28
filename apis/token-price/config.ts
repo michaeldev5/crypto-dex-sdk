@@ -2,14 +2,20 @@ import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export const AMM_SUPPORTED_CHAINS = [
   ParachainId.ASTAR,
+  ParachainId.MOONBEAM,
   ParachainId.BIFROST_KUSAMA,
   ParachainId.BIFROST_POLKADOT,
   ParachainId.AMPLITUDE,
+  ParachainId.PENDULUM,
+]
+
+export const MARKET_SUPPORTED_CHAINS = [
+  ParachainId.MOONBEAM,
 ]
 
 export const UNI_SUPPORTED_CHAINS = [
-  ParachainId.ARBITRUM_ONE,
-  ParachainId.BASE,
+  // ParachainId.ARBITRUM_ONE,
+  // ParachainId.BASE,
 ]
 
 export const LIFI_SUPPORTED_CHAINS = [
@@ -20,6 +26,7 @@ export const LIFI_SUPPORTED_CHAINS = [
 export const ALL_CHAINS = Array.from(
   new Set([
     ...AMM_SUPPORTED_CHAINS,
+    ...MARKET_SUPPORTED_CHAINS,
     ...UNI_SUPPORTED_CHAINS,
     ...LIFI_SUPPORTED_CHAINS,
   ]),

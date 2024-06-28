@@ -4,7 +4,7 @@ import { fetchDaySnapshots } from '../../queries'
 import type { DaySnapshot, DaySnapshotsQueryData } from '../../types'
 import { ZenlinkDayInfoOrderByInput } from '../../__generated__/types-and-hooks'
 
-export interface QueryDaySnapshotsByChainIdsArgs {
+interface QueryDaySnapshotsByChainIdsArgs {
   chainIds: number[]
   limit?: number
   orderBy?: ZenlinkDayInfoOrderByInput

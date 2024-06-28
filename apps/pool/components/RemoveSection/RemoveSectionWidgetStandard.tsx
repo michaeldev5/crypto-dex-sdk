@@ -32,7 +32,7 @@ interface RemoveSectionWidgetStandardProps {
   token1: Type
   token0Minimum?: Amount<Type>
   token1Minimum?: Amount<Type>
-  setPercentage(percentage: string): void
+  setPercentage: (percentage: string) => void
   children: ReactNode
 }
 
@@ -160,8 +160,7 @@ export const RemoveSectionWidgetStandard: FC<RemoveSectionWidgetStandardProps> =
                             weight={500}
                           >
                             <Trans>
-                              Balance:
-                              {balance?.toSignificant(6)}
+                              Balance: {balance?.toSignificant(6)}
                             </Trans>
                           </Typography>
                         </AppearOnMount>

@@ -1,7 +1,7 @@
-import { useMemo } from 'react'
-import { useQuery } from 'wagmi'
-import { ZLK_ADDRESS } from '@crypto-dex-sdk/currency'
+import { useQuery } from '@tanstack/react-query'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import { ZLK_ADDRESS } from '@crypto-dex-sdk/currency'
+import { useMemo } from 'react'
 
 export function useZLKPrice() {
   const queryKey = useMemo(() => ['https://token-price.zenlink.pro/api/v0'], [])
@@ -9,11 +9,12 @@ export function useZLKPrice() {
     data,
     isError,
     isLoading,
-  } = useQuery(
+  } = useQuery({
     queryKey,
-    () => fetch('https://token-price.zenlink.pro/api/v0').then(response => response.json()),
-    { staleTime: 20000, enabled: true },
-  )
+    queryFn: () => fetch('https://token-price.zenlink.pro/api/v0').then(response => response.json()),
+    staleTime: 20000,
+    enabled: true,
+  })
 
   return useMemo(() => {
     let numberOfChains = 0

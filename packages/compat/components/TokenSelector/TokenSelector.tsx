@@ -12,23 +12,25 @@ export interface TokenSelectorProps {
   currency?: Type
   open: boolean
   chainId: ParachainId | undefined
-  tokenMap: Record<string, Token>
+  tokenMap?: Record<string, Token>
   customTokenMap?: Record<string, Token>
-  onClose(): void
-  onSelect?(currency: Type): void
-  onAddToken?(token: Token): void
-  onRemoveToken?({ chainId, address }: { chainId: ParachainId, address: string }): void
+  onClose: () => void
+  onSelect?: (currency: Type) => void
+  onAddToken?: (token: Token) => void
+  onRemoveToken?: ({ chainId, address }: { chainId: ParachainId, address: string }) => void
   includeNative?: boolean
+  includeHotTokens?: boolean
 }
 
 export const TokenSelector: FC<TokenSelectorProps> = memo(
   ({
-    tokenMap,
+    tokenMap = {},
     chainId,
     onSelect,
     open,
     customTokenMap = {},
     includeNative,
+    includeHotTokens = true,
     ...props
   }) => {
     const { address } = useAccount()
@@ -61,6 +63,7 @@ export const TokenSelector: FC<TokenSelectorProps> = memo(
           account={address}
           balancesMap={balances}
           chainId={chainId}
+          includeHotTokens={includeHotTokens}
           includeNative={includeNative}
           onSelect={onSelect}
           open={open}
@@ -69,7 +72,7 @@ export const TokenSelector: FC<TokenSelectorProps> = memo(
           {...props}
         />
       )
-    }, [_tokenMap, address, balances, chainId, isMounted, onSelect, open, props, includeNative, pricesMap])
+    }, [isMounted, address, balances, chainId, includeHotTokens, includeNative, onSelect, open, pricesMap, _tokenMap, props])
   },
   (prevProps, nextProps) => {
     return (

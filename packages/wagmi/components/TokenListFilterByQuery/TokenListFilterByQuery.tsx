@@ -1,22 +1,22 @@
 import { isAddress } from '@ethersproject/address'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Type } from '@crypto-dex-sdk/currency'
 import { Native, Token } from '@crypto-dex-sdk/currency'
 import { filterTokens, tokenComparator, useDebounce, useSortedTokensByQuery } from '@crypto-dex-sdk/hooks'
 import type { Fraction } from '@crypto-dex-sdk/math'
 import type { FC, RefObject } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import type { Address } from 'wagmi'
-import { useToken } from 'wagmi'
 
+import type { Address } from 'viem'
 import type { BalanceMap } from '../../hooks/useBalance/types'
+import { useToken } from '../../hooks'
 
 interface RenderProps {
   currencies: Type[]
   inputRef: RefObject<HTMLInputElement>
   query: string
-  onInput(query: string): void
+  onInput: (query: string) => void
   searching: boolean
   queryToken: [Token | undefined]
 }
@@ -26,7 +26,7 @@ interface Props {
   tokenMap: Record<string, Token>
   pricesMap?: Record<string, Fraction>
   balancesMap?: BalanceMap
-  children(props: RenderProps): JSX.Element
+  children: (props: RenderProps) => JSX.Element
   includeNative?: boolean
 }
 
@@ -55,7 +55,7 @@ export const TokenListFilterByQuery: FC<Props> = ({
 
   const { data: searchTokenResult, isLoading } = useToken({
     address: isAddress(debouncedQuery) && !tokenMap[debouncedQuery.toLowerCase()] ? debouncedQuery as Address : undefined,
-    chainId: chainsParachainIdToChainId[chainId ?? -1],
+    chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
   })
 
   const searchToken = useMemo(() => {

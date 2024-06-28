@@ -1,9 +1,11 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import { useMemo } from 'react'
-import type { Address, useContractReads } from 'wagmi'
-import { useContractRead } from 'wagmi'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
+import { useEffect, useMemo } from 'react'
+import type { useReadContracts } from 'wagmi'
+import { useReadContract } from 'wagmi'
+import type { Address } from 'viem'
 import { referralStorage } from '../../abis'
+import { useBlockNumber } from '../useBlockNumber'
 import { ReferralStorageContractAddresses } from './config'
 
 interface UseOwnedCodesParams {
@@ -14,7 +16,7 @@ interface UseOwnedCodesParams {
 }
 
 type UseOwnedCodes = (params: UseOwnedCodesParams) => (
-  | Pick<ReturnType<typeof useContractReads>, 'isError' | 'isLoading'>
+  | Pick<ReturnType<typeof useReadContracts>, 'isError' | 'isLoading'>
 ) & {
   data: string[]
 }
@@ -26,18 +28,20 @@ export const useOwnedCodes: UseOwnedCodes = ({
   watch = true,
 }) => {
   const contract = useMemo(() => ({
-    chainId: chainsParachainIdToChainId[chainId ?? -1],
-    address: ReferralStorageContractAddresses[chainId ?? -1] as Address,
+    chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
+    address: ReferralStorageContractAddresses[chainId && isEvmNetwork(chainId) ? chainId : -1] as Address,
     abi: referralStorage,
     functionName: 'getOwnedCodes',
     args: [account as Address],
   } as const), [account, chainId])
 
-  const { data, isLoading, isError } = useContractRead({
-    ...contract,
-    enabled: !!account && enabled,
-    watch: !(typeof enabled !== 'undefined' && !enabled) && watch,
-  })
+  const blockNumber = useBlockNumber(chainId)
+  const { data, isLoading, isError, refetch } = useReadContract({ ...contract })
+
+  useEffect(() => {
+    if (enabled && watch && blockNumber)
+      refetch()
+  }, [blockNumber, enabled, refetch, watch])
 
   return useMemo(() => ({
     data: (data || []) as string[],

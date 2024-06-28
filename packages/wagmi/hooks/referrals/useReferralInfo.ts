@@ -1,11 +1,10 @@
-import { HashZero } from '@ethersproject/constants'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import { parseBytes32String } from 'ethers/lib/utils.js'
-import { useMemo } from 'react'
-import type { Address, useContractReads } from 'wagmi'
-import { useContractRead } from 'wagmi'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
+import { useEffect, useMemo } from 'react'
+import { useReadContract } from 'wagmi'
+import { type Address, hexToString, zeroHash } from 'viem'
 import { referralStorage } from '../../abis'
+import { useBlockNumber } from '../useBlockNumber'
 import { ReferralStorageContractAddresses } from './config'
 
 interface UseReferralInfoParams {
@@ -16,7 +15,7 @@ interface UseReferralInfoParams {
 }
 
 type UseReferralInfo = (params: UseReferralInfoParams) => (
-  | Pick<ReturnType<typeof useContractReads>, 'isError' | 'isLoading'>
+  | Pick<ReturnType<typeof useReadContract>, 'isError' | 'isLoading'>
 ) & {
   data: { code: string, referrer: string | undefined } | undefined
 }
@@ -28,25 +27,27 @@ export const useReferralInfo: UseReferralInfo = ({
   watch = true,
 }) => {
   const contract = useMemo(() => ({
-    chainId: chainsParachainIdToChainId[chainId ?? -1],
-    address: ReferralStorageContractAddresses[chainId ?? -1] as Address,
+    chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
+    address: ReferralStorageContractAddresses[chainId && isEvmNetwork(chainId) ? chainId : -1] as Address,
     abi: referralStorage,
     functionName: 'getReferralInfo',
     args: [account as Address],
   } as const), [account, chainId])
 
-  const { data, isLoading, isError } = useContractRead({
-    ...contract,
-    enabled: !!account && enabled,
-    watch: !(typeof enabled !== 'undefined' && !enabled) && watch,
-  })
+  const blockNumber = useBlockNumber(chainId)
+  const { data, isLoading, isError, refetch } = useReadContract({ ...contract })
+
+  useEffect(() => {
+    if (enabled && watch && blockNumber)
+      refetch()
+  }, [blockNumber, enabled, refetch, watch])
 
   return useMemo(() => {
     const [code, referrer] = (data || []) as Address[]
     return {
-      data: (!code || code === HashZero)
+      data: (!code || code === zeroHash)
         ? undefined
-        : { code: parseBytes32String(code), referrer },
+        : { code: hexToString(code, { size: 32 }), referrer },
       isLoading,
       isError,
     }

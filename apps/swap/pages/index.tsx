@@ -2,7 +2,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { TradeType } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Type } from '@crypto-dex-sdk/currency'
-import { DOT, KSM, Native, USDC, USDT, tryParseAmount } from '@crypto-dex-sdk/currency'
+import { DOT, FRAX, KSM, Native, USDC, USDT, tryParseAmount } from '@crypto-dex-sdk/currency'
 import { useIsMounted, usePrevious } from '@crypto-dex-sdk/hooks'
 import { Button, Dots, Tab, Widget } from '@crypto-dex-sdk/ui'
 import { WrapType } from '@crypto-dex-sdk/wagmi'
@@ -43,17 +43,19 @@ export const getServerSideProps: GetServerSideProps = async ({ query, res }) => 
   }
 }
 
-const SWAP_DEFAULT_SLIPPAGE = new Percent(50, 10_000) // 0.50%
+const SWAP_DEFAULT_SLIPPAGE = new Percent(100, 10_000) // 1.00%
 
 function getDefaultToken1(chainId: number): Type | undefined {
+  if (chainId === ParachainId.MOONRIVER && chainId in FRAX)
+    return FRAX[chainId]
   if (chainId in USDC)
-    return USDC[chainId as keyof typeof USDC]
+    return USDC[chainId]
   if (chainId in USDT)
-    return USDT[chainId as keyof typeof USDT]
+    return USDT[chainId]
   if (chainId in DOT)
-    return DOT[chainId as keyof typeof DOT]
+    return DOT[chainId]
   if (chainId in KSM)
-    return KSM[chainId as keyof typeof KSM]
+    return KSM[chainId]
   return undefined
 }
 
@@ -211,15 +213,14 @@ function Swap(initialState: InferGetServerSidePropsType<typeof getServerSideProp
                 value={input0}
               />
               <div className="flex items-center justify-center -mt-[12px] -mb-[12px] z-10">
-                <button
+                <div
                   className="group bg-slate-300 dark:bg-slate-700 p-0.5 border-2 border-slate-400 dark:border-slate-800 transition-all rounded-full hover:ring-2 hover:ring-slate-500 cursor-pointer"
                   onClick={switchCurrencies}
-                  type="button"
                 >
                   <div className="transition-all rotate-0 group-hover:rotate-180 group-hover:delay-200">
                     <ChevronDownIcon height={16} width={16} />
                   </div>
-                </button>
+                </div>
               </div>
               <div className="bg-slate-200 dark:bg-slate-800">
                 <CurrencyInput
@@ -290,7 +291,7 @@ function Swap(initialState: InferGetServerSidePropsType<typeof getServerSideProp
 
 const SwapButton: FC<{
   isWritePending: boolean
-  setOpen(open: boolean): void
+  setOpen: (open: boolean) => void
 }> = ({ isWritePending, setOpen }) => {
   const { isLoading: isLoadingTrade, trade, isSyncing } = useTrade()
   const [{ slippageTolerance }] = useSettings()
@@ -332,15 +333,17 @@ const SwapButton: FC<{
           title: t`Enable expert mode to swap with high price impact`,
         })}
       >
-        {isLoadingTrade
-          ? <Trans>Finding Best Price</Trans>
-          : isWritePending
-            ? <Dots><Trans>Confirm transaction</Trans></Dots>
-            : priceImpactTooHigh
-              ? <Trans>High Price Impact</Trans>
-              : trade && priceImpactSeverity > 2
-                ? <Trans>Swap Anyway</Trans>
-                : <Trans>Swap</Trans>}
+        {
+          isLoadingTrade
+            ? <Trans>Finding Best Price</Trans>
+            : isWritePending
+              ? <Dots><Trans>Confirm transaction</Trans></Dots>
+              : priceImpactTooHigh
+                ? <Trans>High Price Impact</Trans>
+                : trade && priceImpactSeverity > 2
+                  ? <Trans>Swap Anyway</Trans>
+                  : <Trans>Swap</Trans>
+        }
       </Button>
     </Checker.Custom>
   )

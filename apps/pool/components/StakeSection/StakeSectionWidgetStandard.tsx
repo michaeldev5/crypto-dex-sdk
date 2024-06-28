@@ -132,7 +132,6 @@ export const StakeSectionWidgetStandard: FC<StakeSectionWidgetStandardProps> = (
                           <Trans>No farms found</Trans>
                         </Typography>
                         )}
-
                   </Disclosure.Panel>
                 </Transition>
               </>
@@ -270,8 +269,7 @@ export const StakeSectionWidgetStandardItem: FC<StakeSectionWidgetStandardItemPr
                 weight={500}
               >
                 <Trans>
-                  Balance:
-                  {balance?.toSignificant(6)}
+                  Balance: {balance?.toSignificant(6)}
                 </Trans>
               </Typography>
             </AppearOnMount>

@@ -1,8 +1,8 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Chain } from '@wagmi/core'
 import { configureChains, createConfig } from '@wagmi/core'
-import { otherChains } from '@crypto-dex-sdk/wagmi-config'
 import { publicProvider } from '@wagmi/core/providers/public'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { otherChains } from '@crypto-dex-sdk/wagmi-config'
 
 export const EVM_CHAINS = [
   ParachainId.ASTAR,

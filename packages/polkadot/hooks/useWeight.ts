@@ -1,9 +1,10 @@
 import type { Call } from '@polkadot/types/interfaces'
 import type { ICompact, INumber } from '@polkadot/types/types'
 import type { BN } from '@polkadot/util'
-import { useEffect, useState } from 'react'
 import { BN_ZERO, isFunction, nextTick, objectSpread } from '@polkadot/util'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { useEffect, useState } from 'react'
+
 import { useApi } from './useApi'
 
 type V1Weight = INumber
@@ -13,8 +14,14 @@ interface V2Weight {
   proofSize: ICompact<INumber>
 }
 
-interface V2WeightConstruct {
+export interface V2WeightConstruct {
   refTime: BN | ICompact<INumber>
+  proofSize?: BN | ICompact<INumber>
+}
+
+export interface WeightResult {
+  v1Weight: BN
+  v2Weight: V2WeightConstruct
 }
 
 interface Result {
@@ -35,14 +42,22 @@ const EMPTY_STATE: Partial<Result> = {
 }
 
 // return both v1 & v2 weight structures (would depend on actual use)
-export function convertWeight(weight: V1Weight | V2Weight): { v1Weight: BN, v2Weight: V2WeightConstruct } {
+export function convertWeight(weight: V1Weight | V2Weight): WeightResult {
   if ((weight as V2Weight).proofSize) {
-    const refTime = (weight as V2Weight).refTime.toBn()
+    // V2 weight
+    const refTime = (weight as V2Weight).refTime.toBn() as BN
 
     return { v1Weight: refTime, v2Weight: weight as V2Weight }
   }
+  else if ((weight as V2Weight).refTime) {
+    // V1.5 weight (when not converted)
+    const refTime = (weight as V2Weight).refTime.toBn() as BN
 
-  const refTime = (weight as V1Weight).toBn()
+    return { v1Weight: refTime, v2Weight: { refTime } }
+  }
+
+  // V1 weight
+  const refTime = (weight as V1Weight).toBn() as BN
 
   return { v1Weight: refTime, v2Weight: { refTime } }
 }

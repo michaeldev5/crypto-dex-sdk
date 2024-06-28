@@ -1,10 +1,11 @@
-import stringify from 'fast-json-stable-stringify'
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import { getUnixTime } from 'date-fns'
 import { fetchTokenPrices, fetchUniV3TokenPrices } from '@crypto-dex-sdk/graph-client'
+import { getUnixTime } from 'date-fns'
+import stringify from 'fast-json-stable-stringify'
+
 import { ALL_CHAINS, LIFI_SUPPORTED_CHAINS, UNI_SUPPORTED_CHAINS, ZENLINK_CHAINS } from './config'
-import redis from './redis'
 import { fetchTokenPricesFromLifiApi } from './custom-prices'
+import redis from './redis'
 
 async function getAMMTokenPriceResults() {
   const results = await Promise.all(
@@ -72,7 +73,9 @@ export async function execute() {
     const sources = results.filter(result => result.chainId === chainId)
     let tokens: { id: string, priceUSD: number }[] = []
     const uniqueTokens = new Map()
-    sources[0].tokens.forEach(token => uniqueTokens.set(token.id, token.priceUSD))
+    sources.forEach((source) => {
+      source.tokens.forEach(token => uniqueTokens.set(token.id, token.priceUSD))
+    })
     tokens = Array.from(uniqueTokens.entries()).map(([id, priceUSD]) => ({ id, priceUSD }))
     return { chainId, updatedAtTimestamp: getUnixTime(Date.now()), tokens }
   })

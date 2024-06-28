@@ -1,12 +1,12 @@
 import type { FC } from 'react'
-import { useCallback, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import chains, { chainsChainIdToParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { Popover } from '@headlessui/react'
 import { DEFAULT_INPUT_UNSTYLED, NetworkIcon, Typography, classNames } from '@crypto-dex-sdk/ui'
 import { useSettings } from '@crypto-dex-sdk/shared'
-import { useConnect, useNetwork, useSwitchNetwork } from 'wagmi'
+import { useAccount, useConnectorClient, useSwitchChain } from 'wagmi'
 import { useWalletState } from '@crypto-dex-sdk/wagmi'
 import { SUPPORTED_CHAIN_IDS, isEvmNetwork } from '../../config'
 
@@ -17,10 +17,10 @@ interface NetworkSelectorProps {
 export const NetworkSelector: FC<NetworkSelectorProps> = ({ supportedNetworks = SUPPORTED_CHAIN_IDS }) => {
   const [{ parachainId }, { updateParachainId }] = useSettings()
   const [query, setQuery] = useState('')
-  const { chain: evmChain } = useNetwork()
-  const { pendingConnector } = useConnect()
-  const { notConnected } = useWalletState(!!pendingConnector)
-  const { switchNetworkAsync: switchEvmNetworkAsync } = useSwitchNetwork()
+  const { chain: evmChain } = useAccount()
+  const connector = useConnectorClient()
+  const { notConnected } = useWalletState(!!connector)
+  const { switchChainAsync: switchEvmChainAsync } = useSwitchChain()
 
   const switchNetwork = useCallback((chainId: ParachainId) => {
     if (isEvmNetwork(chainId)) {
@@ -31,15 +31,15 @@ export const NetworkSelector: FC<NetworkSelectorProps> = ({ supportedNetworks = 
         updateParachainId(chainId)
       }
       else {
-        switchEvmNetworkAsync
-        && switchEvmNetworkAsync(chainsParachainIdToChainId[chainId])
+        switchEvmChainAsync
+        && switchEvmChainAsync({ chainId: chainsParachainIdToChainId[chainId] })
           .then(() => updateParachainId(chainId))
       }
     }
     else {
       updateParachainId(chainId)
     }
-  }, [evmChain, notConnected, switchEvmNetworkAsync, updateParachainId])
+  }, [evmChain, notConnected, switchEvmChainAsync, updateParachainId])
 
   const isChainActive = useCallback((chainId: ParachainId) => {
     const isParachainIdEqual = parachainId === chainId
@@ -50,7 +50,7 @@ export const NetworkSelector: FC<NetworkSelectorProps> = ({ supportedNetworks = 
     return isParachainIdEqual
   }, [evmChain?.id, parachainId])
 
-  const panel = (
+  const panel = useMemo(() => (
     <Popover.Panel className="flex flex-col w-full sm:w-[320px] fixed bottom-0 left-0 right-0 sm:absolute sm:bottom-[unset] sm:left-[unset] mt-4 sm:rounded-xl rounded-b-none shadow-dropdown bg-white dark:bg-slate-800 border border-slate-500/20 dark:border-slate-200/20">
       <div className="flex gap-2 items-center p-4 pb-3">
         <MagnifyingGlassIcon className="text-slate-500" height={20} width={20} />
@@ -87,7 +87,7 @@ export const NetworkSelector: FC<NetworkSelectorProps> = ({ supportedNetworks = 
           ))}
       </div>
     </Popover.Panel>
-  )
+  ), [isChainActive, query, supportedNetworks, switchNetwork])
 
   return (
     <Popover className="relative">

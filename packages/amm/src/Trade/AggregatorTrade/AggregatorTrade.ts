@@ -2,6 +2,7 @@ import type { Currency } from '@crypto-dex-sdk/currency'
 import { Amount, Native, Price, Token } from '@crypto-dex-sdk/currency'
 import { Fraction, ONE, Percent, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
+
 import type { BaseTrade, RouteDescription } from '../BaseTrade'
 import { TradeVersion } from '../TradeVersion'
 import type { RouteLeg } from './types'

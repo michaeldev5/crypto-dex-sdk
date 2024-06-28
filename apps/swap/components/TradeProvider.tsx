@@ -47,6 +47,7 @@ export const TradeProvider: FC<TradeProviderProps> = ({
     mainCurrency,
     otherCurrency,
   )
+
   const { trade: aggregatorTrade, isLoading, isError, isSyncing } = useAggregatorTrade({
     amount: amountSpecified,
     chainId,
@@ -77,7 +78,7 @@ export const TradeProvider: FC<TradeProviderProps> = ({
 export function useTrade() {
   const context = useContext(Context)
   if (!context)
-    throw new Error('Hook can only be used inside Pool Position Staked Context')
+    throw new Error('Hook can only be used inside Trade Context')
 
   return context
 }

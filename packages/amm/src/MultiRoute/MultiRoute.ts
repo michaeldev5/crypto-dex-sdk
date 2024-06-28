@@ -1,7 +1,8 @@
 import type { Token } from '@crypto-dex-sdk/currency'
 import { Amount, Price } from '@crypto-dex-sdk/currency'
-import invariant from 'tiny-invariant'
 import { JSBI, ONE } from '@crypto-dex-sdk/math'
+import invariant from 'tiny-invariant'
+
 import { getStableSwapOutputAmount } from '../StablePool'
 import type { MultiPath } from './MultiPath'
 

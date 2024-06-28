@@ -4,6 +4,7 @@ import type { Token } from '@crypto-dex-sdk/currency'
 import { Amount } from '@crypto-dex-sdk/currency'
 import { useApis } from '@crypto-dex-sdk/polkadot'
 import { useEffect, useMemo, useState } from 'react'
+
 import { addressToNodeCurrency, isNativeCurrency } from '../libs'
 
 export function useMultipleTotalSupply(tokens?: Token[], enabled = true): Record<string, Amount<Token> | undefined> | undefined {

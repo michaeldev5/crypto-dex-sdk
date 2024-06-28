@@ -1,19 +1,26 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import { Amount, Token } from '@crypto-dex-sdk/currency'
-import { useMemo } from 'react'
-import type { Address } from 'wagmi'
-import { useContractRead } from 'wagmi'
+import { useEffect, useMemo } from 'react'
 import type { Pair } from '@crypto-dex-sdk/amm'
+import { useReadContract } from 'wagmi'
+import type { Address } from 'viem'
 import { pair as pairContract } from '../abis'
+import { useBlockNumber } from './useBlockNumber'
 
 export function usePairTotalSupply(pair: Pair | undefined | null, chainId: ParachainId) {
-  const { data: totalSupply } = useContractRead({
+  const blockNumber = useBlockNumber(chainId)
+  const { data: totalSupply, refetch } = useReadContract({
     address: (pair?.liquidityToken.address ?? '') as Address,
     abi: pairContract,
     functionName: 'totalSupply',
-    chainId: chainsParachainIdToChainId[chainId],
+    chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
   })
+
+  useEffect(() => {
+    if (pair && blockNumber)
+      refetch()
+  }, [blockNumber, pair, refetch])
 
   return useMemo(() => {
     const address = pair?.liquidityToken.address

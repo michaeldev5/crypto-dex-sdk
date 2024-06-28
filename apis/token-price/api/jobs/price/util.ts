@@ -1,11 +1,17 @@
 /* eslint-disable no-console */
-import stringify from 'fast-json-stable-stringify'
 import { ParachainId } from '@crypto-dex-sdk/chain'
+import { fetchMarketPrices, fetchTokenPrices, fetchUniV3TokenPrices } from '@crypto-dex-sdk/graph-client'
 import { getUnixTime } from 'date-fns'
-import { fetchTokenPrices, fetchUniV3TokenPrices } from '@crypto-dex-sdk/graph-client'
-import redis from '../../../lib/redis'
-import { ALL_CHAINS, AMM_SUPPORTED_CHAINS, LIFI_SUPPORTED_CHAINS, UNI_SUPPORTED_CHAINS } from '../../../config'
+import stringify from 'fast-json-stable-stringify'
+import {
+  ALL_CHAINS,
+  AMM_SUPPORTED_CHAINS,
+  LIFI_SUPPORTED_CHAINS,
+  MARKET_SUPPORTED_CHAINS,
+  UNI_SUPPORTED_CHAINS,
+} from '../../../config'
 import { fetchTokenPricesFromLifiApi } from '../../../lib/custom-prices'
+import redis from '../../../lib/redis'
 
 async function getAMMTokenPriceResults() {
   const results = await Promise.all(
@@ -23,6 +29,28 @@ async function getAMMTokenPriceResults() {
           priceUSD: Number(token.derivedETH) * nativePrice,
           liquidity: Number(token.totalLiquidity),
         })) || [],
+      }
+    })
+}
+
+async function getMarketPricesResults() {
+  const results = await Promise.all(
+    MARKET_SUPPORTED_CHAINS.map(chainId => fetchMarketPrices(chainId)),
+  )
+
+  return results
+    .filter((result): result is NonNullable<typeof results[0]> => result !== undefined)
+    .map(({ data }, i) => {
+      return {
+        chainId: MARKET_SUPPORTED_CHAINS[i],
+        tokens: data?.markets.map(market => ([
+          { id: market.id, priceUSD: market.priceUSD },
+          { id: market.sy.id, priceUSD: market.sy.priceUSD },
+          { id: market.sy.baseAsset.id, priceUSD: market.sy.baseAsset.priceUSD },
+          { id: market.sy.yieldToken.id, priceUSD: market.sy.yieldToken.priceUSD },
+          { id: market.pt.id, priceUSD: market.pt.priceUSD },
+          { id: market.yt.id, priceUSD: market.yt.priceUSD },
+        ])).flat() || [],
       }
     })
 }
@@ -63,9 +91,10 @@ export async function execute() {
 
   const results = (
     await Promise.all([
+      getMarketPricesResults(),
+      getLifiTokenPriceResults(),
       getAMMTokenPriceResults(),
       getUniTokenPriceResults(),
-      getLifiTokenPriceResults(),
     ])
   ).flat()
   const chainIds = Array.from(new Set(results.map(result => result.chainId)))
@@ -73,7 +102,9 @@ export async function execute() {
     const sources = results.filter(result => result.chainId === chainId)
     let tokens: { id: string, priceUSD: number }[] = []
     const uniqueTokens = new Map()
-    sources[0].tokens.forEach(token => uniqueTokens.set(token.id, token.priceUSD))
+    sources.forEach((source) => {
+      source.tokens.forEach(token => uniqueTokens.set(token.id, token.priceUSD))
+    })
     tokens = Array.from(uniqueTokens.entries()).map(([id, priceUSD]) => ({ id, priceUSD }))
     return { chainId, updatedAtTimestamp: getUnixTime(Date.now()), tokens }
   })
@@ -91,5 +122,6 @@ export async function execute() {
       ]),
     ),
   )
+
   console.log('Finished updating prices')
 }

@@ -1,9 +1,9 @@
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { Amount, Price, Token } from '@crypto-dex-sdk/currency'
 import type { BigintIsh } from '@crypto-dex-sdk/math'
 import { FIVE, JSBI, ONE, ZERO, _1000, _997, sqrt } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import { InsufficientInputAmountError, InsufficientReservesError } from '../errors'
 import { Fee } from '../Fee'
 import type { MultiPath } from '../MultiRoute'
@@ -35,7 +35,7 @@ export class Pair {
     this.liquidityToken = new Token({
       chainId,
       address: this.pairAddress = PairAddress || Pair.getAddress(Amounts[0].currency, Amounts[1].currency),
-      decimals: chainId === ParachainId.AMPLITUDE ? 12 : 18,
+      decimals: (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM) ? 12 : 18,
       symbol: 'ZLK-LP',
       name: 'Zenlink LP Token',
     })
@@ -140,8 +140,9 @@ export class Pair {
       JSBI.equal(this.reserve0.quotient, ZERO)
       || JSBI.equal(this.reserve1.quotient, ZERO)
       || JSBI.greaterThanOrEqual(outputAmount.quotient, this.reserveOf(outputAmount.currency).quotient)
-    )
+    ) {
       throw new InsufficientReservesError()
+    }
 
     const outputReserve = this.reserveOf(outputAmount.currency)
     const inputReserve = this.reserveOf(outputAmount.currency.equals(this.token0) ? this.token1 : this.token0)

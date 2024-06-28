@@ -10,7 +10,7 @@ interface ProfileProps {
   supportedNetworks: ParachainId[]
   notifications: Record<number, string[]>
 
-  clearNotifications(): void
+  clearNotifications: () => void
 }
 
 export const Profile: FC<ProfileProps> = ({
@@ -31,7 +31,7 @@ export const Profile: FC<ProfileProps> = ({
   }
 
   if (isSubstrateNetwork(parachainId)) {
-    if (parachainId === ParachainId.AMPLITUDE) {
+    if (parachainId === ParachainId.AMPLITUDE || parachainId === ParachainId.PENDULUM) {
       return (
         <AmplitudeProfile
           clearNotifications={clearNotifications}

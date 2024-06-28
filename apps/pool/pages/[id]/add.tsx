@@ -1,13 +1,27 @@
 import { chainShortName } from '@crypto-dex-sdk/chain'
 import type { Pair, Pool, StableSwap } from '@crypto-dex-sdk/graph-client'
-import { POOL_TYPE, pairById, pairsByChainIds, singleTokenLockById, singleTokenLocksByChainIds, stableSwapById, stableSwapsByChainIds } from '@crypto-dex-sdk/graph-client'
+import {
+  POOL_TYPE,
+  pairById,
+  pairsByChainIds,
+  singleTokenLockById,
+  singleTokenLocksByChainIds,
+  stableSwapById,
+  stableSwapsByChainIds,
+} from '@crypto-dex-sdk/graph-client'
 import type { BreadcrumbLink } from '@crypto-dex-sdk/ui'
 import { AppearOnMount } from '@crypto-dex-sdk/ui'
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { useRouter } from 'next/router'
 import type { FC } from 'react'
 import useSWR, { SWRConfig } from 'swr'
-import { AddSectionStable, AddSectionStandard, Layout, PoolPositionProvider, PoolPositionStakedProvider } from 'components'
+import {
+  AddSectionStable,
+  AddSectionStandard,
+  Layout,
+  PoolPositionProvider,
+  PoolPositionStakedProvider,
+} from 'components'
 import { AddSectionMyPosition } from 'components/AddSection/AddSectionMyPosition'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 import { AVAILABLE_POOL_TYPE_MAP } from 'lib/constants'

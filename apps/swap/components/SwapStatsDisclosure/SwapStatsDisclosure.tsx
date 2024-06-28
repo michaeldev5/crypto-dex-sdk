@@ -5,7 +5,6 @@ import { Percent } from '@crypto-dex-sdk/math'
 import { Loader, Skeleton, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import React, { useMemo, useState } from 'react'
-
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { AggregatorRoute, LegacyRoute, Rate, useTrade } from 'components'
 import { Trans, t } from '@lingui/macro'
@@ -53,17 +52,19 @@ export const SwapStatsDisclosure: FC = () => {
         <Trans>Min. Received</Trans>
       </Typography>
       <Typography className="flex justify-end truncate text-slate-600 dark:text-slate-400" variant="sm" weight={500}>
-        {(isLoading || isSyncing)
-          ? <Skeleton.Box className="w-[60px] h-[20px] bg-black/[0.12] dark:bg-white/[0.06]" />
-          : trade
-            ? (
-              <>
-                {trade?.minimumAmountOut(slippagePercent)?.toSignificant(6)}
-                {' '}
-                {trade?.minimumAmountOut(slippagePercent)?.currency.symbol}
-              </>
-              )
-            : null}
+        {
+          (isLoading || isSyncing)
+            ? <Skeleton.Box className="w-[60px] h-[20px] bg-black/[0.12] dark:bg-white/[0.06]" />
+            : trade
+              ? (
+                <>
+                  {trade?.minimumAmountOut(slippagePercent)?.toSignificant(6)}
+                  {' '}
+                  {trade?.minimumAmountOut(slippagePercent)?.currency.symbol}
+                </>
+                )
+              : null
+        }
       </Typography>
       <Typography className="text-slate-600 dark:text-slate-400" variant="sm">
         <Trans>Optimized Route</Trans>
@@ -123,17 +124,19 @@ export const SwapStatsDisclosure: FC = () => {
                       <Tooltip content={<div className="grid grid-cols-2 gap-1">{stats}</div>}>
                         {(isLoading || isSyncing) ? <Loader size={16} /> : <InformationCircleIcon height={16} width={16} />}
                       </Tooltip>
-                      {(isLoading)
-                        ? (
-                          <Typography className="text-slate-700 dark:text-slate-300" variant="sm" weight={600}>
-                            <Trans>Finding best price...</Trans>
-                          </Typography>
-                          )
-                        : (
-                          <>
-                            {content} {usdPrice && (<span className="font-medium text-slate-500">(${formatTransactionAmount(Number(usdPrice))})</span>)}
-                          </>
-                          )}
+                      {
+                        isLoading
+                          ? (
+                            <Typography className="text-slate-700 dark:text-slate-300" variant="sm" weight={600}>
+                              <Trans>Finding best price...</Trans>
+                            </Typography>
+                            )
+                          : (
+                            <>
+                              {content} {usdPrice && (<span className="font-medium text-slate-500">(${formatTransactionAmount(Number(usdPrice))})</span>)}
+                            </>
+                            )
+                      }
                     </div>
                   )}
                 </Rate>

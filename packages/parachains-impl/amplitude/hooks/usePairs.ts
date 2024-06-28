@@ -1,19 +1,20 @@
+// Explicitly import the @polkadot/api-augment here, to re-apply the base types,
+// see https://polkadot.js.org/docs/api/FAQ/#since-upgrading-to-the-7x-series-typescript-augmentation-is-missing
+import '@polkadot/api-augment'
+
 import type { QueryableStorageEntry } from '@polkadot/api/types'
+import type { FrameSystemAccountInfo } from '@polkadot/types/lookup'
 import { Pair } from '@crypto-dex-sdk/amm'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Currency, Token, Type } from '@crypto-dex-sdk/currency'
 import { Amount } from '@crypto-dex-sdk/currency'
 import { addressToZenlinkAssetId } from '@crypto-dex-sdk/format'
 import { useApi, useCallMulti } from '@crypto-dex-sdk/polkadot'
-import { useMemo } from 'react'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { OrmlTokensAccountData } from '@zenlink-types/bifrost/interfaces'
-import type { FrameSystemAccountInfo } from '@polkadot/types/lookup'
+import { useMemo } from 'react'
+
 import { PAIR_ADDRESSES, addressToNodeCurrency, isNativeCurrency } from '../libs'
 import type { PairPrimitivesAssetId } from '../types'
-
-// Explicitly import the @polkadot/api-augment here, to re-apply the base types,
-// see https://polkadot.js.org/docs/api/FAQ/#since-upgrading-to-the-7x-series-typescript-augmentation-is-missing
-import '@polkadot/api-augment'
 
 export enum PairState {
   LOADING,
@@ -28,7 +29,7 @@ export function getPairs(chainId: number | undefined, currencies: [Currency | un
       const [currencyA, currencyB] = currencies
       return Boolean(
         chainId
-        && chainId === ParachainId.AMPLITUDE
+        && (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
         && currencyA
         && currencyB
         && currencyA.chainId === currencyB.chainId

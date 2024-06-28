@@ -1,15 +1,16 @@
+import { t } from '@lingui/macro'
+import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { Amount } from '@crypto-dex-sdk/currency'
 import type { Type } from '@crypto-dex-sdk/currency'
+import { Amount } from '@crypto-dex-sdk/currency'
+import { addressToZenlinkAssetId } from '@crypto-dex-sdk/format'
 import { Percent } from '@crypto-dex-sdk/math'
 import type { TransactionRequest } from '@crypto-dex-sdk/polkadot'
 import { useAccount, useApi, useBlockNumber, useSendTransaction } from '@crypto-dex-sdk/polkadot'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useMemo } from 'react'
-import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
-import { addressToZenlinkAssetId } from '@crypto-dex-sdk/format'
-import { t } from '@lingui/macro'
+
 import { PairState } from './usePairs'
 
 interface UseAddLiquidityStandardReviewParams {
@@ -74,8 +75,9 @@ export const useAddLiquidityStandardReview: UseAddLiquidityStandardReview = ({
         || !account
         || !minAmount0
         || !minAmount1
-      )
+      ) {
         return
+      }
 
       // Deadline is currently default to next 20 blocks
       try {

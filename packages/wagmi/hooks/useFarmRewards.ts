@@ -1,10 +1,12 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Type } from '@crypto-dex-sdk/currency'
-import { useMemo } from 'react'
-import type { Address, useBalance as useWagmiBalance } from 'wagmi'
-import { useContractReads } from 'wagmi'
+import { useEffect, useMemo } from 'react'
+import type { useBalance as useWagmiBalance } from 'wagmi'
+import { useReadContracts } from 'wagmi'
+import type { Address } from 'viem'
 import { getFarmingContractConfig } from './useFarming'
+import { useBlockNumber } from './useBlockNumber'
 
 interface UserReward {
   token: string
@@ -29,7 +31,7 @@ interface UseFarmsRewardsParams {
 type FarmRewardsMap = Record<number, FarmReward>
 
 type UseFarmsRewards = (params: UseFarmsRewardsParams) => (
-  | Pick<ReturnType<typeof useContractReads>, 'isError' | 'isLoading'>
+  | Pick<ReturnType<typeof useReadContracts>, 'isError' | 'isLoading'>
   | Pick<ReturnType<typeof useWagmiBalance>, 'isError' | 'isLoading'>
 ) & {
   data: FarmRewardsMap
@@ -42,13 +44,14 @@ export const useFarmsRewards: UseFarmsRewards = ({
   account,
   pids = [],
 }) => {
+  const blockNumber = useBlockNumber(chainId)
   const { address, abi } = getFarmingContractConfig(chainId)
 
   const poolInfoContracts = useMemo(
     () => pids.map(pid => ({
       address,
       abi,
-      chainId: chainsParachainIdToChainId[chainId ?? -1],
+      chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
       functionName: 'getPoolInfo',
       args: [BigInt(pid!)],
     } as const)),
@@ -59,7 +62,7 @@ export const useFarmsRewards: UseFarmsRewards = ({
     () => pids.map(pid => ({
       address,
       abi,
-      chainId: chainsParachainIdToChainId[chainId ?? -1],
+      chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
       functionName: 'getUserInfo',
       args: [BigInt(pid!), account as Address],
     } as const)),
@@ -70,7 +73,7 @@ export const useFarmsRewards: UseFarmsRewards = ({
     () => pids.map(pid => ({
       address,
       abi,
-      chainId: chainsParachainIdToChainId[chainId ?? -1],
+      chainId: chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1],
       functionName: 'pendingRewards',
       args: [BigInt(pid!), account as Address],
     } as const)),
@@ -81,34 +84,30 @@ export const useFarmsRewards: UseFarmsRewards = ({
     data: _poolInfo,
     isError: isPoolInfoError,
     isLoading: isPoolInfoLoading,
-  } = useContractReads({
-    contracts: poolInfoContracts,
-    enabled,
-    allowFailure: true,
-    watch: !(typeof enabled !== 'undefined' && !enabled) && watch,
-  })
+    refetch: refetchPoolInfo,
+  } = useReadContracts({ contracts: poolInfoContracts, allowFailure: true })
 
   const {
     data: _userInfo,
     isError: isUserInfoError,
     isLoading: isUserInfoLoading,
-  } = useContractReads({
-    contracts: userInfoContracts,
-    enabled,
-    allowFailure: true,
-    watch: !(typeof enabled !== 'undefined' && !enabled) && watch,
-  })
+    refetch: refetchUserInfo,
+  } = useReadContracts({ contracts: userInfoContracts, allowFailure: true })
 
   const {
     data: _pendingRewards,
     isError: isPendingRewardsError,
     isLoading: isPendingRewardsLoading,
-  } = useContractReads({
-    contracts: pendingRewardsContracts,
-    enabled,
-    allowFailure: true,
-    watch: !(typeof enabled !== 'undefined' && !enabled) && watch,
-  })
+    refetch: refetchPendingRewards,
+  } = useReadContracts({ contracts: pendingRewardsContracts, allowFailure: true })
+
+  useEffect(() => {
+    if (watch && enabled && blockNumber) {
+      refetchPoolInfo()
+      refetchUserInfo()
+      refetchPendingRewards()
+    }
+  }, [blockNumber, enabled, refetchPendingRewards, refetchPoolInfo, refetchUserInfo, watch])
 
   const balanceMap: FarmRewardsMap = useMemo(() => {
     const result: FarmRewardsMap = {}
@@ -117,8 +116,9 @@ export const useFarmsRewards: UseFarmsRewards = ({
       _poolInfo?.length !== poolInfoContracts.length
       || _userInfo?.length !== userInfoContracts.length
       || _pendingRewards?.length !== pendingRewardsContracts.length
-    )
+    ) {
       return result
+    }
 
     for (let i = 0; i < pids.length; i++) {
       const pid = pids[i]

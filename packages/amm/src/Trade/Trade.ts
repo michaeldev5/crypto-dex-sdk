@@ -3,6 +3,7 @@ import { Amount, Native, Price, WNATIVE } from '@crypto-dex-sdk/currency'
 import type { Percent } from '@crypto-dex-sdk/math'
 import { Fraction, ONE, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
+
 import type { MultiPath } from '../MultiRoute'
 import { MultiRoute } from '../MultiRoute'
 import type { Pool } from '../Pool'

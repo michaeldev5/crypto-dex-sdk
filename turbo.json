@@ -5,9 +5,11 @@
     ".eslint.js",
     ".npmrc"
   ],
-  "pipeline": {
+  "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": [
         ".vercel/**/*",
         ".next/**",
@@ -36,11 +38,15 @@
         "SWAP_URL",
         "POOL_URL",
         "REFERRALS_URL",
-        "ANALYTICS_URL"
+        "ANALYTICS_URL",
+        "MARKET_URL",
+        "GAUGE_URL"
       ]
     },
     "test": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "outputs": []
     },
     "clean": {
@@ -53,7 +59,9 @@
       "outputs": []
     },
     "dev": {
-      "dependsOn": ["^build"],
+      "dependsOn": [
+        "^build"
+      ],
       "cache": false,
       "persistent": true
     },

@@ -1,11 +1,11 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import type { Address } from 'wagmi'
 import { AddressZero } from '@ethersproject/constants'
 import { useBalances as useWagmiBalances } from '@crypto-dex-sdk/wagmi'
 import { useBalances as useBifrostBalances } from '@crypto-dex-sdk/parachains-bifrost'
 import { useBalances as useAmplitudeBalances } from '@crypto-dex-sdk/parachains-amplitude'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
+import type { Address } from 'viem'
 import { isEvmNetwork } from '../../config'
 import type { BalanceMap } from './types'
 
@@ -49,7 +49,7 @@ export const useBalances: UseBalances = ({
     chainId,
     account,
     currencies,
-    enabled: chainId === ParachainId.AMPLITUDE,
+    enabled: chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM,
   })
 
   return useMemo(() => {
@@ -63,7 +63,7 @@ export const useBalances: UseBalances = ({
     if (isEvmNetwork(chainId))
       return wagmiBalances
 
-    if (chainId === ParachainId.AMPLITUDE)
+    if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeBalances
 
     else

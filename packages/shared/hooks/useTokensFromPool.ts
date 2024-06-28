@@ -1,9 +1,9 @@
-import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Type } from '@crypto-dex-sdk/currency'
+import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
 import type { Pair, Pool, SingleTokenLock, StableSwap } from '@crypto-dex-sdk/graph-client'
 import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
 import { useMemo } from 'react'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export interface TokensFromPool {
   tokens: (Token | Type)[]
@@ -37,7 +37,7 @@ export function getTokensFromPair(pair: Pair): TokensFromPool {
     new Token({
       address: pair.id.includes(':') ? pair.id.split(':')[1] : pair.id,
       name: 'Zenlink LP Token',
-      decimals: pair.chainId === ParachainId.AMPLITUDE ? 12 : 18,
+      decimals: (pair.chainId === ParachainId.AMPLITUDE || pair.chainId === ParachainId.AMPLITUDE) ? 12 : 18,
       symbol: 'ZLP',
       chainId: pair.chainId,
     }),

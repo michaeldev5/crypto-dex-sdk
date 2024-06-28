@@ -1,12 +1,13 @@
 import { Amount, Token } from '@crypto-dex-sdk/currency'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { STABLE_LP_OVERRIDE, STABLE_POOL_ADDRESS, StableSwap } from '@crypto-dex-sdk/amm'
-import type { Address } from 'wagmi'
-import { erc20ABI, useContractReads } from 'wagmi'
 import { JSBI } from '@crypto-dex-sdk/math'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
+import { type Address, erc20Abi } from 'viem'
+import { useReadContracts } from 'wagmi'
 import type { StableSwapWithBase } from '../types'
 import { stablePool } from '../abis'
+import { useBlockNumber } from './useBlockNumber'
 
 export enum StablePoolState {
   LOADING,
@@ -25,6 +26,7 @@ export function useGetStablePools(
     isError: boolean
     data: [StablePoolState, StableSwap | null][]
   } {
+  chainId = chainId && isEvmNetwork(chainId) ? chainId : -1
   const poolsAddresses = useMemo(
     () => addresses.length
       ? addresses as Address[]
@@ -32,11 +34,13 @@ export function useGetStablePools(
     [addresses, chainId],
   )
 
+  const blockNumber = useBlockNumber(chainId)
   const {
     data: stablePoolData,
     isLoading: stablePoolLoading,
     isError: stablePoolError,
-  } = useContractReads({
+    refetch: refetchStablePool,
+  } = useReadContracts({
     contracts: [
       ...poolsAddresses.map(address => ({
         chainId: chainsParachainIdToChainId[chainId ?? -1],
@@ -75,24 +79,28 @@ export function useGetStablePools(
         functionName: 'getVirtualPrice',
       } as const)),
     ],
-    enabled: poolsAddresses.length > 0 && config?.enabled,
-    watch: !config?.enabled,
   })
 
   const {
     data: lpTotalSupply,
     isLoading: lpTotalSupplyLoading,
     isError: lpTotalSupplyError,
-  } = useContractReads({
+    refetch: refetchLpTotalSupply,
+  } = useReadContracts({
     contracts: poolsAddresses.map((_, i) => ({
       chainId: chainsParachainIdToChainId[chainId ?? -1],
       address: (stablePoolData?.[i + poolsAddresses.length]?.result ?? '') as Address,
-      abi: erc20ABI,
+      abi: erc20Abi,
       functionName: 'totalSupply',
     } as const)),
-    enabled: stablePoolData && stablePoolData.length > 0 && config?.enabled,
-    watch: !config?.enabled,
   })
+
+  useEffect(() => {
+    if (config.enabled && blockNumber) {
+      refetchStablePool()
+      refetchLpTotalSupply()
+    }
+  }, [blockNumber, config.enabled, refetchLpTotalSupply, refetchStablePool])
 
   return useMemo(() => {
     return {
@@ -117,7 +125,9 @@ export function useGetStablePools(
           || !virtualPrice
           || !totalSupply
           || !tokens.every(address => address in tokenMap)
-        ) return [StablePoolState.LOADING, null]
+        ) {
+          return [StablePoolState.LOADING, null]
+        }
 
         const liquidityToken = new Token({
           chainId,

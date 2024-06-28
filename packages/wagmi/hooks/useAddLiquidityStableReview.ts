@@ -1,20 +1,19 @@
-import type { SendTransactionResult } from '@wagmi/core'
-import { waitForTransaction } from 'wagmi/actions'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Amount, Token } from '@crypto-dex-sdk/currency'
 import { Percent } from '@crypto-dex-sdk/math'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
 import { useCallback, useMemo } from 'react'
-import { useAccount, useNetwork } from 'wagmi'
+import { useAccount } from 'wagmi'
 import { t } from '@lingui/macro'
 import type { Address } from 'viem'
 import { encodeFunctionData } from 'viem'
-import { BigNumber } from 'ethers'
-import { calculateGasMargin } from '../calculateGasMargin'
+import type { SendTransactionData } from 'wagmi/query'
 import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase, WagmiTransactionRequest } from '../types'
+import { config } from '../client'
 import { useSendTransaction } from './useSendTransaction'
 import { getStableRouterContractConfig, useStableRouterContract } from './useStableRouter'
 import { useTransactionDeadline } from './useTransactionDeadline'
@@ -44,10 +43,9 @@ export const useAddLiquidityStableReview: UseAddLiquidityStableReview = ({
   liquidity,
   setOpen,
 }) => {
-  const ethereumChainId = chainsParachainIdToChainId[chainId ?? -1]
+  const ethereumChainId = chainsParachainIdToChainId[chainId && isEvmNetwork(chainId) ? chainId : -1]
   const deadline = useTransactionDeadline(ethereumChainId)
-  const { address } = useAccount()
-  const { chain } = useNetwork()
+  const { address, chain } = useAccount()
 
   const [, { createNotification }] = useNotifications(address)
   const contract = useStableRouterContract(chainId)
@@ -55,16 +53,16 @@ export const useAddLiquidityStableReview: UseAddLiquidityStableReview = ({
   const [{ slippageTolerance }] = useSettings()
 
   const onSettled = useCallback(
-    (data: SendTransactionResult | undefined) => {
-      if (!data || !swap || !poolName)
+    (hash: SendTransactionData | undefined) => {
+      if (!hash || !swap || !poolName)
         return
 
       const ts = new Date().getTime()
       createNotification({
         type: 'mint',
         chainId,
-        txHash: data.hash,
-        promise: waitForTransaction({ hash: data.hash }),
+        txHash: hash,
+        promise: waitForTransactionReceipt(config, { hash }),
         summary: {
           pending: t`Adding liquidity to the ${poolName} stable pool`,
           completed: t`Successfully added liquidity to the ${poolName} stable pool`,
@@ -93,8 +91,9 @@ export const useAddLiquidityStableReview: UseAddLiquidityStableReview = ({
           || !address
           || !deadline
           || !contract
-        )
+        ) {
           return
+        }
 
         if (swap.baseSwap && useBase) {
           const args: [Address, Address, bigint[], bigint[], bigint, Address, bigint] = [
@@ -107,12 +106,10 @@ export const useAddLiquidityStableReview: UseAddLiquidityStableReview = ({
             deadline.toBigInt(),
           ]
 
-          const gasLimit = await contract.estimateGas.addPoolAndBaseLiquidity([...args], { account: address })
           setRequest({
             account: address,
             to: contractAddress,
             data: encodeFunctionData({ abi, functionName: 'addPoolAndBaseLiquidity', args }),
-            gas: calculateGasMargin(BigNumber.from(gasLimit)).toBigInt(),
           })
         }
         else {
@@ -124,12 +121,10 @@ export const useAddLiquidityStableReview: UseAddLiquidityStableReview = ({
             deadline.toBigInt(),
           ]
 
-          const gasLimit = await contract.estimateGas.addPoolLiquidity([...args], { account: address })
           setRequest({
             account: address,
             to: contractAddress,
             data: encodeFunctionData({ abi, functionName: 'addPoolLiquidity', args }),
-            gas: calculateGasMargin(BigNumber.from(gasLimit)).toBigInt(),
           })
         }
       }
@@ -138,16 +133,27 @@ export const useAddLiquidityStableReview: UseAddLiquidityStableReview = ({
     [abi, address, chain?.id, contract, contractAddress, deadline, inputs.length, liquidity, slippagePercent, swap, useBase],
   )
 
-  const { sendTransaction, isLoading: isWritePending } = useSendTransaction({
+  const {
+    estimateGas,
+    request,
+    useSendTransactionReturn: {
+      sendTransaction,
+      isPending: isWritePending,
+    },
+  } = useSendTransaction({
     chainId,
     prepare,
-    onSettled,
-    onSuccess: () => setOpen(false),
+    mutation: {
+      onSettled,
+      onSuccess: () => setOpen(false),
+    },
   })
 
   return useMemo(() => ({
     isWritePending,
-    sendTransaction,
+    sendTransaction: request && estimateGas
+      ? () => sendTransaction({ ...request })
+      : undefined,
     routerAddress: contractAddress,
-  }), [contractAddress, isWritePending, sendTransaction])
+  }), [contractAddress, estimateGas, isWritePending, request, sendTransaction])
 }

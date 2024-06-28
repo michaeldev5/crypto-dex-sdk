@@ -1,11 +1,11 @@
 import {
-  ArrowLeftOnRectangleIcon,
+  ArrowLeftEndOnRectangleIcon,
   ArrowTopRightOnSquareIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import chains, { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import chains, { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import { Amount, Native } from '@crypto-dex-sdk/currency'
 import { shortenAddress } from '@crypto-dex-sdk/format'
 import { usePrices } from '@crypto-dex-sdk/shared'
@@ -13,10 +13,10 @@ import { CopyHelper, IconButton, JazzIcon, Typography } from '@crypto-dex-sdk/ui
 import Image from 'next/legacy/image'
 import type { Dispatch, FC, SetStateAction } from 'react'
 import { useMemo } from 'react'
-import type { Address } from 'wagmi'
 import { useBalance, useDisconnect, useEnsAvatar, useEnsName } from 'wagmi'
 
 import { Trans, t } from '@lingui/macro'
+import type { Address } from 'viem'
 import { ProfileView } from './Profile'
 
 interface DefaultProps {
@@ -29,13 +29,13 @@ export const Default: FC<DefaultProps> = ({ chainId, address, setView }) => {
   const { data: prices } = usePrices({ chainId })
   const { data: ensName } = useEnsName({ address, chainId: 1 })
   const { data: avatar } = useEnsAvatar({
-    name: ensName,
+    name: ensName ?? undefined,
     chainId: 1,
   })
 
   const { data: _balance } = useBalance({
     address,
-    chainId: chainsParachainIdToChainId[chainId],
+    chainId: chainsParachainIdToChainId[isEvmNetwork(chainId) ? chainId : -1],
   })
 
   const balance = useMemo(
@@ -65,7 +65,7 @@ export const Default: FC<DefaultProps> = ({ chainId, address, setView }) => {
               : (
                 <JazzIcon address={address} diameter={16} />
                 )}
-            {shortenAddress(address)}
+            {ensName || shortenAddress(address)}
           </Typography>
           <div className="flex gap-3">
             <CopyHelper hideIcon toCopy={address}>
@@ -85,7 +85,7 @@ export const Default: FC<DefaultProps> = ({ chainId, address, setView }) => {
               <ArrowTopRightOnSquareIcon height={18} width={18} />
             </IconButton>
             <IconButton as="button" className="p-0.5" description={t`Disconnect`} onClick={() => disconnect()}>
-              <ArrowLeftOnRectangleIcon height={18} width={18} />
+              <ArrowLeftEndOnRectangleIcon height={18} width={18} />
             </IconButton>
           </div>
         </div>
