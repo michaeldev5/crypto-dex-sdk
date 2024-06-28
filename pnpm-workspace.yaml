@@ -1,6 +1,5 @@
 packages:
-  - "apis/*"
-  - 'apps/*'
+  - 'apis/*'
   - 'packages/**'
   - 'scripts/*'
   - 'examples/*'

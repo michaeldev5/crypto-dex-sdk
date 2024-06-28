@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/v2-aggregation-router-api-example",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Examples for Zenlink V2 Aggregation Router API",
   "license": "LGPL-2.1-or-later",
   "keywords": [

@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/polkadot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Zenlink Polkadot Api",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",

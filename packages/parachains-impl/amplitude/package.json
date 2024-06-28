@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/parachains-amplitude",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Zenlink Parachains Impl for Amplitude",
   "author": "zenlinkpro",
   "license": "MIT",

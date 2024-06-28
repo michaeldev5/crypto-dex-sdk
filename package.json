@@ -1,6 +1,6 @@
 {
   "name": "crypto-dex-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packageManager": "pnpm@8.6.2",
   "license": "LGPL-2.1-or-later",
   "repository": "https://github.com/michaeldev5/crypto-dex-sdk",
