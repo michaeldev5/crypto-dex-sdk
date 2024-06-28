@@ -2,8 +2,6 @@ import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Token } from '@crypto-dex-sdk/currency'
 import type { FC, ReactNode } from 'react'
 import { TokenListImportChecker as WagmiTokenListImportChecker } from '@crypto-dex-sdk/wagmi'
-import { TokenListImportChecker as BifrostTokenListImportChecker } from '@crypto-dex-sdk/parachains-bifrost'
-import { TokenListImportChecker as AmplitudeTokenListImportChecker } from '@crypto-dex-sdk/parachains-amplitude'
 import { isEvmNetwork } from '../../config'
 
 interface TokenListImportCheckerProps {
@@ -24,7 +22,7 @@ export const TokenListImportChecker: FC<TokenListImportCheckerProps> = ({
     return <WagmiTokenListImportChecker {...props}>{children}</WagmiTokenListImportChecker>
 
   if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
-    return <AmplitudeTokenListImportChecker>{children}</AmplitudeTokenListImportChecker>
+    return <></>
   else
-    return <BifrostTokenListImportChecker>{children}</BifrostTokenListImportChecker>
+    return <></>
 }

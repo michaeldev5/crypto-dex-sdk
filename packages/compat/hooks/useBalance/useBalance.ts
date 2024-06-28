@@ -1,7 +1,7 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { AddressZero } from '@ethersproject/constants'
 import { useBalances as useWagmiBalances } from '@crypto-dex-sdk/wagmi'
-import { useBalances as useBifrostBalances } from '@crypto-dex-sdk/parachains-bifrost'
+// import { useBalances as useBifrostBalances } from '@crypto-dex-sdk/parachains-bifrost'
 import { useBalances as useAmplitudeBalances } from '@crypto-dex-sdk/parachains-amplitude'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
@@ -23,13 +23,13 @@ type UseBalances = (params: UseBalancesParams) => {
   isError: boolean
 }
 
-export const useBalances: UseBalances = ({
+export const useBalances: any = ({
   chainId,
   account,
   currencies,
   enabled,
   watch,
-}) => {
+}: any) => {
   const wagmiBalances = useWagmiBalances({
     chainId,
     account: account as Address,
@@ -38,12 +38,12 @@ export const useBalances: UseBalances = ({
     watch,
   })
 
-  const bifrostBalances = useBifrostBalances({
-    chainId,
-    account,
-    currencies,
-    enabled: chainId === ParachainId.BIFROST_KUSAMA || chainId === ParachainId.BIFROST_POLKADOT,
-  })
+  // const bifrostBalances = useBifrostBalances({
+  //   chainId,
+  //   account,
+  //   currencies,
+  //   enabled: chainId === ParachainId.BIFROST_KUSAMA || chainId === ParachainId.BIFROST_POLKADOT,
+  // })
 
   const amplitudeBalances = useAmplitudeBalances({
     chainId,
@@ -65,10 +65,7 @@ export const useBalances: UseBalances = ({
 
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeBalances
-
-    else
-      return bifrostBalances
-  }, [amplitudeBalances, bifrostBalances, chainId, wagmiBalances])
+  }, [amplitudeBalances, chainId, wagmiBalances])
 }
 
 interface UseBalanceParams {

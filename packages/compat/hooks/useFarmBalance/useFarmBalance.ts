@@ -1,6 +1,6 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { useFarmBalances as useWagmiFarmBalances } from '@crypto-dex-sdk/wagmi'
-import { useFarmBalances as useBifrostBalances } from '@crypto-dex-sdk/parachains-bifrost'
+// import { useFarmBalances as useBifrostBalances } from '@crypto-dex-sdk/parachains-bifrost'
 import { useMemo } from 'react'
 import type { Address } from 'viem'
 import { isEvmNetwork } from '../../config'
@@ -20,13 +20,13 @@ type UseFarmBalances = (params: UseFarmBalancesParams) => {
   isError: boolean
 }
 
-export const useFarmBalances: UseFarmBalances = ({
+export const useFarmBalances: any = ({
   chainId,
   account,
   pids,
   enabled,
   watch,
-}) => {
+}: any) => {
   const wagmiBalances = useWagmiFarmBalances({
     chainId,
     account: account as Address,
@@ -35,11 +35,11 @@ export const useFarmBalances: UseFarmBalances = ({
     watch,
   })
 
-  const bifrostBalances = useBifrostBalances({
-    chainId,
-    account,
-    pids,
-  })
+  // const bifrostBalances = useBifrostBalances({
+  //   chainId,
+  //   account,
+  //   pids,
+  // })
 
   return useMemo(() => {
     if (!chainId) {
@@ -51,8 +51,7 @@ export const useFarmBalances: UseFarmBalances = ({
     }
     if (isEvmNetwork(chainId))
       return wagmiBalances
-    return bifrostBalances
-  }, [bifrostBalances, chainId, wagmiBalances])
+  }, [chainId, wagmiBalances])
 }
 
 interface UseFarmBalanceParams {

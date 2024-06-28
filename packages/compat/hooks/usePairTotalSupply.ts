@@ -1,14 +1,14 @@
 import type { Pair } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { usePairTotalSupply as useWagmiPairTotalSupply } from '@crypto-dex-sdk/wagmi'
-import { usePairTotalSupply as useBifrostPairTotalSupply } from '@crypto-dex-sdk/parachains-bifrost'
+// import { usePairTotalSupply as useBifrostPairTotalSupply } from '@crypto-dex-sdk/parachains-bifrost'
 import { usePairTotalSupply as useAmplitudePairTotalSupply } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { isEvmNetwork, isSubstrateNetwork } from '../config'
 
 export function usePairTotalSupply(pair: Pair | undefined | null, chainId: ParachainId) {
   const wagmiPairTotalSupply = useWagmiPairTotalSupply(pair, chainId)
-  const bifrostPairTotalSupply = useBifrostPairTotalSupply(pair, chainId, isSubstrateNetwork(chainId))
+  // const bifrostPairTotalSupply = useBifrostPairTotalSupply(pair, chainId, isSubstrateNetwork(chainId))
   const amplitudePairTotalSupply = useAmplitudePairTotalSupply(pair, chainId, isSubstrateNetwork(chainId))
 
   return useMemo(() => {
@@ -18,6 +18,6 @@ export function usePairTotalSupply(pair: Pair | undefined | null, chainId: Parac
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudePairTotalSupply
     else
-      return bifrostPairTotalSupply
-  }, [amplitudePairTotalSupply, bifrostPairTotalSupply, chainId, wagmiPairTotalSupply])
+      return amplitudePairTotalSupply
+  }, [amplitudePairTotalSupply, chainId, wagmiPairTotalSupply])
 }

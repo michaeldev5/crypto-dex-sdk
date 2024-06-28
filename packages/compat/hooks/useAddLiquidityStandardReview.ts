@@ -3,9 +3,9 @@ import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { Dispatch, SetStateAction } from 'react'
 import { useMemo } from 'react'
 import { useAddLiquidityStandardReview as useWagmiAddLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
-import {
-  useAddLiquidityStandardReview as useBifrostAddLiquidityStandardReview,
-} from '@crypto-dex-sdk/parachains-bifrost'
+// import {
+//   useAddLiquidityStandardReview as useBifrostAddLiquidityStandardReview,
+// } from '@crypto-dex-sdk/parachains-bifrost'
 import {
   useAddLiquidityStandardReview as useAmplitudeAddLiquidityStandardReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
@@ -28,19 +28,19 @@ type UseAddLiquidityStandardReview = (params: UseAddLiquidityStandardReviewParam
   routerAddress: string | undefined
 }
 
-export const useAddLiquidityStandardReview: UseAddLiquidityStandardReview = ({
+export const useAddLiquidityStandardReview: any = ({
   chainId,
   ...params
-}) => {
+}: any) => {
   const wagmiAddLiquidityStandardReview = useWagmiAddLiquidityStandardReview({
     chainId,
     ...params,
   })
 
-  const bifrostAddLiquidityStandardReview = useBifrostAddLiquidityStandardReview({
-    chainId,
-    ...params,
-  })
+  // const bifrostAddLiquidityStandardReview = useBifrostAddLiquidityStandardReview({
+  //   chainId,
+  //   ...params,
+  // })
 
   const amplitudeAddLiquidityStandardReview = useAmplitudeAddLiquidityStandardReview({
     chainId,
@@ -53,7 +53,5 @@ export const useAddLiquidityStandardReview: UseAddLiquidityStandardReview = ({
 
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeAddLiquidityStandardReview
-    else
-      return bifrostAddLiquidityStandardReview
-  }, [amplitudeAddLiquidityStandardReview, bifrostAddLiquidityStandardReview, chainId, wagmiAddLiquidityStandardReview])
+  }, [amplitudeAddLiquidityStandardReview, chainId, wagmiAddLiquidityStandardReview])
 }

@@ -1,7 +1,7 @@
 import type { Pair } from '@crypto-dex-sdk/amm'
 import type { Currency } from '@crypto-dex-sdk/currency'
 import { usePairs as useWagmiPairs } from '@crypto-dex-sdk/wagmi'
-import { usePairs as useBifrostPairs } from '@crypto-dex-sdk/parachains-bifrost'
+// import { usePairs as useBifrostPairs } from '@crypto-dex-sdk/parachains-bifrost'
 import { usePairs as useAmplitudePairs } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { ParachainId } from '@crypto-dex-sdk/chain'
@@ -29,7 +29,7 @@ export function usePairs(
     enabled: config?.enabled ? config?.enabled : Boolean(chainId && isEvmNetwork(chainId)),
   })
 
-  const bifrostPairs = useBifrostPairs(chainId, currencies, Boolean(chainId && isSubstrateNetwork(chainId)))
+  // const bifrostPairs = useBifrostPairs(chainId, currencies, Boolean(chainId && isSubstrateNetwork(chainId)))
 
   const amplitudePairs = useAmplitudePairs(chainId, currencies, Boolean(chainId && isSubstrateNetwork(chainId)))
 
@@ -47,8 +47,8 @@ export function usePairs(
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudePairs
     else
-      return bifrostPairs
-  }, [amplitudePairs, bifrostPairs, chainId, wagmiPairs])
+      return amplitudePairs
+  }, [amplitudePairs, chainId, wagmiPairs])
 }
 
 interface UsePairReturn {

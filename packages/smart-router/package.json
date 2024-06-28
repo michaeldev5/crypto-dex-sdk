@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/smart-router",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Zenlink Smart Order Router",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -42,10 +42,10 @@
     "viem": "2.9.25"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/router-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/node": "^20.12.7",
     "eslint": "^8.57.0",
     "tsup": "^8.0.2",
     "typescript": "5.4.5",

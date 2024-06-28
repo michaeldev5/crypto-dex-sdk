@@ -3,9 +3,9 @@ import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { Percent } from '@crypto-dex-sdk/math'
 import { useRemoveLiquidityStandardReview as useWagmiRemoveLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
-import {
-  useRemoveLiquidityStandardReview as useBifrostRemoveLiquidityStandardReview,
-} from '@crypto-dex-sdk/parachains-bifrost'
+// import {
+//   useRemoveLiquidityStandardReview as useBifrostRemoveLiquidityStandardReview,
+// } from '@crypto-dex-sdk/parachains-bifrost'
 import {
   useRemoveLiquidityStandardReview as useAmplitudeRemoveLiquidityStandardReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
@@ -38,10 +38,10 @@ export const useRemoveLiquidityStandardReview: UseRemoveLiquidityStandardReview 
     ...params,
   })
 
-  const bifrostRemoveLiquidityStandardReview = useBifrostRemoveLiquidityStandardReview({
-    chainId,
-    ...params,
-  })
+  // const bifrostRemoveLiquidityStandardReview = useBifrostRemoveLiquidityStandardReview({
+  //   chainId,
+  //   ...params,
+  // })
 
   const amplitudeRemoveLiquidityStandardReview = useAmplitudeRemoveLiquidityStandardReview({
     chainId,
@@ -55,6 +55,6 @@ export const useRemoveLiquidityStandardReview: UseRemoveLiquidityStandardReview 
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeRemoveLiquidityStandardReview
     else
-      return bifrostRemoveLiquidityStandardReview
-  }, [amplitudeRemoveLiquidityStandardReview, bifrostRemoveLiquidityStandardReview, chainId, wagmiRemoveLiquidityStandardReview])
+      return amplitudeRemoveLiquidityStandardReview
+  }, [amplitudeRemoveLiquidityStandardReview, chainId, wagmiRemoveLiquidityStandardReview])
 }

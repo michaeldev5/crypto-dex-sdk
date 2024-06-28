@@ -2,8 +2,8 @@ import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { FC } from 'react'
 
 import { Checker as WagmiChecker } from '@crypto-dex-sdk/wagmi'
-import { Checker as BifrostChecker } from '@crypto-dex-sdk/parachains-bifrost'
-import { Checker as AmplitudeChecker } from '@crypto-dex-sdk/parachains-amplitude'
+// import { Checker as BifrostChecker } from '@crypto-dex-sdk/parachains-bifrost'
+// import { Checker as AmplitudeChecker } from '@crypto-dex-sdk/parachains-amplitude'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { isEvmNetwork } from '../../config'
 import type { CheckerButton } from './types'
@@ -28,16 +28,16 @@ export const Amounts: FC<AmountsProps> = ({
 
   if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM) {
     return (
-      <AmplitudeChecker.Amounts chainId={chainId} {...rest}>
+      <>
         {children}
-      </AmplitudeChecker.Amounts>
+      </>
     )
   }
   else {
     return (
-      <BifrostChecker.Amounts chainId={chainId} {...rest}>
+      <>
         {children}
-      </BifrostChecker.Amounts>
+      </>
     )
   }
 }

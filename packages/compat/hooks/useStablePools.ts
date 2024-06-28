@@ -1,7 +1,7 @@
 import type { StableSwap } from '@crypto-dex-sdk/amm'
 import type { Token } from '@crypto-dex-sdk/currency'
 import { useGetStablePools as useWagmiGetStablePools } from '@crypto-dex-sdk/wagmi'
-import { useGetStablePools as useBifrostGetStablePools } from '@crypto-dex-sdk/parachains-bifrost'
+// import { useGetStablePools as useBifrostGetStablePools } from '@crypto-dex-sdk/parachains-bifrost'
 import { useGetStablePools as useAmplitudeGetStablePools } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { ParachainId } from '@crypto-dex-sdk/chain'
@@ -28,7 +28,7 @@ export function useGetStablePools(
   const wagmiStablePools = useWagmiGetStablePools(chainId, tokenMap, addresses, {
     enabled: Boolean(config.enabled && chainId && isEvmNetwork(chainId)),
   })
-  const bifrostStablePools = useBifrostGetStablePools()
+  // const bifrostStablePools = useBifrostGetStablePools()
   const amplitudeStablePools = useAmplitudeGetStablePools()
 
   return useMemo(() => {
@@ -46,8 +46,8 @@ export function useGetStablePools(
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeStablePools
     else
-      return bifrostStablePools
-  }, [amplitudeStablePools, bifrostStablePools, chainId, wagmiStablePools])
+      return amplitudeStablePools
+  }, [amplitudeStablePools, chainId, wagmiStablePools])
 }
 
 export function generateStableSwapWithBase(swaps: StableSwap[]): StableSwapWithBase[] {

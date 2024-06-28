@@ -4,7 +4,7 @@ import type { Dispatch, SetStateAction } from 'react'
 import { useMemo } from 'react'
 import type { Permit2Actions } from '@crypto-dex-sdk/wagmi'
 import { useSwapReview as useWagmiSwapReview } from '@crypto-dex-sdk/wagmi'
-import { useSwapReview as useBifrostSwapReview } from '@crypto-dex-sdk/parachains-bifrost'
+// import { useSwapReview as useBifrostSwapReview } from '@crypto-dex-sdk/parachains-bifrost'
 import { useSwapReview as useAmplitudeSwapReview } from '@crypto-dex-sdk/parachains-amplitude'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { EVM_NETWORKS, isEvmNetwork } from '../config'
@@ -42,11 +42,11 @@ export const useSwapReview: UseSwapReview = ({
     ...params,
   })
 
-  const bifrostSwapReview = useBifrostSwapReview({
-    chainId,
-    trade: trade?.version === TradeVersion.LEGACY ? trade : undefined,
-    ...params,
-  })
+  // const bifrostSwapReview = useBifrostSwapReview({
+  //   chainId,
+  //   trade: trade?.version === TradeVersion.LEGACY ? trade : undefined,
+  //   ...params,
+  // })
 
   const amplitudeSwapReview = useAmplitudeSwapReview({
     chainId,
@@ -61,6 +61,6 @@ export const useSwapReview: UseSwapReview = ({
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeSwapReview
     else
-      return bifrostSwapReview
-  }, [amplitudeSwapReview, bifrostSwapReview, chainId, wagmiSwapReview])
+      return amplitudeSwapReview
+  }, [amplitudeSwapReview, chainId, wagmiSwapReview])
 }

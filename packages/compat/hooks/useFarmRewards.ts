@@ -1,6 +1,6 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { useFarmsRewards as useWagmiFarmsRewards } from '@crypto-dex-sdk/wagmi'
-import { useFarmsRewards as useBifrostFarmsRewards } from '@crypto-dex-sdk/parachains-bifrost'
+// import { useFarmsRewards as useBifrostFarmsRewards } from '@crypto-dex-sdk/parachains-bifrost'
 import { useFarmsRewards as useAmplitudeFarmsRewards } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import type { Address } from 'viem'
@@ -31,13 +31,13 @@ type UseFarmsRewards = (params: UseFarmsRewardsParams) => {
   isError: boolean
 }
 
-export const useFarmsRewards: UseFarmsRewards = ({
+export const useFarmsRewards: any = ({
   chainId,
   account,
   pids,
   enabled,
   watch,
-}) => {
+}: any) => {
   const wagmiBalances = useWagmiFarmsRewards({
     chainId,
     account: account as Address,
@@ -46,11 +46,11 @@ export const useFarmsRewards: UseFarmsRewards = ({
     watch,
   })
 
-  const bifrostBalances = useBifrostFarmsRewards({
-    chainId,
-    account,
-    pids,
-  })
+  // const bifrostBalances = useBifrostFarmsRewards({
+  //   chainId,
+  //   account,
+  //   pids,
+  // })
 
   const amplitudeBalances = useAmplitudeFarmsRewards({
     chainId,
@@ -71,9 +71,9 @@ export const useFarmsRewards: UseFarmsRewards = ({
 
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeBalances
-    else
-      return bifrostBalances
-  }, [amplitudeBalances, bifrostBalances, chainId, wagmiBalances])
+    // else
+    //   return bifrostBalances
+  }, [amplitudeBalances, chainId, wagmiBalances])
 }
 
 interface UseFarmRewardsParams {

@@ -74,6 +74,6 @@ export function useTokens({
     queryKey: queryKey({ tokens }),
     queryFn,
     enabled: _enabled,
-    staleTime,
+    staleTime: staleTime as any,
   })
 }

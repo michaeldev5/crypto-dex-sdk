@@ -1,13 +1,13 @@
 {
   "name": "@crypto-dex-sdk/token-price-api",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "scripts": {
     "lint": "TIMING=1 eslint --fix ."
   },
   "dependencies": {
-    "@vercel/node": "^3.0.27",
     "@crypto-dex-sdk/chain": "workspace:*",
     "@crypto-dex-sdk/graph-client": "workspace:*",
+    "@vercel/node": "^3.0.27",
     "date-fns": "^3.6.0",
     "fast-json-stable-stringify": "^2.1.0",
     "ioredis": "^5.4.1"

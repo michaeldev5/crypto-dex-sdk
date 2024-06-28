@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/graph-config",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Zenlink Graph Config",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",

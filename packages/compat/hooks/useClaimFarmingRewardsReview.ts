@@ -1,8 +1,8 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { useClaimFarmingRewardsReview as useWagmiClaimFarmingRewardsReview } from '@crypto-dex-sdk/wagmi'
-import {
-  useClaimFarmingRewardsReview as useBifrostClaimFarmingRewardsReview,
-} from '@crypto-dex-sdk/parachains-bifrost'
+// import {
+//   useClaimFarmingRewardsReview as useBifrostClaimFarmingRewardsReview,
+// } from '@crypto-dex-sdk/parachains-bifrost'
 import {
   useClaimFarmingRewardsReview as useAmplitudeClaimFarmingRewardsReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
@@ -20,19 +20,19 @@ type UseClaimFarmingRewardsReview = (params: UseClaimFarmingRewardsReviewParams)
   farmAddress: string | undefined
 }
 
-export const useClaimFarmingRewardsReview: UseClaimFarmingRewardsReview = ({
+export const useClaimFarmingRewardsReview: any = ({
   chainId,
   ...params
-}) => {
+}: any) => {
   const wagmiClaimFarmingRewardsReview = useWagmiClaimFarmingRewardsReview({
     chainId,
     ...params,
   })
 
-  const bifrostClaimFarmingRewardsReview = useBifrostClaimFarmingRewardsReview({
-    chainId,
-    ...params,
-  })
+  // const bifrostClaimFarmingRewardsReview = useBifrostClaimFarmingRewardsReview({
+  //   chainId,
+  //   ...params,
+  // })
 
   const amplitudeClaimFarmingRewardsReview = useAmplitudeClaimFarmingRewardsReview({
     chainId,
@@ -45,7 +45,7 @@ export const useClaimFarmingRewardsReview: UseClaimFarmingRewardsReview = ({
 
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeClaimFarmingRewardsReview
-    else
-      return bifrostClaimFarmingRewardsReview
-  }, [amplitudeClaimFarmingRewardsReview, bifrostClaimFarmingRewardsReview, chainId, wagmiClaimFarmingRewardsReview])
+    // else
+    //   return bifrostClaimFarmingRewardsReview
+  }, [amplitudeClaimFarmingRewardsReview, chainId, wagmiClaimFarmingRewardsReview])
 }

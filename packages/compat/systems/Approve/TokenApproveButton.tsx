@@ -2,8 +2,8 @@ import type { Amount, Currency } from '@crypto-dex-sdk/currency'
 import type { FC } from 'react'
 import type { Permit2Actions } from '@crypto-dex-sdk/wagmi'
 import { Approve as WagmiApprove } from '@crypto-dex-sdk/wagmi'
-import { Approve as BifrostApprove } from '@crypto-dex-sdk/parachains-bifrost'
-import { Approve as AmplitudeApprove } from '@crypto-dex-sdk/parachains-amplitude'
+// import { Approve as BifrostApprove } from '@crypto-dex-sdk/parachains-bifrost'
+// import { Approve as AmplitudeApprove } from '@crypto-dex-sdk/parachains-amplitude'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { isEvmNetwork } from '../../config'
 import type { ApprovalButtonRenderProp, ApproveButton } from './types'
@@ -41,7 +41,7 @@ export const TokenApproveButton: FC<TokenApproveButtonProps> = ({
   }
 
   if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
-    return <AmplitudeApprove.Token />
+    return <></>
   else
-    return <BifrostApprove.Token />
+    return <></>
 }

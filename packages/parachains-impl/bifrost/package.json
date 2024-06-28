@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/parachains-bifrost",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "description": "Zenlink Parachains Impl for Bifrost",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -23,6 +23,11 @@
     "lint": "TIMING=1 eslint . --fix"
   },
   "dependencies": {
+    "@crypto-dex-sdk/amm": "workspace:*",
+    "@crypto-dex-sdk/chain": "workspace:*",
+    "@crypto-dex-sdk/currency": "workspace:*",
+    "@crypto-dex-sdk/format": "workspace:*",
+    "@crypto-dex-sdk/math": "workspace:*",
     "@headlessui/react": "1.7.17",
     "@heroicons/react": "2.1.3",
     "@lingui/core": "4.10.0",
@@ -36,10 +41,10 @@
     "@zenlink-types/bifrost": "1.7.6"
   },
   "devDependencies": {
-    "@types/react": "18.2.57",
-    "@types/react-dom": "^18.2.25",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/react": "18.2.57",
+    "@types/react-dom": "^18.2.25",
     "eslint": "^8.57.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

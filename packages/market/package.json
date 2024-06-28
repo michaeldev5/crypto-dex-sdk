@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/market",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Zenlink Market",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -36,9 +36,9 @@
     "tiny-warning": "^1.0.3"
   },
   "devDependencies": {
-    "@types/node": "^20.12.7",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/node": "^20.12.7",
     "eslint": "^8.57.0",
     "tsup": "^8.0.2",
     "typescript": "5.4.5",

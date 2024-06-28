@@ -3,8 +3,6 @@ import type { Token, Type } from '@crypto-dex-sdk/currency'
 import type { Fraction } from '@crypto-dex-sdk/math'
 import type { FC, RefObject } from 'react'
 import { TokenListFilterByQuery as WagmiTokenListFilterByQuery } from '@crypto-dex-sdk/wagmi'
-import { TokenListFilterByQuery as BifrostTokenListFilterByQuery } from '@crypto-dex-sdk/parachains-bifrost'
-import { TokenListFilterByQuery as AmplitudeTokenListFilterByQuery } from '@crypto-dex-sdk/parachains-amplitude'
 import { isEvmNetwork } from '../../config'
 import type { BalanceMap } from '../../hooks/useBalance/types'
 
@@ -34,7 +32,7 @@ export const TokenListFilterByQuery: FC<Props> = ({
     return <WagmiTokenListFilterByQuery chainId={chainId} {...props} />
 
   if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
-    return <AmplitudeTokenListFilterByQuery chainId={chainId} {...props} />
+    return <></>
   else
-    return <BifrostTokenListFilterByQuery chainId={chainId} {...props} />
+    return <></>
 }

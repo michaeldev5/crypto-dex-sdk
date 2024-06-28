@@ -1,8 +1,8 @@
 import type { FC } from 'react'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { Checker as WagmiChecker } from '@crypto-dex-sdk/wagmi'
-import { Checker as BifrostChecker } from '@crypto-dex-sdk/parachains-bifrost'
-import { Checker as AmplitudeChecker } from '@crypto-dex-sdk/parachains-amplitude'
+// import { Checker as BifrostChecker } from '@crypto-dex-sdk/parachains-bifrost'
+// import { Checker as AmplitudeChecker } from '@crypto-dex-sdk/parachains-amplitude'
 import { isEvmNetwork } from '../../config'
 import type { CheckerButton } from './types'
 
@@ -21,16 +21,16 @@ export const Connected: FC<ConnectedProps> = ({ children, chainId, ...rest }) =>
 
   if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM) {
     return (
-      <AmplitudeChecker.Connected {...rest}>
+      <>
         {children}
-      </AmplitudeChecker.Connected>
+      </>
     )
   }
   else {
     return (
-      <BifrostChecker.Connected {...rest}>
+      <>
         {children}
-      </BifrostChecker.Connected>
+      </>
     )
   }
 }

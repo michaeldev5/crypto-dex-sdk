@@ -1,6 +1,6 @@
 {
   "name": "price-script",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Price script",
   "license": "LGPL-2.1-or-later",
   "keywords": [
@@ -27,13 +27,13 @@
   },
   "devDependencies": {
     "@apollo/client": "^3.9.11",
-    "@types/express": "^4.17.21",
     "@crypto-dex-sdk/chain": "workspace:*",
     "@crypto-dex-sdk/currency": "workspace:*",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/graph-client": "workspace:*",
     "@crypto-dex-sdk/graph-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/express": "^4.17.21",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",

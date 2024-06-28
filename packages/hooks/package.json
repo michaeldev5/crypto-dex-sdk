@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/hooks",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Zenlink Interface Hooks",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
@@ -30,13 +30,13 @@
     "react-responsive": "^10.0.0"
   },
   "devDependencies": {
-    "@types/react": "18.2.57",
-    "@types/react-dom": "^18.2.25",
     "@crypto-dex-sdk/currency": "workspace:*",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/format": "workspace:*",
     "@crypto-dex-sdk/math": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
+    "@types/react": "18.2.57",
+    "@types/react-dom": "^18.2.25",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "5.4.5"

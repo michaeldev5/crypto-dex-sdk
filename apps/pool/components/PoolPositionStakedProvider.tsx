@@ -66,7 +66,7 @@ export const PoolPositionStakedProvider: FC<PoolPositionStakedProviderProps> = (
     () =>
       Object.entries(_farmBalanceMap ?? {}).reduce<Record<number | string, Amount<Token>>>(
         (balanceMap, [pid, amount]) => {
-          balanceMap[pid] = Amount.fromRawAmount(liquidityToken, amount)
+          balanceMap[pid] = Amount.fromRawAmount(liquidityToken, amount as any)
           return balanceMap
         },
         {},

@@ -2,9 +2,6 @@ import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { useStakeLiquidityReview as useWagmiStakeLiquidityReview } from '@crypto-dex-sdk/wagmi'
 import {
-  useStakeLiquidityStandardReview as useBifrostStakeLiquidityStandardReview,
-} from '@crypto-dex-sdk/parachains-bifrost'
-import {
   useStakeLiquidityStandardReview as useAmplitudeStakeLiquidityStandardReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
@@ -31,10 +28,10 @@ export const useStakeLiquidityStandardReview: UseStakeLiquidityStandardReview = 
     ...params,
   })
 
-  const bifrostStakeLiquidityStandardReview = useBifrostStakeLiquidityStandardReview({
-    chainId,
-    ...params,
-  })
+  // const bifrostStakeLiquidityStandardReview = useBifrostStakeLiquidityStandardReview({
+  //   chainId,
+  //   ...params,
+  // })
 
   const amplitudeStakeLiquidityStandardReview = useAmplitudeStakeLiquidityStandardReview({
     chainId,
@@ -48,6 +45,6 @@ export const useStakeLiquidityStandardReview: UseStakeLiquidityStandardReview = 
     if (chainId === ParachainId.AMPLITUDE || chainId === ParachainId.PENDULUM)
       return amplitudeStakeLiquidityStandardReview
     else
-      return bifrostStakeLiquidityStandardReview
-  }, [amplitudeStakeLiquidityStandardReview, bifrostStakeLiquidityStandardReview, chainId, wagmiStakeLiquidityStandardReview])
+      return amplitudeStakeLiquidityStandardReview
+  }, [amplitudeStakeLiquidityStandardReview, chainId, wagmiStakeLiquidityStandardReview])
 }
