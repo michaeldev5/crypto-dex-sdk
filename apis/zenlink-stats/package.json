@@ -1,5 +1,5 @@
 {
-  "name": "zenlink-stats-api",
+  "name": "@crypto-dex-sdk/zenlink-stats-api",
   "version": "0.1.0",
   "scripts": {
     "start": "esno api/jobs/stats/run.ts",
