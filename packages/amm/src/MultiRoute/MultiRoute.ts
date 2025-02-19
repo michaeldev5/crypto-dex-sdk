@@ -3,6 +3,7 @@ import { Amount, Price } from '@crypto-dex-sdk/currency'
 import { JSBI, ONE } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 import { getStableSwapOutputAmount } from '../StablePool'
+import { MultiPath } from './MultiPath'
 
 export class MultiRoute {
   public readonly chainId: number

@@ -27,7 +27,6 @@
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-
     "tsup": "^8.3.6",
     "typescript": "5.7.3"
   }
