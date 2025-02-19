@@ -1,15 +1,14 @@
+import type { FC } from 'react'
+import type { Permit2Actions } from '../../hooks'
+import type { ApprovalButtonRenderProp, ApproveButton } from './types'
 import { Transition } from '@headlessui/react'
 import { Trans } from '@lingui/macro'
 import type { Amount, Currency } from '@crypto-dex-sdk/currency'
 import { Badge, Button, Currency as CurrencyFromUi, IconButton, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
 import { memo, useEffect, useMemo } from 'react'
-
 import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk'
-import type { Permit2Actions } from '../../hooks'
 import { ApprovalState, useERC20ApproveCallback, usePermit2ApproveCallback } from '../../hooks'
 import { DefaultButton } from './DefaultButton'
-import type { ApprovalButtonRenderProp, ApproveButton } from './types'
 
 type RenderPropPayload = ApprovalButtonRenderProp
 
@@ -86,18 +85,18 @@ export const TokenApproveButton: FC<TokenApproveButtonProps> = memo(
             approvalState,
             !amount?.currency.isNative
               ? (
-                <Button
-                  {...props}
-                  className={classNames('whitespace-nowrap', props.className)}
-                  disabled={disabled || approvalState === ApprovalState.PENDING}
-                  key={1}
-                  onClick={isToUsePermit2 ? () => sign?.() : onApprove}
-                  type="button"
-                >
-                  <Trans>
-                    {isToUsePermit2 ? 'Permit' : 'Approve'} {amount?.currency.symbol}
-                  </Trans>
-                </Button>
+                  <Button
+                    {...props}
+                    className={classNames('whitespace-nowrap', props.className)}
+                    disabled={disabled || approvalState === ApprovalState.PENDING}
+                    key={1}
+                    onClick={isToUsePermit2 ? () => sign?.() : onApprove}
+                    type="button"
+                  >
+                    <Trans>
+                      {isToUsePermit2 ? 'Permit' : 'Approve'} {amount?.currency.symbol}
+                    </Trans>
+                  </Button>
                 )
               : undefined,
             false,
@@ -118,6 +117,7 @@ export const TokenApproveButton: FC<TokenApproveButtonProps> = memo(
 
     return (
       <Transition
+        as="div"
         enter="transform transition duration-[400ms] delay-[700ms] ease-out"
         enterFrom="opacity-0 scale-50"
         enterTo="opacity-100 scale-100"

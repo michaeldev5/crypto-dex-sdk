@@ -1,6 +1,6 @@
 import { JSBI } from '@crypto-dex-sdk/math'
 import { addWeeks, format, getUnixTime, startOfWeek } from 'date-fns'
-import type { Market } from '../Market'
+import { Market } from '../Market'
 
 export function isExpired(expiry: number, currentTime: number): boolean {
   return expiry <= currentTime
@@ -38,9 +38,9 @@ function validateTimestamps(startTimestamp: number, endTimestamp: number) {
   const endDate = new Date(endTimestamp * 1000) // convert Unix timestamp to JavaScript Date
   const isValidEndDate
       = endDate.getUTCDay() === 4
-      && endDate.getUTCHours() === 0
-      && endDate.getUTCMinutes() === 0
-      && endDate.getUTCSeconds() === 0
+        && endDate.getUTCHours() === 0
+        && endDate.getUTCMinutes() === 0
+        && endDate.getUTCSeconds() === 0
   if (!isValidEndDate)
     throw new Error('Maturity must be at Thursday 12 AM')
 }

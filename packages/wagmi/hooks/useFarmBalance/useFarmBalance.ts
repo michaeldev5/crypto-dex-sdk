@@ -1,10 +1,10 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
-import { useEffect, useMemo } from 'react'
 import type { useBalance as useWagmiBalance } from 'wagmi'
+import { useEffect, useMemo } from 'react'
 import { useReadContracts } from 'wagmi'
-import { getFarmingContractConfig } from '../useFarming'
 import { useBlockNumber } from '../useBlockNumber'
+import { getFarmingContractConfig } from '../useFarming'
 
 export type FarmBalanceMap = Record<string, string>
 

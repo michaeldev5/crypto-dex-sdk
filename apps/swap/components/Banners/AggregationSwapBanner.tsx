@@ -1,8 +1,8 @@
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { AppearOnMount, Button, IconButton, Link, Typography, classNames, useBreakpoint } from '@crypto-dex-sdk/ui'
 import { CpuChipIcon, XCircleIcon } from '@heroicons/react/24/solid'
-import { type FC, useCallback } from 'react'
 import { Trans } from '@lingui/macro'
+import { FC, useCallback } from 'react'
 
 export const AggregationSwapBanner: FC = () => {
   const [{ hideAggregationSwapBanner }, { updateHideAggregationSwapBanner }] = useSettings()

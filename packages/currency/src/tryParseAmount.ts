@@ -1,6 +1,5 @@
 import { parseUnits } from '@ethersproject/units'
 import { JSBI } from '@crypto-dex-sdk/math'
-
 import { Amount } from './Amount'
 import type { Type } from './Type'
 

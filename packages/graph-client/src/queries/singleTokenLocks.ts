@@ -9,11 +9,11 @@ import type {
   SingleTokenLocksQuery,
   SingleTokenLocksQueryVariables,
 } from '../__generated__/types-and-hooks'
+import { wrapResultData } from '.'
 import {
   SingleTokenLockDayDataOrderByInput,
   SingleTokenLockHourDataOrderByInput,
 } from '../__generated__/types-and-hooks'
-import { wrapResultData } from '.'
 
 const SINGLE_TOKEN_LOCK_BY_ID = gql`
   query singleTokenLockById(

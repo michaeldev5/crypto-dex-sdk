@@ -7,10 +7,10 @@ import type { BasePool } from '../entities'
 import type { DataFetcher } from '../fetchers'
 import type { LiquidityProviders } from '../liquidity-providers'
 import { getBigNumber } from '../util'
+import { getAggregationRouterCode } from './AggregationRouter'
 import { findMultiRouteExactIn } from './MultiRouter'
 import { getRouteProcessorCode } from './RouteProcessor'
 import { getRouteProcessor2Code } from './RouteProcessor2'
-import { getAggregationRouterCode } from './AggregationRouter'
 
 type RouteCallBack = (r: SplitMultiRoute) => void
 export type PoolFilter = (list: BasePool) => boolean
@@ -165,9 +165,7 @@ export class Router {
     const tokenOut = toToken instanceof Token
       ? toToken.address
       : NATIVE_ADDRESS
-    const amountOutMin = route.amountOutBN
-      .mul(getBigNumber((1 - maxPriceImpact) * 1_000_000))
-      .div(1_000_000)
+    const amountOutMin = route.amountOutBN.mul(getBigNumber((1 - maxPriceImpact) * 1_000_000)).div(1_000_000)
 
     return {
       tokenIn,
@@ -201,9 +199,7 @@ export class Router {
     const tokenOut = toToken instanceof Token
       ? toToken.address
       : NATIVE_ADDRESS
-    const amountOutMin = route.amountOutBN
-      .mul(getBigNumber((1 - maxPriceImpact) * 1_000_000))
-      .div(1_000_000)
+    const amountOutMin = route.amountOutBN.mul(getBigNumber((1 - maxPriceImpact) * 1_000_000)).div(1_000_000)
 
     return {
       tokenIn,
@@ -237,9 +233,7 @@ export class Router {
     const tokenOut = toToken instanceof Token
       ? toToken.address
       : NATIVE_ADDRESS
-    const amountOutMin = route.amountOutBN
-      .mul(getBigNumber((1 - maxPriceImpact) * 1_000_000))
-      .div(1_000_000)
+    const amountOutMin = route.amountOutBN.mul(getBigNumber((1 - maxPriceImpact) * 1_000_000)).div(1_000_000)
 
     return {
       tokenIn,

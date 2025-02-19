@@ -16,10 +16,10 @@ import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import { Button, Dots } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useMemo, useState } from 'react'
-import { Trans } from '@lingui/macro'
 import { useTokensFromPair, useUnderlyingTokenBalanceFromPool } from '../../lib/hooks'
 import { usePoolPosition } from '../PoolPositionProvider'
 import { RemoveSectionWidgetStandard } from './RemoveSectionWidgetStandard'
+import { Trans } from '@lingui/react'
 
 interface RemoveSectionLegacyProps {
   pair: Pair
@@ -89,15 +89,15 @@ export const RemoveSectionStandard: FC<RemoveSectionLegacyProps> = ({ pair }) =>
     return [
       currencyAToRemove
         ? Amount.fromRawAmount(
-          currencyAToRemove.currency,
-          calculateSlippageAmount(currencyAToRemove, slippagePercent)[0],
-        )
+            currencyAToRemove.currency,
+            calculateSlippageAmount(currencyAToRemove, slippagePercent)[0],
+          )
         : undefined,
       currencyBToRemove
         ? Amount.fromRawAmount(
-          currencyBToRemove.currency,
-          calculateSlippageAmount(currencyBToRemove, slippagePercent)[0],
-        )
+            currencyBToRemove.currency,
+            calculateSlippageAmount(currencyBToRemove, slippagePercent)[0],
+          )
         : undefined,
     ]
   }, [slippagePercent, currencyAToRemove, currencyBToRemove])

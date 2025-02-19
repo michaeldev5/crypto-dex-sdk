@@ -1,6 +1,5 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { PublicClient } from 'viem'
-
 import { LiquidityProviders } from './LiquidityProvider'
 import { UniswapV3BaseProvider } from './UniswapV3Base'
 

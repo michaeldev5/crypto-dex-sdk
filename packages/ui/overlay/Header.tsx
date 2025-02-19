@@ -1,7 +1,7 @@
-import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import type { FC, ReactNode } from 'react'
+import { ChevronDownIcon, ChevronLeftIcon, ChevronRightIcon, ChevronUpIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
-import { IconButton, classNames } from '../index'
+import { classNames, IconButton } from '../index'
 import { Typography } from '../typography'
 
 export interface HeaderProps {
@@ -24,24 +24,22 @@ export const Header: FC<HeaderProps> = ({ className, title, border = true, onBac
     >
       {onBack
         ? (
-          <IconButton className="flex items-center justify-center gap-2 cursor-pointer" onClick={onBack}>
-            {arrowDirection === 'left' && (
-              <ChevronLeftIcon className={classNames('cursor-pointer ')} height={24} width={24} />
-            )}
-            {arrowDirection === 'bottom' && (
-              <ChevronDownIcon className={classNames('cursor-pointer ')} height={24} width={24} />
-            )}
-            {arrowDirection === 'top' && (
-              <ChevronUpIcon className={classNames('cursor-pointer ')} height={24} width={24} />
-            )}
-            {arrowDirection === 'right' && (
-              <ChevronRightIcon className={classNames('cursor-pointer ')} height={24} width={24} />
-            )}
-          </IconButton>
+            <IconButton className="flex items-center justify-center gap-2 cursor-pointer" onClick={onBack}>
+              {arrowDirection === 'left' && (
+                <ChevronLeftIcon className={classNames('cursor-pointer')} height={24} width={24} />
+              )}
+              {arrowDirection === 'bottom' && (
+                <ChevronDownIcon className={classNames('cursor-pointer')} height={24} width={24} />
+              )}
+              {arrowDirection === 'top' && (
+                <ChevronUpIcon className={classNames('cursor-pointer')} height={24} width={24} />
+              )}
+              {arrowDirection === 'right' && (
+                <ChevronRightIcon className={classNames('cursor-pointer')} height={24} width={24} />
+              )}
+            </IconButton>
           )
-        : (
-          <div />
-          )}
+        : <div />}
       <Typography
         as="h3"
         className={classNames('flex items-center justify-center gap-4 text-base font-medium leading-6')}
@@ -51,15 +49,13 @@ export const Header: FC<HeaderProps> = ({ className, title, border = true, onBac
       </Typography>
       {onClose
         ? (
-          <div className="flex items-center justify-end">
-            <IconButton className="flex items-center justify-end cursor-pointer" onClick={onClose}>
-              <XMarkIcon height={24} width={24} />
-            </IconButton>
-          </div>
+            <div className="flex items-center justify-end">
+              <IconButton className="flex items-center justify-end cursor-pointer" onClick={onClose}>
+                <XMarkIcon height={24} width={24} />
+              </IconButton>
+            </div>
           )
-        : (
-          <div />
-          )}
+        : <div />}
     </div>
   )
 }

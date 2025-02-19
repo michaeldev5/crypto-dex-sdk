@@ -3,7 +3,6 @@ import { Amount, Price } from '@crypto-dex-sdk/currency'
 import type { JSBI, Percent } from '@crypto-dex-sdk/math'
 import { Fraction, ONE, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
-import type { Market } from '../Market'
 import { TradeType } from './TradeType'
 
 export interface AggregationSwapData {
@@ -58,7 +57,8 @@ export class Trade {
     const slippageAdjustedAmountOut = new Fraction(ONE)
       .add(slippageTolerance)
       .invert()
-      .multiply(this.outputAmount.quotient).quotient
+      .multiply(this.outputAmount.quotient)
+      .quotient
 
     return Amount.fromRawAmount(this.outputAmount.currency.wrapped, slippageAdjustedAmountOut)
   }

@@ -1,9 +1,6 @@
-import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { FC } from 'react'
-
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { Checker as WagmiChecker } from '@crypto-dex-sdk/wagmi'
-// import { Checker as BifrostChecker } from '@crypto-dex-sdk/parachains-bifrost'
-// import { Checker as AmplitudeChecker } from '@crypto-dex-sdk/parachains-amplitude'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { isEvmNetwork } from '../../config'
 import type { CheckerButton } from './types'

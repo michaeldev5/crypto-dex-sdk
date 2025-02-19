@@ -1,6 +1,6 @@
-import { Trans } from '@lingui/macro'
+import type { FC, JSX, ReactNode } from 'react'
 
-import type { FC, ReactNode } from 'react'
+import { Trans } from '@lingui/react/macro'
 import { Container, DiscordIcon, GithubIcon, Link, TwitterIcon, Typography, ZenlinkIcon } from '..'
 
 export type FooterProps = React.HTMLProps<HTMLDivElement>
@@ -66,6 +66,16 @@ const config: Array<FootItem> = [
         href: 'https://app.zenlink.pro/pool',
       },
       {
+        msgId: 'Eden',
+        name: <Trans>Eden</Trans>,
+        href: 'https://app.zenlink.pro/market',
+      },
+      {
+        msgId: 'Gauge',
+        name: <Trans>Gauge</Trans>,
+        href: 'https://app.zenlink.pro/gauge',
+      },
+      {
         msgId: 'Referrals',
         name: <Trans>Referrals</Trans>,
         href: 'https://app.zenlink.pro/referrals',
@@ -98,7 +108,7 @@ const config: Array<FootItem> = [
       {
         msgId: 'Discord Support',
         name: <Trans>Discord Support</Trans>,
-        href: 'https://discord.com/invite/v32WcymvXn',
+        href: 'https://discord.com/invite/zbVzqkHsBp',
         target: '_blank',
         rel: 'noopener noreferrer',
       },
@@ -179,7 +189,7 @@ export function Footer(props: FooterProps): JSX.Element {
             <a href="https://twitter.com/ZenlinkPro" rel="noopener noreferrer" target="_blank">
               <TwitterIcon className="text-slate-700 dark:text-slate-300 hover:text-slate-500 hover:dark:text-slate-50" width={16} />
             </a>
-            <a href="https://discord.com/invite/v32WcymvXn" rel="noopener noreferrer" target="_blank">
+            <a href="https://discord.com/invite/zbVzqkHsBp" rel="noopener noreferrer" target="_blank">
               <DiscordIcon className="text-slate-700 dark:text-slate-300 hover:text-slate-500 hover:dark:text-slate-50" width={16} />
             </a>
           </div>

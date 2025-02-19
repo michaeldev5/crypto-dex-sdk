@@ -9,7 +9,6 @@ import type { Amount, Token } from '@crypto-dex-sdk/currency'
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import { Approve, useAccount, useAddLiquidityStableReview } from '@crypto-dex-sdk/compat'
 import { useTokenAmountDollarValues } from 'lib/hooks'
-import { Trans, t } from '@lingui/macro'
 
 interface AddSectionReviewModalStableProps {
   swap: StableSwapWithBase | undefined

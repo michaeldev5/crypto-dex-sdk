@@ -9,11 +9,11 @@ import type {
   StableSwapsQuery,
   StableSwapsQueryVariables,
 } from '../__generated__/types-and-hooks'
+import { wrapResultData } from '.'
 import {
   StableSwapDayDataOrderByInput,
   StableSwapHourDataOrderByInput,
 } from '../__generated__/types-and-hooks'
-import { wrapResultData } from '.'
 
 const STABLESWAP_BY_ID = gql`
   query stableSwapById(

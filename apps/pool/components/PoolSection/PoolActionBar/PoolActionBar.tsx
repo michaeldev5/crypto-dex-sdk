@@ -1,7 +1,6 @@
 import { AppearOnMount, Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { Fragment, useState } from 'react'
-
 import type { Pool } from '@crypto-dex-sdk/graph-client'
 import { Trans } from '@lingui/macro'
 import { PoolActionBarPositionDialog } from './PoolActionBarPositionDialog'

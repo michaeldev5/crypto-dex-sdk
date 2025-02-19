@@ -1,9 +1,9 @@
 import { chainShortName } from '@crypto-dex-sdk/chain'
 import type { Pair, Pool, StableSwap } from '@crypto-dex-sdk/graph-client'
 import {
-  POOL_TYPE,
   pairById,
   pairsByChainIds,
+  POOL_TYPE,
   singleTokenLockById,
   singleTokenLocksByChainIds,
   stableSwapById,
@@ -23,10 +23,10 @@ import {
   PoolPositionStakedProvider,
 } from 'components'
 import { AddSectionMyPosition } from 'components/AddSection/AddSectionMyPosition'
+import { StakeSectionStable, StakeSectionStandard } from 'components/StakeSection'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 import { AVAILABLE_POOL_TYPE_MAP } from 'lib/constants'
 import { swapFeeOfPool } from 'lib/functions'
-import { StakeSectionStable, StakeSectionStandard } from 'components/StakeSection'
 
 function LINKS({ pool }: { pool: Pool }): BreadcrumbLink[] {
   return [
@@ -44,12 +44,12 @@ function LINKS({ pool }: { pool: Pool }): BreadcrumbLink[] {
 const Add: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fallback }) => {
   return (
     <SWRConfig value={{ fallback }}>
-      <_Add />
+      <AddCore />
     </SWRConfig>
   )
 }
 
-function _Add() {
+function AddCore() {
   const router = useRouter()
   const { data } = useSWR<{ pool: Pool }>(
     `/pool/api/pool/${router.query.id}`,

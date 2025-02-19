@@ -39,7 +39,7 @@ export const SingleRoute: FC<UseTradeOutput> = ({ trade }) => {
 
   return (
     <div className="flex justify-between items-center gap-1 relative">
-      <div className="absolute inset-0 left-1 right-1 flex items-center text-slate-600 pointer-events-none z-[-1]">
+      <div className="absolute inset-0 left-1 right-1 flex items-center text-slate-600 pointer-events-none z-[0]">
         <svg
           className="sc-o1ook0-5 iESzev"
           height="35"
@@ -289,9 +289,9 @@ export const LegacyRoute: FC = memo(function LegacyRoute() {
       {!trade || isLoading
         ? <Skeleton.Box className="mt-2 w-full h-8 bg-black/[0.12] dark:bg-white/[0.06]" />
         : (
-          <div className="pt-2">
-            {trade.version === TradeVersion.LEGACY && <SingleRoute trade={trade} />}
-          </div>
+            <div className="pt-2">
+              {trade.version === TradeVersion.LEGACY && <SingleRoute trade={trade} />}
+            </div>
           )}
     </AppearOnMount>
   )

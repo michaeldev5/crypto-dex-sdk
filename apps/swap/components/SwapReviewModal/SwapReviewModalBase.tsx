@@ -5,9 +5,7 @@ import { Dialog, Typography } from '@crypto-dex-sdk/ui'
 import { Icon } from '@crypto-dex-sdk/ui/currency/Icon'
 import type { FC, ReactNode } from 'react'
 import { useMemo } from 'react'
-
 import { useTokenAmountDollarValues } from 'lib/hooks'
-import { t } from '@lingui/macro'
 import { Rate } from '../Rate'
 
 interface SwapReviewModalBaseProps {

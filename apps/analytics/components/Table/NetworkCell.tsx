@@ -1,8 +1,7 @@
 import { NetworkIcon } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-
-import { ICON_SIZE } from './constants'
 import type { CellProps } from './types'
+import { ICON_SIZE } from './constants'
 
 export const NetworkCell: FC<CellProps> = ({ row }) => {
   return (

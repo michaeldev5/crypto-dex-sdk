@@ -1,4 +1,6 @@
-import { Disclosure, Transition } from '@headlessui/react'
+
+import type { FC, ReactNode } from 'react'
+import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { PlusIcon } from '@heroicons/react/24/solid'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
@@ -7,9 +9,6 @@ import type { Type } from '@crypto-dex-sdk/currency'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { useCustomTokens } from '@crypto-dex-sdk/shared'
 import { Widget, classNames } from '@crypto-dex-sdk/ui'
-import type { FC, ReactNode } from 'react'
-
-import { t } from '@lingui/macro'
 import { useTokens } from '../../lib/state/token-lists'
 import { SettingsOverlay } from '../SettingsOverlay'
 
@@ -52,32 +51,33 @@ export const AddSectionWidgetStandard: FC<AddSectionWidgetProps> = ({
             <>
               {isFarm && isMounted
                 ? (
-                  <Widget.Header className="!pb-3 " title="1. Add Liquidity">
-                    <div className="flex gap-3">
-                      <SettingsOverlay chainId={chainId} variant="dialog" />
-                      <Disclosure.Button className="w-full pr-0.5">
-                        <div className="flex items-center justify-between">
-                          <div
-                            className={classNames(
-                              open ? 'rotate-180' : 'rotate-0',
-                              'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
-                            )}
-                          >
-                            <ChevronDownIcon
-                              className="group-hover:text-slate-200 text-slate-300"
-                              height={24}
-                              width={24}
-                            />
+                    <Widget.Header className="!pb-3 " title="1. Add Liquidity">
+                      <div className="flex gap-3">
+                        <SettingsOverlay chainId={chainId} variant="dialog" />
+                        <DisclosureButton className="w-full pr-0.5">
+                          <div className="flex items-center justify-between">
+                            <div
+                              className={classNames(
+                                open ? 'rotate-180' : 'rotate-0',
+                                'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
+                              )}
+                            >
+                              <ChevronDownIcon
+                                className="group-hover:text-slate-200 text-slate-300"
+                                height={24}
+                                width={24}
+                              />
+                            </div>
                           </div>
-                        </div>
-                      </Disclosure.Button>
-                    </div>
-                  </Widget.Header>
+                        </DisclosureButton>
+                      </div>
+                    </Widget.Header>
                   )
                 : (
-                  <Widget.Header className="!pb-3" title={t`Add Liquidity`} />
+                    <Widget.Header className="!pb-3" title={t`Add Liquidity`} />
                   )}
               <Transition
+                as="div"
                 className="transition-[max-height] overflow-hidden"
                 enter="duration-300 ease-in-out"
                 enterFrom="transform max-h-0"
@@ -87,7 +87,7 @@ export const AddSectionWidgetStandard: FC<AddSectionWidgetProps> = ({
                 leaveTo="transform max-h-0"
                 unmount={false}
               >
-                <Disclosure.Panel unmount={false}>
+                <DisclosurePanel unmount={false}>
                   <Web3Input.Currency
                     chainId={chainId}
                     className="p-3"
@@ -121,7 +121,7 @@ export const AddSectionWidgetStandard: FC<AddSectionWidgetProps> = ({
                     />
                     <div className="p-3">{children}</div>
                   </div>
-                </Disclosure.Panel>
+                </DisclosurePanel>
               </Transition>
             </>
           )}

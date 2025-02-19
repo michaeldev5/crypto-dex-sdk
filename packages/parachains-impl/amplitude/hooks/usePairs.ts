@@ -1,8 +1,5 @@
-// Explicitly import the @polkadot/api-augment here, to re-apply the base types,
-// see https://polkadot.js.org/docs/api/FAQ/#since-upgrading-to-the-7x-series-typescript-augmentation-is-missing
-import '@polkadot/api-augment'
-
 import type { QueryableStorageEntry } from '@polkadot/api/types'
+
 import type { FrameSystemAccountInfo } from '@polkadot/types/lookup'
 import { Pair } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
@@ -13,8 +10,11 @@ import { useApi, useCallMulti } from '@crypto-dex-sdk/polkadot'
 import type { OrmlTokensAccountData } from '@zenlink-types/bifrost/interfaces'
 import { useMemo } from 'react'
 
-import { PAIR_ADDRESSES, addressToNodeCurrency, isNativeCurrency } from '../libs'
-import type { PairPrimitivesAssetId } from '../types'
+import { addressToNodeCurrency, isNativeCurrency, PAIR_ADDRESSES } from '../libs'
+// Explicitly import the @polkadot/api-augment here, to re-apply the base types,
+// see https://polkadot.js.org/docs/api/FAQ/#since-upgrading-to-the-7x-series-typescript-augmentation-is-missing
+import '@polkadot/api-augment'
+import { PairPrimitivesAssetId } from '../types'
 
 export enum PairState {
   LOADING,

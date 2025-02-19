@@ -1,10 +1,10 @@
+import type { ImageProps } from 'next/legacy/image'
+import type { FC } from 'react'
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid'
 import chains, { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Currency } from '@crypto-dex-sdk/currency'
 import { WrappedTokenInfo } from '@crypto-dex-sdk/token-lists'
-import type { ImageProps } from 'next/legacy/image'
 import Image from 'next/legacy/image'
-import type { FC } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 
 import { GradientCircleIcon } from '../icons'
@@ -61,7 +61,7 @@ export const Icon: FC<IconProps> = ({ currency, disableLink, ...rest }) => {
       return currency.logoURI
 
     return `https://raw.githubusercontent.com/zenlinkpro/assets/master/blockchains/${BLOCKCHAIN[currency.chainId]
-      }/assets/${currency.wrapped.address}/logo.png`
+    }/assets/${currency.wrapped.address}/logo.png`
   }, [currency])
 
   useEffect(() => {

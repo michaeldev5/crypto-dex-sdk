@@ -1,15 +1,14 @@
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { ZERO } from '@crypto-dex-sdk/math'
 import type { NotificationData } from '@crypto-dex-sdk/ui'
-import type { Dispatch, SetStateAction } from 'react'
-import { useCallback } from 'react'
-import { useAccount } from 'wagmi'
-
-import { encodeFunctionData } from 'viem'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Dispatch, SetStateAction } from 'react'
 import type { SendTransactionData } from 'wagmi/query'
-import { waitForTransactionReceipt } from 'wagmi/actions'
 import type { WagmiTransactionRequest } from '../types'
+import { useCallback } from 'react'
+import { encodeFunctionData } from 'viem'
+import { useAccount } from 'wagmi'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { config } from '../client'
 import { useSendTransaction } from './useSendTransaction'
 import { getWNATIVEContractConfig, useWNATIVEContract } from './useWNATIVEContract'
@@ -44,7 +43,7 @@ export const useWrapCallback: UseWrapCallback = ({ chainId, wrapType, amount, on
           promise: waitForTransactionReceipt(config, { hash }),
           summary: {
             pending: `${wrapType === WrapType.Wrap ? 'Wrapping' : 'Unwrapping'} ${amount.toSignificant(6)} ${amount.currency.symbol
-              }`,
+            }`,
             completed: `Successfully ${wrapType === WrapType.Wrap ? 'wrapped' : 'unwrapped'} ${amount.toSignificant(
               6,
             )} ${amount.currency.symbol}`,

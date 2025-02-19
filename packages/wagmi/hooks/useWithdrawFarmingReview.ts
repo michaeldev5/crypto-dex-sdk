@@ -1,18 +1,18 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { useNotifications } from '@crypto-dex-sdk/shared'
-import type { Dispatch, SetStateAction } from 'react'
-import { useCallback, useMemo } from 'react'
-import { useAccount } from 'wagmi'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { t } from '@lingui/macro'
+import type { Dispatch, SetStateAction } from 'react'
 import type { Address } from 'viem'
-import { encodeFunctionData } from 'viem'
 import type { SendTransactionData } from 'wagmi/query'
-import { waitForTransactionReceipt } from 'wagmi/actions'
 import type { WagmiTransactionRequest } from '../types'
+import { t } from '@lingui/core/macro'
+import { useCallback, useMemo } from 'react'
+import { encodeFunctionData } from 'viem'
+import { useAccount } from 'wagmi'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { config } from '../client'
-import { useSendTransaction } from './useSendTransaction'
 import { getFarmingContractConfig, useFarmingContract } from './useFarming'
+import { useSendTransaction } from './useSendTransaction'
 
 interface UseWithdrawFarmingReviewParams {
   chainId: ParachainId
@@ -49,9 +49,9 @@ export const useWithdrawFarmingReview: UseWithdrawFarmingReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Unstaking ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol}`,
-          completed: t`Successfully unstaked ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol}`,
-          failed: t`Something went wrong when unstake ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol}`,
+          pending: t`Unstaking ${amountToWithdraw?.toSignificant(6) || 'unknown'} ${amountToWithdraw?.currency.symbol || 'symbol'}`,
+          completed: t`Successfully unstaked ${amountToWithdraw?.toSignificant(6) || 'unknown'} ${amountToWithdraw?.currency.symbol || 'symbol'}`,
+          failed: t`Something went wrong when unstake ${amountToWithdraw?.toSignificant(6) || 'unknown'} ${amountToWithdraw?.currency.symbol || 'symbol'}`,
         },
         timestamp: ts,
         groupTimestamp: ts,
@@ -85,7 +85,7 @@ export const useWithdrawFarmingReview: UseWithdrawFarmingReview = ({
           data: encodeFunctionData({ abi, functionName: 'redeem', args }),
         })
       }
-      catch (e: unknown) {
+      catch {
         //
       }
     },

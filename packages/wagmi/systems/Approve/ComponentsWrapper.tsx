@@ -1,7 +1,6 @@
 import { Transition } from '@headlessui/react'
 import { classNames } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement } from 'react'
-
 import type { DefaultButtonProps } from './DefaultButton'
 
 interface ComponentsWrapperProps {
@@ -17,6 +16,7 @@ export const ComponentsWrapper: FC<ComponentsWrapperProps> = ({ className, child
   return (
     <Transition
       appear
+      as="div"
       className="transition-[max-height] overflow-hidden"
       enter="duration-[400ms] ease-in-out delay-300"
       enterFrom="transform max-h-0"

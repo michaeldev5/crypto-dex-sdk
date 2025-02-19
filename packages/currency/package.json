@@ -24,6 +24,10 @@
     "prepublishOnly": "pnpm build",
     "test": "vitest run"
   },
+  "peerDependencies": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
   "dependencies": {
     "@crypto-dex-sdk/chain": "workspace:*",
     "@crypto-dex-sdk/format": "workspace:*",
@@ -37,12 +41,12 @@
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
     "@types/lodash.flatmap": "^4.5.9",
-    "@types/react": "18.2.57",
-    "@types/react-dom": "^18.2.25",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tsup": "^8.0.2",
-    "typescript": "5.4.5",
-    "vitest": "^0.34.6"
+    "@types/react": "19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3",
+    "vitest": "^2.1.8"
   }
 }

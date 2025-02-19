@@ -5,8 +5,10 @@ import { Amount, DOT, ZLK } from '@crypto-dex-sdk/currency'
 import { Button, Currency, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { useVotingEscrow } from '@crypto-dex-sdk/wagmi'
 import { type FC, useMemo } from 'react'
+import { useVotingRewards } from 'lib/hooks'
 
 export const VeDashboard: FC = () => {
+  const { address } = useAccount()
   const { data: ve } = useVotingEscrow(ParachainId.MOONBEAM, { enabled: true })
 
   const [totalVeBalance, myVeBalance] = useMemo(
@@ -17,9 +19,16 @@ export const VeDashboard: FC = () => {
     [ve],
   )
 
+  const { unClaimedDOTAmount, data } = useVotingRewards(address)
+
+  const { sendTransaction, isWritePending } = useClaimVotingRewardsReview({
+    chainId: ParachainId.MOONBEAM,
+    rewardsData: data,
+  })
+
   return (
     <div className="flex flex-col sm:flex-row mb-4 bg-slate-200 dark:bg-slate-800 rounded-xl divide-y sm:divide-x sm:divide-y-0 divide-dashed divide-slate-500/50">
-      <div className="flex p-4 flex-grow justify-start sm:justify-center items-center">
+      <div className="flex p-4 basis-1/4 justify-start sm:justify-center items-center">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
             <BuildingLibraryIcon height={20} width={20} />
@@ -28,11 +37,24 @@ export const VeDashboard: FC = () => {
             </Typography>
           </div>
           <Typography variant="lg" weight={600}>
-            {totalVeBalance.toSignificant(4)}
+            {formatFullNumber(totalVeBalance.toSignificant(4))}
           </Typography>
         </div>
       </div>
-      <div className="flex p-4 flex-grow justify-start sm:justify-center items-center">
+      <div className="flex p-4 basis-1/4 justify-start sm:justify-center items-center">
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-2">
+            <BuildingLibraryIcon height={20} width={20} />
+            <Typography weight={500}>
+              <Trans>Total Locked ZLK</Trans>
+            </Typography>
+          </div>
+          <Typography variant="lg" weight={600}>
+            {formatFullNumber(ve?.totalLockedZLK.toSignificant(4) || '0')}
+          </Typography>
+        </div>
+      </div>
+      <div className="flex p-4 basis-1/4 justify-start sm:justify-center items-center">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
             <WalletIcon height={20} width={20} />
@@ -41,11 +63,11 @@ export const VeDashboard: FC = () => {
             </Typography>
           </div>
           <Typography variant="lg" weight={600}>
-            {myVeBalance.toSignificant(4)}
+            {formatFullNumber(myVeBalance.toSignificant(4))}
           </Typography>
         </div>
       </div>
-      <div className="flex p-4 flex-grow justify-start sm:justify-center items-center">
+      <div className="flex p-4 basis-1/4 justify-start sm:justify-center items-center">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-2">
             <HandRaisedIcon height={20} width={20} />
@@ -57,6 +79,8 @@ export const VeDashboard: FC = () => {
                 <Trans>
                   DOT rewards distributed every 4-5 weeks.
                 </Trans>
+                <br />
+                Last distribution: 25 Sep 2024
               </Typography>
             )}
             >
@@ -67,15 +91,22 @@ export const VeDashboard: FC = () => {
             <div className="flex items-center gap-2">
               <Currency.Icon currency={DOT[ParachainId.MOONBEAM]} disableLink height={20} width={20} />
               <Typography variant="lg" weight={600}>
-                0
+                {
+                  Number(unClaimedDOTAmount.toExact()) > 0 && Number(unClaimedDOTAmount.toExact()) < 0.01
+                    ? '<0.01'
+                    : unClaimedDOTAmount.toSignificant(4)
+                }
               </Typography>
             </div>
-            <Button
-              disabled
-              size="xs"
-            >
-              <Trans>Claim</Trans>
-            </Button>
+            <Checker.Network chainId={ParachainId.MOONBEAM} size="xs">
+              <Button
+                disabled={isWritePending || unClaimedDOTAmount.equalTo(ZERO)}
+                onClick={() => sendTransaction?.()}
+                size="xs"
+              >
+                {isWritePending ? <Dots><Trans>Confirm</Trans></Dots> : <Trans>Claim</Trans>}
+              </Button>
+            </Checker.Network>
           </div>
         </div>
       </div>

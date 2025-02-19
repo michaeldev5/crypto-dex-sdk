@@ -1,9 +1,8 @@
+import type { FC } from 'react'
+import type { TokenSelectorProps } from './TokenSelector'
 import { CogIcon } from '@heroicons/react/24/outline'
 import { IconButton, Overlay, SlideIn } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
 import { useState } from 'react'
-
-import type { TokenSelectorProps } from './TokenSelector'
 import { TokenSelectorCustomTokensOverlay } from './TokenSelectorCustomTokensOverlay'
 
 type TokenSelectorSettingsOverlayProps = Pick<TokenSelectorProps, 'customTokenMap' | 'onRemoveToken'>

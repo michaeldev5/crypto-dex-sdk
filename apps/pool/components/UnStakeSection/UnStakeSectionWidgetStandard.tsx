@@ -1,3 +1,4 @@
+import type { FC } from 'react'
 import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
@@ -8,15 +9,14 @@ import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
+  classNames,
   Currency,
   DEFAULT_INPUT_UNSTYLED,
   Dots,
   Input,
   Typography,
-  classNames,
 } from '@crypto-dex-sdk/ui'
 import { Widget } from '@crypto-dex-sdk/ui/widget'
-import type { FC } from 'react'
 import { Fragment, useMemo, useState } from 'react'
 import { Checker, useAccount, useWithdrawFarmingReview } from '@crypto-dex-sdk/compat'
 import type { Pair } from '@crypto-dex-sdk/graph-client'
@@ -69,31 +69,32 @@ export const UnStakeSectionWidgetStandard: FC<UnStakeSectionWidgetStandardProps>
               <>
                 {isFarm && isMounted
                   ? (
-                    <Widget.Header className="!pb-3 " title={<Trans>UnStake Liquidity</Trans>}>
-                      <div className="flex gap-3">
-                        <Disclosure.Button className="w-full pr-0.5">
-                          <div className="flex items-center justify-between">
-                            <div
-                              className={classNames(
-                                open ? 'rotate-180' : 'rotate-0',
-                                'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
-                              )}
-                            >
-                              <ChevronDownIcon
-                                className="group-hover:text-slate-200 text-slate-300"
-                                height={24}
-                                width={24}
-                              />
+                      <Widget.Header className="!pb-3 " title={<Trans>UnStake Liquidity</Trans>}>
+                        <div className="flex gap-3">
+                          <Disclosure.Button className="w-full pr-0.5">
+                            <div className="flex items-center justify-between">
+                              <div
+                                className={classNames(
+                                  open ? 'rotate-180' : 'rotate-0',
+                                  'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
+                                )}
+                              >
+                                <ChevronDownIcon
+                                  className="group-hover:text-slate-200 text-slate-300"
+                                  height={24}
+                                  width={24}
+                                />
+                              </div>
                             </div>
-                          </div>
-                        </Disclosure.Button>
-                      </div>
-                    </Widget.Header>
+                          </Disclosure.Button>
+                        </div>
+                      </Widget.Header>
                     )
                   : (
-                    <Widget.Header className="!pb-3" title={<Trans>UnStake Liquidity</Trans>} />
+                      <Widget.Header className="!pb-3" title={<Trans>UnStake Liquidity</Trans>} />
                     )}
                 <Transition
+                  as="div"
                   className="transition-[max-height]"
                   enter="duration-300 ease-in-out"
                   enterFrom="transform max-h-0"
@@ -101,6 +102,7 @@ export const UnStakeSectionWidgetStandard: FC<UnStakeSectionWidgetStandardProps>
                   leave="transition-[max-height] duration-250 ease-in-out"
                   leaveFrom="transform max-h-[380px]"
                   leaveTo="transform max-h-0"
+                  show
                   unmount={false}
                 >
                   <Disclosure.Panel unmount={false}>
@@ -173,6 +175,7 @@ export const UnStakeSectionWidgetStandardItem: FC<UnStakeSectionWidgetStandardIt
   return (
     <div className="relative border-t border-slate-500/20 dark:border-slate-200/5 mb-3">
       <Transition
+        as="div"
         className="transition-[max-height]"
         enter="duration-300 ease-in-out"
         enterFrom="transform max-h-0"
@@ -180,6 +183,7 @@ export const UnStakeSectionWidgetStandardItem: FC<UnStakeSectionWidgetStandardIt
         leave="transition-[max-height] duration-250 ease-in-out"
         leaveFrom="transform"
         leaveTo="transform max-h-0"
+        show
         unmount={false}
       >
         <div className="flex flex-col gap-3 px-3 pt-3">

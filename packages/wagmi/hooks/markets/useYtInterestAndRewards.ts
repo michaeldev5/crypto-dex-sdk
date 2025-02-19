@@ -8,6 +8,7 @@ import { useAccount, useReadContracts } from 'wagmi'
 import { JSBI } from '@crypto-dex-sdk/math'
 import { useBlockNumber } from '../useBlockNumber'
 import { yt as ytABI } from '../../abis'
+import { REFETCH_BLOCKS } from './constants'
 
 export interface YtInterestAndRewardsResult {
   market: Market
@@ -60,8 +61,7 @@ export function useYtInterestAndRewards(
           abi: ytABI,
           functionName: 'userReward',
           args: [token.address as Address, account],
-        }) as const))
-      .flat(),
+        }) as const)).flat(),
     [account, chainId, markets],
   )
 
@@ -87,7 +87,7 @@ export function useYtInterestAndRewards(
   } = useReadContracts({ contracts: rewardsCalls })
 
   useEffect(() => {
-    if (config?.enabled && blockNumber && account) {
+    if (config?.enabled && blockNumber && Number(blockNumber) % REFETCH_BLOCKS === 0 && account) {
       refetchInterest()
       refetchRewards()
       refetchYtBalance()

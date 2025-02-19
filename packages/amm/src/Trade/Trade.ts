@@ -3,13 +3,12 @@ import { Amount, Native, Price, WNATIVE } from '@crypto-dex-sdk/currency'
 import type { Percent } from '@crypto-dex-sdk/math'
 import { Fraction, ONE, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
-
 import type { MultiPath } from '../MultiRoute'
-import { MultiRoute } from '../MultiRoute'
 import type { Pool } from '../Pool'
 import type { StableSwap } from '../StablePool'
-import { getStableSwapOutputAmount } from '../StablePool'
 import type { BaseTrade, RouteDescription } from './BaseTrade'
+import { MultiRoute } from '../MultiRoute'
+import { getStableSwapOutputAmount } from '../StablePool'
 import { PoolType } from './BaseTrade'
 import { computePriceImpact } from './computePriceImpact'
 import { convertStableSwapOrPairToPool } from './convertStableSwapOrPairToPool'
@@ -88,7 +87,8 @@ export class Trade implements BaseTrade {
     const slippageAdjustedAmountOut = new Fraction(ONE)
       .add(slippageTolerance)
       .invert()
-      .multiply(this.outputAmount.quotient).quotient
+      .multiply(this.outputAmount.quotient)
+      .quotient
 
     return Amount.fromRawAmount(this.outputAmount.currency.wrapped, slippageAdjustedAmountOut)
   }

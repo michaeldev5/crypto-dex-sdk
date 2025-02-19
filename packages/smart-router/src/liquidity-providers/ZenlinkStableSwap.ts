@@ -6,8 +6,8 @@ import JSBI from 'jsbi'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
 import type { Address, PublicClient } from 'viem'
 import type { PoolCode } from '../entities'
-import { StablePool, StablePoolCode } from '../entities'
 import { zenlinkStableSwap } from '../abis'
+import { StablePool, StablePoolCode } from '../entities'
 import { LiquidityProvider, LiquidityProviders } from './LiquidityProvider'
 
 const StablePools: Record<string | number, [string, string][]> = {

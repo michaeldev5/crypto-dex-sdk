@@ -3,7 +3,6 @@ import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { Button, Dots } from '@crypto-dex-sdk/ui'
 import type { FC, ReactNode } from 'react'
 import { useMemo, useState } from 'react'
-
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import type { PairState } from '@crypto-dex-sdk/compat'
 import { Approve, useAccount, useAddLiquidityStandardReview } from '@crypto-dex-sdk/compat'

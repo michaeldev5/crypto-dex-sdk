@@ -2,7 +2,6 @@ import { Popover, Transition } from '@headlessui/react'
 import React, { useState } from 'react'
 import { Input, NetworkIcon, classNames } from '@crypto-dex-sdk/ui'
 import { CHAIN_META as chains } from '../config/chain'
-
 import type { NetworkSelectorProps } from './index'
 
 export function NetworkSelectorMenu<T extends string>({
@@ -20,6 +19,7 @@ export function NetworkSelectorMenu<T extends string>({
         <>
           {typeof children === 'function' ? children({ close, open }) : children}
           <Transition
+            as="div"
             enter="transition duration-300 ease-out"
             enterFrom="transform translate-y-[-16px] opacity-0"
             enterTo="transform translate-y-0 opacity-100"

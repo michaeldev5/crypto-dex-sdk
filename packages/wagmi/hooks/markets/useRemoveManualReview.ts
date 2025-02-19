@@ -11,12 +11,13 @@ import { Percent } from '@crypto-dex-sdk/math'
 import type { Address } from 'viem'
 import { encodeFunctionData, zeroAddress } from 'viem'
 import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
+import type { WagmiTransactionRequest } from '../../types'
+import type { TokenOutput } from './types'
+import { t } from '@lingui/core/macro'
 import { config } from '../../client'
 import { useSendTransaction } from '../useSendTransaction'
-import type { WagmiTransactionRequest } from '../../types'
-import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
-import type { TokenOutput } from './types'
 import { SwapType } from './types'
+import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
 
 interface UseRemoveManualReviewParams {
   chainId: ParachainId
@@ -62,8 +63,8 @@ export const useRemoveManualReview: UseRemoveManualReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Removing liquidity from the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
-          completed: t`Successfully removed liquidity from the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
+          pending: t`Removing liquidity from the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
+          completed: t`Successfully removed liquidity from the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
           failed: t`Something went wrong when removing liquidity`,
         },
         timestamp: ts,
@@ -107,7 +108,7 @@ export const useRemoveManualReview: UseRemoveManualReview = ({
           data: encodeFunctionData({ abi, functionName: 'removeLiquidityDualTokenAndPt', args }),
         })
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [abi, address, contract, contractAddress, lpToRemove, market.SY.yieldToken.address, market.address, ptRemoved, slippagePercent, tokenRemoved],
   )

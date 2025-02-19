@@ -6,8 +6,8 @@ import { BigNumber } from '@ethersproject/bignumber'
 import type { BaseToken } from '@crypto-dex-sdk/amm'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
 import type { PoolCode, UniV3Tick } from '../entities'
-import { AlgebraPoolCode, UniV3Pool } from '../entities'
 import { algebraStateMulticall } from '../abis'
+import { AlgebraPoolCode, UniV3Pool } from '../entities'
 import { formatAddress } from '../util'
 import { LiquidityProvider } from './LiquidityProvider'
 
@@ -61,26 +61,25 @@ export abstract class AlgebraBaseProvider extends LiquidityProvider {
       }
     }
 
-    const poolState = await this.client
-      .multicall({
-        allowFailure: true,
-        contracts: pools.map(
-          pool =>
-            ({
-              args: [
-                this.factory[this.chainId] as Address,
-                pool.token0.address as Address,
-                pool.token1.address as Address,
-                this.BIT_AMOUNT,
-                this.BIT_AMOUNT,
-              ],
-              address: this.stateMultiCall[this.chainId] as Address,
-              chainId: chainsParachainIdToChainId[this.chainId],
-              abi: algebraStateMulticall,
-              functionName: 'getFullStateWithRelativeBitmaps',
-            } as const),
-        ),
-      })
+    const poolState = await this.client.multicall({
+      allowFailure: true,
+      contracts: pools.map(
+        pool =>
+          ({
+            args: [
+              this.factory[this.chainId] as Address,
+              pool.token0.address as Address,
+              pool.token1.address as Address,
+              this.BIT_AMOUNT,
+              this.BIT_AMOUNT,
+            ],
+            address: this.stateMultiCall[this.chainId] as Address,
+            chainId: chainsParachainIdToChainId[this.chainId],
+            abi: algebraStateMulticall,
+            functionName: 'getFullStateWithRelativeBitmaps',
+          } as const),
+      ),
+    })
 
     const ticksMap = new Map<string, { index: number, value: bigint }[]>()
     poolState.forEach((state) => {
@@ -121,9 +120,7 @@ export abstract class AlgebraBaseProvider extends LiquidityProvider {
         return
       }
 
-      const ticks: UniV3Tick[] = Array.from(tickBitmap)
-        .sort((a, b) => a.index - b.index)
-        .map(tick => ({ index: tick.index, DLiquidity: BigNumber.from(tick.value) }))
+      const ticks: UniV3Tick[] = Array.from(tickBitmap).sort((a, b) => a.index - b.index).map(tick => ({ index: tick.index, DLiquidity: BigNumber.from(tick.value) }))
 
       const v3pool = new UniV3Pool(
         address,

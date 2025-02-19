@@ -2,9 +2,9 @@ import type { RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import invariant from 'tiny-invariant'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
+import type { SolidlyPool } from '../pools'
 import { encodeAbiParameters, parseAbiParameters } from 'viem'
 import { HEXer } from '../../HEXer'
-import type { SolidlyPool } from '../pools'
 import { PoolCode } from './PoolCode'
 
 export class VelodromeV2PoolCode extends PoolCode {

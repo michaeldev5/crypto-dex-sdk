@@ -1,8 +1,9 @@
 import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import type { Token } from '@crypto-dex-sdk/currency'
 import { Amount } from '@crypto-dex-sdk/currency'
+import type { Address } from 'viem'
 import { useEffect, useMemo } from 'react'
-import { type Address, erc20Abi } from 'viem'
+import { erc20Abi } from 'viem'
 import { useReadContracts } from 'wagmi'
 import { useBlockNumber } from './useBlockNumber'
 

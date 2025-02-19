@@ -1,6 +1,4 @@
 /* eslint-disable no-console */
-import { BigNumber } from '@ethersproject/bignumber'
-import invariant from 'tiny-invariant'
 import type {
   BaseToken,
   NetworkInfo,
@@ -10,20 +8,22 @@ import type {
 import { PoolType, RouteStatus } from '@crypto-dex-sdk/amm'
 import { ASSERT, DEBUG, getBigNumber } from '../util'
 import type { BasePool } from './pools'
+import { BigNumber } from '@ethersproject/bignumber'
+import invariant from 'tiny-invariant'
+import { Edge } from './Edge'
 import {
   DodoV2Pool,
   GmxPool,
   IZiPool,
   JoeV2Pool,
   MetaPool,
+  setTokenId,
   SolidlyPool,
   StablePool,
   StandardPool,
   SyncPool,
   UniV3Pool,
-  setTokenId,
 } from './pools'
-import { Edge } from './Edge'
 import { Vertice } from './Vertice'
 
 const ROUTER_DISTRIBUTION_PORTION = 65535

@@ -29,7 +29,11 @@
   },
   "devDependencies": {
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "tsup": "^8.0.2",
-    "typescript": "5.4.5"
+    "@pendulum-chain/types": "0.3.4",
+    "@polkadot/api": "^12.3.1",
+    "@zenlink-interface/chain": "workspace:*",
+    "@zenlink-types/bifrost": "1.7.7",
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3"
   }
 }

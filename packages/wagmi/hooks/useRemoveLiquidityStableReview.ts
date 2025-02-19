@@ -3,20 +3,19 @@ import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Amount, Token, Type } from '@crypto-dex-sdk/currency'
 import { Percent, ZERO } from '@crypto-dex-sdk/math'
-import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
-import type { Dispatch, SetStateAction } from 'react'
-import { useCallback, useMemo } from 'react'
-import { useAccount } from 'wagmi'
-import { t } from '@lingui/macro'
 import type { Address } from 'viem'
-import { encodeFunctionData } from 'viem'
 import type { SendTransactionData } from 'wagmi/query'
-import { waitForTransactionReceipt } from 'wagmi/actions'
 import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase, WagmiTransactionRequest } from '../types'
+import { t } from '@lingui/core/macro'
+import { Dispatch, SetStateAction, useCallback, useMemo } from 'react'
+import { encodeFunctionData } from 'viem'
+import { useAccount } from 'wagmi'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { config } from '../client'
 import { useSendTransaction } from './useSendTransaction'
 import { getStableRouterContractConfig, useStableRouterContract } from './useStableRouter'
 import { useTransactionDeadline } from './useTransactionDeadline'
+import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 
 interface UseRemoveLiquidityStableReviewParams {
   chainId: ParachainId
@@ -177,8 +176,7 @@ export const useRemoveLiquidityStableReview: UseRemoveLiquidityStableReview = ({
           }
         }
       }
-      catch (e: unknown) {
-      }
+      catch { }
     },
     [abi, address, amountToRemove?.quotient, balance, chain?.id, contract, contractAddress, deadline, liquidity, minReviewedAmounts, slippagePercent, swap, useBase],
   )

@@ -1,3 +1,4 @@
+import { type FC, useMemo } from 'react'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
 import { ParachainId } from '@crypto-dex-sdk/chain'
@@ -7,15 +8,13 @@ import type { Market } from '@crypto-dex-sdk/market'
 import { ZERO } from '@crypto-dex-sdk/math'
 import { Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { useVotingEscrow } from '@crypto-dex-sdk/wagmi'
-import { type FC, useMemo } from 'react'
 
 interface MaxBoostTableProps {
   market: Market
   lpMinted: Amount<Token>
-  className?: string
 }
 
-export const MaxBoostTable: FC<MaxBoostTableProps> = ({ market, lpMinted, className }) => {
+export const MaxBoostTable: FC<MaxBoostTableProps> = ({ market, lpMinted }) => {
   const { data } = useVotingEscrow(ParachainId.MOONBEAM)
 
   const [maxBoostAmount3Months, maxBoostAmount1Year, maxBoostAmount2Years] = useMemo(

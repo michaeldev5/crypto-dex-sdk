@@ -3,7 +3,6 @@ import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
 import type { FC, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
-
 import { useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { useTokenAmountDollarValues, useUnderlyingTokenBalanceFromPool } from '../lib/hooks'
 

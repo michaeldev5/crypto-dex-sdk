@@ -6,8 +6,8 @@ import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/rea
 import stringify from 'fast-json-stable-stringify'
 import useSWR from 'swr'
 import type { FC } from 'react'
-import { useCallback, useEffect, useMemo, useState } from 'react'
 import { usePoolFilters } from 'components/PoolsFiltersProvider'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { PAGE_SIZE } from '../constants'
 import { APR_COLUMN, FEES_COLUMN, NAME_COLUMN, NETWORK_COLUMN, TVL_COLUMN, VOLUME_COLUMN } from './Cells/columns'
 

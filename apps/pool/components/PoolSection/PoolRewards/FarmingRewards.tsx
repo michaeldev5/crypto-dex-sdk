@@ -64,7 +64,7 @@ export const FarmingRewards: FC<FarmingRewardsProps> = ({ incentives, farm }) =>
                 </Table.td>
                 <Table.td>
                   <Typography className="text-slate-600 dark:text-slate-400" variant="sm" weight={500}>
-                    {t`${Number(Number(incentive?.rewardPerDay).toPrecision(6))} ${incentive?.token?.symbol} per day`}
+                    {t`${Number(Number(incentive?.rewardPerDay).toPrecision(6))} ${incentive?.token?.symbol || 'symbol'} per day`}
                   </Typography>
                 </Table.td>
               </Table.tr>

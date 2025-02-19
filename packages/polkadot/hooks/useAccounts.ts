@@ -1,12 +1,11 @@
 /* eslint-disable no-console */
+import type { BaseWallet, Account as OnBoardAccount } from '@polkadot-onboard/core'
 import type { Signer } from '@polkadot/types/types'
+import type { Connector } from '../types'
 import { u8aToHex } from '@polkadot/util'
 import { decodeAddress } from '@polkadot/util-crypto'
-import type { BaseWallet, Account as OnBoardAccount } from '@polkadot-onboard/core'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { useEffect, useState } from 'react'
-
-import type { Connector } from '../types'
 import { useProviderAccounts } from './useApi'
 
 if (!console.assert) {

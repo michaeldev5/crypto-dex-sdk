@@ -1,7 +1,6 @@
 import type { BigintIsh } from '@crypto-dex-sdk/math'
 import { Big, Fraction, JSBI, MAX_UINT256, Rounding, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
-
 import { Share } from './Share'
 import type { Token } from './Token'
 import type { Type } from './Type'

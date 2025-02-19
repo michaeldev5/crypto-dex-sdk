@@ -2,13 +2,13 @@ import { Button } from '@crypto-dex-sdk/ui'
 import { PlusIcon } from '@heroicons/react/24/solid'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import type { FC } from 'react'
+import { Trans } from '@lingui/macro'
+import { Layout, PoolsFiltersProvider, PoolsSection } from 'components'
+import { SUPPORTED_CHAIN_IDS } from 'config'
+import { getPools } from 'lib/api'
+import { AVAILABLE_POOL_TYPE_MAP } from 'lib/constants'
 import { useMemo } from 'react'
 import { SWRConfig, unstable_serialize } from 'swr'
-import { getPools } from 'lib/api'
-import { SUPPORTED_CHAIN_IDS } from 'config'
-import { Layout, PoolsFiltersProvider, PoolsSection } from 'components'
-import { AVAILABLE_POOL_TYPE_MAP } from 'lib/constants'
-import { Trans } from '@lingui/macro'
 
 export const getStaticProps: GetStaticProps = async () => {
   const [pools] = await Promise.all([getPools()])
@@ -35,12 +35,12 @@ const Pools: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fallback, s
   const parsedSelectedNetworks = useMemo(() => selectedNetworks.map(Number), [selectedNetworks])
   return (
     <SWRConfig value={{ fallback }}>
-      <_Pools selectedNetworks={parsedSelectedNetworks} />
+      <PoolsCore selectedNetworks={parsedSelectedNetworks} />
     </SWRConfig>
   )
 }
 
-function _Pools({ selectedNetworks }: { selectedNetworks: typeof SUPPORTED_CHAIN_IDS }) {
+function PoolsCore({ selectedNetworks }: { selectedNetworks: typeof SUPPORTED_CHAIN_IDS }) {
   return (
     <Layout>
       <div className="flex flex-col gap-10 md:gap-16">

@@ -1,16 +1,16 @@
-import { Tab } from '@headlessui/react'
 import { Trans } from '@lingui/macro'
 import { Network, classNames } from '@crypto-dex-sdk/ui'
 import { PoolTable, TableFilters, ZLKStats, usePoolFilters } from 'components'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 import type { FC } from 'react'
+import { Tab, TabGroup, TabPanel, TabPanels } from '@headlessui/react'
 
 export const TableSection: FC = () => {
   const { selectedNetworks, setFilters } = usePoolFilters()
 
   return (
-    <section className="flex flex-col gap-6">
-      <Tab.Group>
+    <section>
+      <TabGroup className="flex flex-col gap-6">
         <div className="flex items-center gap-6">
           <Tab
             className={({ selected }) => classNames(
@@ -30,8 +30,8 @@ export const TableSection: FC = () => {
             <Trans>Stats</Trans>
           </Tab>
         </div>
-        <Tab.Panels>
-          <Tab.Panel unmount={false}>
+        <TabPanels>
+          <TabPanel unmount={false}>
             <div className="flex flex-col gap-6">
               <TableFilters />
               <Network.Selector
@@ -41,12 +41,12 @@ export const TableSection: FC = () => {
               />
               <PoolTable />
             </div>
-          </Tab.Panel>
-          <Tab.Panel unmount>
+          </TabPanel>
+          <TabPanel unmount>
             <ZLKStats />
-          </Tab.Panel>
-        </Tab.Panels>
-      </Tab.Group>
+          </TabPanel>
+        </TabPanels>
+      </TabGroup>
     </section>
   )
 }

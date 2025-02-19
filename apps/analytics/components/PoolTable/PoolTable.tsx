@@ -1,23 +1,23 @@
-import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
 import type { PaginationState, SortingState } from '@tanstack/react-table'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
 import { Table, useBreakpoint } from '@crypto-dex-sdk/ui'
+import type { FC } from 'react'
+import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
+import { GenericTable, PAGE_SIZE, usePoolFilters } from 'components'
 import {
   APR_COLUMN,
-  FEES_24H_COLUMN,
   FEES_7D_COLUMN,
+  FEES_24H_COLUMN,
   NAME_COLUMN,
   NETWORK_COLUMN,
   TVL_COLUMN,
-  VOLUME_24H_COLUMN,
   VOLUME_7D_COLUMN,
+  VOLUME_24H_COLUMN,
 } from 'components/Table/columns'
 import stringify from 'fast-json-stable-stringify'
-import type { FC } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import useSWR from 'swr'
-import { GenericTable, PAGE_SIZE, usePoolFilters } from 'components'
 
 const COLUMNS = [
   NETWORK_COLUMN,

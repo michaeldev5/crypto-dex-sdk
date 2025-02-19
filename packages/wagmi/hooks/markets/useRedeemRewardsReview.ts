@@ -6,11 +6,11 @@ import { type Dispatch, type SetStateAction, useCallback, useMemo } from 'react'
 import { useAccount } from 'wagmi'
 import type { SendTransactionData } from 'wagmi/query'
 import { waitForTransactionReceipt } from 'wagmi/actions'
-import { t } from '@lingui/macro'
 import type { Address } from 'viem'
+import type { WagmiTransactionRequest } from '../../types'
+import { t } from '@lingui/core/macro'
 import { encodeFunctionData } from 'viem'
 import { config } from '../../client'
-import type { WagmiTransactionRequest } from '../../types'
 import { useSendTransaction } from '../useSendTransaction'
 import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
 
@@ -83,7 +83,7 @@ export const useRedeemRewardsReview: UseRedeemRewardsReview = ({
           data: encodeFunctionData({ abi, functionName: 'redeemDueInterestAndRewards', args }),
         })
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [address, contract, sys, yts, markets, contractAddress, abi],
   )

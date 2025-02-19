@@ -1,10 +1,9 @@
+import type { FC } from 'react'
 import { Transition } from '@headlessui/react'
 import { MagnifyingGlassIcon, XCircleIcon } from '@heroicons/react/24/solid'
 import { useDebounce } from '@crypto-dex-sdk/hooks'
 import { DEFAULT_INPUT_UNSTYLED, IconButton, classNames } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
 import React, { useEffect, useState } from 'react'
-
 import { t } from '@lingui/macro'
 import { useMarketFilters } from '../../../MarketsFiltersProvider'
 
@@ -53,6 +52,7 @@ export const TableFiltersSearchMarket: FC = () => {
         />
         <Transition
           appear
+          as="div"
           className="flex items-center"
           enter="transition duration-300 origin-center ease-out"
           enterFrom="transform scale-90 opacity-0"

@@ -1,10 +1,10 @@
 import type { RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import invariant from 'tiny-invariant'
 import type { Address } from 'viem'
+import type { SyncPool } from '../pools'
+import invariant from 'tiny-invariant'
 import { encodeAbiParameters, parseAbiParameters } from 'viem'
 import { HEXer } from '../../HEXer'
-import type { SyncPool } from '../pools'
 import { PoolCode } from './PoolCode'
 
 export class SyncPoolCode extends PoolCode {

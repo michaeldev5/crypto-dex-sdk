@@ -14,11 +14,11 @@ import type { AggregatorTrade } from '@crypto-dex-sdk/amm'
 import { TradeVersion, calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import { config } from '../../client'
 import type { WagmiTransactionRequest } from '../../types'
+import type { TokenOutput } from './types'
 import { useSendTransaction } from '../useSendTransaction'
 import { getSwapRouterContractConfig } from '../useSwapRouter'
-import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
-import type { TokenOutput } from './types'
 import { SwapType } from './types'
+import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
 
 interface UseRedeemPyReviewParams {
   chainId: ParachainId
@@ -64,8 +64,8 @@ export const useRedeemPyReview: UseRedeemPyReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Redeeming PY from ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)}`,
-          completed: t`Successfully redeemed PY from ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)}`,
+          pending: t`Redeeming PY from ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)}`,
+          completed: t`Successfully redeemed PY from ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)}`,
           failed: t`Something went wrong when redeeming PY`,
         },
         timestamp: ts,
@@ -124,7 +124,7 @@ export const useRedeemPyReview: UseRedeemPyReview = ({
           data: encodeFunctionData({ abi, functionName: 'redeemPyToToken', args }),
         })
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [pyToRedeem, outputAmount, address, contract, trade, market.chainId, market.YT.address, market.SY.yieldToken.address, slippagePercent, contractAddress, abi],
   )

@@ -5,8 +5,6 @@ import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { Button, Dots } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useCallback, useMemo, useState } from 'react'
-
-import { Trans, t } from '@lingui/macro'
 import { useTokensFromPair } from '../../lib/hooks'
 import { AddSectionReviewModalStandard } from './AddSectionReviewModalStandard'
 import { AddSectionWidgetStandard } from './AddSectionWidgetStandard'

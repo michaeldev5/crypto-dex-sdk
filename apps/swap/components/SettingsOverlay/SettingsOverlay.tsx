@@ -4,7 +4,6 @@ import { isEvmNetwork } from '@crypto-dex-sdk/compat'
 import { IconButton, Overlay, SlideIn } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { useState } from 'react'
-import { t } from '@lingui/macro'
 import { AggregatorOverlay } from './AggregatorOverlay'
 
 import { CustomTokensOverlay } from './CustomTokensOverlay'
@@ -16,6 +15,7 @@ interface SettingsOverlayProps {
 
 export const SettingsOverlay: FC<SettingsOverlayProps> = ({ chainId }) => {
   const [open, setOpen] = useState(false)
+
   return (
     <>
       <div className="grid grid-flow-col gap-4">

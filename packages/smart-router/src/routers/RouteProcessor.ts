@@ -2,10 +2,10 @@ import { BigNumber } from '@ethersproject/bignumber'
 import invariant from 'tiny-invariant'
 import type { BaseToken, RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import { RouteStatus } from '@crypto-dex-sdk/amm'
+import { CommandCode } from '../CommandCode'
 import { PoolCode } from '../entities'
 import { HEXer } from '../HEXer'
 import { getBigNumber } from '../util'
-import { CommandCode } from '../CommandCode'
 
 function last<T>(arr: T[]): T {
   return arr[arr.length - 1]

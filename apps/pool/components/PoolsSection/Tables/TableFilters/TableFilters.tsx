@@ -1,10 +1,10 @@
 import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { Network, Select, Switch, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { Trans } from '@lingui/macro'
 import { usePoolFilters } from 'components/PoolsFiltersProvider'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 import { AVAILABLE_POOL_TYPE_MAP } from 'lib/constants'
-import { Trans } from '@lingui/macro'
 import { TableFiltersSearchToken } from './TableFiltersSearchToken'
 
 export const TableFilters: FC<{ showAllFilters?: boolean }> = ({ showAllFilters = false }) => {

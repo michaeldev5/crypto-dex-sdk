@@ -5,16 +5,11 @@ import { Router } from '@crypto-dex-sdk/smart-router'
 import { BigNumber } from 'ethers'
 import { z } from 'zod'
 
-import { V2_CHAINS, getDataFetcher } from './config'
+import { getDataFetcher, V2_CHAINS } from './config'
 import { getToken } from './tokens'
 
 const querySchema = z.object({
-  chainId: z.coerce
-    .number()
-    .int()
-    .gte(0)
-    .lte(2 ** 256)
-    .default(ParachainId.ASTAR),
+  chainId: z.coerce.number().int().gte(0).lte(2 ** 256).default(ParachainId.ASTAR),
   fromTokenId: z.string().default('Native'),
   toTokenId: z.string().default('Native'),
   gasPrice: z.coerce.number().int().gte(1),
@@ -123,25 +118,25 @@ export default async (request: VercelRequest, response: VercelResponse) => {
     routeParams: to
       ? V2_CHAINS.includes(chainId)
         ? Router.routeProcessorParams2(
-          dataFetcher,
-          bestRoute,
-          fromToken,
-          toToken,
-          to,
-          getRouteProcessor2AddressForChainId(chainId),
-          getFeeSettlementAddressForChainId(chainId),
-          priceImpact,
-        )
+            dataFetcher,
+            bestRoute,
+            fromToken,
+            toToken,
+            to,
+            getRouteProcessor2AddressForChainId(chainId),
+            getFeeSettlementAddressForChainId(chainId),
+            priceImpact,
+          )
         : Router.routeProcessorParams(
-          dataFetcher,
-          bestRoute,
-          fromToken,
-          toToken,
-          to,
-          getRouteProcessorAddressForChainId(chainId),
-          getFeeSettlementAddressForChainId(chainId),
-          priceImpact,
-        )
+            dataFetcher,
+            bestRoute,
+            fromToken,
+            toToken,
+            to,
+            getRouteProcessorAddressForChainId(chainId),
+            getFeeSettlementAddressForChainId(chainId),
+            priceImpact,
+          )
       : undefined,
   })
 }

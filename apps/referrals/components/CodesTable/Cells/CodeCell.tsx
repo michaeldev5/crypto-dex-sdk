@@ -1,7 +1,7 @@
 import { CopyHelper, IconButton, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { CheckIcon, DocumentDuplicateIcon } from '@heroicons/react/24/outline'
 import type { CellProps } from './types'
+import { CheckIcon, DocumentDuplicateIcon } from '@heroicons/react/24/outline'
 
 export const CodeCell: FC<CellProps> = ({ row }) => {
   return (

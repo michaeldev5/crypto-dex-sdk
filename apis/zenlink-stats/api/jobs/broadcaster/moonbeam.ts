@@ -1,5 +1,6 @@
+import type { Address } from 'viem'
+import { createWalletClient, fallback, http } from 'viem'
 import { privateKeyToAccount } from 'viem/accounts'
-import { type Address, createWalletClient, fallback, http } from 'viem'
 import { moonbeam } from 'viem/chains'
 import { broadcaster } from '../../../abis'
 

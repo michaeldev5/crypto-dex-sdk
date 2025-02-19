@@ -3,12 +3,13 @@ import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Token, Type } from '@crypto-dex-sdk/currency'
 import { Amount, Native } from '@crypto-dex-sdk/currency'
 import { JSBI } from '@crypto-dex-sdk/math'
-import { useEffect, useMemo } from 'react'
-import { useReadContracts, useBalance as useWagmiBalance } from 'wagmi'
-import { type Address, isAddress, zeroAddress } from 'viem'
-import { erc20Abi } from 'viem'
-import { useBlockNumber } from '../useBlockNumber'
+import type { Address } from 'viem'
 import type { BalanceMap } from './types'
+import { useEffect, useMemo } from 'react'
+import { erc20Abi, isAddress, zeroAddress } from 'viem'
+import { useReadContracts, useBalance as useWagmiBalance } from 'wagmi'
+import { REFETCH_BLOCKS } from '../markets/constants'
+import { useBlockNumber } from '../useBlockNumber'
 
 interface UseBalancesParams {
   account: string | undefined
@@ -102,7 +103,7 @@ export const useBalances: UseBalances = ({
   }, [data, contracts.length, nativeBalance, chainId, validatedTokenAddresses.length, validatedTokens])
 
   useEffect(() => {
-    if (watch && enabled && blockNumber) {
+    if (watch && enabled && blockNumber && Number(blockNumber) % REFETCH_BLOCKS === 0) {
       nativeBalanceRefetch()
       tokensBalanceRefetch()
     }

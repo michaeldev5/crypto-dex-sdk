@@ -1,9 +1,8 @@
+import type { Type } from './Type'
 import { getAddress, isAddress } from '@ethersproject/address'
 import { addressToZenlinkAssetId, isZenlinkAddress } from '@crypto-dex-sdk/format'
 import invariant from 'tiny-invariant'
-
 import { Currency } from './Currency'
-import type { Type } from './Type'
 
 /**
  * Represents an ERC20 token with a unique address and some metadata.

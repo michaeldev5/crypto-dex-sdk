@@ -1,3 +1,6 @@
+import type { FC } from 'react'
+import type { BalanceMap } from '../../hooks/useBalance/types'
+import type { TokenSelectorProps } from './TokenSelector'
 import { AddressZero } from '@ethersproject/constants'
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { XCircleIcon } from '@heroicons/react/24/solid'
@@ -6,6 +9,7 @@ import type { Token, Type } from '@crypto-dex-sdk/currency'
 import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
 import type { Fraction } from '@crypto-dex-sdk/math'
 import {
+  classNames,
   Currency,
   DEFAULT_INPUT_PADDING,
   DEFAULT_INPUT_UNSTYLED,
@@ -15,14 +19,9 @@ import {
   NetworkIcon,
   SlideIn,
   Typography,
-  classNames,
 } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
 import { useCallback } from 'react'
-
-import type { BalanceMap } from '../../hooks/useBalance/types'
 import { TokenListFilterByQuery } from '../TokenListFilterByQuery'
-import type { TokenSelectorProps } from './TokenSelector'
 import { TokenSelectorImportRow } from './TokenSelectorImportRow'
 import { TokenSelectorRow } from './TokenSelectorRow'
 import { TokenSelectorSettingsOverlay } from './TokenSelectorSettingsOverlay'
@@ -101,21 +100,21 @@ export const TokenSelectorDialog: FC<TokenSelectorDialogProps> = ({
                 />
                 {searching
                   ? (
-                    <div className="relative left-[-2px]">
-                      <Loader className="animate-spin-slow text-slate-500" size={14} strokeWidth={3} />
-                    </div>
+                      <div className="relative left-[-2px]">
+                        <Loader className="animate-spin-slow text-slate-500" size={14} strokeWidth={3} />
+                      </div>
                     )
                   : query
                     ? (
-                      <XCircleIcon
-                        className="cursor-pointer text-slate-500 hover:text-slate-300"
-                        height={20}
-                        onClick={() => onInput('')}
-                        width={20}
-                      />
+                        <XCircleIcon
+                          className="cursor-pointer text-slate-500 hover:text-slate-300"
+                          height={20}
+                          onClick={() => onInput('')}
+                          width={20}
+                        />
                       )
                     : (
-                      <MagnifyingGlassIcon className="text-slate-500" height={20} strokeWidth={2} width={20} />
+                        <MagnifyingGlassIcon className="text-slate-500" height={20} strokeWidth={2} width={20} />
                       )}
               </div>
               <div className="relative h-full -ml-6 -mr-6">

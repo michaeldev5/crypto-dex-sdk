@@ -1,3 +1,4 @@
+import { Transition } from '@headlessui/react'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
 import { CheckIcon, ChevronDownIcon, PlusIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
@@ -7,12 +8,11 @@ import { type Market, getMaturityFormatDate } from '@crypto-dex-sdk/market'
 import { Button, Currency, Dots, Switch, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { useTokens } from 'lib/state/token-lists'
 import { type FC, type ReactNode, useCallback, useMemo, useState } from 'react'
-import { Transition } from '@headlessui/react'
 import { PricePanel } from 'components'
 import { useUsdPctChange } from 'lib/hooks'
-import { TradeProvider, useTrade } from './TradeProvider'
 import { MarketAddZapReviewModal } from './MarketAddZapReviewModal'
 import { MaxBoostTable } from './MaxBoostTable'
+import { TradeProvider, useTrade } from './TradeProvider'
 
 interface MarketAddZapProps {
   market: Market
@@ -73,7 +73,6 @@ export const MarketAddZap: FC<MarketAddZapProps> = ({ market }) => {
           </MarketAddZapWidget>
         )}
       </MarketAddZapReviewModal>
-
     </TradeProvider>
   )
 }
@@ -181,6 +180,7 @@ export const MarketAddZapWidget: FC<MarketAddZapWidgetProps> = ({
           </div>
         </div>
         <Transition
+          as="div"
           className="transition-[max-height] overflow-hidden"
           enter="duration-300 ease-in-out"
           enterFrom="transform max-h-0"
@@ -215,7 +215,7 @@ export const MarketAddZapWidget: FC<MarketAddZapWidgetProps> = ({
             </div>
           </div>
         </Transition>
-        <MaxBoostTable className="mt-3" lpMinted={lpMinted} market={market} />
+        <MaxBoostTable lpMinted={lpMinted} market={market} />
         {children && <div className="mt-4">{children}</div>}
       </div>
     </div>

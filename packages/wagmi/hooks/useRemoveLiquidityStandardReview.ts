@@ -6,18 +6,18 @@ import { Native } from '@crypto-dex-sdk/currency'
 import type { Percent } from '@crypto-dex-sdk/math'
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
-import { useCallback, useMemo } from 'react'
-import { useAccount } from 'wagmi'
-import { t } from '@lingui/macro'
 import type { Address } from 'viem'
-import { encodeFunctionData } from 'viem'
 import type { SendTransactionData } from 'wagmi/query'
-import { waitForTransactionReceipt } from 'wagmi/actions'
 import type { WagmiTransactionRequest } from '../types'
+import { t } from '@lingui/macro'
+import { useCallback, useMemo } from 'react'
+import { encodeFunctionData } from 'viem'
+import { useAccount } from 'wagmi'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { config } from '../client'
+import { useSendTransaction } from './useSendTransaction'
 import { getStandardRouterContractConfig, useStandardRouterContract } from './useStandardRouter'
 import { useTransactionDeadline } from './useTransactionDeadline'
-import { useSendTransaction } from './useSendTransaction'
 
 interface UseRemoveLiquidityStandardReviewParams {
   chainId: ParachainId
@@ -65,8 +65,8 @@ export const useRemoveLiquidityStandardReview: UseRemoveLiquidityStandardReview 
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Removing liquidity from the ${token0.symbol}/${token1.symbol} pair`,
-          completed: t`Successfully removed liquidity from the ${token0.symbol}/${token1.symbol} pair`,
+          pending: t`Removing liquidity from the ${token0.symbol || 'token0'}/${token1.symbol || 'token1'} pair`,
+          completed: t`Successfully removed liquidity from the ${token0.symbol || 'token0'}/${token1.symbol || 'token1'} pair`,
           failed: t`Something went wrong when removing liquidity`,
         },
         timestamp: ts,
@@ -96,7 +96,7 @@ export const useRemoveLiquidityStandardReview: UseRemoveLiquidityStandardReview 
 
         const withNative
           = Native.onChain(pool.chainId).wrapped.address === pool.token0.address
-          || Native.onChain(pool.chainId).wrapped.address === pool.token1.address
+            || Native.onChain(pool.chainId).wrapped.address === pool.token1.address
 
         if (withNative) {
           const token1IsNative = Native.onChain(pool.chainId).wrapped.address === pool.token1.wrapped.address
@@ -136,7 +136,7 @@ export const useRemoveLiquidityStandardReview: UseRemoveLiquidityStandardReview 
           })
         }
       }
-      catch (e: unknown) {
+      catch {
         //
       }
     },

@@ -2,11 +2,11 @@ import { formatUSD } from '@crypto-dex-sdk/format'
 import { format } from 'date-fns'
 import type { FC } from 'react'
 import { useCallback, useMemo, useState } from 'react'
-import type { EChartsOption } from 'echarts-for-react'
 import ReactECharts from 'echarts-for-react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import { Typography, classNames } from '@crypto-dex-sdk/ui'
 import { useTheme } from 'next-themes'
+import type { EChartsOption } from 'echarts-for-react'
 import { Trans } from '@lingui/macro'
 import tailwindConfig from '../../tailwind.config.js'
 
@@ -73,8 +73,8 @@ export const VolumeChart: FC<{ x: number[], y0: number[], y1: number[] }> = ({ x
             <span class="text-sm text-pink-500 font-bold">Market: ${formatUSD(params[1].value)}</span>
             <span class="text-sm text-blue-500 font-bold">Pool: ${formatUSD(params[0].value)}</span>
             <span class="text-xs text-slate-600 dark:text-slate-400 font-medium mt-1">${
-              date instanceof Date && !Number.isNaN(date?.getTime()) ? format(date, 'dd MMM yyyy HH:mm') : ''
-            }</span>
+      date instanceof Date && !Number.isNaN(date?.getTime()) ? format(date, 'dd MMM yyyy HH:mm') : ''
+      }</span>
           </div>`
         },
         borderWidth: 0,

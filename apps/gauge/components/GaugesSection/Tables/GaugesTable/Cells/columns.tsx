@@ -1,7 +1,6 @@
-import { Trans } from '@lingui/macro'
 import type { ColumnDef } from '@tanstack/react-table'
 import type { Gauge } from '@crypto-dex-sdk/market'
-
+import { Trans } from '@lingui/macro'
 import { JSBI } from '@crypto-dex-sdk/math'
 import { GaugeCommunityVoteCell } from './GaugeCommunityVoteCell'
 import { GaugeMyVoteCell } from './GaugeMyVoteCell'
@@ -44,7 +43,7 @@ export const MY_VOTE_COLUMN: ColumnDef<Gauge, unknown> = {
   header: _ => <Trans>My Vote</Trans>,
   accessorFn: row => JSBI.toNumber(row.userVote.weight),
   cell: props => <GaugeMyVoteCell row={props.row.original} />,
-  size: 80,
+  size: 100,
   meta: {
     className: 'justify-end',
     skeleton: <div className="rounded-full bg-slate-300 dark:bg-slate-700 w-full h-[20px] animate-pulse" />,

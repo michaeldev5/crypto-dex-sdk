@@ -1,13 +1,12 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import { AddressZero } from '@ethersproject/constants'
 import { useBalances as useWagmiBalances } from '@crypto-dex-sdk/wagmi'
-// import { useBalances as useBifrostBalances } from '@crypto-dex-sdk/parachains-bifrost'
 import { useBalances as useAmplitudeBalances } from '@crypto-dex-sdk/parachains-amplitude'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
 import type { Address } from 'viem'
-import { isEvmNetwork } from '../../config'
 import type { BalanceMap } from './types'
+import { AddressZero } from '@ethersproject/constants'
+import { isEvmNetwork } from '../../config'
 
 interface UseBalancesParams {
   account: string | undefined

@@ -4,9 +4,9 @@ import { useEffect, useMemo } from 'react'
 import { useAccount, useReadContract, useReadContracts } from 'wagmi'
 import { Gauge, type VeBalance, VotingEscrow } from '@crypto-dex-sdk/market'
 import { JSBI, ZERO } from '@crypto-dex-sdk/math'
-import { useBlockNumber } from '../useBlockNumber'
-import { useMarkets } from '../markets'
 import { votingController } from '../../abis'
+import { useMarkets } from '../markets'
+import { useBlockNumber } from '../useBlockNumber'
 import { votingControllerContract } from './config'
 
 interface UseGaugesReturn {

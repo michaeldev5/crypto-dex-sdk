@@ -1,12 +1,12 @@
 import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import type { Address, PublicClient } from 'viem'
 import type { Token } from '@crypto-dex-sdk/currency'
-import { BigNumber } from '@ethersproject/bignumber'
 import type { BaseToken } from '@crypto-dex-sdk/amm'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
+import type { Address, PublicClient } from 'viem'
 import type { PoolCode, UniV3Tick } from '../entities'
-import { KyperElasticPoolCode, UniV3Pool } from '../entities'
+import { BigNumber } from '@ethersproject/bignumber'
 import { kyperElasticStateMulticall } from '../abis'
+import { KyperElasticPoolCode, UniV3Pool } from '../entities'
 import { formatAddress } from '../util'
 import { LiquidityProvider, LiquidityProviders } from './LiquidityProvider'
 
@@ -62,27 +62,26 @@ export class KyperElasticProvider extends LiquidityProvider {
       }
     }
 
-    const poolState = await this.client
-      .multicall({
-        allowFailure: true,
-        contracts: pools.map(
-          pool =>
-            ({
-              args: [
-                this.factory[this.chainId] as Address,
-                pool.token0.address as Address,
-                pool.token1.address as Address,
-                pool.swapFee * 100000,
-                this.BIT_AMOUNT,
-                this.BIT_AMOUNT,
-              ],
-              address: this.stateMultiCall[this.chainId] as Address,
-              chainId: chainsParachainIdToChainId[this.chainId],
-              abi: kyperElasticStateMulticall,
-              functionName: 'getFullStateWithRelativeBitmaps',
-            } as const),
-        ),
-      })
+    const poolState = await this.client.multicall({
+      allowFailure: true,
+      contracts: pools.map(
+        pool =>
+          ({
+            args: [
+              this.factory[this.chainId] as Address,
+              pool.token0.address as Address,
+              pool.token1.address as Address,
+              pool.swapFee * 100000,
+              this.BIT_AMOUNT,
+              this.BIT_AMOUNT,
+            ],
+            address: this.stateMultiCall[this.chainId] as Address,
+            chainId: chainsParachainIdToChainId[this.chainId],
+            abi: kyperElasticStateMulticall,
+            functionName: 'getFullStateWithRelativeBitmaps',
+          } as const),
+      ),
+    })
 
     const ticksMap = new Map<string, { tick: number, liquidityNet: bigint }[]>()
     poolState.forEach((state) => {
@@ -120,9 +119,7 @@ export class KyperElasticProvider extends LiquidityProvider {
         return
       }
 
-      const ticks: UniV3Tick[] = Array.from(tickBitmap)
-        .sort((a, b) => a.tick - b.tick)
-        .map(tick => ({ index: tick.tick, DLiquidity: BigNumber.from(tick.liquidityNet) }))
+      const ticks: UniV3Tick[] = Array.from(tickBitmap).sort((a, b) => a.tick - b.tick).map(tick => ({ index: tick.tick, DLiquidity: BigNumber.from(tick.liquidityNet) }))
 
       const v3pool = new UniV3Pool(
         address,

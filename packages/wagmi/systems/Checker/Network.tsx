@@ -5,9 +5,8 @@ import { useSettings } from '@crypto-dex-sdk/shared'
 import { Button } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement } from 'react'
 import { useCallback } from 'react'
-
-import { useAccount, useSwitchChain } from 'wagmi'
 import type { CheckerButton } from './types'
+import { useAccount, useSwitchChain } from 'wagmi'
 
 export interface NetworkProps extends CheckerButton {
   chainId: number | undefined

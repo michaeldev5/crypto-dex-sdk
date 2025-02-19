@@ -1,6 +1,5 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import invariant from 'tiny-invariant'
-
 import type { Native } from './Native'
 import type { Token } from './Token'
 

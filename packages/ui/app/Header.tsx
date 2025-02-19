@@ -1,26 +1,28 @@
-import { Listbox, Transition } from '@headlessui/react'
+import type { JSX } from 'react'
+import type { MaxWidth } from '..'
+import { ListboxButton, Transition } from '@headlessui/react'
 import { ArrowTopRightOnSquareIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
 import useScrollPosition from '@react-hook/window-scroll'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
-import React, { Fragment } from 'react'
-
-import type { MaxWidth } from '..'
+import React, from 'react'
 import {
+  classNames,
   Container,
   IconButton,
   Link,
   Select,
   Typography,
-  ZenlinkIcon,
-  classNames,
   useBreakpoint,
+  ZenlinkIcon,
 } from '..'
 
 export enum AppType {
   Root = 'Explore Apps',
   Swap = 'Swap',
   Pool = 'Pool',
+  Eden = 'Eden',
+  Gauge = 'Gauge',
   Referrals = 'Referrals',
   Analytics = 'Analytics',
   Legacy = 'Old App',
@@ -53,9 +55,9 @@ export function Header({
   // 2. When body has a negative top set for body lock for Dialogs on small screens
   const showBackground
     = (scrollY > 45 && withScrollBackground && isMounted)
-    || (typeof window !== 'undefined' && !isMd
-      ? Number(document.body.style.top.slice(0, -2)) < 0 && withScrollBackground
-      : false)
+      || (typeof window !== 'undefined' && !isMd
+        ? Number(document.body.style.top.slice(0, -2)) < 0 && withScrollBackground
+        : false)
 
   return (
     <header
@@ -65,17 +67,8 @@ export function Header({
       )}
       {...props}
     >
-      <Transition
-        as={Fragment}
-        enter="transform transition ease-in-out duration-100"
-        enterFrom="translate-y-[-100%]"
-        enterTo="translate-y-0"
-        leave="transform transition ease-in-out duration-200"
-        leaveFrom="translate-y-0"
-        leaveTo="translate-y-[-100%]"
-        show={showBackground || !withScrollBackground}
-      >
-        <div className={classNames(bgColor, 'absolute inset-0 border-b pointer-events-none border-slate-500/20 dark:border-slate-200/10')} />
+      <Transition show={showBackground || !withScrollBackground}>
+        <div className={classNames(bgColor, 'transform transition ease-in-out duration-200 data-[closed]:translate-y-[-100%] absolute inset-0 border-b pointer-events-none border-slate-500/20 dark:border-slate-200/10')} />
       </Transition>
       <Container
         className={classNames('flex items-center w-full mx-auto z-[101] py-1 px-4 row-full')}
@@ -91,14 +84,14 @@ export function Header({
           <div className="hidden md:flex justify-center gap-1 relative">{nav}</div>
           <Select
             button={(
-              <Listbox.Button
+              <ListboxButton
                 className="md:-ml-3 flex items-center font-semibold text-slate-600 dark:text-slate-300 hover:bg-slate-300/20 dark:hover:bg-slate-500/20 rounded-lg"
                 type="button"
               >
                 <IconButton as="div" className="p-1">
                   <EllipsisHorizontalIcon aria-hidden="true" className="w-7 h-7" />
                 </IconButton>
-              </Listbox.Button>
+              </ListboxButton>
             )}
           >
             <Select.Options className="!w-[max-content] -ml-5 mt-5 !max-h-[unset]">
@@ -131,11 +124,35 @@ export function Header({
                       <Trans>Pool your liquidity to generate LP tokens</Trans>
                     </Typography>
                   </Select.Option>
+                  <Select.Option
+                    as="a"
+                    className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
+                    href="/market"
+                    key={AppType.Eden}
+                    value={AppType.Eden}
+                  >
+                    <Trans>Eden</Trans>
+                    <Typography className="text-slate-600 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-blue-100" variant="xs">
+                      <Trans>Execute advanced yield strategies</Trans>
+                    </Typography>
+                  </Select.Option>
                 </div>
                 <div>
                   <Typography className="hidden px-2 mb-1 uppercase md:block text-slate-600 dark:text-slate-400" variant="xs" weight={600}>
                     <Trans>Products</Trans>
                   </Typography>
+                  <Select.Option
+                    as="a"
+                    className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"
+                    href="/gauge"
+                    key={AppType.Gauge}
+                    value={AppType.Gauge}
+                  >
+                    <Trans>Gauge</Trans>
+                    <Typography className="text-slate-600 dark:text-slate-400 group-hover:text-slate-700 dark:group-hover:text-blue-100" variant="xs">
+                      <Trans>Lock ZLK for veZLK to participate in governance</Trans>
+                    </Typography>
+                  </Select.Option>
                   <Select.Option
                     as="a"
                     className="!border-slate-700 !cursor-pointer px-2 flex flex-col gap-0 !items-start group"

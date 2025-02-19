@@ -7,11 +7,11 @@ import type { FC, ReactNode } from 'react'
 import { useCallback, useMemo, useState } from 'react'
 import { Button, Dots, classNames } from '@crypto-dex-sdk/ui'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
-import { useTokens } from 'lib/state/token-lists'
 import { Trans } from '@lingui/macro'
 import { useUsdPctChange } from 'lib/hooks'
-import { TradeProvider, useTrade } from './TradeProvider'
+import { useTokens } from 'lib/state/token-lists'
 import { MarketRemoveZapReviewModal } from './MarketRemoveZapReview'
+import { TradeProvider, useTrade } from './TradeProvider'
 
 interface MarketRemoveZapProps {
   market: Market

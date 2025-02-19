@@ -3,8 +3,8 @@ import { AddressZero } from '@ethersproject/constants'
 import { Trade } from '@crypto-dex-sdk/amm'
 import type { AggregatorTrade } from '@crypto-dex-sdk/amm'
 import type { Address } from 'viem'
-import { encodeAbiParameters, parseAbiParameters } from 'viem'
 import type { PermitSingle } from '@uniswap/permit2-sdk'
+import { encodeAbiParameters, parseAbiParameters } from 'viem'
 
 export interface TradeOptions {
   /**

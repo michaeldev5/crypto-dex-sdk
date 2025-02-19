@@ -1,7 +1,6 @@
 import { formatUSD } from '@crypto-dex-sdk/format'
 import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-
 import type { CellProps } from './types'
 
 export const PoolFees7dCell: FC<CellProps> = ({ row }) => {

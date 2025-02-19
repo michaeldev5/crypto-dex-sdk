@@ -4,8 +4,7 @@ import { useCallback, useState } from 'react'
 import { Currency as UICurrency, classNames } from '@crypto-dex-sdk/ui'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Trans } from '@lingui/macro'
-import { TokenSelector } from './TokenSelector/TokenSelector'
-import type { TokenSelectorProps } from './TokenSelector/TokenSelector'
+import { TokenSelector, TokenSelectorProps } from './TokenSelector/TokenSelector'
 
 export interface CurrencyInputProps extends Pick<TokenSelectorProps, 'onSelect' | 'tokenMap'> {
   value: string
@@ -42,24 +41,24 @@ export const CurrencyInput: FC<CurrencyInputProps> = ({
         >
           {currency
             ? (
-              <>
-                <div className="w-6 h-6">
-                  <UICurrency.Icon
-                    currency={currency}
-                    disableLink
-                    height={24}
-                    layout="responsive"
-                    priority
-                    width={24}
-                  />
-                </div>
-                <div className="ml-0.5 -mr-0.5">{currency.symbol}</div>
-              </>
+                <>
+                  <div className="w-6 h-6">
+                    <UICurrency.Icon
+                      currency={currency}
+                      disableLink
+                      height={24}
+                      layout="responsive"
+                      priority
+                      width={24}
+                    />
+                  </div>
+                  <div className="ml-0.5 -mr-0.5">{currency.symbol}</div>
+                </>
               )
             : (
-              <div className="ml-0.5 -mr-0.5 pl-1">
-                <Trans>Select</Trans>
-              </div>
+                <div className="ml-0.5 -mr-0.5 pl-1">
+                  <Trans>Select</Trans>
+                </div>
               )}
           {onSelect && (
             <div className="w-5 h-5">

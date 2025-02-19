@@ -6,8 +6,8 @@ import { type Market, getMaturityFormatDate } from '@crypto-dex-sdk/market'
 import { AppearOnMount, type BreadcrumbLink, LoadingOverlay } from '@crypto-dex-sdk/ui'
 import {
   Layout,
-  MarketAPY,
   MarketActions,
+  MarketAPY,
   MarketChart,
   MarketComposition,
   MarketHeader,

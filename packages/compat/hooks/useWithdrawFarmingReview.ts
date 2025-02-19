@@ -1,7 +1,6 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { useWithdrawFarmingReview as useWagmiWithdrawFarmingReview } from '@crypto-dex-sdk/wagmi'
-// import { useWithdrawFarmingReview as useBifrostWithdrawFarmingReview } from '@crypto-dex-sdk/parachains-bifrost'
 import { useWithdrawFarmingReview as useAmplitudeWithdrawFarmingReview } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'

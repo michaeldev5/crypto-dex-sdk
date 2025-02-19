@@ -1,14 +1,14 @@
 import { formatUSD } from '@crypto-dex-sdk/format'
-import { format, getUnixTime } from 'date-fns'
 import type { FC } from 'react'
+import { format, getUnixTime } from 'date-fns'
+import ReactECharts from 'echarts-for-react'
+import { useTheme } from 'next-themes'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import type { EChartsOption } from 'echarts-for-react/lib/types'
-import { AppearOnMount, Typography, classNames } from '@crypto-dex-sdk/ui'
-import ReactECharts from 'echarts-for-react'
+import { Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
 import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
-import { useTheme } from 'next-themes'
 import { Trans } from '@lingui/macro'
 import tailwindConfig from '../../tailwind.config.js'
 
@@ -133,9 +133,9 @@ export const PoolChart: FC<PoolChartProps> = ({ pool }) => {
           return `
             <div class="flex flex-col gap-0.5">
               <span class="text-sm text-slate-900 dark:text-slate-50 font-semibold">${formatUSD(params[0].value)
-            }</span>
+      }</span>
               <span class="text-xs text-slate-600 dark:text-slate-400 font-medium">${date instanceof Date && !Number.isNaN(date?.getTime()) ? format(date, 'dd MMM yyyy HH:mm') : ''
-            }</span>
+      }</span>
             </div>
           `
         },
@@ -303,7 +303,7 @@ export const PoolChart: FC<PoolChartProps> = ({ pool }) => {
         </Typography>
         {xData.length && (
           <Typography className="text-slate-500 hoveredItemName" variant="sm">
-            <AppearOnMount>{format(new Date(xData[xData.length - 1] * 1000), 'dd MMM yyyy HH:mm')}</AppearOnMount>
+            {format(new Date(xData[xData.length - 1] * 1000), 'dd MMM yyyy HH:mm')}
           </Typography>
         )}
       </div>

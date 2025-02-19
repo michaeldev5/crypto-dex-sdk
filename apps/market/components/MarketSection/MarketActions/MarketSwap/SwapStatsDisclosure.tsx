@@ -4,10 +4,10 @@ import { Percent } from '@crypto-dex-sdk/math'
 import { Loader, Skeleton, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
 import { Disclosure, Transition } from '@headlessui/react'
-import { Rate } from 'components'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
+import { Rate } from 'components'
 import { useTrade } from './TradeProvider'
 
 export const SwapStatsDisclosure: FC = () => {
@@ -29,11 +29,11 @@ export const SwapStatsDisclosure: FC = () => {
             ? <Skeleton.Box className="w-[60px] h-[20px] bg-black/[0.12] dark:bg-white/[0.06]" />
             : trade
               ? (
-                <>
-                  {trade?.minimumAmountOut(slippagePercent)?.toSignificant(6)}
-                  {' '}
-                  {trade?.minimumAmountOut(slippagePercent)?.currency.symbol}
-                </>
+                  <>
+                    {trade?.minimumAmountOut(slippagePercent)?.toSignificant(6)}
+                    {' '}
+                    {trade?.minimumAmountOut(slippagePercent)?.currency.symbol}
+                  </>
                 )
               : null
         }
@@ -44,6 +44,7 @@ export const SwapStatsDisclosure: FC = () => {
   return (
     <>
       <Transition
+        as="div"
         className="p-3 !pb-1 transition-[max-height] overflow-hidden"
         enter="duration-300 ease-in-out"
         enterFrom="transform max-h-0"
@@ -72,14 +73,14 @@ export const SwapStatsDisclosure: FC = () => {
                       {
                         isLoading
                           ? (
-                            <Typography className="text-slate-700 dark:text-slate-300" variant="sm" weight={600}>
-                              <Trans>Finding best price...</Trans>
-                            </Typography>
+                              <Typography className="text-slate-700 dark:text-slate-300" variant="sm" weight={600}>
+                                <Trans>Finding best price...</Trans>
+                              </Typography>
                             )
                           : (
-                            <>
-                              {content} {usdPrice && (<span className="font-medium text-slate-500">(${formatTransactionAmount(Number(usdPrice))})</span>)}
-                            </>
+                              <>
+                                {content} {usdPrice && (<span className="font-medium text-slate-500">(${formatTransactionAmount(Number(usdPrice))})</span>)}
+                              </>
                             )
                       }
                     </div>
@@ -98,6 +99,7 @@ export const SwapStatsDisclosure: FC = () => {
                 </Disclosure.Button>
               </div>
               <Transition
+                as="div"
                 className="transition-[max-height] overflow-hidden"
                 enter="duration-300 ease-in-out"
                 enterFrom="transform max-h-0"

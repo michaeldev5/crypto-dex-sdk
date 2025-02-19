@@ -1,3 +1,4 @@
+import type { FC } from 'react'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
 import { ParachainId } from '@crypto-dex-sdk/chain'
@@ -6,7 +7,7 @@ import type { Market } from '@crypto-dex-sdk/market'
 import { Button, Currency, Dots, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { useBoostMarketsReview } from '@crypto-dex-sdk/wagmi'
 import { useIsBoosted } from 'lib/hooks'
-import { type FC, useMemo } from 'react'
+import { useMemo } from 'react'
 
 interface MarketLPRewardsProps {
   isLoading: boolean
@@ -93,22 +94,22 @@ export const MarketLPRewards: FC<MarketLPRewardsProps> = ({
         </div>
         {rewards.length
           ? rewards.map(reward => (
-            <div className="flex items-center justify-between" key={reward.currency.wrapped.address}>
+              <div className="flex items-center justify-between" key={reward.currency.wrapped.address}>
+                <div className="flex items-center gap-2">
+                  <Currency.Icon currency={reward.currency} height={20} width={20} />
+                  <Typography className="text-slate-700 dark:text-slate-300" variant="sm" weight={600}>
+                    {reward?.toSignificant(6)} {reward.currency.symbol}
+                  </Typography>
+                </div>
+              </div>
+            ))
+          : (
               <div className="flex items-center gap-2">
-                <Currency.Icon currency={reward.currency} height={20} width={20} />
+                <Currency.Icon currency={ZLK[ParachainId.MOONBEAM]} height={20} width={20} />
                 <Typography className="text-slate-700 dark:text-slate-300" variant="sm" weight={600}>
-                  {reward?.toSignificant(6)} {reward.currency.symbol}
+                  0 {ZLK[ParachainId.MOONBEAM].symbol}
                 </Typography>
               </div>
-            </div>
-          ))
-          : (
-            <div className="flex items-center gap-2">
-              <Currency.Icon currency={ZLK[ParachainId.MOONBEAM]} height={20} width={20} />
-              <Typography className="text-slate-700 dark:text-slate-300" variant="sm" weight={600}>
-                0 {ZLK[ParachainId.MOONBEAM].symbol}
-              </Typography>
-            </div>
             )}
       </div>
     )

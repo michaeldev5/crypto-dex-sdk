@@ -1,5 +1,4 @@
-import type { FC } from 'react'
-import { useMemo, useState } from 'react'
+import { useMemo, useState, type FC } from 'react'
 import { Tab } from '@headlessui/react'
 import { Chip, classNames } from '@crypto-dex-sdk/ui'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'

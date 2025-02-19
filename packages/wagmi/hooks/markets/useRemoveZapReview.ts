@@ -7,16 +7,17 @@ import { type Dispatch, type SetStateAction, useCallback, useMemo } from 'react'
 import { useAccount } from 'wagmi'
 import type { SendTransactionData } from 'wagmi/query'
 import { waitForTransactionReceipt } from 'wagmi/actions'
-import { t } from '@lingui/macro'
 import { Percent } from '@crypto-dex-sdk/math'
 import type { Address } from 'viem'
+import type { WagmiTransactionRequest } from '../../types'
+import type { LimitOrderData, TokenOutput } from './types'
+import { t } from '@lingui/core/macro'
 import { encodeFunctionData, zeroAddress } from 'viem'
 import { config } from '../../client'
-import type { WagmiTransactionRequest } from '../../types'
-import { getSwapRouterContractConfig } from '../useSwapRouter'
 import { useSendTransaction } from '../useSendTransaction'
+import { getSwapRouterContractConfig } from '../useSwapRouter'
+import { SwapType } from './types'
 import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
-import { type LimitOrderData, SwapType, type TokenOutput } from './types'
 
 interface UseRemoveZapReviewParams {
   chainId: ParachainId
@@ -62,8 +63,8 @@ export const useRemoveZapReview: UseRemoveZapReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Removing liquidity from the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
-          completed: t`Successfully removed liquidity from the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
+          pending: t`Removing liquidity from the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
+          completed: t`Successfully removed liquidity from the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
           failed: t`Something went wrong when removing liquidity`,
         },
         timestamp: ts,
@@ -123,7 +124,7 @@ export const useRemoveZapReview: UseRemoveZapReview = ({
           data: encodeFunctionData({ abi, functionName: 'removeLiquiditySingleToken', args }),
         })
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [abi, address, contract, contractAddress, lpToRemove, market.SY.yieldToken.address, market.address, market.chainId, outputAmount, slippagePercent, trade],
   )

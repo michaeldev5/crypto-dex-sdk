@@ -1,8 +1,5 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { useClaimFarmingRewardsReview as useWagmiClaimFarmingRewardsReview } from '@crypto-dex-sdk/wagmi'
-// import {
-//   useClaimFarmingRewardsReview as useBifrostClaimFarmingRewardsReview,
-// } from '@crypto-dex-sdk/parachains-bifrost'
 import {
   useClaimFarmingRewardsReview as useAmplitudeClaimFarmingRewardsReview,
 } from '@crypto-dex-sdk/parachains-amplitude'

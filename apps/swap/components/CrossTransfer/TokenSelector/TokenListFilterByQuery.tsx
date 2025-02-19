@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 
 interface RenderProps {
   currencies: Type[]
-  inputRef: RefObject<HTMLInputElement>
+  inputRef: RefObject<HTMLInputElement | null>
   query: string
   onInput: (query: string) => void
   searching: boolean

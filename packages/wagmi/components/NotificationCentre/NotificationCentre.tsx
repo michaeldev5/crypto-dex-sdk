@@ -1,10 +1,9 @@
 import { BellIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { Button, Drawer, IconButton, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-
+import type { CreateNotificationParams, NotificationType } from './types'
 import { Trans } from '@lingui/macro'
 import { NotificationGroup } from './NotificationGroup'
-import type { CreateNotificationParams, NotificationType } from './types'
 
 interface ProviderProps {
   notifications: Record<number, string[]>
@@ -38,11 +37,9 @@ export const NotificationCentre: FC<Omit<ProviderProps, 'createNotification'>> =
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          {Object.entries(notifications)
-            .reverse()
-            .map(([, notifications], index) => {
-              return <NotificationGroup key={index} notifications={notifications} />
-            })}
+          {Object.entries(notifications).reverse().map(([, notifications], index) => {
+            return <NotificationGroup key={index} notifications={notifications} />
+          })}
         </div>
       </Drawer.Panel>
     </Drawer.Root>

@@ -1,11 +1,11 @@
 import { GenericTable, Table, useBreakpoint } from '@crypto-dex-sdk/ui'
 import { useMarketFilters } from 'components/MarketsFiltersProvider'
 import { type FC, useCallback, useEffect, useMemo, useState } from 'react'
+import type { PaginationState, SortingState } from '@tanstack/react-table'
 import {
-  type PaginationState,
-  type SortingState,
   getCoreRowModel,
   getSortedRowModel,
+
   useReactTable,
 } from '@tanstack/react-table'
 import type { Market } from '@crypto-dex-sdk/market'
@@ -97,8 +97,7 @@ export const MarketsTable: FC<MarketsTableParams> = ({ markets, isLoading }) => 
           }
         }
       }
-    })
-      .slice(fromIndex, toIndex)
+    }).slice(fromIndex, toIndex)
   }, [activeOnly, markets, marketsGraphDataMap, pagination.pageIndex, pagination.pageSize, query, sorting])
 
   const table = useReactTable<Market>({

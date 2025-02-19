@@ -2,8 +2,8 @@ import { CogIcon } from '@heroicons/react/24/outline'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { IconButton, Overlay, SlideIn } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { useState } from 'react'
 import { Trans } from '@lingui/macro'
+import { useState } from 'react'
 import { SlippageToleranceDisclosure } from './SlippageToleranceDisclosure'
 
 interface SettingsOverlayProps {

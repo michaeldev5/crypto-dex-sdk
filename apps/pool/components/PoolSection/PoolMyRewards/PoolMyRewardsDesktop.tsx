@@ -7,8 +7,8 @@ import { Checker, useBlockNumber, useClaimFarmingRewardsReview } from '@crypto-d
 import { Trans, t } from '@lingui/macro'
 import { ZERO } from '@crypto-dex-sdk/math'
 import type { PoolFarmWithIncentives } from 'lib/hooks'
-import { useTokenAmountDollarValues } from 'lib/hooks'
 import { usePoolPositionRewards } from 'components/PoolPositionRewardsProvider'
+import { useTokenAmountDollarValues } from 'lib/hooks'
 
 interface PoolMyRewardsProps {
   averageBlockTime?: number

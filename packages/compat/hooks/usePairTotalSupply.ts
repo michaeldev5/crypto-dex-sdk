@@ -1,7 +1,6 @@
 import type { Pair } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { usePairTotalSupply as useWagmiPairTotalSupply } from '@crypto-dex-sdk/wagmi'
-// import { usePairTotalSupply as useBifrostPairTotalSupply } from '@crypto-dex-sdk/parachains-bifrost'
 import { usePairTotalSupply as useAmplitudePairTotalSupply } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { isEvmNetwork, isSubstrateNetwork } from '../config'

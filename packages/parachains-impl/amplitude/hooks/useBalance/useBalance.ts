@@ -7,9 +7,8 @@ import { JSBI } from '@crypto-dex-sdk/math'
 import { useAccount, useApi, useCallMulti, useNativeBalancesAll } from '@crypto-dex-sdk/polkadot'
 import type { OrmlTokensAccountData } from '@zenlink-types/bifrost/interfaces'
 import { useMemo } from 'react'
-
 import { addressToNodeCurrency, isNativeCurrency } from '../../libs'
-import type { BalanceMap } from './types'
+import { BalanceMap } from './types'
 
 interface UseBalancesParams {
   account: string | undefined
@@ -49,8 +48,8 @@ export const useBalances: UseBalances = ({
     chainId,
     calls: (api && isAccount(account))
       ? validatedTokens
-        .map(currency => [api.query.tokens.accounts, [account, addressToNodeCurrency(currency.wrapped.address)]])
-        .filter((call): call is [QueryableStorageEntry<'promise'>, [string, any]] => Boolean(call[0]))
+          .map(currency => [api.query.tokens.accounts, [account, addressToNodeCurrency(currency.wrapped.address)]])
+          .filter((call): call is [QueryableStorageEntry<'promise'>, [string, any]] => Boolean(call[0]))
       : [],
     options: { enabled: enabled && Boolean(api && isAccount(account)) },
   })

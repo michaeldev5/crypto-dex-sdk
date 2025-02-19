@@ -1,7 +1,7 @@
 import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { CheckBadgeIcon } from '@heroicons/react/24/solid'
 import type { CellProps } from './types'
+import { CheckBadgeIcon } from '@heroicons/react/24/solid'
 
 export const PositionSizeCell: FC<CellProps> = ({ row }) => {
   return (

@@ -2,9 +2,8 @@ import { CheckIcon, XCircleIcon } from '@heroicons/react/24/solid'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import chains from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
-
 import { Trans } from '@lingui/macro'
-import { NetworkIcon, Typography, classNames } from '..'
+import { classNames, NetworkIcon, Typography } from '..'
 import { Select } from '../select'
 
 export interface SelectorMenuProps {
@@ -24,25 +23,25 @@ export const SelectorMenu: FC<SelectorMenuProps> = ({ networks, selectedNetworks
           <Typography className="flex gap-2 items-center text-slate-800 dark:text-slate-200" variant="sm" weight={600}>
             {value.length === 0
               ? (
-                <>
-                  <CheckIcon className="text-green-600 dark:text-green" height={20} width={20} />
-                  {' '}
-                  <Trans>All Networks</Trans>
-                </>
+                  <>
+                    <CheckIcon className="text-green-600 dark:text-green" height={20} width={20} />
+                    {' '}
+                    <Trans>All Networks</Trans>
+                  </>
                 )
               : (
-                <>
-                  <XCircleIcon
-                    className="hover:text-slate-600 hover:dark:text-slate-400 text-slate-500"
-                    height={20}
-                    onClick={() => onChange(networks)}
-                    width={20}
-                  />
-                  {' '}
-                  <Trans>
-                    {value.length} Selected
-                  </Trans>
-                </>
+                  <>
+                    <XCircleIcon
+                      className="hover:text-slate-600 hover:dark:text-slate-400 text-slate-500"
+                      height={20}
+                      onClick={() => onChange(networks)}
+                      width={20}
+                    />
+                    {' '}
+                    <Trans>
+                      {value.length} Selected
+                    </Trans>
+                  </>
                 )}
           </Typography>
         </Select.Button>

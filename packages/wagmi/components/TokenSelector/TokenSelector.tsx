@@ -5,7 +5,6 @@ import { usePrices } from '@crypto-dex-sdk/shared'
 import type { FC } from 'react'
 import { memo, useMemo } from 'react'
 import { useAccount } from 'wagmi'
-
 import { useBalances } from '../../hooks'
 import { TokenSelectorDialog } from './TokenSelectorDialog'
 import { TokenSelectorOverlay } from './TokenSelectorOverlay'

@@ -1,11 +1,10 @@
 import type { RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import invariant from 'tiny-invariant'
-import type { Address } from 'viem'
-import { encodeAbiParameters, parseAbiParameters } from 'viem'
-import type { UniV3Pool } from '../pools/UniV3Pool'
+import { Address, encodeAbiParameters, parseAbiParameters } from 'viem'
 import { HEXer } from '../../HEXer'
 import { PoolCode } from './PoolCode'
+import { UniV3Pool } from '../pools'
 
 export class ArthswapV3PoolCode extends PoolCode {
   executor: { [chainId: number]: string } = {

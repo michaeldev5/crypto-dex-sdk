@@ -8,16 +8,16 @@ import { type Dispatch, type SetStateAction, useCallback, useMemo } from 'react'
 import { useAccount } from 'wagmi'
 import type { SendTransactionData } from 'wagmi/query'
 import { waitForTransactionReceipt } from 'wagmi/actions'
-import { t } from '@lingui/macro'
 import type { Address } from 'viem'
+import type { WagmiTransactionRequest } from '../../types'
+import type { ApproxParams, LimitOrderData, TokenInput } from './types'
+import { t } from '@lingui/core/macro'
 import { encodeFunctionData, zeroAddress } from 'viem'
 import { config } from '../../client'
-import type { WagmiTransactionRequest } from '../../types'
-import { getSwapRouterContractConfig } from '../useSwapRouter'
 import { useSendTransaction } from '../useSendTransaction'
-import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
-import type { ApproxParams, LimitOrderData, TokenInput } from './types'
+import { getSwapRouterContractConfig } from '../useSwapRouter'
 import { SwapType } from './types'
+import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
 
 interface UseAddZapReviewParams {
   chainId: ParachainId
@@ -69,8 +69,8 @@ export const useAddZapReview: UseAddZapReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Adding liquidity to the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
-          completed: t`Successfully added liquidity to the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
+          pending: t`Adding liquidity to the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
+          completed: t`Successfully added liquidity to the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
           failed: t`Something went wrong when adding liquidity`,
         },
         timestamp: ts,
@@ -174,7 +174,7 @@ export const useAddZapReview: UseAddZapReview = ({
           })
         }
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [abi, address, amountSpecified, contract, contractAddress, guess, lpMinted, market.SY.yieldToken.address, market.address, market.chainId, slippagePercent, trade, ytMinted, zeroPriceImpactMode],
   )

@@ -3,19 +3,20 @@ import type { Amount, Token } from '@crypto-dex-sdk/currency'
 import { type Market, getMaturityFormatDate } from '@crypto-dex-sdk/market'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import { type Dispatch, type SetStateAction, useCallback, useMemo } from 'react'
-import { useAccount } from 'wagmi'
 import type { SendTransactionData } from 'wagmi/query'
 import { waitForTransactionReceipt } from 'wagmi/actions'
-import { t } from '@lingui/macro'
 import { Percent, ZERO } from '@crypto-dex-sdk/math'
-import type { Address } from 'viem'
 import { encodeFunctionData, zeroAddress } from 'viem'
 import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import { config } from '../../client'
+import type { Address } from 'viem'
 import type { WagmiTransactionRequest } from '../../types'
+import type { TokenInput } from './types'
+import { t } from '@lingui/core/macro'
+import { useAccount } from 'wagmi'
 import { useSendTransaction } from '../useSendTransaction'
+import { SwapType } from './types'
 import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
-import { SwapType, type TokenInput } from './types'
 
 interface UseAddManualReviewParams {
   chainId: ParachainId
@@ -61,8 +62,8 @@ export const useAddManualReview: UseAddManualReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Adding liquidity to the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
-          completed: t`Successfully added liquidity to the ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)} market`,
+          pending: t`Adding liquidity to the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
+          completed: t`Successfully added liquidity to the ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)} market`,
           failed: t`Something went wrong when adding liquidity`,
         },
         timestamp: ts,
@@ -106,7 +107,7 @@ export const useAddManualReview: UseAddManualReview = ({
           data: encodeFunctionData({ abi, functionName: 'addLiquidityDualTokenAndPt', args }),
         })
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [abi, address, contract, contractAddress, lpMinted, market.SY.yieldToken.address, market.address, ptAmount, slippagePercent, tokenAmount],
   )

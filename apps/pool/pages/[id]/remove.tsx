@@ -1,9 +1,9 @@
 import { chainShortName } from '@crypto-dex-sdk/chain'
 import type { Pair, Pool, StableSwap } from '@crypto-dex-sdk/graph-client'
 import {
-  POOL_TYPE,
   pairById,
   pairsByChainIds,
+  POOL_TYPE,
   singleTokenLockById,
   singleTokenLocksByChainIds,
   stableSwapById,
@@ -12,7 +12,6 @@ import {
 import type { BreadcrumbLink } from '@crypto-dex-sdk/ui'
 import { AppearOnMount } from '@crypto-dex-sdk/ui'
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
-import { useRouter } from 'next/router'
 import type { FC } from 'react'
 import useSWR, { SWRConfig } from 'swr'
 import {
@@ -23,10 +22,11 @@ import {
   RemoveSectionStandard,
 } from 'components'
 import { AddSectionMyPosition } from 'components/AddSection/AddSectionMyPosition'
+import { UnStakeSectionStable, UnStakeSectionStandard } from 'components/UnStakeSection'
 import { SUPPORTED_CHAIN_IDS } from 'config'
 import { AVAILABLE_POOL_TYPE_MAP } from 'lib/constants'
 import { swapFeeOfPool } from 'lib/functions'
-import { UnStakeSectionStable, UnStakeSectionStandard } from 'components/UnStakeSection'
+import { useRouter } from 'next/router'
 
 function LINKS({ pool }: { pool: Pool }): BreadcrumbLink[] {
   return [
@@ -44,12 +44,12 @@ function LINKS({ pool }: { pool: Pool }): BreadcrumbLink[] {
 const Remove: FC<InferGetStaticPropsType<typeof getStaticProps>> = ({ fallback }) => {
   return (
     <SWRConfig value={{ fallback }}>
-      <_Remove />
+      <RemoveCore />
     </SWRConfig>
   )
 }
 
-function _Remove() {
+function RemoveCore() {
   const router = useRouter()
   const { data } = useSWR<{ pool: Pool }>(
     `/pool/api/pool/${router.query.id}`,

@@ -1,5 +1,6 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { fetchTokenPrices, fetchUniV3TokenPrices } from '@crypto-dex-sdk/graph-client'
+/* eslint-disable no-console */
 import { getUnixTime } from 'date-fns'
 import stringify from 'fast-json-stable-stringify'
 

@@ -1,4 +1,6 @@
 import {
+  _100,
+  _1e18,
   EIGHT,
   ELEVEN,
   FIFTEEN,
@@ -15,8 +17,6 @@ import {
   TWELVE,
   TWO,
   ZERO,
-  _100,
-  _1e18,
 } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 

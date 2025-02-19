@@ -7,9 +7,9 @@ import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import { Button, Currency, Dots, Typography, classNames } from '@crypto-dex-sdk/ui'
 import { useBalance } from '@crypto-dex-sdk/wagmi'
 import type { FC, ReactNode } from 'react'
-import { useCallback, useMemo, useState } from 'react'
 import { Trans } from '@lingui/macro'
 import { PricePanel } from 'components'
+import { useCallback, useMemo, useState } from 'react'
 import { MarketRemoveManualReviewModal } from './MarketRemoveManualReviewModal'
 
 interface MarketRemoveManualProps {

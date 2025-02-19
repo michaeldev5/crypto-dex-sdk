@@ -3,7 +3,8 @@
   "version": "0.1.2",
   "scripts": {
     "start": "esno api/jobs/stats/run.ts",
-    "lint": "TIMING=1 eslint --fix ."
+    "lint": "TIMING=1 eslint --fix .",
+    "voting-results": "esno scripts/generateVotingClaimResults"
   },
   "dependencies": {
     "@crypto-dex-sdk/chain": "workspace:*",
@@ -12,20 +13,20 @@
     "@crypto-dex-sdk/smart-router": "workspace:*",
     "@crypto-dex-sdk/token-lists": "workspace:*",
     "@crypto-dex-sdk/wagmi-config": "workspace:*",
-    "@polkadot/api": "^10.9.1",
-    "@vercel/node": "^3.0.27",
+    "@polkadot/api": "^12.3.1",
+    "@vercel/node": "^5.1.2",
     "@wagmi/core": "1.1.1-cjs",
-    "axios": "^1.6.8",
-    "date-fns": "^3.6.0",
-    "esno": "^4.7.0",
+    "axios": "^1.7.9",
+    "date-fns": "^4.1.0",
+    "esno": "^4.8.0",
     "ethers": "^5.7.2",
     "fast-json-stable-stringify": "^2.1.0",
-    "ioredis": "^5.4.1",
-    "viem": "2.9.25"
+    "ioredis": "^5.4.2",
+    "viem": "2.22.22"
   },
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "eslint": "^8.57.0"
+    "eslint": "^9.19.0"
   }
 }

@@ -1,18 +1,18 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
-import { useCallback, useMemo } from 'react'
-import { useAccount } from 'wagmi'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { t } from '@lingui/macro'
 import type { Address } from 'viem'
-import { encodeFunctionData } from 'viem'
 import type { SendTransactionData } from 'wagmi/query'
-import { waitForTransactionReceipt } from 'wagmi/actions'
 import type { WagmiTransactionRequest } from '../types'
+import { useCallback, useMemo } from 'react'
+import { encodeFunctionData } from 'viem'
+import { useAccount } from 'wagmi'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { config } from '../client'
-import { useSendTransaction } from './useSendTransaction'
 import { getFarmingContractConfig, useFarmingContract } from './useFarming'
+import { useSendTransaction } from './useSendTransaction'
 
 interface UseStakeLiquidityReviewParams {
   chainId: ParachainId
@@ -48,9 +48,9 @@ export const useStakeLiquidityReview: UseStakeLiquidityReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Staking ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol}`,
-          completed: t`Successfully stake ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol}`,
-          failed: t`Something went wrong when stake ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol}`,
+          pending: t`Staking ${amountToStake?.toSignificant(6) || 'unknown'} ${amountToStake?.currency.symbol || 'symbol'}`,
+          completed: t`Successfully stake ${amountToStake?.toSignificant(6) || 'unknown'} ${amountToStake?.currency.symbol || 'symbol'}`,
+          failed: t`Something went wrong when stake ${amountToStake?.toSignificant(6) || 'unknown'} ${amountToStake?.currency.symbol || 'symbol'}`,
         },
         timestamp: ts,
         groupTimestamp: ts,
@@ -84,7 +84,7 @@ export const useStakeLiquidityReview: UseStakeLiquidityReview = ({
           data: encodeFunctionData({ abi, functionName: 'stake', args }),
         })
       }
-      catch (e: unknown) {
+      catch {
         //
       }
     },

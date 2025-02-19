@@ -28,13 +28,13 @@
     "@crypto-dex-sdk/chain": "workspace:*",
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "dotenv": "^16.4.5",
-    "eslint": "^8.57.0",
-    "esno": "^4.7.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.19.0",
+    "esno": "^4.8.0",
     "fast-json-stable-stringify": "^2.1.0",
     "ts-node": "^10.9.2",
-    "tsup": "^8.0.2",
-    "typescript": "5.4.5",
-    "viem": "^2.15.1"
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3",
+    "viem": "2.22.22"
   }
 }

@@ -9,6 +9,7 @@ import type { Market, PT, SYBase, YT } from '@crypto-dex-sdk/market'
 import { useBlockNumber } from '../useBlockNumber'
 import { market as marketABI } from '../../abis'
 import { MarketEntities, YieldTokensEntities } from './config'
+import { REFETCH_BLOCKS } from './constants'
 import { useYieldTokens } from './useYieldTokens'
 
 interface UseMarketsReturn {
@@ -37,12 +38,12 @@ export function useMarkets(
     () => isEmptyEntities
       ? []
       : Object.values(marketEntities).map(market => ({
-        chainId: chainsParachainIdToChainId[chainId ?? -1],
-        address: market.address as Address,
-        abi: marketABI,
-        functionName: 'readState',
-        args: [zeroAddress],
-      }) as const),
+          chainId: chainsParachainIdToChainId[chainId ?? -1],
+          address: market.address as Address,
+          abi: marketABI,
+          functionName: 'readState',
+          args: [zeroAddress],
+        }) as const),
     [chainId, isEmptyEntities, marketEntities],
   )
 
@@ -50,11 +51,11 @@ export function useMarkets(
     () => isEmptyEntities
       ? []
       : Object.values(marketEntities).map(market => ({
-        chainId: chainsParachainIdToChainId[chainId ?? -1],
-        address: market.address as Address,
-        abi: marketABI,
-        functionName: 'totalActiveSupply',
-      }) as const),
+          chainId: chainsParachainIdToChainId[chainId ?? -1],
+          address: market.address as Address,
+          abi: marketABI,
+          functionName: 'totalActiveSupply',
+        }) as const),
     [chainId, isEmptyEntities, marketEntities],
   )
 
@@ -73,7 +74,7 @@ export function useMarkets(
   } = useReadContracts({ contracts: activeSupplyCalls })
 
   useEffect(() => {
-    if (config?.enabled && blockNumber) {
+    if (config?.enabled && blockNumber && Number(blockNumber) % REFETCH_BLOCKS === 0) {
       refetchMarket()
       refetchSupply()
     }

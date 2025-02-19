@@ -1,25 +1,24 @@
 import '@crypto-dex-sdk/ui/index.css'
-
 import type { AppProps } from 'next/app'
-import { Analytics } from '@vercel/analytics/react'
 import type { FC } from 'react'
 import { config } from '@crypto-dex-sdk/wagmi'
 import { WagmiProvider } from 'wagmi'
 import { ThemeProvider } from 'next-themes'
 import { App, ToastContainer } from '@crypto-dex-sdk/ui'
 import { Provider } from 'react-redux'
-import { configureStore } from '@reduxjs/toolkit'
 import { DefaultSeo } from 'next-seo'
 import { parachains } from '@crypto-dex-sdk/polkadot-config'
 import { PolkadotApiProvider } from '@crypto-dex-sdk/polkadot'
 import { LanguageProvider, storage, storageMiddleware } from '@crypto-dex-sdk/shared'
+import { configureStore } from '@reduxjs/toolkit'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-
-import { tokenLists } from 'lib/state/token-lists'
+import { Analytics } from '@vercel/analytics/react'
 import { SUPPORTED_CHAIN_IDS } from 'config'
+import { tokenLists } from 'lib/state/token-lists'
 import { Updaters as TokenListsUpdaters } from 'lib/state/TokenListsUpdaters'
-import SEO from '../next-seo.config.mjs'
 import { AggregationSwapBanner, Header } from '../components'
+import SEO from '../next-seo.config.mjs'
+import '@zenlink-interface/ui/index.css'
 
 const store = configureStore({
   // @ts-expect-error ignore
@@ -30,12 +29,6 @@ const store = configureStore({
     [storage.reducerPath]: storage.reducer,
   },
 })
-
-declare global {
-  interface Window {
-    dataLayer: Record<string, any>[]
-  }
-}
 
 const queryClient = new QueryClient()
 

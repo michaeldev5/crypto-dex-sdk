@@ -4,8 +4,8 @@ import type {
   TokenPricesQuery,
   TokenPricesQueryVariables,
 } from '../__generated__/types-and-hooks'
-import { LEGACY_CLIENTS } from '../appolo'
 import { wrapResultData } from '.'
+import { LEGACY_CLIENTS } from '../appolo'
 
 const TOKEN_PRICES_FETCH = gql`
   query tokenPrices($where: TokenWhereInput, $limit: Int) {

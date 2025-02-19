@@ -2,16 +2,16 @@ import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import { type Dispatch, type SetStateAction, useCallback, useMemo } from 'react'
 import { useAccount } from 'wagmi'
-import type { SendTransactionData } from 'wagmi/query'
 import { waitForTransactionReceipt } from 'wagmi/actions'
-import { t } from '@lingui/macro'
-import type { Address } from 'viem'
-import { encodeFunctionData } from 'viem'
 import type { JSBI } from '@crypto-dex-sdk/math'
 import { config } from '../../client'
+import type { Address } from 'viem'
+import type { SendTransactionData } from 'wagmi/query'
 import type { WagmiTransactionRequest } from '../../types'
-import { useSendTransaction } from '../useSendTransaction'
+import { t } from '@lingui/core/macro'
+import { encodeFunctionData } from 'viem'
 import { votingController } from '../../abis'
+import { useSendTransaction } from '../useSendTransaction'
 import { votingControllerContract } from './config'
 
 interface UseVoteReviewParams {
@@ -71,7 +71,7 @@ export const useVoteReview: UseVoteReview = ({ chainId, markets, weights }) => {
           data: encodeFunctionData({ abi: votingController, functionName: 'vote', args }),
         })
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [address, contractAddress, markets, weights],
   )

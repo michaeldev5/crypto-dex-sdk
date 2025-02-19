@@ -9,11 +9,11 @@ import type {
   PairsQuery,
   PairsQueryVariables,
 } from '../__generated__/types-and-hooks'
+import { wrapResultData } from '.'
 import {
   PairDayDataOrderByInput,
   PairHourDataOrderByInput,
 } from '../__generated__/types-and-hooks'
-import { wrapResultData } from '.'
 
 const PAIR_BY_ID = gql`
   query pairById(

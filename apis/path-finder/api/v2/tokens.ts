@@ -6,7 +6,7 @@ import { ZENLINK_DEFAULT_TOKEN_LIST } from '@crypto-dex-sdk/token-lists'
 import type { Address } from 'viem'
 
 import { erc20ABI } from '../../abis/erc20'
-import { SUPPORTED_CHAINS, getClient } from './config'
+import { getClient, SUPPORTED_CHAINS } from './config'
 
 export const DEFAULT_TOKENS_MAP = ZENLINK_DEFAULT_TOKEN_LIST
   .reduce<Map<ParachainId, Map<string, Token>>>((map, tokenList) => {
@@ -60,7 +60,8 @@ async function fetchTokenInfo(chainId: ParachainId, tokenId: string): Promise<To
             functionName: 'decimals',
           },
         ],
-      }).catch((e) => {
+      })
+      .catch((e) => {
         console.warn(`${e.message}`)
         return undefined
       })

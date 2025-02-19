@@ -18,9 +18,9 @@
     "@crypto-dex-sdk/hooks": "workspace:*",
     "@crypto-dex-sdk/token-lists": "workspace:*",
     "@reduxjs/toolkit": "^1.9.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^9.1.1"
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-redux": "^9.2.0"
   },
   "dependencies": {
     "@ethersproject/address": "^5.7.0",
@@ -31,7 +31,7 @@
     "fast-json-stable-stringify": "^2.1.0",
     "multicodec": "^3.2.1",
     "multihashes": "^4.0.3",
-    "viem": "2.9.25"
+    "viem": "2.22.22"
   },
   "devDependencies": {
     "@crypto-dex-sdk/chain": "workspace:*",
@@ -40,12 +40,12 @@
     "@crypto-dex-sdk/token-lists": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
     "@reduxjs/toolkit": "^1.9.7",
-    "@types/node": "^20.12.7",
-    "@types/react": "18.2.57",
-    "@types/react-dom": "^18.2.25",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^9.1.1",
-    "typescript": "5.4.5"
+    "@types/node": "^22.13.1",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-redux": "^9.2.0",
+    "typescript": "5.7.3"
   }
 }

@@ -1,10 +1,9 @@
+import type { FC } from 'react'
+import type { CheckerButton } from './types'
 import { Trans } from '@lingui/macro'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
-import type { FC } from 'react'
 import { useAccount } from 'wagmi'
-
 import { Wallet } from '../../components'
-import type { CheckerButton } from './types'
 
 export const Connected: FC<CheckerButton> = ({ children, ...rest }) => {
   const isMounted = useIsMounted()

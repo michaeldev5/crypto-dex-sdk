@@ -1,15 +1,16 @@
 import type { Market } from '@crypto-dex-sdk/market'
-import { useAccount, useReadContracts } from 'wagmi'
-import { useEffect, useMemo } from 'react'
 import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import type { Address } from 'viem'
 import { Amount, Token, ZLK } from '@crypto-dex-sdk/currency'
 import { JSBI } from '@crypto-dex-sdk/math'
-import { useBlockNumber } from '../useBlockNumber'
+import type { Address } from 'viem'
+import { useEffect, useMemo } from 'react'
+import { useAccount, useReadContracts } from 'wagmi'
 import { market as marketABI } from '../../abis'
+import { useBlockNumber } from '../useBlockNumber'
 import { useTokens } from '../useTokens'
-import { useRewardsData } from './useRewardsData'
+import { REFETCH_BLOCKS } from './constants'
 import { useMarketActiveBalances } from './useMarketActiveBalances'
+import { useRewardsData } from './useRewardsData'
 
 interface UseMarketRewardsReturn {
   isLoading: boolean
@@ -36,15 +37,15 @@ export function useMarketRewards(
   const rewardStatesCalls = useMemo(
     () => rewardTokens?.length
       ? markets.map(
-        (market, i) =>
-          (rewardTokens[i] || []).map(token => ({
-            chainId: chainsParachainIdToChainId[chainId ?? -1],
-            address: market.address as Address,
-            abi: marketABI,
-            functionName: 'rewardState',
-            args: [token.address],
-          }) as const),
-      ).flat()
+          (market, i) =>
+            (rewardTokens[i] || []).map(token => ({
+              chainId: chainsParachainIdToChainId[chainId ?? -1],
+              address: market.address as Address,
+              abi: marketABI,
+              functionName: 'rewardState',
+              args: [token.address],
+            }) as const),
+        ).flat()
       : [],
     [chainId, markets, rewardTokens],
   )
@@ -52,15 +53,15 @@ export function useMarketRewards(
   const userRewardsCalls = useMemo(
     () => rewardTokens?.length
       ? markets.map(
-        (market, i) =>
-          (rewardTokens[i] || []).map(token => ({
-            chainId: chainsParachainIdToChainId[chainId ?? -1],
-            address: market.address as Address,
-            abi: marketABI,
-            functionName: 'userReward',
-            args: [token.address, account],
-          }) as const),
-      ).flat()
+          (market, i) =>
+            (rewardTokens[i] || []).map(token => ({
+              chainId: chainsParachainIdToChainId[chainId ?? -1],
+              address: market.address as Address,
+              abi: marketABI,
+              functionName: 'userReward',
+              args: [token.address, account],
+            }) as const),
+        ).flat()
       : [],
     [account, chainId, markets, rewardTokens],
   )
@@ -80,7 +81,7 @@ export function useMarketRewards(
   } = useReadContracts({ contracts: userRewardsCalls })
 
   useEffect(() => {
-    if (config?.enabled && blockNumber && account) {
+    if (config?.enabled && blockNumber && Number(blockNumber) % REFETCH_BLOCKS === 0 && account) {
       refetchUserRewards()
       refetchRewardStates()
     }
@@ -163,8 +164,7 @@ export function useMarketRewardTokens(
       tokens: Array.from(
         new Set(
           data.map(d => (d.result || [])
-            .map(address => ({ chainId: chainsParachainIdToChainId[chainId], address })))
-            .flat(),
+            .map(address => ({ chainId: chainsParachainIdToChainId[chainId], address }))).flat(),
         ),
       ),
     }

@@ -7,7 +7,6 @@ import { ZERO } from '@crypto-dex-sdk/math'
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { getMarketActionRouterContract } from '@crypto-dex-sdk/wagmi'
 import { useAggregationTrade } from 'lib/hooks'
-import type { FC, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 
 interface TradeContext {

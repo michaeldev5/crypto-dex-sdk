@@ -1,9 +1,9 @@
-import classNames from 'classnames'
 import type { MouseEventHandler, ReactNode } from 'react'
-import React from 'react'
-
-import { Loader } from '../loader'
 import type { PolymorphicComponentPropsWithRef, PolymorphicRef } from '../types'
+import classNames from 'classnames'
+
+import React from 'react'
+import { Loader } from '../loader'
 import { BUTTON_CLASSES, BUTTON_SIZES, BUTTON_STYLES, BUTTON_STYLES_VARIANT } from './styles'
 
 export type ButtonColor = 'red' | 'blue' | 'pink' | 'purple' | 'gradient' | 'gray' | 'green'
@@ -29,7 +29,7 @@ export type ButtonComponent = <C extends React.ElementType = 'button'>(
 ) => React.ReactNode | null
 
 export const Button: ButtonComponent = React.forwardRef(
-  <Tag extends React.ElementType = 'button'>(
+  <Tag extends React.ElementType>(
     {
       as,
       children,
@@ -64,17 +64,17 @@ export const Button: ButtonComponent = React.forwardRef(
         ref={ref}
         {...rest}
       >
-        {loading
-          ? (
-            <Loader stroke="currentColor" />
-            )
-          : (
-            <>
-              {startIcon && startIcon}
-              {children}
-              {endIcon && endIcon}
-            </>
-            )}
+        {
+          loading
+            ? <Loader stroke="currentColor" />
+            : (
+                <>
+                  {startIcon && startIcon}
+                  {children}
+                  {endIcon && endIcon}
+                </>
+              )
+        }
       </Component>
     )
   },

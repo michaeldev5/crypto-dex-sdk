@@ -1,6 +1,6 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import { useMemo } from 'react'
 import type { Address } from 'viem'
+import { useMemo } from 'react'
 import { routerABI } from '../abis'
 
 const standardRouters: Record<number, string> = {

@@ -1,8 +1,6 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
 import { Profile as WagmiProfile } from '@crypto-dex-sdk/wagmi'
-// import { Profile as BifrostProfile } from '@crypto-dex-sdk/parachains-bifrost'
-// import { Profile as AmplitudeProfile } from '@crypto-dex-sdk/parachains-amplitude'
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { isEvmNetwork, isSubstrateNetwork } from '../../config'
 

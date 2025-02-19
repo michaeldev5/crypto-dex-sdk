@@ -1,14 +1,14 @@
 import { Amount, Token } from '@crypto-dex-sdk/currency'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import type { Address, PublicClient } from 'viem'
 import { StableSwap } from '@crypto-dex-sdk/amm'
+import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
+import type { Address, PublicClient } from 'viem'
+import type { PoolCode } from '../entities'
 import { BigNumber } from '@ethersproject/bignumber'
 import JSBI from 'jsbi'
-import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
-import type { PoolCode } from '../entities'
-import { CurveMetaPoolCode, CurveStablePoolCode, MetaPool, StablePool } from '../entities'
 import { curveStableBase } from '../abis'
+import { CurveMetaPoolCode, CurveStablePoolCode, MetaPool, StablePool } from '../entities'
 import { LiquidityProvider } from './LiquidityProvider'
 
 export abstract class CurveStableBaseProvider extends LiquidityProvider {
@@ -49,7 +49,7 @@ export abstract class CurveStableBaseProvider extends LiquidityProvider {
     const allPools = [...(this.basePools[this.chainId] || []), ...(this.metaPools[this.chainId] || [])]
     const [poolAddresses, tokensAddresses, lpAddresses, basePoolAddresses] = allPools.reduce<
       [string[], string[][], string[], (string | undefined)[]]
-        >((memo, pool) => {
+    >((memo, pool) => {
           const [poolAddress, tokenAddresses, lpAddress, basePoolAddress] = pool
           memo[0].push(poolAddress)
           memo[1].push(tokenAddresses)

@@ -3,6 +3,7 @@ import { Amount, Price, Token } from '@crypto-dex-sdk/currency'
 import { JSBI, MAX_UINT256, ONE, TWELVE, ZERO, _1e15, _1e18, minimum, sqrt } from '@crypto-dex-sdk/math'
 import { getUnixTime } from 'date-fns'
 import type { PT, SYBase, YT } from '../Token'
+import { InsufficientInputAmountError } from '../errors'
 import {
   approxSwapExactPtForYt,
   approxSwapExactSyForPt,
@@ -19,7 +20,6 @@ import {
   syToAsset,
   syToAssetUp,
 } from '../utils'
-import { InsufficientInputAmountError } from '../errors'
 import { MAX_LOCK_TIME, WEEK } from '../VotingEscrow'
 
 export interface MarketState {
@@ -73,6 +73,7 @@ const DEFAULT_MARKET_APPROX_PARAMS: ApproxParams = {
 export class Market extends Token {
   public readonly id: string
   public readonly projectName: string
+  public readonly officialLink: string
   public readonly PT: PT
   public readonly SY: SYBase
   public readonly YT: YT
@@ -85,6 +86,7 @@ export class Market extends Token {
 
   public constructor(
     projectName: string,
+    officialLink: string,
     token: {
       chainId: number | string
       address: string
@@ -97,6 +99,7 @@ export class Market extends Token {
     super(token)
     this.id = token.address
     this.projectName = projectName
+    this.officialLink = officialLink
     this.PT = PT
     this.SY = this.PT.SY
     invariant(this.PT.YT, 'YT_NOT_INITIALIZED')

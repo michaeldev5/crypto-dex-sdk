@@ -3,13 +3,12 @@ import type { NotificationData } from '@crypto-dex-sdk/ui'
 import { classNames } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement, ReactNode } from 'react'
 import { Children, cloneElement, isValidElement, useMemo, useReducer } from 'react'
-
 import { Approve as WagmiApprove } from '@crypto-dex-sdk/wagmi'
 import { isSubstrateNetwork } from '../../config'
 import type { TokenApproveButtonProps } from './TokenApproveButton'
+import type { ApproveButton } from './types'
 import { TokenApproveButton } from './TokenApproveButton'
 import { ApprovalState } from './types'
-import type { ApproveButton } from './types'
 
 interface Props {
   className?: string
@@ -68,7 +67,7 @@ const Controller: FC<Props> = ({ className, components, render, onSuccess, chain
 
   const initialized
     = state.approvals.length === Children.toArray(components.props.children).length
-    && !state.approvals.some(el => el?.[0] === ApprovalState.UNKNOWN)
+      && !state.approvals.some(el => el?.[0] === ApprovalState.UNKNOWN)
 
   const children = useMemo(() => {
     return cloneElement(

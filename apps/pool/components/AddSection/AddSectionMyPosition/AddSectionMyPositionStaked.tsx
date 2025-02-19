@@ -2,7 +2,6 @@ import { formatUSD } from '@crypto-dex-sdk/format'
 import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import React from 'react'
-import { Trans } from '@lingui/macro'
 import { usePoolPositionStaked } from '../../PoolPositionStakedProvider'
 
 export const AddSectionMyPositionStaked: FC = () => {

@@ -6,13 +6,13 @@ import type { Amount, Token } from '@crypto-dex-sdk/currency'
 import { Percent } from '@crypto-dex-sdk/math'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import type { Dispatch, SetStateAction } from 'react'
-import { useCallback, useMemo } from 'react'
-import { useAccount } from 'wagmi'
-import { t } from '@lingui/macro'
 import type { Address } from 'viem'
-import { encodeFunctionData } from 'viem'
 import type { SendTransactionData } from 'wagmi/query'
 import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase, WagmiTransactionRequest } from '../types'
+import { t } from '@lingui/macro'
+import { useCallback, useMemo } from 'react'
+import { encodeFunctionData } from 'viem'
+import { useAccount } from 'wagmi'
 import { config } from '../client'
 import { useSendTransaction } from './useSendTransaction'
 import { getStableRouterContractConfig, useStableRouterContract } from './useStableRouter'
@@ -128,7 +128,7 @@ export const useAddLiquidityStableReview: UseAddLiquidityStableReview = ({
           })
         }
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [abi, address, chain?.id, contract, contractAddress, deadline, inputs.length, liquidity, slippagePercent, swap, useBase],
   )

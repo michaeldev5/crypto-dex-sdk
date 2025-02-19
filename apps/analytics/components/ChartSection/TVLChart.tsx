@@ -2,12 +2,12 @@ import type { FC } from 'react'
 import { useCallback, useMemo, useState } from 'react'
 import { format } from 'date-fns'
 import { formatUSD } from '@crypto-dex-sdk/format'
-import resolveConfig from 'tailwindcss/resolveConfig'
 import { Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { EChartsOption } from 'echarts-for-react'
+import { Trans } from '@lingui/macro'
 import ReactECharts from 'echarts-for-react'
 import { useTheme } from 'next-themes'
-import { Trans } from '@lingui/macro'
+import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config.js'
 
 const tailwind = resolveConfig(tailwindConfig)
@@ -73,7 +73,7 @@ export const TVLChart: FC<{ x: number[], y0: number[], y1: number[] }> = ({ x, y
             <span class="text-sm text-pink-500 font-bold">Market: ${formatUSD(params[1].value)}</span>
             <span class="text-sm text-blue-500 font-bold">Pool: ${formatUSD(params[0].value)}</span>
             <span class="text-xs text-slate-600 dark:text-slate-400 font-medium mt-1">${date instanceof Date && !Number.isNaN(date?.getTime()) ? format(date, 'dd MMM yyyy HH:mm') : ''
-            }</span>
+      }</span>
           </div>`
         },
         borderWidth: 0,

@@ -3,12 +3,12 @@ import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import { ZERO } from '@crypto-dex-sdk/math'
 import { Button } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import type { CheckerButton } from './types'
 import { useMemo } from 'react'
-import { useAccount } from 'wagmi'
 
 import { zeroAddress } from 'viem'
+import { useAccount } from 'wagmi'
 import { useBalances } from '../../hooks'
-import type { CheckerButton } from './types'
 
 export interface AmountsProps extends CheckerButton {
   chainId: number | undefined

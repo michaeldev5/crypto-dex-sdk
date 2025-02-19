@@ -10,19 +10,18 @@ import { ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
+  classNames,
   DEFAULT_INPUT_UNSTYLED,
   Input,
   Typography,
   Currency as UICurrency,
-  classNames,
 } from '@crypto-dex-sdk/ui'
 import { Widget } from '@crypto-dex-sdk/ui/widget'
 import type { FC, ReactNode } from 'react'
 import { Fragment, useState } from 'react'
-
-import { Trans, t } from '@lingui/macro'
 import { usePoolPosition } from '../PoolPositionProvider'
 import { SettingsOverlay } from '../SettingsOverlay'
+import { Trans } from '@lingui/react'
 
 interface RemoveSectionWidgetStandardProps {
   isFarm: boolean
@@ -80,32 +79,31 @@ export const RemoveSectionWidgetStandard: FC<RemoveSectionWidgetStandardProps> =
               <>
                 {isFarm && isMounted
                   ? (
-                    <Widget.Header className="!pb-3 " title={t`Remove Liquidity`}>
-                      <div className="flex gap-3">
-                        <SettingsOverlay chainId={chainId} variant="dialog" />
-                        <Disclosure.Button className="w-full pr-0.5">
-                          <div className="flex items-center justify-between">
-                            <div
-                              className={classNames(
-                                open ? 'rotate-180' : 'rotate-0',
-                                'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
-                              )}
-                            >
-                              <ChevronDownIcon
-                                className="group-hover:text-slate-800 dark:group-hover:text-slate-200 text-slate-700 dark:text-slate-300"
-                                height={24}
-                                width={24}
-                              />
+                      <Widget.Header className="!pb-3 " title={t`Remove Liquidity`}>
+                        <div className="flex gap-3">
+                          <SettingsOverlay chainId={chainId} variant="dialog" />
+                          <Disclosure.Button className="w-full pr-0.5">
+                            <div className="flex items-center justify-between">
+                              <div
+                                className={classNames(
+                                  open ? 'rotate-180' : 'rotate-0',
+                                  'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
+                                )}
+                              >
+                                <ChevronDownIcon
+                                  className="group-hover:text-slate-800 dark:group-hover:text-slate-200 text-slate-700 dark:text-slate-300"
+                                  height={24}
+                                  width={24}
+                                />
+                              </div>
                             </div>
-                          </div>
-                        </Disclosure.Button>
-                      </div>
-                    </Widget.Header>
+                          </Disclosure.Button>
+                        </div>
+                      </Widget.Header>
                     )
-                  : (
-                    <Widget.Header className="!pb-3" title={t`Remove Liquidity`} />
-                    )}
+                  : <Widget.Header className="!pb-3" title={t`Remove Liquidity`} />}
                 <Transition
+                  as="div"
                   className="transition-[max-height] overflow-hidden"
                   enter="duration-300 ease-in-out"
                   enterFrom="transform max-h-0"
@@ -115,7 +113,7 @@ export const RemoveSectionWidgetStandard: FC<RemoveSectionWidgetStandardProps> =
                   leaveTo="transform max-h-0"
                   unmount={false}
                 >
-                  <Disclosure.Panel unmount={false}>
+                  <DisclosurePanel unmount={false}>
                     <div className="flex flex-col gap-3 p-3">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center justify-between flex-grow">
@@ -166,6 +164,7 @@ export const RemoveSectionWidgetStandard: FC<RemoveSectionWidgetStandardProps> =
                         </AppearOnMount>
                       </div>
                       <Transition
+                        as="div"
                         className="transition-[max-height] overflow-hidden"
                         enter="duration-300 ease-in-out"
                         enterFrom="transform max-h-0"
@@ -213,7 +212,7 @@ export const RemoveSectionWidgetStandard: FC<RemoveSectionWidgetStandardProps> =
                       </Transition>
                       {children}
                     </div>
-                  </Disclosure.Panel>
+                  </DisclosurePanel>
                 </Transition>
               </>
             )}

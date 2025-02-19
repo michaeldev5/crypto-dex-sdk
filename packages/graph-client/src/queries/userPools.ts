@@ -6,16 +6,12 @@ import type {
   StableSwapLiquidityPositionQueryData,
   StakePositionQueryData,
 } from '../types'
-import type {
-  UserPoolsQuery,
-  UserPoolsQueryVariables,
-} from '../__generated__/types-and-hooks'
+import { wrapResultData } from '.'
 import {
   PairDayDataOrderByInput,
   StableSwapDayDataOrderByInput,
 } from '../__generated__/types-and-hooks'
 import { encodeChainAddress } from '../utils'
-import { wrapResultData } from '.'
 
 const USER_POOLS_FETCH = gql`
   query userPools(

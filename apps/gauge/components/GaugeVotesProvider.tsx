@@ -3,8 +3,8 @@ import type { Gauge } from '@crypto-dex-sdk/market'
 import { JSBI, Percent, _1e18 } from '@crypto-dex-sdk/math'
 import { useGauges, useVoteReview } from '@crypto-dex-sdk/wagmi'
 import type { FC, ReactNode } from 'react'
-import { createContext, useCallback, useContext, useMemo, useState } from 'react'
 import type { Address } from 'viem'
+import { createContext, useCallback, useContext, useMemo, useState } from 'react'
 
 export enum VoteMode {
   VIEW,

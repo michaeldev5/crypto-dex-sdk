@@ -3,9 +3,9 @@ import type { Amount, Currency } from '@crypto-dex-sdk/currency'
 import type { NotificationData } from '@crypto-dex-sdk/ui'
 import { useCallback, useMemo, useState } from 'react'
 import { useAccount, useSendTransaction } from 'wagmi'
-import { t } from '@lingui/macro'
 import type { Address } from 'viem'
-import { UserRejectedRequestError, encodeFunctionData, erc20Abi, maxUint256 } from 'viem'
+import { t } from '@lingui/core/macro'
+import { encodeFunctionData, erc20Abi, maxUint256, UserRejectedRequestError } from 'viem'
 import { waitForTransactionReceipt } from 'wagmi/actions'
 import { config } from '../client'
 import { useERC20Allowance } from './useERC20Allowance'
@@ -34,13 +34,13 @@ export function useERC20ApproveCallback(
     value: BigInt(0),
     data: spender && amountToApprove
       ? encodeFunctionData({
-        abi: erc20Abi,
-        functionName: 'approve',
-        args: [
-          spender as Address,
-          useExact ? BigInt(amountToApprove?.quotient.toString()) : maxUint256,
-        ],
-      })
+          abi: erc20Abi,
+          functionName: 'approve',
+          args: [
+            spender as Address,
+            useExact ? BigInt(amountToApprove?.quotient.toString()) : maxUint256,
+          ],
+        })
       : undefined,
   }), [address, amountToApprove, spender, token?.address, useExact])
 
@@ -105,9 +105,9 @@ export function useERC20ApproveCallback(
           txHash: hash,
           promise: waitForTransactionReceipt(config, { hash }),
           summary: {
-            pending: t`Approving ${amountToApprove.currency.symbol}`,
-            completed: t`Successfully approved ${amountToApprove.currency.symbol}`,
-            failed: t`Something went wrong approving ${amountToApprove.currency.symbol}`,
+            pending: t`Approving ${amountToApprove.currency.symbol || 'symbol'}`,
+            completed: t`Successfully approved ${amountToApprove.currency.symbol || 'symbol'}`,
+            failed: t`Something went wrong approving ${amountToApprove.currency.symbol || 'symbol'}`,
           },
           groupTimestamp: ts,
           timestamp: ts,

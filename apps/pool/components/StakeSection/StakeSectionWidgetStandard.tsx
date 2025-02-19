@@ -10,13 +10,13 @@ import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
+  classNames,
   Currency,
   DEFAULT_INPUT_UNSTYLED,
   Dots,
   Input,
   Tooltip,
   Typography,
-  classNames,
 } from '@crypto-dex-sdk/ui'
 import { Widget } from '@crypto-dex-sdk/ui/widget'
 import type { FC } from 'react'
@@ -72,31 +72,32 @@ export const StakeSectionWidgetStandard: FC<StakeSectionWidgetStandardProps> = (
               <>
                 {isFarm && isMounted
                   ? (
-                    <Widget.Header className="!pb-3 " title={<Trans>Stake Liquidity</Trans>}>
-                      <div className="flex gap-3">
-                        <Disclosure.Button className="w-full pr-0.5">
-                          <div className="flex items-center justify-between">
-                            <div
-                              className={classNames(
-                                open ? 'rotate-180' : 'rotate-0',
-                                'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
-                              )}
-                            >
-                              <ChevronDownIcon
-                                className="group-hover:text-slate-200 text-slate-300"
-                                height={24}
-                                width={24}
-                              />
+                      <Widget.Header className="!pb-3 " title={<Trans>Stake Liquidity</Trans>}>
+                        <div className="flex gap-3">
+                          <DisclosureButton className="w-full pr-0.5">
+                            <div className="flex items-center justify-between">
+                              <div
+                                className={classNames(
+                                  open ? 'rotate-180' : 'rotate-0',
+                                  'transition-all w-5 h-5 -mr-1.5 flex items-center delay-300',
+                                )}
+                              >
+                                <ChevronDownIcon
+                                  className="group-hover:text-slate-200 text-slate-300"
+                                  height={24}
+                                  width={24}
+                                />
+                              </div>
                             </div>
-                          </div>
-                        </Disclosure.Button>
-                      </div>
-                    </Widget.Header>
+                          </DisclosureButton>
+                        </div>
+                      </Widget.Header>
                     )
                   : (
-                    <Widget.Header className="!pb-3" title={<Trans>Stake Liquidity</Trans>} />
+                      <Widget.Header className="!pb-3" title={<Trans>Stake Liquidity</Trans>} />
                     )}
                 <Transition
+                  as="div"
                   className="transition-[max-height] overflow-hidden"
                   enter="duration-300 ease-in-out"
                   enterFrom="transform max-h-0"
@@ -106,7 +107,7 @@ export const StakeSectionWidgetStandard: FC<StakeSectionWidgetStandardProps> = (
                   leaveTo="transform max-h-0"
                   unmount={false}
                 >
-                  <Disclosure.Panel unmount={false}>
+                  <DisclosurePanel unmount={false}>
                     <div className="text-sm leading-5 font-normal px-3 pb-5 text-slate-400">
                       <Trans>
                         Stake your liquidity tokens to receive incentive rewards on top of your pool fee rewards
@@ -114,25 +115,25 @@ export const StakeSectionWidgetStandard: FC<StakeSectionWidgetStandardProps> = (
                     </div>
                     {farms.length > 0
                       ? (
-                        <>
-                          {farms.map(farm => (
-                            <StakeSectionWidgetStandardItem
-                              chainId={chainId}
-                              farm={farm}
-                              key={farm.pid}
-                            />
-                          ))}
-                        </>
+                          <>
+                            {farms.map(farm => (
+                              <StakeSectionWidgetStandardItem
+                                chainId={chainId}
+                                farm={farm}
+                                key={farm.pid}
+                              />
+                            ))}
+                          </>
                         )
                       : (
-                        <Typography
-                          className="w-full italic text-center dark:text-slate-400 text-gray-600 mb-6"
-                          variant="xs"
-                        >
-                          <Trans>No farms found</Trans>
-                        </Typography>
+                          <Typography
+                            className="w-full italic text-center dark:text-slate-400 text-gray-600 mb-6"
+                            variant="xs"
+                          >
+                            <Trans>No farms found</Trans>
+                          </Typography>
                         )}
-                  </Disclosure.Panel>
+                  </DisclosurePanel>
                 </Transition>
               </>
             )}
@@ -178,6 +179,7 @@ export const StakeSectionWidgetStandardItem: FC<StakeSectionWidgetStandardItemPr
   return (
     <div className="relative border-t border-slate-500/20 dark:border-slate-200/5 mb-3">
       <Transition
+        as="div"
         className="transition-[max-height]"
         enter="duration-300 ease-in-out"
         enterFrom="transform max-h-0"
@@ -185,6 +187,7 @@ export const StakeSectionWidgetStandardItem: FC<StakeSectionWidgetStandardItemPr
         leave="transition-[max-height] duration-250 ease-in-out"
         leaveFrom="transform"
         leaveTo="transform max-h-0"
+        show
         unmount={false}
       >
         <div className="flex flex-col gap-3 px-3 pt-3">

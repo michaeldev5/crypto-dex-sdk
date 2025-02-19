@@ -2,9 +2,9 @@ import { formatUSD } from '@crypto-dex-sdk/format'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
 import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { usePoolPosition } from 'components/PoolPositionProvider'
 import { Trans } from '@lingui/macro'
 import { useTokensFromPool } from '@crypto-dex-sdk/shared'
+import { usePoolPosition } from 'components/PoolPositionProvider'
 
 interface PoolPositionProps {
   pool: Pool

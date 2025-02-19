@@ -14,10 +14,12 @@ import type { AggregatorTrade } from '@crypto-dex-sdk/amm'
 import { TradeVersion, calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import { config } from '../../client'
 import type { WagmiTransactionRequest } from '../../types'
+import type { TokenInput } from './types'
+import { t } from '@lingui/core/macro'
 import { useSendTransaction } from '../useSendTransaction'
 import { getSwapRouterContractConfig } from '../useSwapRouter'
+import { SwapType } from './types'
 import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
-import { SwapType, type TokenInput } from './types'
 
 interface UseMintPyReviewParams {
   chainId: ParachainId
@@ -65,8 +67,8 @@ export const useMintPyReview: UseMintPyReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Minting PY from ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)}`,
-          completed: t`Successfully minted PY from ${market.SY.yieldToken.symbol} ${getMaturityFormatDate(market)}`,
+          pending: t`Minting PY from ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)}`,
+          completed: t`Successfully minted PY from ${market.SY.yieldToken.symbol || 'symbol'} ${getMaturityFormatDate(market)}`,
           failed: t`Something went wrong when minting PY`,
         },
         timestamp: ts,
@@ -154,7 +156,7 @@ export const useMintPyReview: UseMintPyReview = ({
           })
         }
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [amountSpecified, ptMinted, ytMinted, address, contract, market.SY, market.YT.address, market.chainId, trade, slippagePercent, contractAddress, abi],
   )

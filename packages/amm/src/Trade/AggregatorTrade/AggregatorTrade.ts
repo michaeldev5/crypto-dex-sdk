@@ -2,10 +2,7 @@ import type { Currency } from '@crypto-dex-sdk/currency'
 import { Amount, Native, Price, Token } from '@crypto-dex-sdk/currency'
 import { Fraction, ONE, Percent, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
-
-import type { BaseTrade, RouteDescription } from '../BaseTrade'
 import { TradeVersion } from '../TradeVersion'
-import type { RouteLeg } from './types'
 
 type WriteArgs = any[]
 
@@ -64,7 +61,8 @@ export class AggregatorTrade implements BaseTrade {
     const slippageAdjustedAmountOut = new Fraction(ONE)
       .add(slippageTolerance)
       .invert()
-      .multiply(this.outputAmount.quotient).quotient
+      .multiply(this.outputAmount.quotient)
+      .quotient
 
     return Amount.fromRawAmount(this.outputAmount.currency.wrapped, slippageAdjustedAmountOut)
   }

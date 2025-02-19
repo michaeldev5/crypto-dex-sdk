@@ -1,7 +1,7 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { PublicClient } from 'viem'
-import { LiquidityProviders } from './LiquidityProvider'
 import { CurveStableBaseProvider } from './CurveStableBase'
+import { LiquidityProviders } from './LiquidityProvider'
 
 export class CurveStableProvider extends CurveStableBaseProvider {
   basePools: { [chainId: number]: [string, string[], string][] } = {

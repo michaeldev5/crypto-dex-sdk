@@ -77,8 +77,8 @@ export const useRemoveLiquidityStandardReview: UseRemoveLiquidityStandardReview 
           type: 'burn',
           chainId: pool.chainId,
           summary: {
-            pending: t`Removing liquidity from the ${token0.symbol}/${token1.symbol} pair`,
-            completed: t`Successfully removed liquidity from the ${token0.symbol}/${token1.symbol} pair`,
+            pending: t`Removing liquidity from the ${token0.symbol || 'symbol'}/${token1.symbol || 'symbol'} pair`,
+            completed: t`Successfully removed liquidity from the ${token0.symbol || 'symbol'}/${token1.symbol || 'symbol'} pair`,
             failed: t`Something went wrong when removing liquidity`,
           },
           timestamp: ts,

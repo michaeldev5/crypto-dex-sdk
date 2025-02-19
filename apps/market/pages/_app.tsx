@@ -20,6 +20,7 @@ import { parachains } from '@crypto-dex-sdk/polkadot-config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Header } from 'components'
 import SEO from '../next-seo.config.mjs'
+import '@zenlink-interface/ui/index.css'
 
 const store = configureStore({
   // @ts-expect-error ignore

@@ -1,4 +1,3 @@
-import { Trans } from '@lingui/macro'
 import type { ColumnDef } from '@tanstack/react-table'
 import type { Market } from '@crypto-dex-sdk/market'
 import { JSBI } from '@crypto-dex-sdk/math'
@@ -9,6 +8,7 @@ import { MarketMaturityCell } from './MarketMaturityCell'
 import { UnderlyingAPYCell } from './UnderlyingAPYCell'
 import { ImpliedAPYCell } from './ImpliedAPYCell'
 import { LongYieldROICell } from './LongYieldROICell'
+import { Trans } from '@lingui/macro'
 import { FixedROICell } from './FiexedROICell'
 
 export const NAME_COLUMN: ColumnDef<Market, unknown> = {

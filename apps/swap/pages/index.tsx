@@ -1,3 +1,5 @@
+import type { FC } from 'react'
+import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { TradeType } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
@@ -6,9 +8,7 @@ import { DOT, FRAX, KSM, Native, USDC, USDT, tryParseAmount } from '@crypto-dex-
 import { useIsMounted, usePrevious } from '@crypto-dex-sdk/hooks'
 import { Button, Dots, Tab, Widget } from '@crypto-dex-sdk/ui'
 import { WrapType } from '@crypto-dex-sdk/wagmi'
-import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
 import { useRouter } from 'next/router'
-import type { FC } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import { useCustomTokens, useSettings } from '@crypto-dex-sdk/shared'
@@ -24,10 +24,9 @@ import {
   SwapReviewModal,
   SwapStatsDisclosure,
   TradeProvider,
-  WrapReviewModal,
   useTrade,
+  WrapReviewModal,
 } from 'components'
-import { Trans, t } from '@lingui/macro'
 import { CrossTransfer } from 'components/CrossTransfer'
 
 export const getServerSideProps: GetServerSideProps = async ({ query, res }) => {
@@ -253,27 +252,27 @@ function Swap(initialState: InferGetServerSidePropsType<typeof getServerSideProp
                       <Checker.Network chainId={chainId} fullWidth size="md">
                         {isWrap
                           ? (
-                            <WrapReviewModal
-                              chainId={chainId}
-                              input0={parsedInput0}
-                              input1={parsedInput1}
-                              wrapType={wrap ? WrapType.Wrap : WrapType.Unwrap}
-                            >
-                              {({ isWritePending, setOpen }) => {
-                                return (
-                                  <Button disabled={isWritePending} fullWidth onClick={() => setOpen(true)} size="md">
-                                    {wrap ? 'Wrap' : 'Unwrap'}
-                                  </Button>
-                                )
-                              }}
-                            </WrapReviewModal>
+                              <WrapReviewModal
+                                chainId={chainId}
+                                input0={parsedInput0}
+                                input1={parsedInput1}
+                                wrapType={wrap ? WrapType.Wrap : WrapType.Unwrap}
+                              >
+                                {({ isWritePending, setOpen }) => {
+                                  return (
+                                    <Button disabled={isWritePending} fullWidth onClick={() => setOpen(true)} size="md">
+                                      {wrap ? 'Wrap' : 'Unwrap'}
+                                    </Button>
+                                  )
+                                }}
+                              </WrapReviewModal>
                             )
                           : (
-                            <SwapReviewModal chainId={chainId} onSuccess={onSuccess}>
-                              {({ isWritePending, setOpen }) => {
-                                return <SwapButton isWritePending={isWritePending} setOpen={setOpen} />
-                              }}
-                            </SwapReviewModal>
+                              <SwapReviewModal chainId={chainId} onSuccess={onSuccess}>
+                                {({ isWritePending, setOpen }) => {
+                                  return <SwapButton isWritePending={isWritePending} setOpen={setOpen} />
+                                }}
+                              </SwapReviewModal>
                             )}
                       </Checker.Network>
                     </Checker.Amounts>

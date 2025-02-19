@@ -1,8 +1,8 @@
-import { BigNumber } from '@ethersproject/bignumber'
-import { two96 } from './SwapMath'
-import { getLogSqrtPriceFloor, getSqrtPrice } from './LogPowMath'
-import { getAmountX, getAmountY } from './AmountMath'
 import type { IZiState } from '.'
+import { BigNumber } from '@ethersproject/bignumber'
+import { getAmountX, getAmountY } from './AmountMath'
+import { getLogSqrtPriceFloor, getSqrtPrice } from './LogPowMath'
+import { two96 } from './SwapMath'
 
 export interface RangeRetStateX2YDesire {
   finished: boolean
@@ -139,9 +139,7 @@ function x2YRangeComplete(rg: Range, desireY: BigNumber): RangeCompRetX2Y {
     // rg.sqrtPriceRX96 * TwoPower.Pow96 < 2^160 * 2^96 = 2^256
     const sqrtPricePrM1X96 = rg.sqrtPriceRX96.mul(two96).div(rg.sqrtRateX96)
     // rg.liquidity * (sqrtPricePrMlocX96 - TwoPower.Pow96) < 2^128 * 2^100 = 2^228 < 2^256
-    ret.costX = rg.liquidity
-      .mul(sqrtPricePrMlocX96.sub(two96))
-      .div(rg.sqrtPriceRX96.sub(sqrtPricePrM1X96))
+    ret.costX = rg.liquidity.mul(sqrtPricePrMlocX96.sub(two96)).div(rg.sqrtPriceRX96.sub(sqrtPricePrM1X96))
 
     ret.locPt = ret.locPt - 1
     ret.sqrtLocX96 = getSqrtPrice(ret.locPt)

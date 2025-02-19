@@ -1,7 +1,6 @@
 import { ChevronLeftIcon } from '@heroicons/react/24/solid'
 import { Button, IconButton, Typography } from '@crypto-dex-sdk/ui'
 import type { Dispatch, FC, SetStateAction } from 'react'
-
 import { Trans } from '@lingui/macro'
 import { NotificationGroup } from '../../NotificationCentre'
 import { ProfileView } from './Profile'
@@ -33,16 +32,14 @@ export const Transactions: FC<TransactionsProps> = ({ setView, notifications, cl
       <div className="flex flex-col gap-3 p-2 max-h-[300px] scroll">
         {Object.entries(notifications).length > 0
           ? (
-              Object.entries(notifications)
-                .reverse()
-                .map(([, notifications], index) => {
-                  return <NotificationGroup key={index} notifications={notifications} />
-                })
+              Object.entries(notifications).reverse().map(([, notifications], index) => {
+                return <NotificationGroup key={index} notifications={notifications} />
+              })
             )
           : (
-            <Typography className="text-slate-500 text-center py-5" variant="sm">
-              <Trans>Your transactions will appear here</Trans>
-            </Typography>
+              <Typography className="text-slate-500 text-center py-5" variant="sm">
+                <Trans>Your transactions will appear here</Trans>
+              </Typography>
             )}
       </div>
     </div>

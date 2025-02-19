@@ -3,8 +3,8 @@ import type { Token, Type } from '@crypto-dex-sdk/currency'
 import { Native, WNATIVE } from '@crypto-dex-sdk/currency'
 import type { PublicClient } from 'viem'
 import type { PoolCode } from '../entities'
-import { LiquidityProviders, NativeWrapProvider } from '../liquidity-providers'
 import type { LiquidityProvider } from '../liquidity-providers'
+import { LiquidityProviders, NativeWrapProvider } from '../liquidity-providers'
 import { LIQUIDITY_PROVIDERS, LIQUIDITY_PROVIDERS_MAP } from './constant'
 
 export class DataFetcher {

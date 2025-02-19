@@ -3,24 +3,17 @@ import { ParachainId } from '@crypto-dex-sdk/chain'
 import { Native } from '@crypto-dex-sdk/currency'
 import type { LiquidityProviders } from '@crypto-dex-sdk/smart-router'
 import {
-  Router,
   getAggregationExecutorAddressForChainId,
   getAggregationRouterAddressForChainId,
 } from '@crypto-dex-sdk/smart-router'
 import { BigNumber } from 'ethers'
 import { z } from 'zod'
-
 import redis from '../../lib/redis'
-import { MAX_REQUESTS_PER_MIN, convertChainId, getClient, getDataFetcher } from './config'
+import { convertChainId, getClient, getDataFetcher, MAX_REQUESTS_PER_MIN } from './config'
 import { getToken } from './tokens'
 
 const querySchema = z.object({
-  chainId: z.coerce
-    .number()
-    .int()
-    .gte(0)
-    .lte(2 ** 256)
-    .default(ParachainId.ASTAR),
+  chainId: z.coerce.number().int().gte(0).lte(2 ** 256).default(ParachainId.ASTAR),
   fromTokenId: z.string().default('Native'),
   toTokenId: z.string().default('Native'),
   gasPrice: z.coerce.number().int().gte(1),
@@ -57,9 +50,7 @@ export default async (request: VercelRequest, response: VercelResponse) => {
       response.status(429).send('Too many requests. Please try again later.')
       return
     }
-    await redis.multi()
-      .set(key, Number.parseInt(currentCount, 10) + 1, 'EX', 60)
-      .exec()
+    await redis.multi().set(key, Number.parseInt(currentCount, 10) + 1, 'EX', 60).exec()
   }
 
   const {
@@ -140,15 +131,15 @@ export default async (request: VercelRequest, response: VercelResponse) => {
     executorAddress: getAggregationExecutorAddressForChainId(chainId),
     routeParams: to
       ? Router.aggregationRouterParams(
-        dataFetcher,
-        bestRoute,
-        fromToken,
-        toToken,
-        to,
-        getAggregationExecutorAddressForChainId(chainId),
-        getFeeSettlementAddressForChainId(chainId),
-        priceImpact,
-      )
+          dataFetcher,
+          bestRoute,
+          fromToken,
+          toToken,
+          to,
+          getAggregationExecutorAddressForChainId(chainId),
+          getFeeSettlementAddressForChainId(chainId),
+          priceImpact,
+        )
       : undefined,
   })
 }

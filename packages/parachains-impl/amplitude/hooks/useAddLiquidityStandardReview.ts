@@ -98,8 +98,8 @@ export const useAddLiquidityStandardReview: UseAddLiquidityStandardReview = ({
           type: 'mint',
           chainId,
           summary: {
-            pending: t`Adding liquidity to the ${token0.symbol}/${token1.symbol} pair`,
-            completed: t`Successfully added liquidity to the ${token0.symbol}/${token1.symbol} pair`,
+            pending: t`Adding liquidity to the ${token0.symbol || 'token0'}/${token1.symbol || 'token1'} pair`,
+            completed: t`Successfully added liquidity to the ${token0.symbol || 'token0'}/${token1.symbol || 'token1'} pair`,
             failed: t`Something went wrong when adding liquidity`,
           },
           timestamp: ts,

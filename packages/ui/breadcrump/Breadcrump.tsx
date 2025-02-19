@@ -1,5 +1,5 @@
+import type { FC, JSX } from 'react'
 import { ChevronRightIcon, HomeIcon } from '@heroicons/react/24/solid'
-import type { FC } from 'react'
 
 import { Link, Typography } from '..'
 

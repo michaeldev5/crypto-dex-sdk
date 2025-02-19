@@ -1,14 +1,14 @@
 import type { QueryFunction } from '@tanstack/react-query'
+import type { Address } from 'viem'
 import { useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
-import { type Address, erc20Abi } from 'viem'
+import { erc20Abi } from 'viem'
 import { readContracts } from 'wagmi/actions'
 import { config } from '../client'
 
 export interface FetchTokensArgs { tokens: { address: string, chainId: number }[] }
 export type UseTokensArgs = Partial<FetchTokensArgs>
 export type FetchTokensResult = { decimals?: number, name?: string, symbol?: string, address: Address }[]
-export type UseTokensConfig = Partial<Parameters<typeof useQuery>['0']>
 
 function queryKey({ tokens }: FetchTokensArgs) {
   return [{ entity: 'tokens', tokens: tokens || [] }] as const
@@ -60,7 +60,7 @@ export function useTokens({
   tokens = [],
   enabled = true,
   staleTime = 1_000 * 60 * 60 * 24, // 24 hours
-}: UseTokensArgs & UseTokensConfig): { data: {
+}: UseTokensArgs & { enabled?: boolean, staleTime?: number }): { data: {
   address: string
   name: string
   symbol: string

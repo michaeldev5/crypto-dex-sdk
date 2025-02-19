@@ -3,9 +3,6 @@ import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { Percent } from '@crypto-dex-sdk/math'
 import { useRemoveLiquidityStandardReview as useWagmiRemoveLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
-// import {
-//   useRemoveLiquidityStandardReview as useBifrostRemoveLiquidityStandardReview,
-// } from '@crypto-dex-sdk/parachains-bifrost'
 import {
   useRemoveLiquidityStandardReview as useAmplitudeRemoveLiquidityStandardReview,
 } from '@crypto-dex-sdk/parachains-amplitude'

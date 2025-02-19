@@ -2,26 +2,26 @@ import type { AggregatorTrade, Trade } from '@crypto-dex-sdk/amm'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
-import type { Dispatch, SetStateAction } from 'react'
-import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useAccount, useEstimateGas, useSendTransaction } from 'wagmi'
-import { log } from 'next-axiom'
-import stringify from 'fast-json-stable-stringify'
 import { Percent } from '@crypto-dex-sdk/math'
+import type { Dispatch, SetStateAction } from 'react'
+import type { Abi, Address } from 'viem'
+import type { SendTransactionData } from 'wagmi/query'
+import type { WagmiTransactionRequest } from '../types'
+import type { Permit2Actions } from './usePermit2ApproveCallback'
 import { isAddress } from '@ethersproject/address'
 import { t } from '@lingui/macro'
-import type { Abi, Address } from 'viem'
-import { encodeFunctionData, zeroAddress } from 'viem'
 import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk'
-import type { SendTransactionData } from 'wagmi/query'
+import stringify from 'fast-json-stable-stringify'
+import { log } from 'next-axiom'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { encodeFunctionData, zeroAddress } from 'viem'
 import { waitForTransactionReceipt } from 'wagmi/actions'
-import { SwapRouter } from '../SwapRouter'
-import type { WagmiTransactionRequest } from '../types'
 import { config } from '../client'
+import { SwapRouter } from '../SwapRouter'
+import { ApprovalState, useERC20ApproveCallback } from './useERC20ApproveCallback'
 import { useRouters } from './useRouters'
 import { useTransactionDeadline } from './useTransactionDeadline'
-import { ApprovalState, useERC20ApproveCallback } from './useERC20ApproveCallback'
-import type { Permit2Actions } from './usePermit2ApproveCallback'
 
 const SWAP_DEFAULT_SLIPPAGE = new Percent(50, 10_000) // 0.50%
 
@@ -102,11 +102,11 @@ export const useSwapReview: UseSwapReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Swapping ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol
-            } for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol}`,
-          completed: t`Successfully swapped ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol
-            } for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol}`,
-          failed: t`Something went wrong when trying to swap ${trade.inputAmount.currency.symbol} for ${trade.outputAmount.currency.symbol}`,
+          pending: t`Swapping ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol || 'symbol'
+          } for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol || 'symbol'}`,
+          completed: t`Successfully swapped ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol || 'symbol'
+          } for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol || 'symbol'}`,
+          failed: t`Something went wrong when trying to swap ${trade.inputAmount.currency.symbol || 'symbol'} for ${trade.outputAmount.currency.symbol || 'symbol'}`,
         },
         timestamp: ts,
         groupTimestamp: ts,

@@ -5,10 +5,10 @@ import { Typography } from '@crypto-dex-sdk/ui'
 import type { EChartsOption } from 'echarts-for-react'
 import type { FC } from 'react'
 import { useMemo } from 'react'
-import ReactECharts from 'echarts-for-react'
-import resolveConfig from 'tailwindcss/resolveConfig'
-import { useTheme } from 'next-themes'
 import { Trans } from '@lingui/macro'
+import ReactECharts from 'echarts-for-react'
+import { useTheme } from 'next-themes'
+import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../../tailwind.config.js'
 import { RateDesc } from './InitialIcon'
 
@@ -136,26 +136,26 @@ export const CirculatingDistribution: FC = () => {
       {(isLoading || isError)
         ? <div className=" h-full bg-slate-300 dark:bg-slate-700 animate-pulse w-full rounded-md" />
         : (
-          <section>
-            <Typography weight={600}><Trans>Circulating Distribution</Trans></Typography>
-            <div className="h-80">
-              <ReactECharts option={DEFAULT_OPTION} style={{ height: 320 }} />
-            </div>
-            <div>
-              <div className="h-40 flex items-center justify-center">
-                <div className="flex flex-col text-black dark:text-white text-sm gap-0.5">
-                  {data.map((d, index) => (
-                    <RateDesc
-                      color={COLORS[index % COLORS.length]}
-                      desc={`${formatFullNumber(d.amount)} (${d.percent})`}
-                      key={d.chainName}
-                      title={d.chainName}
-                    />
-                  ))}
+            <section>
+              <Typography weight={600}><Trans>Circulating Distribution</Trans></Typography>
+              <div className="h-80">
+                <ReactECharts option={DEFAULT_OPTION} style={{ height: 320 }} />
+              </div>
+              <div>
+                <div className="h-40 flex items-center justify-center">
+                  <div className="flex flex-col text-black dark:text-white text-sm gap-0.5">
+                    {data.map((d, index) => (
+                      <RateDesc
+                        color={COLORS[index % COLORS.length]}
+                        desc={`${formatFullNumber(d.amount)} (${d.percent})`}
+                        key={d.chainName}
+                        title={d.chainName}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
           )}
     </>
   )

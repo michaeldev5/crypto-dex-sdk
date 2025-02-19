@@ -1,8 +1,8 @@
+import type { FC } from 'react'
 import { Trans } from '@lingui/macro'
 import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
 import type { MarketGraphData } from '@crypto-dex-sdk/graph-client'
 import { Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
 import { useMemo } from 'react'
 
 interface MarketStatsProps {
@@ -22,18 +22,14 @@ export const MarketStats: FC<MarketStatsProps> = ({ market }) => {
   const volume1d = useMemo(() => {
     const currentHourIndex = Number.parseInt((new Date().getTime() / 3600000).toString(), 10)
     const hourStartUnix1d = Number(currentHourIndex - 24) * 3600000
-    return market?.marketHourData
-      .filter(hourData => Number(hourData.hourStartUnix) >= hourStartUnix1d)
-      .reduce((volume, { hourlyVolumeUSD }) => volume + hourlyVolumeUSD, 0)
+    return market?.marketHourData.filter(hourData => Number(hourData.hourStartUnix) >= hourStartUnix1d).reduce((volume, { hourlyVolumeUSD }) => volume + hourlyVolumeUSD, 0)
   }, [market?.marketHourData])
 
   const volume1dChange = useMemo(() => {
     const currentHourIndex = Number.parseInt((new Date().getTime() / 3600000).toString(), 10)
     const hourStartUnix1d = Number(currentHourIndex - 24) * 3600000
     const hourStartUnix2d = Number(currentHourIndex - 48) * 3600000
-    const volume2d = market?.marketHourData
-      .filter(hourData => Number(hourData.hourStartUnix) >= hourStartUnix2d && Number(hourData.hourStartUnix) < hourStartUnix1d)
-      .reduce((volume, { hourlyVolumeUSD }) => volume + hourlyVolumeUSD, 0)
+    const volume2d = market?.marketHourData.filter(hourData => Number(hourData.hourStartUnix) >= hourStartUnix2d && Number(hourData.hourStartUnix) < hourStartUnix1d).reduce((volume, { hourlyVolumeUSD }) => volume + hourlyVolumeUSD, 0)
 
     return volume1d && volume2d && volume2d > 0
       ? (volume1d - volume2d) / volume2d
@@ -72,10 +68,10 @@ export const MarketStats: FC<MarketStatsProps> = ({ market }) => {
         </Typography>
         {liquidity1dChange
           ? (
-            <Typography className={liquidity1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
-              {liquidity1dChange > 0 ? '+' : '-'}
-              {formatPercent(Math.abs(liquidity1dChange))}
-            </Typography>
+              <Typography className={liquidity1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
+                {liquidity1dChange > 0 ? '+' : '-'}
+                {formatPercent(Math.abs(liquidity1dChange))}
+              </Typography>
             )
           : null}
       </div>
@@ -88,10 +84,10 @@ export const MarketStats: FC<MarketStatsProps> = ({ market }) => {
         </Typography>
         {volume1dChange
           ? (
-            <Typography className={volume1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
-              {volume1dChange > 0 ? '+' : '-'}
-              {formatPercent(Math.abs(volume1dChange))}
-            </Typography>
+              <Typography className={volume1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
+                {volume1dChange > 0 ? '+' : '-'}
+                {formatPercent(Math.abs(volume1dChange))}
+              </Typography>
             )
           : null}
       </div>
@@ -104,10 +100,10 @@ export const MarketStats: FC<MarketStatsProps> = ({ market }) => {
         </Typography>
         {impliedAPY1dChange
           ? (
-            <Typography className={impliedAPY1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
-              {impliedAPY1dChange > 0 ? '+' : '-'}
-              {formatPercent(Math.abs(impliedAPY1dChange))}
-            </Typography>
+              <Typography className={impliedAPY1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
+                {impliedAPY1dChange > 0 ? '+' : '-'}
+                {formatPercent(Math.abs(impliedAPY1dChange))}
+              </Typography>
             )
           : null}
       </div>
@@ -120,10 +116,10 @@ export const MarketStats: FC<MarketStatsProps> = ({ market }) => {
         </Typography>
         {underlyingAPY1dChange
           ? (
-            <Typography className={underlyingAPY1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
-              {underlyingAPY1dChange > 0 ? '+' : '-'}
-              {formatPercent(Math.abs(underlyingAPY1dChange))}
-            </Typography>
+              <Typography className={underlyingAPY1dChange > 0 ? 'text-green-600 dark:text-green' : 'text-red'} variant="xs" weight={500}>
+                {underlyingAPY1dChange > 0 ? '+' : '-'}
+                {formatPercent(Math.abs(underlyingAPY1dChange))}
+              </Typography>
             )
           : null}
       </div>

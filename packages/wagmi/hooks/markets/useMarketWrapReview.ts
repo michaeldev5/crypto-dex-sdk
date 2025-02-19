@@ -11,10 +11,10 @@ import { encodeFunctionData, zeroAddress } from 'viem'
 import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import { config } from '../../client'
 import type { WagmiTransactionRequest } from '../../types'
-import { useSendTransaction } from '../useSendTransaction'
-import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
 import type { TokenInput, TokenOutput } from './types'
+import { useSendTransaction } from '../useSendTransaction'
 import { SwapType } from './types'
+import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
 
 interface UseMarketWrapReviewParams {
   chainId: number | undefined

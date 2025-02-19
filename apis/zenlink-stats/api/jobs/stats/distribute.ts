@@ -1,5 +1,5 @@
-import { ApiPromise, WsProvider } from '@polkadot/api'
 import type { Address } from '@wagmi/core'
+import { ApiPromise, WsProvider } from '@polkadot/api'
 import { fetchBalance, fetchToken } from '@wagmi/core'
 import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { fetchZLKTokenInfo } from '@crypto-dex-sdk/graph-client'

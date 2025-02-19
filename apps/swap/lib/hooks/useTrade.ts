@@ -1,18 +1,18 @@
 import type { AggregatorTrade, Pair, StableSwap } from '@crypto-dex-sdk/amm'
 import { FACTORY_ADDRESS, Trade, TradeType } from '@crypto-dex-sdk/amm'
 import {
+  isSubstrateNetwork,
   PairState,
   StablePoolState,
-  isSubstrateNetwork,
   useGetStablePools,
   usePairs,
 } from '@crypto-dex-sdk/compat'
 import type { Amount, Type as Currency } from '@crypto-dex-sdk/currency'
 import { useCurrencyCombinations } from '@crypto-dex-sdk/currency'
 import { useDebounce } from '@crypto-dex-sdk/hooks'
-import { useMemo } from 'react'
 import { AMM_ENABLED_NETWORKS } from 'config'
 import { useTokens } from 'lib/state/token-lists'
+import { useMemo } from 'react'
 
 export interface UseTradeOutput {
   trade: Trade | AggregatorTrade | undefined

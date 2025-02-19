@@ -5,8 +5,8 @@ import { useEffect, useMemo } from 'react'
 import type { useBalance as useWagmiBalance } from 'wagmi'
 import { useReadContracts } from 'wagmi'
 import type { Address } from 'viem'
-import { getFarmingContractConfig } from './useFarming'
 import { useBlockNumber } from './useBlockNumber'
+import { getFarmingContractConfig } from './useFarming'
 
 interface UserReward {
   token: string

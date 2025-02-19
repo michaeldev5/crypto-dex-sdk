@@ -15,9 +15,9 @@
     "lint": "TIMING=1 eslint . --fix"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "viem": "2.9.25"
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "viem": "2.22.22"
   },
   "dependencies": {
     "@crypto-dex-sdk/chain": "workspace:*",
@@ -41,13 +41,23 @@
     "@crypto-dex-sdk/format": "workspace:*",
     "@crypto-dex-sdk/math": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "@types/react": "18.2.57",
-    "@types/react-dom": "^18.2.25",
-    "eslint": "^8.57.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "tsup": "^8.0.2",
-    "typescript": "5.4.5"
+    "@lingui/core": "5.2.0",
+    "@lingui/macro": "5.2.0",
+    "@lingui/react": "5.2.0",
+    "@reduxjs/toolkit": "^1.9.7",
+    "@tanstack/react-query": "^5.66.0",
+    "make-plural": "^7.4.0",
+    "react-redux": "^9.2.0",
+    "viem": "2.22.22",
+    "wagmi": "2.14.10",
+    "zod": "^3.24.1",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "eslint": "^9.19.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tsup": "^8.3.6",
+    "typescript": "5.7.3"
   },
   "nextBundleAnalysis": {
     "budget": 460800,

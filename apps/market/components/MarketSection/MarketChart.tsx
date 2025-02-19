@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import { type FC, useCallback, useEffect, useMemo, useState } from 'react'
 import type { EChartsOption } from 'echarts-for-react/lib/types'
 import resolveConfig from 'tailwindcss/resolveConfig'
-import { AppearOnMount, Typography, classNames } from '@crypto-dex-sdk/ui'
+import { Typography, classNames } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
 import ReactECharts from 'echarts-for-react'
 import tailwindConfig from '../../tailwind.config.js'
@@ -44,8 +44,9 @@ export const MarketChart: FC<MarketChartProps> = ({ market, isLoading }) => {
   const [chartPeriod, setChartPeriod] = useState<MarketChartPeriod>(MarketChartPeriod.Week)
 
   useEffect(() => {
-    if (chartType === MarketChartType.APY)
-      setChartPeriod(MarketChartPeriod.Week)
+    if (chartType === MarketChartType.APY) {
+      setChartPeriod(MarketChartPeriod.Month)
+    }
   }, [chartType])
 
   return (
@@ -133,20 +134,20 @@ export const MarketChart: FC<MarketChartProps> = ({ market, isLoading }) => {
       {
         chartType === MarketChartType.APY
           ? (
-            <APYChart
-              chartPeriod={chartPeriod}
-              chartType={chartType}
-              isLoading={isLoading}
-              market={market}
-            />
+              <APYChart
+                chartPeriod={chartPeriod}
+                chartType={chartType}
+                isLoading={isLoading}
+                market={market}
+              />
             )
           : (
-            <LiquidityAndVolumeChart
-              chartPeriod={chartPeriod}
-              chartType={chartType}
-              isLoading={isLoading}
-              market={market}
-            />
+              <LiquidityAndVolumeChart
+                chartPeriod={chartPeriod}
+                chartType={chartType}
+                isLoading={isLoading}
+                market={market}
+              />
             )
       }
 
@@ -220,13 +221,13 @@ function APYChart({ chartPeriod, market }: ChartProps) {
 
           const date = new Date(Number(params[0].name * 1000))
           return `
-            <div class="flex flex-col gap-0.5">
+            <div class="flex flex-col">
               <span class="text-sm text-green font-semibold">Implied APY: ${formatPercent(params[0].value)
-            }</span>
+      }</span>
             <span class="text-sm text-blue font-semibold">Underlying APY: ${formatPercent(params[1].value)
-            }</span>
-              <span class="text-xs text-slate-600 dark:text-slate-400 font-medium">${date instanceof Date && !Number.isNaN(date?.getTime()) ? format(date, 'dd MMM yyyy HH:mm') : ''
-            }</span>
+      }</span>
+              <span class="text-xs text-slate-600 dark:text-slate-400 font-medium mt-1">${date instanceof Date && !Number.isNaN(date?.getTime()) ? format(date, 'dd MMM yyyy HH:mm') : ''
+      }</span>
             </div>
           `
         },
@@ -249,11 +250,14 @@ function APYChart({ chartPeriod, market }: ChartProps) {
       yAxis: {
         type: 'value',
         show: false,
+        scale: true,
       },
       series: [
         {
           name: 'Implied APY',
           type: 'line',
+          showSymbol: false,
+          step: 'end',
           color: tailwind.theme.colors.green[500],
           smooth: true,
           animationEasing: 'elasticOut',
@@ -265,6 +269,8 @@ function APYChart({ chartPeriod, market }: ChartProps) {
         {
           name: 'Underlying APY',
           type: 'line',
+          showSymbol: false,
+          step: 'end',
           color: tailwind.theme.colors.blue[500],
           smooth: true,
           animationEasing: 'elasticOut',
@@ -287,8 +293,8 @@ function APYChart({ chartPeriod, market }: ChartProps) {
   return (
     <>
       {!!market && (
-        <div className="flex flex-col">
-          <div className="flex gap-2">
+        <div className="flex flex-col gap-1">
+          <div className="flex flex-col">
             <Typography className="text-green-500" variant="base" weight={500}>
               <Trans>Implied APY</Trans>:
               {' '}
@@ -306,7 +312,7 @@ function APYChart({ chartPeriod, market }: ChartProps) {
           </div>
           {xData.length && (
             <Typography className="text-slate-500 hoveredItemName" variant="sm">
-              <AppearOnMount>{format(new Date(xData[xData.length - 1] * 1000), 'dd MMM yyyy HH:mm')}</AppearOnMount>
+              {format(new Date(xData[xData.length - 1] * 1000), 'dd MMM yyyy HH:mm')}
             </Typography>
           )}
         </div>
@@ -399,9 +405,9 @@ function LiquidityAndVolumeChart({ chartType, chartPeriod, market }: ChartProps)
           return `
             <div class="flex flex-col gap-0.5">
               <span class="text-sm text-slate-900 dark:text-slate-50 font-semibold">${formatUSD(params[0].value)
-            }</span>
+      }</span>
               <span class="text-xs text-slate-600 dark:text-slate-400 font-medium">${date instanceof Date && !Number.isNaN(date?.getTime()) ? format(date, 'dd MMM yyyy HH:mm') : ''
-            }</span>
+      }</span>
             </div>
           `
         },
@@ -471,7 +477,7 @@ function LiquidityAndVolumeChart({ chartType, chartPeriod, market }: ChartProps)
           </Typography>
           {xData.length && (
             <Typography className="text-slate-500 hoveredItemName" variant="sm">
-              <AppearOnMount>{format(new Date(xData[xData.length - 1] * 1000), 'dd MMM yyyy HH:mm')}</AppearOnMount>
+              {format(new Date(xData[xData.length - 1] * 1000), 'dd MMM yyyy HH:mm')}
             </Typography>
           )}
         </div>

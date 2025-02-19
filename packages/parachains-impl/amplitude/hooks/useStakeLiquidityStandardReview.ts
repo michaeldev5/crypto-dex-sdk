@@ -52,9 +52,9 @@ export const useStakeLiquidityStandardReview: UseStakeLiquidityStandardReview = 
           type: 'burn',
           chainId,
           summary: {
-            pending: t`Staking ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol}`,
-            completed: t`Successfully stake ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol}`,
-            failed: t`Something went wrong when stake ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol}`,
+            pending: t`Staking ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol || 'symbol'}`,
+            completed: t`Successfully stake ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol || 'symbol'}`,
+            failed: t`Something went wrong when stake ${amountToStake?.toSignificant(6)} ${amountToStake?.currency.symbol || 'symbol'}`,
           },
           timestamp: ts,
           groupTimestamp: ts,

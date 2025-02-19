@@ -1,8 +1,7 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { PublicClient } from 'viem'
-
-import { LiquidityProviders } from './LiquidityProvider'
 import { AlgebraBaseProvider } from './AlgebraBase'
+import { LiquidityProviders } from './LiquidityProvider'
 
 export class StellaSwapV3Provider extends AlgebraBaseProvider {
   public constructor(chainId: ParachainId, client: PublicClient) {

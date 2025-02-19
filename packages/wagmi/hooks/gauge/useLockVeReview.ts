@@ -4,13 +4,13 @@ import { useNotifications } from '@crypto-dex-sdk/shared'
 import { type Dispatch, type SetStateAction, useCallback, useMemo } from 'react'
 import { useAccount } from 'wagmi'
 import type { SendTransactionData } from 'wagmi/query'
-import { waitForTransactionReceipt } from 'wagmi/actions'
-import { t } from '@lingui/macro'
-import { encodeFunctionData } from 'viem'
-import { config } from '../../client'
 import type { WagmiTransactionRequest } from '../../types'
-import { useSendTransaction } from '../useSendTransaction'
+import { t } from '@lingui/core/macro'
+import { encodeFunctionData } from 'viem'
+import { waitForTransactionReceipt } from 'wagmi/actions'
 import { votingEscrow } from '../../abis'
+import { config } from '../../client'
+import { useSendTransaction } from '../useSendTransaction'
 import { veContract } from './config'
 
 interface UseLockVeReviewParams {
@@ -76,7 +76,7 @@ export const useLockVeReview: UseLockVeReview = ({
           data: encodeFunctionData({ abi: votingEscrow, functionName: 'increaseLockPosition', args }),
         })
       }
-      catch (e: unknown) { }
+      catch { }
     },
     [address, amount, contractAddress, newExpiry],
   )

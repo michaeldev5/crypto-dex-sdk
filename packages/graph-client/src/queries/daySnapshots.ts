@@ -3,8 +3,8 @@ import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { ZenlinkDayInfoOrderByInput } from '../__generated__/types-and-hooks'
 import type { DaySnapshotsQuery, DaySnapshotsQueryVariables } from '../__generated__/types-and-hooks'
 import type { DaySnapshotsQueryData } from '../types'
-import { LEGACY_CLIENTS } from '../appolo'
 import { wrapResultData } from '.'
+import { LEGACY_CLIENTS } from '../appolo'
 
 const DAY_SNAPSHOTS = gql`
   query daySnapshots(

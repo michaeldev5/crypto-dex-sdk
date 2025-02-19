@@ -1,7 +1,7 @@
 {
   "name": "crypto-dex-sdk",
   "version": "0.1.2",
-  "packageManager": "pnpm@8.6.2",
+  "packageManager": "pnpm@9.7.0",
   "license": "LGPL-2.1-or-later",
   "repository": "https://github.com/michaeldev5/crypto-dex-sdk",
   "engines": {
@@ -36,16 +36,16 @@
   },
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",
-    "@lingui/cli": "^4.10.0",
-    "@types/node": "^20.12.7",
+    "@lingui/cli": "^5.2.0",
+    "@types/node": "^22.13.1",
     "chatgpt": "^5.2.5",
-    "dotenv-cli": "^7.4.1",
-    "eslint": "^8.57.0",
-    "esno": "^4.7.0",
-    "fast-glob": "^3.3.2",
-    "ora": "^8.0.1",
-    "pathe": "^1.1.2",
-    "turbo": "2.0.3",
-    "undici": "^6.3.0"
+    "dotenv-cli": "^8.0.0",
+    "eslint": "^9.19.0",
+    "esno": "^4.8.0",
+    "fast-glob": "^3.3.3",
+    "ora": "^8.2.0",
+    "pathe": "^2.0.2",
+    "turbo": "2.4.0",
+    "undici": "^7.1.1"
   }
 }

@@ -6,8 +6,8 @@ import { formatFullNumber, formatUSD } from '@crypto-dex-sdk/format'
 import { Link } from '@crypto-dex-sdk/ui'
 import { Trans, t } from '@lingui/macro'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
-import { StatsCard } from './StatsCard'
 import { DistributionSection } from './DistributionSection'
+import { StatsCard } from './StatsCard'
 
 export const ZLKStats: FC = () => {
   const { data: stats, isLoading } = useZLKStats()

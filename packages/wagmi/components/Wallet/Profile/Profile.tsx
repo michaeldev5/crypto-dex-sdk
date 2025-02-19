@@ -1,3 +1,4 @@
+import type { FC } from 'react'
 import { Popover } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { ParachainId, chainsChainIdToParachainId } from '@crypto-dex-sdk/chain'
@@ -5,7 +6,6 @@ import { shortenAddress } from '@crypto-dex-sdk/format'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { DEFAULT_INPUT_UNSTYLED, JazzIcon, classNames, useBreakpoint } from '@crypto-dex-sdk/ui'
 import Image from 'next/legacy/image'
-import type { FC } from 'react'
 import { useState } from 'react'
 import ReactDOM from 'react-dom'
 import { useAccount, useEnsAvatar, useEnsName } from 'wagmi'
@@ -70,10 +70,10 @@ export const Profile: FC<ProfileProps> = ({ notifications, clearNotifications })
               >
                 {avatar
                   ? (
-                    <Image alt="ens-avatar" className="rounded-full" height={20} src={avatar} width={20} />
+                      <Image alt="ens-avatar" className="rounded-full" height={20} src={avatar} width={20} />
                     )
                   : (
-                    <JazzIcon address={address} diameter={20} />
+                      <JazzIcon address={address} diameter={20} />
                     )}
                 {isSm ? ensName || shortenAddress(address) : ''}
                 <ChevronDownIcon

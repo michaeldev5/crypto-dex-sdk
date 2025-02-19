@@ -7,14 +7,13 @@ import { filterTokens, tokenComparator, useDebounce, useSortedTokensByQuery } fr
 import type { Fraction } from '@crypto-dex-sdk/math'
 import type { FC, RefObject } from 'react'
 import { useEffect, useMemo, useRef, useState } from 'react'
-
 import type { Address } from 'viem'
 import type { BalanceMap } from '../../hooks/useBalance/types'
 import { useToken } from '../../hooks'
 
 interface RenderProps {
   currencies: Type[]
-  inputRef: RefObject<HTMLInputElement>
+  inputRef: RefObject<HTMLInputElement | null>
   query: string
   onInput: (query: string) => void
   searching: boolean
@@ -45,8 +44,8 @@ export const TokenListFilterByQuery: FC<Props> = ({
   const searching = useRef<boolean>(false)
   const _includeNative
     = includeNative
-    && chainId
-    && (!debouncedQuery || debouncedQuery.toLowerCase().includes(Native.onChain(chainId).symbol.toLowerCase()))
+      && chainId
+      && (!debouncedQuery || debouncedQuery.toLowerCase().includes(Native.onChain(chainId).symbol.toLowerCase()))
 
   useEffect(() => {
     if (query.length > 0)

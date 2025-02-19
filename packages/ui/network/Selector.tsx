@@ -1,6 +1,6 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { chainName } from '@crypto-dex-sdk/chain'
-import type { FC, ReactElement } from 'react'
+import type { FC, JSX, ReactElement } from 'react'
 import { useCallback, useMemo } from 'react'
 
 import { NetworkIcon } from '../icons'

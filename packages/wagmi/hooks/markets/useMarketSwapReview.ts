@@ -1,19 +1,20 @@
 import { type Market, type Trade, TradeType } from '@crypto-dex-sdk/market'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import { type Dispatch, type SetStateAction, useCallback, useMemo } from 'react'
+import { MAX_UINT256, Percent } from '@crypto-dex-sdk/math'
+import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
+import type { Address } from 'viem'
+import type { SendTransactionData } from 'wagmi/query'
+import type { WagmiTransactionRequest } from '../../types'
+import type { ApproxParams, LimitOrderData, TokenInput, TokenOutput } from './types'
+import { t } from '@lingui/core/macro'
+import { encodeFunctionData, zeroAddress } from 'viem'
 import { useAccount } from 'wagmi'
 import { waitForTransactionReceipt } from 'wagmi/actions'
-import type { SendTransactionData } from 'wagmi/query'
-import { t } from '@lingui/macro'
-import { MAX_UINT256, Percent } from '@crypto-dex-sdk/math'
-import type { Address } from 'viem'
-import { encodeFunctionData, zeroAddress } from 'viem'
-import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import { config } from '../../client'
-import type { WagmiTransactionRequest } from '../../types'
 import { useSendTransaction } from '../useSendTransaction'
+import { SwapType } from './types'
 import { getMarketActionRouterContract, useMarketActionRouterContract } from './useMarketActionRouter'
-import { type ApproxParams, type LimitOrderData, SwapType, type TokenInput, type TokenOutput } from './types'
 
 interface UseMarketSwapReviewParams {
   chainId: number | undefined
@@ -56,12 +57,12 @@ export const useMarketSwapReview: UseMarketSwapReview = ({
         txHash: hash,
         promise: waitForTransactionReceipt(config, { hash }),
         summary: {
-          pending: t`Swapping ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol} 
-            for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol}`,
-          completed: t`Successfully swapped ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol}
-            for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol}`,
-          failed: t`Something went wrong when trying to swap ${trade.inputAmount.currency.symbol} 
-            for ${trade.outputAmount.currency.symbol}`,
+          pending: t`Swapping ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol || 'symbol'} 
+            for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol || 'symbol'}`,
+          completed: t`Successfully swapped ${trade.inputAmount.toSignificant(6)} ${trade.inputAmount.currency.symbol || 'symbol'}
+            for ${trade.outputAmount.toSignificant(6)} ${trade.outputAmount.currency.symbol || 'symbol'}`,
+          failed: t`Something went wrong when trying to swap ${trade.inputAmount.currency.symbol || 'symbol'} 
+            for ${trade.outputAmount.currency.symbol || 'symbol'}`,
         },
         timestamp: ts,
         groupTimestamp: ts,

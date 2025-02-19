@@ -10,20 +10,19 @@ import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import {
   AppearOnMount,
   Button,
+  classNames,
   DEFAULT_INPUT_UNSTYLED,
   Dots,
   Input,
   Typography,
   Currency as UICurrency,
   Widget,
-  classNames,
 } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import { Fragment, useCallback, useMemo, useState } from 'react'
 import { usePoolPosition } from 'components'
 import { useRemoveStableSwapLiquidity, useTokensFromStableSwap } from 'lib/hooks'
 import { useTokens } from 'lib/state/token-lists'
-import { Trans, t } from '@lingui/macro'
 
 interface RemoveSectionStableProps {
   pool: StableSwap
@@ -167,6 +166,7 @@ export const RemoveSectionStable: FC<RemoveSectionStableProps> = ({ pool }) => {
               <>
                 <Widget.Header className="!pb-3" title={t`Remove Liquidity`} />
                 <Transition
+                  as="div"
                   className="transition-[max-height] overflow-hidden"
                   enter="duration-300 ease-in-out"
                   enterFrom="transform max-h-0"
@@ -176,7 +176,7 @@ export const RemoveSectionStable: FC<RemoveSectionStableProps> = ({ pool }) => {
                   leaveTo="transform max-h-0"
                   unmount={false}
                 >
-                  <Disclosure.Panel unmount={false}>
+                  <DisclosurePanel unmount={false}>
                     <div className="flex flex-col gap-3 p-3">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center justify-between flex-grow">
@@ -227,6 +227,7 @@ export const RemoveSectionStable: FC<RemoveSectionStableProps> = ({ pool }) => {
                         </AppearOnMount>
                       </div>
                       <Transition
+                        as="div"
                         className="transition-[max-height] overflow-hidden"
                         enter="duration-300 ease-in-out"
                         enterFrom="transform max-h-0"
@@ -284,7 +285,6 @@ export const RemoveSectionStable: FC<RemoveSectionStableProps> = ({ pool }) => {
                           ))}
                         </div>
                       </Transition>
-
                       <Checker.Connected chainId={pool.chainId} fullWidth size="md">
                         <Checker.Custom
                           guard={(
@@ -338,7 +338,7 @@ export const RemoveSectionStable: FC<RemoveSectionStableProps> = ({ pool }) => {
                         </Checker.Custom>
                       </Checker.Connected>
                     </div>
-                  </Disclosure.Panel>
+                  </DisclosurePanel>
                 </Transition>
               </>
             )}

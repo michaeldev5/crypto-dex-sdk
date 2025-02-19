@@ -1,7 +1,7 @@
 import { fetchVotePositions } from '@crypto-dex-sdk/graph-client'
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import { getWeekEndTimestamp } from './misc'
 import type { PoolsData } from './types'
+import { getWeekStartTimestamp } from './misc'
 import { UserVeBalanceList } from './types'
 
 export async function queryVotePositions(timestampTo: number) {
@@ -15,7 +15,7 @@ export async function queryVotePositions(timestampTo: number) {
       poolsData[data.pool] = {}
     if (!poolsData[data.pool][data.user])
       poolsData[data.pool][data.user] = new UserVeBalanceList()
-    poolsData[data.pool][data.user].addSnapshot(data.slope, data.bias, getWeekEndTimestamp(data.timestamp))
+    poolsData[data.pool][data.user].addSnapshot(data.slope, data.bias, getWeekStartTimestamp(data.timestamp))
   }
 
   return poolsData

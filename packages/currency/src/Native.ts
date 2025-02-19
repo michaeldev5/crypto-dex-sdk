@@ -1,6 +1,5 @@
 import CHAIN from '@crypto-dex-sdk/chain'
 import invariant from 'tiny-invariant'
-
 import { WNATIVE } from './constants'
 import { Currency } from './Currency'
 import type { Token } from './Token'

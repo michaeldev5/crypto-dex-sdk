@@ -5,8 +5,7 @@ import { Button, DEFAULT_INPUT_PADDING, DEFAULT_INPUT_UNSTYLED, Dialog, Dots, Ty
 import { useSetCodeReview } from '@crypto-dex-sdk/wagmi'
 import { REFERRALS_ENABLED_NETWORKS } from 'config'
 import { formatBytes32String } from 'ethers/lib/utils.js'
-import type { Dispatch, FC, SetStateAction } from 'react'
-import { useCallback, useMemo, useState } from 'react'
+import { Dispatch, FC, SetStateAction, useCallback, useMemo, useState } from 'react'
 
 interface SetCodeModalProps {
   chainId?: ParachainId
@@ -40,8 +39,8 @@ export const SetCodeModal: FC<SetCodeModalProps> = ({
   })
 
   const isInputOwnedCodes = useMemo(() =>
-    ownedCodes.includes(formatBytes32String(inputCode))
-  , [inputCode, ownedCodes])
+    ownedCodes.includes(formatBytes32String(inputCode)),
+  [inputCode, ownedCodes])
 
   return (
     <Dialog onClose={() => setOpen(false)} open={open}>

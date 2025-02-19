@@ -4,7 +4,6 @@ import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { Market } from '@crypto-dex-sdk/market'
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { useAggregationTrade } from 'lib/hooks'
-import type { FC, ReactNode } from 'react'
 import { createContext, useContext, useMemo } from 'react'
 
 interface TradeContext {

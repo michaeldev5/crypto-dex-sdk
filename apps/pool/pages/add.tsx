@@ -13,11 +13,11 @@ import stringify from 'fast-json-stable-stringify'
 import { useCustomTokens } from '@crypto-dex-sdk/shared'
 import {
   Checker,
+  isSubstrateNetwork,
   PairState,
   PoolFinder,
   PoolFinderType,
   Web3Input,
-  isSubstrateNetwork,
 } from '@crypto-dex-sdk/compat'
 import { AddSectionMyPosition } from 'components/AddSection/AddSectionMyPosition'
 import { isStandardPool } from 'lib/functions'
@@ -34,7 +34,6 @@ import {
   SelectStablePoolWidget,
   SettingsOverlay,
 } from 'components'
-import { Trans, t } from '@lingui/macro'
 
 const LINKS: BreadcrumbLink[] = [
   {
@@ -139,9 +138,9 @@ const AddStandard: FC<AddStandardProps> = ({ chainId, setPool }) => {
               )
             : [PairState.LOADING].includes(poolState)
                 ? (
-                  <div className="h-[20px] flex items-center justify-center">
-                    <Loader width={14} />
-                  </div>
+                    <div className="h-[20px] flex items-center justify-center">
+                      <Loader width={14} />
+                    </div>
                   )
                 : [PairState.EXISTS].includes(poolState)
                     ? (
@@ -152,7 +151,7 @@ const AddStandard: FC<AddStandardProps> = ({ chainId, setPool }) => {
                       )
 
         return (
-          <_AddStandard
+          <AddStandardCore
             chainId={chainId}
             pool={pool}
             poolState={poolState}
@@ -181,7 +180,7 @@ interface AddStandardWidgetProps {
   setPool: (pool: Pool | undefined) => void
 }
 
-const _AddStandard: FC<AddStandardWidgetProps> = ({
+const AddStandardCore: FC<AddStandardWidgetProps> = ({
   chainId,
   pool,
   poolState,

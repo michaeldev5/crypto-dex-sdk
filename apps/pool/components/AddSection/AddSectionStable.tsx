@@ -12,7 +12,6 @@ import type { FC } from 'react'
 import { useCallback, useMemo, useState } from 'react'
 import { useTokens } from 'lib/state/token-lists'
 import { useAddStableSwapLiquidity, useTokensFromStableSwap } from 'lib/hooks'
-import { Trans, t } from '@lingui/macro'
 import { AddSectionReviewModalStable } from './AddSectionReviewModalStable'
 
 export const AddSectionStable: FC<{ pool: StableSwap }> = ({ pool }) => {
@@ -78,6 +77,7 @@ export const AddSectionStable: FC<{ pool: StableSwap }> = ({ pool }) => {
                       )}
                     />
                     <Transition
+                      as="div"
                       className="transition-[max-height] overflow-hidden"
                       enter="duration-300 ease-in-out"
                       enterFrom="transform max-h-0"
@@ -87,7 +87,7 @@ export const AddSectionStable: FC<{ pool: StableSwap }> = ({ pool }) => {
                       leaveTo="transform max-h-0"
                       unmount={false}
                     >
-                      <Disclosure.Panel unmount={false}>
+                      <DisclosurePanel unmount={false}>
                         {!tokens.length && (
                           <div className="flex flex-col p-3 gap-6">
                             <Skeleton.Box className="w-full h-[68px] bg-black/[0.12] dark:bg-white/[0.06]" />
@@ -146,7 +146,7 @@ export const AddSectionStable: FC<{ pool: StableSwap }> = ({ pool }) => {
                             </Checker.Custom>
                           </Checker.Connected>
                         </div>
-                      </Disclosure.Panel>
+                      </DisclosurePanel>
                     </Transition>
                   </>
                 )}

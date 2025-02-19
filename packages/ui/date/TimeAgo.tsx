@@ -1,6 +1,6 @@
 import { useInterval } from '@crypto-dex-sdk/hooks'
-import { formatDistanceToNow } from 'date-fns'
 import type { FC } from 'react'
+import { formatDistanceToNow } from 'date-fns'
 import { useState } from 'react'
 
 export const TimeAgo: FC<{ date: Date }> = ({ date }) => {

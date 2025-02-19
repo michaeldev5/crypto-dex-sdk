@@ -1,11 +1,11 @@
 import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import type { Address, PublicClient } from 'viem'
 import type { Token } from '@crypto-dex-sdk/currency'
 import { BigNumber } from '@ethersproject/bignumber'
 import type { BaseToken } from '@crypto-dex-sdk/amm'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
 import { type IZiOrders, IZiPool, IZiPoolCode, type IZiState, type PoolCode } from '../entities'
 import { closeValues, formatAddress, getNumber } from '../util'
+import type { Address, PublicClient } from 'viem'
 import { izumiStateMulticall } from '../abis'
 import { LiquidityProvider, LiquidityProviders } from './LiquidityProvider'
 
@@ -74,31 +74,29 @@ export class IZumiSwapProvider extends LiquidityProvider {
 
     const poolState = (
       await Promise.all(
-        poolsGroup.map(pools => this.client
-          .multicall({
-            allowFailure: true,
-            contracts: pools.map(
-              pool =>
-                ({
-                  args: [
-                    this.factory[this.chainId] as Address,
-                    pool.token0.address as Address,
-                    pool.token1.address as Address,
-                    pool.swapFee * 1000000,
-                    this.OFFSET,
-                    this.BATCH_SIZE,
-                  ],
-                  address: this.stateMultiCall[this.chainId] as Address,
-                  chainId: chainsParachainIdToChainId[this.chainId],
-                  abi: izumiStateMulticall,
-                  functionName: 'getFullState',
-                } as const),
-            ),
-          })
-          .catch((e) => {
-            console.warn(e.message)
-            return undefined
-          })),
+        poolsGroup.map(pools => this.client.multicall({
+          allowFailure: true,
+          contracts: pools.map(
+            pool =>
+              ({
+                args: [
+                  this.factory[this.chainId] as Address,
+                  pool.token0.address as Address,
+                  pool.token1.address as Address,
+                  pool.swapFee * 1000000,
+                  this.OFFSET,
+                  this.BATCH_SIZE,
+                ],
+                address: this.stateMultiCall[this.chainId] as Address,
+                chainId: chainsParachainIdToChainId[this.chainId],
+                abi: izumiStateMulticall,
+                functionName: 'getFullState',
+              } as const),
+          ),
+        }).catch((e) => {
+          console.warn(e.message)
+          return undefined
+        })),
       )
     ).flat()
 

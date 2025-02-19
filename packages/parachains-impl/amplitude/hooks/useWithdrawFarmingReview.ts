@@ -54,9 +54,9 @@ export const useWithdrawFarmingReview: UseWithdrawFarmingReview = ({
           type: 'burn',
           chainId,
           summary: {
-            pending: t`Unstaking ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol}`,
-            completed: t`Successfully unstaked ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol}`,
-            failed: t`Something went wrong when unstake ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol}`,
+            pending: t`Unstaking ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol || 'symbol'}`,
+            completed: t`Successfully unstaked ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol || 'symbol'}`,
+            failed: t`Something went wrong when unstake ${amountToWithdraw?.toSignificant(6)} ${amountToWithdraw?.currency.symbol || 'symbol'}`,
           },
           timestamp: ts,
           groupTimestamp: ts,

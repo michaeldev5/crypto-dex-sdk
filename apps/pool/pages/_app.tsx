@@ -1,25 +1,20 @@
 import '@crypto-dex-sdk/ui/index.css'
-
 import { App, ToastContainer } from '@crypto-dex-sdk/ui'
 import { config } from '@crypto-dex-sdk/wagmi'
 import type { AppProps } from 'next/app'
-import { Analytics } from '@vercel/analytics/react'
 import type { FC } from 'react'
-import { Provider } from 'react-redux'
-import { WagmiProvider } from 'wagmi'
 import { configureStore } from '@reduxjs/toolkit'
 import { PolkadotApiProvider } from '@crypto-dex-sdk/polkadot'
 import { parachains } from '@crypto-dex-sdk/polkadot-config'
 import { ThemeProvider } from 'next-themes'
 import { DefaultSeo } from 'next-seo'
 import { LanguageProvider, storage, storageMiddleware } from '@crypto-dex-sdk/shared'
-
 import { tokenLists } from 'lib/state/token-lists'
 import { Updaters as TokenListsUpdaters } from 'lib/state/TokenListsUpdaters'
-import { SUPPORTED_CHAIN_IDS } from 'config'
-import { Header } from 'components'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Provider } from 'react-redux'
+import { WagmiProvider } from 'wagmi'
 import SEO from '../next-seo.config.mjs'
+import '@zenlink-interface/ui/index.css'
 
 const store = configureStore({
   // @ts-expect-error ignore

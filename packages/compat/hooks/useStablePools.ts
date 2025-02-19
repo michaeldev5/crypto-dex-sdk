@@ -1,7 +1,6 @@
 import type { StableSwap } from '@crypto-dex-sdk/amm'
 import type { Token } from '@crypto-dex-sdk/currency'
 import { useGetStablePools as useWagmiGetStablePools } from '@crypto-dex-sdk/wagmi'
-// import { useGetStablePools as useBifrostGetStablePools } from '@crypto-dex-sdk/parachains-bifrost'
 import { useGetStablePools as useAmplitudeGetStablePools } from '@crypto-dex-sdk/parachains-amplitude'
 import { useMemo } from 'react'
 import { ParachainId } from '@crypto-dex-sdk/chain'

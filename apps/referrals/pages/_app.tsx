@@ -1,7 +1,5 @@
 import '@crypto-dex-sdk/ui/index.css'
-
 import type { AppProps } from 'next/app'
-import { Analytics } from '@vercel/analytics/react'
 import type { FC } from 'react'
 import { WagmiProvider } from 'wagmi'
 import { config } from '@crypto-dex-sdk/wagmi'
@@ -15,8 +13,8 @@ import { SUPPORTED_CHAIN_IDS } from 'config'
 import { PolkadotApiProvider } from '@crypto-dex-sdk/polkadot'
 import { parachains } from '@crypto-dex-sdk/polkadot-config'
 import { Header } from 'components'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import SEO from '../next-seo.config.mjs'
+import '@zenlink-interface/ui/index.css'
 
 const store = configureStore({
   reducer: {

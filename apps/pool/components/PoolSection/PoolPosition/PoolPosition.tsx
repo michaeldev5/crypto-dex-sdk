@@ -2,7 +2,6 @@ import { formatUSD } from '@crypto-dex-sdk/format'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
 import { Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-
 import { Trans } from '@lingui/macro'
 import { usePoolPosition } from '../../PoolPositionProvider'
 import { PoolPositionDesktop } from './PoolPositionDesktop'

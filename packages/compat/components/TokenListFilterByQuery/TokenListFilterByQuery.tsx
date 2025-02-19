@@ -8,7 +8,7 @@ import type { BalanceMap } from '../../hooks/useBalance/types'
 
 interface RenderProps {
   currencies: Type[]
-  inputRef: RefObject<HTMLInputElement>
+  inputRef: RefObject<HTMLInputElement | null>
   query: string
   onInput: (query: string) => void
   searching: boolean
