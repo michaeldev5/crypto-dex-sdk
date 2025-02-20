@@ -1,6 +1,6 @@
 import type { Type } from './Type'
-import { getAddress, isAddress } from '@ethersproject/address'
 import { addressToZenlinkAssetId, isZenlinkAddress } from '@crypto-dex-sdk/format'
+import { getAddress, isAddress } from '@ethersproject/address'
 import invariant from 'tiny-invariant'
 import { Currency } from './Currency'
 

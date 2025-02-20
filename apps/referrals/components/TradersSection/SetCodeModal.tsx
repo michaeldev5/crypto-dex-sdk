@@ -1,11 +1,12 @@
-import { Trans } from '@lingui/macro'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Dispatch, FC, SetStateAction } from 'react'
 import { Checker } from '@crypto-dex-sdk/compat'
-import { Button, DEFAULT_INPUT_PADDING, DEFAULT_INPUT_UNSTYLED, Dialog, Dots, Typography, classNames } from '@crypto-dex-sdk/ui'
+import { Button, classNames, DEFAULT_INPUT_PADDING, DEFAULT_INPUT_UNSTYLED, Dialog, Dots, Typography } from '@crypto-dex-sdk/ui'
 import { useSetCodeReview } from '@crypto-dex-sdk/wagmi'
+import { Trans } from '@lingui/macro'
 import { REFERRALS_ENABLED_NETWORKS } from 'config'
 import { formatBytes32String } from 'ethers/lib/utils.js'
-import { Dispatch, FC, SetStateAction, useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 
 interface SetCodeModalProps {
   chainId?: ParachainId

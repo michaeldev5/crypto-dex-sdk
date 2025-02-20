@@ -1,8 +1,8 @@
-import { Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { formatDistanceToNow } from 'date-fns'
-import { getMaturityFormatDate } from '@crypto-dex-sdk/market'
 import type { CellProps } from './types'
+import { getMaturityFormatDate } from '@crypto-dex-sdk/market'
+import { Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
+import { formatDistanceToNow } from 'date-fns'
 
 export const PositionMaturityCell: FC<CellProps> = ({ row }) => {
   const { isSm } = useBreakpoint('sm')

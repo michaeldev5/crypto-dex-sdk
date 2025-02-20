@@ -1,5 +1,5 @@
-import { addressToZenlinkAssetId, isZenlinkAddress } from '@crypto-dex-sdk/format'
 import type { PairPrimitivesAssetId } from '../../types'
+import { addressToZenlinkAssetId, isZenlinkAddress } from '@crypto-dex-sdk/format'
 
 export const PAIR_ADDRESSES: Record<string, { address: string, account: string }> = {
   // BNC-KSM

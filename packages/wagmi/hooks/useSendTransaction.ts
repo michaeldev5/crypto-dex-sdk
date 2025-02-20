@@ -1,13 +1,13 @@
-import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Dispatch, SetStateAction } from 'react'
 import type { UseSendTransactionParameters } from 'wagmi'
-import { useEstimateGas, useSendTransaction as useSendTransaction_ } from 'wagmi'
-import { createErrorToast } from '@crypto-dex-sdk/ui'
 import type { SendTransactionErrorType, SendTransactionParameters } from 'wagmi/actions'
 import type { SendTransactionData } from 'wagmi/query'
 import type { WagmiTransactionRequest } from '../types'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
+import { createErrorToast } from '@crypto-dex-sdk/ui'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { TransactionExecutionError, UserRejectedRequestError } from 'viem'
+import { useEstimateGas, useSendTransaction as useSendTransaction_ } from 'wagmi'
 import { useBlockNumber } from './useBlockNumber'
 
 export function useSendTransaction<Args extends UseSendTransactionParameters = UseSendTransactionParameters>({

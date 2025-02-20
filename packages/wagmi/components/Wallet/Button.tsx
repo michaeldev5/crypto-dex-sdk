@@ -1,7 +1,6 @@
-import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline'
 import type { ButtonProps } from '@crypto-dex-sdk/ui'
+import type { ReactNode } from 'react'
 import type { Connector } from 'wagmi'
-import { t } from '@lingui/macro'
 import {
   AppearOnMount,
   CoinbaseWalletIcon,
@@ -18,7 +17,8 @@ import {
   Button as UIButton,
   WalletConnectIcon,
 } from '@crypto-dex-sdk/ui'
-import type { ReactNode } from 'react'
+import { ChevronDoubleDownIcon } from '@heroicons/react/24/outline'
+import { t } from '@lingui/macro'
 import React, { useCallback, useMemo } from 'react'
 import { useAccount, useConnect } from 'wagmi'
 
@@ -121,18 +121,18 @@ export function Button<C extends React.ElementType>({
               <Menu.Items className="z-[1090]">
                 <div>
                   {isMounted
-                  && _connectors.map(connector => (
-                    <Menu.Item
-                      className="flex items-center gap-3 group"
-                      key={connector.id}
-                      onClick={() => _onSelect(connector.id)}
-                    >
-                      <div className="-ml-[6px] group-hover:bg-blue-100 rounded-full group-hover:ring-[5px] group-hover:ring-blue-100">
-                        {Icons[getConnectorName(connector)] && Icons[getConnectorName(connector)]}
-                      </div>{' '}
-                      {getConnectorName(connector)}
-                    </Menu.Item>
-                  ))}
+                    && _connectors.map(connector => (
+                      <Menu.Item
+                        className="flex items-center gap-3 group"
+                        key={connector.id}
+                        onClick={() => _onSelect(connector.id)}
+                      >
+                        <div className="-ml-[6px] group-hover:bg-blue-100 rounded-full group-hover:ring-[5px] group-hover:ring-blue-100">
+                          {Icons[getConnectorName(connector)] && Icons[getConnectorName(connector)]}
+                        </div>{' '}
+                        {getConnectorName(connector)}
+                      </Menu.Item>
+                    ))}
                 </div>
               </Menu.Items>
             </Menu>

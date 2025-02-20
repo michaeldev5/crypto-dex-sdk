@@ -1,10 +1,10 @@
-import { t } from '@lingui/macro'
 import type { Trade } from '@crypto-dex-sdk/amm'
-import { Percent } from '@crypto-dex-sdk/math'
 import type { TransactionRequest } from '@crypto-dex-sdk/polkadot'
+import type { Dispatch, SetStateAction } from 'react'
+import { Percent } from '@crypto-dex-sdk/math'
 import { useAccount, useApi, useBlockNumber, useSendTransaction } from '@crypto-dex-sdk/polkadot'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
-import type { Dispatch, SetStateAction } from 'react'
+import { t } from '@lingui/macro'
 import { useCallback, useMemo } from 'react'
 
 import { SwapRouter } from '../SwapRouter'

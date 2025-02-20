@@ -1,9 +1,9 @@
-import type { ApiPromise } from '@polkadot/api'
-import type { SubmittableExtrinsic } from '@polkadot/api/types'
 import type { Trade } from '@crypto-dex-sdk/amm'
 import type { ZenlinkProtocolPrimitivesAssetId } from '@crypto-dex-sdk/format'
-import { addressToZenlinkAssetId } from '@crypto-dex-sdk/format'
 import type { Percent } from '@crypto-dex-sdk/math'
+import type { ApiPromise } from '@polkadot/api'
+import type { SubmittableExtrinsic } from '@polkadot/api/types'
+import { addressToZenlinkAssetId } from '@crypto-dex-sdk/format'
 
 export interface TradeOptions {
   api: ApiPromise

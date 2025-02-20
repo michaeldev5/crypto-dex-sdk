@@ -1,8 +1,8 @@
 import type { Address } from '@wagmi/core'
+import { chainsParachainIdToChainId, ParachainId } from '@crypto-dex-sdk/chain'
+import { fetchZLKTokenInfo } from '@crypto-dex-sdk/graph-client'
 import { ApiPromise, WsProvider } from '@polkadot/api'
 import { fetchBalance, fetchToken } from '@wagmi/core'
-import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import { fetchZLKTokenInfo } from '@crypto-dex-sdk/graph-client'
 
 import {
   EVM_CHAINS,

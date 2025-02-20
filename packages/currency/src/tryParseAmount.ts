@@ -1,7 +1,7 @@
-import { parseUnits } from '@ethersproject/units'
-import { JSBI } from '@crypto-dex-sdk/math'
-import { Amount } from './Amount'
 import type { Type } from './Type'
+import { JSBI } from '@crypto-dex-sdk/math'
+import { parseUnits } from '@ethersproject/units'
+import { Amount } from './Amount'
 
 // try to parse a user entered amount for a given token
 export function tryParseAmount<T extends Type>(value?: string, currency?: T): Amount<T> | undefined {

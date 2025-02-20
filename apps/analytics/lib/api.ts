@@ -1,5 +1,5 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { DaySnapshot, Pool } from '@crypto-dex-sdk/graph-client'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import {
   daySnapshotsByChainIds,
   marketDaySnapshotsByChainIds,

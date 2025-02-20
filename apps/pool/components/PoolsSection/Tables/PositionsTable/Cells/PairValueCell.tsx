@@ -1,10 +1,10 @@
+import type { FC } from 'react'
+import type { CellProps } from './types'
 import { formatUSD } from '@crypto-dex-sdk/format'
 import { useInViewport } from '@crypto-dex-sdk/hooks'
 import { Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { useRef } from 'react'
 import { PoolPositionProvider } from 'components'
-import { CellProps } from './types'
+import { useRef } from 'react'
 
 export const PairValueCell: FC<CellProps> = ({ row }) => {
   const ref = useRef<HTMLDivElement>(null)

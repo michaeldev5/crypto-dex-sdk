@@ -1,3 +1,4 @@
+import type { Pool } from '@crypto-dex-sdk/graph-client'
 import type { ColumnDef } from '@tanstack/react-table'
 import { Trans } from '@lingui/macro'
 import React from 'react'

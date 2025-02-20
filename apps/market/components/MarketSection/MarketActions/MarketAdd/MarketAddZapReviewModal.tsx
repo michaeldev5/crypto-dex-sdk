@@ -1,13 +1,14 @@
-import { Approve, useAccount } from '@crypto-dex-sdk/compat'
-import type { Market } from '@crypto-dex-sdk/market'
-import { useNotifications } from '@crypto-dex-sdk/shared'
-import { useAddZapReview } from '@crypto-dex-sdk/wagmi'
-import { type FC, type ReactNode, useState } from 'react'
-import { Button, Dialog, Dots } from '@crypto-dex-sdk/ui'
-import { Trans } from '@lingui/macro'
 import type { Type } from '@crypto-dex-sdk/currency'
-import { useTrade } from './TradeProvider'
+import type { Market } from '@crypto-dex-sdk/market'
+import type { FC, ReactNode } from 'react'
+import { Approve, useAccount } from '@crypto-dex-sdk/compat'
+import { useNotifications } from '@crypto-dex-sdk/shared'
+import { Button, Dialog, Dots } from '@crypto-dex-sdk/ui'
+import { useAddZapReview } from '@crypto-dex-sdk/wagmi'
+import { Trans } from '@lingui/macro'
+import { useState } from 'react'
 import { MarketAddZapWidget } from './MarketAddZap'
+import { useTrade } from './TradeProvider'
 
 interface MarketAddZapReviewModalProps {
   market: Market

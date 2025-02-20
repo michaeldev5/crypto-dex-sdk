@@ -1,7 +1,7 @@
-import { BigNumber } from '@ethersproject/bignumber'
 import type { BaseToken, NetworkInfo, SplitMultiRoute } from '@crypto-dex-sdk/amm'
-import { RouteStatus } from '@crypto-dex-sdk/amm'
 import type { BasePool } from '../entities'
+import { RouteStatus } from '@crypto-dex-sdk/amm'
+import { BigNumber } from '@ethersproject/bignumber'
 import { Graph, MetaPool, setTokenId, StablePool } from '../entities'
 
 function isSpecialPool(pool: BasePool): boolean {

@@ -1,7 +1,7 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CellProps } from './types'
 import { formatUSD } from '@crypto-dex-sdk/format'
+import { Typography } from '@crypto-dex-sdk/ui'
 import { useMarketFilters } from 'components'
 
 export const MarketLiquidityCell: FC<CellProps> = ({ row }) => {

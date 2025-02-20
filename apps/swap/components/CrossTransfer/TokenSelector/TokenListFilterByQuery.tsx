@@ -1,7 +1,7 @@
 import type { Token, Type } from '@crypto-dex-sdk/currency'
-import { filterTokens, useDebounce, useSortedTokensByQuery } from '@crypto-dex-sdk/hooks'
 import type { Fraction } from '@crypto-dex-sdk/math'
-import type { FC, RefObject } from 'react'
+import type { FC, JSX, RefObject } from 'react'
+import { filterTokens, useDebounce, useSortedTokensByQuery } from '@crypto-dex-sdk/hooks'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 interface RenderProps {

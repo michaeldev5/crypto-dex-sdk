@@ -1,7 +1,7 @@
 import type { Amount, Token, Type } from '@crypto-dex-sdk/currency'
 import type { Market } from '@crypto-dex-sdk/market'
-import { useAccount } from 'wagmi'
 import { useMemo } from 'react'
+import { useAccount } from 'wagmi'
 import { useBalances } from '../useBalance'
 
 export interface MarketPosition {

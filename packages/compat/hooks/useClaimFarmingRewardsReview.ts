@@ -1,8 +1,8 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import { useClaimFarmingRewardsReview as useWagmiClaimFarmingRewardsReview } from '@crypto-dex-sdk/wagmi'
 import {
   useClaimFarmingRewardsReview as useAmplitudeClaimFarmingRewardsReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
+import { useClaimFarmingRewardsReview as useWagmiClaimFarmingRewardsReview } from '@crypto-dex-sdk/wagmi'
 import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'
 

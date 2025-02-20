@@ -1,9 +1,9 @@
-import type { Amount, Type } from '@zenlink-interface/currency'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { FC } from 'react'
 import type { CheckerButton } from './types'
-import { ZERO } from '@zenlink-interface/math'
-import { useAccount } from '@zenlink-interface/polkadot'
-import { Button } from '@zenlink-interface/ui'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { useAccount } from '@crypto-dex-sdk/polkadot'
+import { Button } from '@crypto-dex-sdk/ui'
 
 import { useMemo } from 'react'
 import { useBalances } from '../../hooks'

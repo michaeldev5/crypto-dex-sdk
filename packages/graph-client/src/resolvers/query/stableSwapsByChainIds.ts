@@ -1,10 +1,11 @@
-import { STABLE_SWAP_FEE_NUMBER, StableSwap } from '@crypto-dex-sdk/amm'
+import type { PoolFarm, StableSwap, StableSwapQueryData, TokenQueryData } from '../../types'
+import { STABLE_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
 import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
 import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'
 import omit from 'lodash.omit'
 import { StableSwapOrderByInput } from '../../__generated__/types-and-hooks'
 import { fetchStableSwaps, fetchTokensByIds } from '../../queries'
-import { POOL_TYPE, PoolFarm, StableSwapQueryData, TokenQueryData } from '../../types'
+import { POOL_TYPE } from '../../types'
 
 export interface QueryStableSwapsByChainIdsArgs {
   chainIds: number[]

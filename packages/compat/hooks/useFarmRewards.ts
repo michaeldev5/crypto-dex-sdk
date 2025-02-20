@@ -1,8 +1,8 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
-import { useFarmsRewards as useWagmiFarmsRewards } from '@crypto-dex-sdk/wagmi'
-import { useFarmsRewards as useAmplitudeFarmsRewards } from '@crypto-dex-sdk/parachains-amplitude'
-import { useMemo } from 'react'
 import type { Address } from 'viem'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { useFarmsRewards as useAmplitudeFarmsRewards } from '@crypto-dex-sdk/parachains-amplitude'
+import { useFarmsRewards as useWagmiFarmsRewards } from '@crypto-dex-sdk/wagmi'
+import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'
 
 interface UserReward {

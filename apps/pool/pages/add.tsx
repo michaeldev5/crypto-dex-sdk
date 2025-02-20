@@ -1,16 +1,9 @@
 import type { Pair } from '@crypto-dex-sdk/amm'
-import { ParachainId, chainShortName } from '@crypto-dex-sdk/chain'
 import type { Type } from '@crypto-dex-sdk/currency'
-import { tryParseAmount } from '@crypto-dex-sdk/currency'
-import type { BreadcrumbLink } from '@crypto-dex-sdk/ui'
-import { AppearOnMount, Button, Dots, Loader, Widget } from '@crypto-dex-sdk/ui'
-import type { FC, ReactNode } from 'react'
-import { useCallback, useEffect, useMemo, useState } from 'react'
-import useSWR, { SWRConfig } from 'swr'
 import type { Pool, StableSwap } from '@crypto-dex-sdk/graph-client'
-import { PlusIcon } from '@heroicons/react/24/outline'
-import stringify from 'fast-json-stable-stringify'
-import { useCustomTokens } from '@crypto-dex-sdk/shared'
+import type { BreadcrumbLink } from '@crypto-dex-sdk/ui'
+import type { FC, ReactNode } from 'react'
+import { chainShortName, ParachainId } from '@crypto-dex-sdk/chain'
 import {
   Checker,
   isSubstrateNetwork,
@@ -19,10 +12,11 @@ import {
   PoolFinderType,
   Web3Input,
 } from '@crypto-dex-sdk/compat'
-import { AddSectionMyPosition } from 'components/AddSection/AddSectionMyPosition'
-import { isStandardPool } from 'lib/functions'
-import { useTokens } from 'lib/state/token-lists'
-import { AMM_ENABLED_NETWORKS } from 'config'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import { useCustomTokens } from '@crypto-dex-sdk/shared'
+import { AppearOnMount, Button, Dots, Loader, Widget } from '@crypto-dex-sdk/ui'
+import { PlusIcon } from '@heroicons/react/24/outline'
+import { t, Trans } from '@lingui/macro'
 import {
   AddSectionReviewModalStandard,
   AddSectionStable,
@@ -34,6 +28,13 @@ import {
   SelectStablePoolWidget,
   SettingsOverlay,
 } from 'components'
+import { AddSectionMyPosition } from 'components/AddSection/AddSectionMyPosition'
+import { AMM_ENABLED_NETWORKS } from 'config'
+import stringify from 'fast-json-stable-stringify'
+import { isStandardPool } from 'lib/functions'
+import { useTokens } from 'lib/state/token-lists'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import useSWR, { SWRConfig } from 'swr'
 
 const LINKS: BreadcrumbLink[] = [
   {

@@ -1,12 +1,12 @@
-import type { FC } from 'react'
-import { ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
-import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
-import { Trans, t } from '@lingui/macro'
 import type { Token } from '@crypto-dex-sdk/currency'
+import type { FC } from 'react'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { useAllCustomTokens } from '@crypto-dex-sdk/shared'
 import { Currency, Overlay, SlideIn, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { TokenSelectorCustomTokenRow } from '@crypto-dex-sdk/wagmi'
+import { ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
+import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { t, Trans } from '@lingui/macro'
 import React, { useMemo, useState } from 'react'
 
 export const CustomTokensOverlay: FC = () => {

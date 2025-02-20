@@ -1,8 +1,8 @@
+import type { ParaChain } from '@crypto-dex-sdk/polkadot-config'
 import type { Account, BaseWallet } from '@polkadot-onboard/core'
 import type { ApiPromise } from '@polkadot/api'
 import type { SubmittableExtrinsicFunction } from '@polkadot/api/promise/types'
 import type { ChainProperties, ChainType } from '@polkadot/types/interfaces'
-import type { ParaChain } from '@crypto-dex-sdk/polkadot-config'
 
 export interface InjectedAccountExt {
   address: string

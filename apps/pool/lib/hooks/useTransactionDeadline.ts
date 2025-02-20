@@ -1,6 +1,6 @@
-import { BigNumber } from '@ethersproject/bignumber'
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { useCurrentBlockTimestamp } from '@crypto-dex-sdk/wagmi'
+import { BigNumber } from '@ethersproject/bignumber'
 import { useMemo } from 'react'
 
 export function useTransactionDeadline(chainId: number, enabled = true): BigNumber | undefined {

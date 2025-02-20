@@ -1,12 +1,12 @@
-import { Disclosure, Transition } from '@headlessui/react'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { FC } from 'react'
 import { PoolFinderType } from '@crypto-dex-sdk/compat'
 import { Tab, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { Widget } from '@crypto-dex-sdk/ui/widget'
-import type { FC } from 'react'
-import React, { memo } from 'react'
+import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
+import { Trans } from '@lingui/macro'
 import { STABLE_SWAP_ENABLED_NETWORKS } from 'config'
-import { Trans } from '@lingui/react'
+import React, { memo } from 'react'
 
 interface SelectPoolTypeWidgetProps {
   selectedNetwork: ParachainId

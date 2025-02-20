@@ -1,8 +1,8 @@
-import { AppearOnMount, Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { Fragment, useState } from 'react'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
+import type { FC } from 'react'
+import { AppearOnMount, Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
+import { Fragment, useState } from 'react'
 import { PoolActionBarPositionDialog } from './PoolActionBarPositionDialog'
 import { PoolActionBarPositionRewards } from './PoolActionBarPositionRewards'
 

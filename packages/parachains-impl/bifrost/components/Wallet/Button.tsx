@@ -1,8 +1,7 @@
-import type { ButtonProps } from '@zenlink-interface/ui'
+import type { ButtonProps } from '@crypto-dex-sdk/ui'
 import type { ReactNode } from 'react'
-import { t } from '@lingui/macro'
-import { connectors, ConnectorSource, useProviderAccounts, useWallets } from '@zenlink-interface/polkadot'
-import { useSettings } from '@zenlink-interface/shared'
+import { connectors, ConnectorSource, useProviderAccounts, useWallets } from '@crypto-dex-sdk/polkadot'
+import { useSettings } from '@crypto-dex-sdk/shared'
 import {
   AppearOnMount,
   Menu,
@@ -11,7 +10,8 @@ import {
   TalismanIcon,
   Button as UIButton,
   WalletConnectIcon,
-} from '@zenlink-interface/ui'
+} from '@crypto-dex-sdk/ui'
+import { t } from '@lingui/macro'
 import { useCallback, useEffect, useState } from 'react'
 
 const Icons: Record<string, ReactNode> = {
@@ -89,19 +89,19 @@ export function Button<C extends React.ElementType>({
               <Menu.Items className="z-[100]">
                 <div>
                   {isMounted
-                  && connectors.map(connector => (
-                    <Menu.Item
-                      className="flex items-center gap-3 group"
-                      key={connector.id}
-                      onClick={() => selectConnector(connector.id)}
-                    >
-                      <div className="-ml-[6px] group-hover:bg-blue-100 rounded-full group-hover:ring-[5px] group-hover:ring-blue-100">
-                        {Icons[connector.name] && Icons[connector.name]}
-                      </div>
-                      {' '}
-                      {connector.name}
-                    </Menu.Item>
-                  ))}
+                    && connectors.map(connector => (
+                      <Menu.Item
+                        className="flex items-center gap-3 group"
+                        key={connector.id}
+                        onClick={() => selectConnector(connector.id)}
+                      >
+                        <div className="-ml-[6px] group-hover:bg-blue-100 rounded-full group-hover:ring-[5px] group-hover:ring-blue-100">
+                          {Icons[connector.name] && Icons[connector.name]}
+                        </div>
+                        {' '}
+                        {connector.name}
+                      </Menu.Item>
+                    ))}
                 </div>
               </Menu.Items>
             </Menu>

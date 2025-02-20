@@ -1,5 +1,5 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { useMemo } from 'react'
 import { farming } from '../abis'
 

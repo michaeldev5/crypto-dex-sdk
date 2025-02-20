@@ -1,8 +1,8 @@
+import type { DaySnapshot, DaySnapshotsQueryData } from '../../types'
 import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
 import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'
-import { fetchDaySnapshots } from '../../queries'
-import type { DaySnapshot, DaySnapshotsQueryData } from '../../types'
 import { ZenlinkDayInfoOrderByInput } from '../../__generated__/types-and-hooks'
+import { fetchDaySnapshots } from '../../queries'
 
 interface QueryDaySnapshotsByChainIdsArgs {
   chainIds: number[]

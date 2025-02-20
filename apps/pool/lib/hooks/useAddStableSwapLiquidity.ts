@@ -1,9 +1,9 @@
 import type { Token } from '@crypto-dex-sdk/currency'
+import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
 import { Amount } from '@crypto-dex-sdk/currency'
 import { ZERO } from '@crypto-dex-sdk/math'
-import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
-import { useMemo } from 'react'
 import { calculateStableSwapTokenAmount } from 'lib/functions'
+import { useMemo } from 'react'
 
 export function useAddStableSwapLiquidity(
   swap: StableSwapWithBase | undefined,

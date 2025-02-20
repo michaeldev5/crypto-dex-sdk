@@ -1,6 +1,6 @@
 import type { BaseToken } from '@crypto-dex-sdk/amm'
-import { BigNumber } from '@ethersproject/bignumber'
 import type { Token } from '@crypto-dex-sdk/currency'
+import { BigNumber } from '@ethersproject/bignumber'
 import { getBigNumber, getNumber } from '../../util'
 import { BasePool } from './BasePool'
 

@@ -1,11 +1,11 @@
 import type { Market, MarketRewardData } from '@crypto-dex-sdk/market'
-import { useEffect, useMemo } from 'react'
-import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
-import { useReadContracts } from 'wagmi'
+import { chainsParachainIdToChainId, ParachainId } from '@crypto-dex-sdk/chain'
 import { JSBI } from '@crypto-dex-sdk/math'
-import { useBlockNumber } from '../useBlockNumber'
+import { useEffect, useMemo } from 'react'
+import { useReadContracts } from 'wagmi'
 import { gaugeController } from '../../abis'
+import { useBlockNumber } from '../useBlockNumber'
 import { REFETCH_BLOCKS } from './constants'
 
 export const gaugeControllerContract: Record<number, Address> = {

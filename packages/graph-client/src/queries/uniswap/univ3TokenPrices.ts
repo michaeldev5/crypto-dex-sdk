@@ -1,6 +1,6 @@
-import { gql } from '@apollo/client'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { UniV3TokenPricesQuery, UniV3TokenPricesQueryVariables } from '../../__generated__/uniswap-v3-types'
+import { gql } from '@apollo/client'
 import { wrapResultData } from '..'
 import { LEGACY_CLIENTS } from '../../appolo'
 

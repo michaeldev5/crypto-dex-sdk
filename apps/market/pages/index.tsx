@@ -1,6 +1,6 @@
+import { Link } from '@crypto-dex-sdk/ui'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
-import { Link } from '@zenlink-interface/ui'
 import { Layout, MarketsFiltersProvider, MarketsSection } from 'components'
 
 function Markets() {

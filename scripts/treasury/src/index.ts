@@ -1,7 +1,8 @@
-import { privateKeyToAccount } from 'viem/accounts'
-import { type Address, createPublicClient, createWalletClient, fallback, http } from 'viem'
-import { moonbeam } from 'viem/chains'
+import type { Address } from 'viem'
 import { ParachainId } from '@crypto-dex-sdk/chain'
+import { createPublicClient, createWalletClient, fallback, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { moonbeam } from 'viem/chains'
 /* eslint-disable no-console */
 import { erc20, market, syBase, treasury } from '../abis'
 import { markets } from './markets'

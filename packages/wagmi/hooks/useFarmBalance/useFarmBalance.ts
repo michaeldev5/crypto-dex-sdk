@@ -1,6 +1,6 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { useBalance as useWagmiBalance } from 'wagmi'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import { useEffect, useMemo } from 'react'
 import { useReadContracts } from 'wagmi'
 import { useBlockNumber } from '../useBlockNumber'

@@ -1,8 +1,8 @@
 import type { FC, ReactElement } from 'react'
-import { Checker as WagmiChecker } from '@crypto-dex-sdk/wagmi'
-import { ParachainId } from '@crypto-dex-sdk/chain'
-import { isEvmNetwork } from '../../config'
 import type { CheckerButton } from './types'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Checker as WagmiChecker } from '@crypto-dex-sdk/wagmi'
+import { isEvmNetwork } from '../../config'
 
 export interface NetworkProps extends CheckerButton {
   chainId: number | undefined

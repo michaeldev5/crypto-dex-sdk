@@ -1,9 +1,10 @@
+import type { PoolFarm, SingleTokenLock, SingleTokenLockQueryData } from '../../types'
 import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
 import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'
 import omit from 'lodash.omit'
 import { SingleTokenLockOrderByInput } from '../../__generated__/types-and-hooks'
 import { fetchSingleTokenLocks } from '../../queries'
-import { POOL_TYPE, PoolFarm, SingleTokenLock, SingleTokenLockQueryData } from '../../types'
+import { POOL_TYPE } from '../../types'
 
 export interface QuerySingleTokenLocksByChainIdsArgs {
   chainIds: number[]

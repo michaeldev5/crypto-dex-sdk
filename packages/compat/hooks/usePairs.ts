@@ -1,9 +1,9 @@
 import type { Pair } from '@crypto-dex-sdk/amm'
 import type { Currency } from '@crypto-dex-sdk/currency'
-import { usePairs as useWagmiPairs } from '@crypto-dex-sdk/wagmi'
-import { usePairs as useAmplitudePairs } from '@crypto-dex-sdk/parachains-amplitude'
-import { useMemo } from 'react'
 import { ParachainId } from '@crypto-dex-sdk/chain'
+import { usePairs as useAmplitudePairs } from '@crypto-dex-sdk/parachains-amplitude'
+import { usePairs as useWagmiPairs } from '@crypto-dex-sdk/wagmi'
+import { useMemo } from 'react'
 import { isEvmNetwork, isSubstrateNetwork } from '../config'
 
 export enum PairState {

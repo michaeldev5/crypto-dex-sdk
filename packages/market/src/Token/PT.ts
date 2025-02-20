@@ -1,8 +1,8 @@
-import { Token } from '@crypto-dex-sdk/currency'
 import type { JSBI } from '@crypto-dex-sdk/math'
-import { isCurrentExpired } from '../utils'
 import type { SYBase } from './SYBase'
 import type { YT } from './YT'
+import { Token } from '@crypto-dex-sdk/currency'
+import { isCurrentExpired } from '../utils'
 
 export class PT extends Token {
   public readonly SY: SYBase

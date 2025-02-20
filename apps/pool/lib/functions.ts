@@ -1,9 +1,9 @@
+import type { PoolFarm } from '@crypto-dex-sdk/graph-client'
+import type { StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
 import { Pair, StableSwap } from '@crypto-dex-sdk/amm'
 import { Amount, Token } from '@crypto-dex-sdk/currency'
-import type { PoolFarm } from '@crypto-dex-sdk/graph-client'
 import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
 import { ZERO } from '@crypto-dex-sdk/math'
-import type { StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
 
 export function isStandardPool(pool: Pair | StableSwap | null): pool is Pair {
   return pool instanceof Pair

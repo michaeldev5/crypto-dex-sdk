@@ -1,9 +1,9 @@
 import type { FC } from 'react'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import { classNames, DEFAULT_INPUT_UNSTYLED, Input, Tab, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
 import { AdjustmentsVerticalIcon, ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
-import { useSettings } from '@crypto-dex-sdk/shared'
-import { DEFAULT_INPUT_UNSTYLED, Input, Tab, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 
 export const SlippageToleranceDisclosure: FC = () => {
   const [{ slippageTolerance, slippageToleranceType }, { updateSlippageTolerance, updateSlippageToleranceType }]

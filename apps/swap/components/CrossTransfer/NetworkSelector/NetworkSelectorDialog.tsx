@@ -1,7 +1,7 @@
 import type { NetworkSelectorProps } from './index'
+import { classNames, Dialog, Input } from '@crypto-dex-sdk/ui'
 import { Popover } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/24/outline'
-import { Dialog, Input, classNames } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
 import React, { useState } from 'react'
 import { CHAIN_META as chains } from '../config/chain'

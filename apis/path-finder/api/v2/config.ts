@@ -1,7 +1,7 @@
+import type { Chain, PublicClient } from 'viem'
 import { EthereumChainId, ParachainId } from '@crypto-dex-sdk/chain'
 import { DataFetcher } from '@crypto-dex-sdk/smart-router'
 import { astar, scroll } from '@crypto-dex-sdk/wagmi-config'
-import type { Chain, PublicClient } from 'viem'
 import { createPublicClient, fallback, http } from 'viem'
 import { base, moonbeam } from 'viem/chains'
 import 'dotenv/config'

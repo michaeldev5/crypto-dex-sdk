@@ -1,12 +1,12 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { Button, Dots } from '@crypto-dex-sdk/ui'
-import type { FC, ReactNode } from 'react'
-import { useMemo, useState } from 'react'
-import { useNotifications } from '@crypto-dex-sdk/shared'
 import type { PairState } from '@crypto-dex-sdk/compat'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { FC, ReactNode } from 'react'
 import { Approve, useAccount, useAddLiquidityStandardReview } from '@crypto-dex-sdk/compat'
-import { Trans, t } from '@lingui/macro'
+import { useNotifications } from '@crypto-dex-sdk/shared'
+import { Button, Dots } from '@crypto-dex-sdk/ui'
+import { t, Trans } from '@lingui/macro'
+import { useMemo, useState } from 'react'
 import { AddSectionReviewModal } from './AddSectionReviewModal'
 
 interface AddSectionReviewModalStandardProps {

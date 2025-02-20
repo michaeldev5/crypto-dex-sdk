@@ -1,6 +1,6 @@
-import { fetchVotePositions } from '@crypto-dex-sdk/graph-client'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { PoolsData } from './types'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { fetchVotePositions } from '@crypto-dex-sdk/graph-client'
 import { getWeekStartTimestamp } from './misc'
 import { UserVeBalanceList } from './types'
 

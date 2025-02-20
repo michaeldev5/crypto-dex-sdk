@@ -1,11 +1,12 @@
-import { Approve, useAccount } from '@crypto-dex-sdk/compat'
 import type { Amount, Token, Type } from '@crypto-dex-sdk/currency'
 import type { Market } from '@crypto-dex-sdk/market'
+import type { FC, ReactNode } from 'react'
+import { Approve, useAccount } from '@crypto-dex-sdk/compat'
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import { Button, Dialog, Dots } from '@crypto-dex-sdk/ui'
 import { useRemoveManualReview } from '@crypto-dex-sdk/wagmi'
-import { type FC, type ReactNode, useState } from 'react'
 import { Trans } from '@lingui/macro'
+import { useState } from 'react'
 import { MarketRemoveManualWidget } from './MarketRemoveManual'
 
 interface MarketRemoveManualModalProps {

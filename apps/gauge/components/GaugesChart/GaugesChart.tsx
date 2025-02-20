@@ -1,7 +1,7 @@
 import type { FC } from 'react'
+import { classNames, Typography } from '@crypto-dex-sdk/ui'
 import { Tab } from '@headlessui/react'
 import { Trans } from '@lingui/macro'
-import { Typography, classNames } from '@crypto-dex-sdk/ui'
 import { ChartMode, useGaugeVotes } from 'components'
 import { TAB_DEFAULT_CLASS, TAB_NOT_SELECTED_CLASS, TAB_SELECTED_CLASS } from 'lib/constants'
 import { useEffect, useState } from 'react'

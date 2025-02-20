@@ -1,10 +1,11 @@
 import type { RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
+import type { Address } from 'viem'
+import type { StablePool } from '../pools'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import invariant from 'tiny-invariant'
-import { Address, encodeAbiParameters, parseAbiParameters } from 'viem'
+import { encodeAbiParameters, parseAbiParameters } from 'viem'
 import { HEXer } from '../../HEXer'
 import { PoolCode } from './PoolCode'
-import { StablePool } from '../pools'
 
 const NATIVE_POOLS = [].map((p: string) => p.toLowerCase())
 

@@ -1,8 +1,9 @@
-import { CogIcon } from '@heroicons/react/24/outline'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { FC } from 'react'
 import { isEvmNetwork } from '@crypto-dex-sdk/compat'
 import { IconButton, Overlay, SlideIn } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
+import { CogIcon } from '@heroicons/react/24/outline'
+import { t } from '@lingui/macro'
 import { useState } from 'react'
 import { AggregatorOverlay } from './AggregatorOverlay'
 

@@ -1,8 +1,8 @@
+import type { NetworkSelectorProps } from './index'
+import { classNames, Input, NetworkIcon } from '@crypto-dex-sdk/ui'
 import { Popover, Transition } from '@headlessui/react'
 import React, { useState } from 'react'
-import { Input, NetworkIcon, classNames } from '@crypto-dex-sdk/ui'
 import { CHAIN_META as chains } from '../config/chain'
-import type { NetworkSelectorProps } from './index'
 
 export function NetworkSelectorMenu<T extends string>({
   selected,

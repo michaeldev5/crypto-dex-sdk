@@ -1,7 +1,8 @@
-import type { FC } from 'react'
-import { Disclosure, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Pair } from '@crypto-dex-sdk/graph-client'
+import type { PoolFarmWithIncentives } from 'lib/hooks'
+import type { FC } from 'react'
+import { Checker, useAccount, useWithdrawFarmingReview } from '@crypto-dex-sdk/compat'
 import { tryParseAmount } from '@crypto-dex-sdk/currency'
 import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
@@ -17,14 +18,13 @@ import {
   Typography,
 } from '@crypto-dex-sdk/ui'
 import { Widget } from '@crypto-dex-sdk/ui/widget'
-import { Fragment, useMemo, useState } from 'react'
-import { Checker, useAccount, useWithdrawFarmingReview } from '@crypto-dex-sdk/compat'
-import type { Pair } from '@crypto-dex-sdk/graph-client'
-import type { PoolFarmWithIncentives } from 'lib/hooks'
-import { useFarmsFromPool, useTokenAmountDollarValues, useUnderlyingTokenBalanceFromPool } from 'lib/hooks'
+import { Disclosure, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Trans } from '@lingui/macro'
-import { incentiveRewardToToken } from 'lib/functions'
 import { usePoolPositionStaked } from 'components/PoolPositionStakedProvider'
+import { incentiveRewardToToken } from 'lib/functions'
+import { useFarmsFromPool, useTokenAmountDollarValues, useUnderlyingTokenBalanceFromPool } from 'lib/hooks'
+import { Fragment, useMemo, useState } from 'react'
 
 interface UnStakeSectionWidgetStandardProps {
   isFarm: boolean

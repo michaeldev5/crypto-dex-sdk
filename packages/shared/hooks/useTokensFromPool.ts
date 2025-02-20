@@ -1,7 +1,7 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Type } from '@crypto-dex-sdk/currency'
-import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
 import type { Pair, Pool, SingleTokenLock, StableSwap } from '@crypto-dex-sdk/graph-client'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
 import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
 import { useMemo } from 'react'
 

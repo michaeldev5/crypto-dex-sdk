@@ -1,12 +1,13 @@
-import { Trans } from '@lingui/macro'
-import { Button, Dialog, Dots } from '@crypto-dex-sdk/ui'
-import type { YtInterestAndRewardsResult } from '@crypto-dex-sdk/wagmi'
-import { useRedeemRewardsReview } from '@crypto-dex-sdk/wagmi'
-import { type FC, type ReactNode, useMemo, useState } from 'react'
-import type { Market } from '@crypto-dex-sdk/market'
 import type { Amount, Token } from '@crypto-dex-sdk/currency'
-import { YtInterestAndRewards } from './YtInterestAndRewards'
+import type { Market } from '@crypto-dex-sdk/market'
+import type { YtInterestAndRewardsResult } from '@crypto-dex-sdk/wagmi'
+import type { FC, ReactNode } from 'react'
+import { Button, Dialog, Dots } from '@crypto-dex-sdk/ui'
+import { useRedeemRewardsReview } from '@crypto-dex-sdk/wagmi'
+import { Trans } from '@lingui/macro'
+import { useMemo, useState } from 'react'
 import { MarketLPRewards } from './MarketLPRewards'
+import { YtInterestAndRewards } from './YtInterestAndRewards'
 
 interface MarketRewardsReviewModalProps {
   chainId: number

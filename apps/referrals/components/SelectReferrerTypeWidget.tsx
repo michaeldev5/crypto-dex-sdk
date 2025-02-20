@@ -1,8 +1,8 @@
-import { Tab, Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { memo } from 'react'
 import type { ReferrerType } from 'pages'
+import type { FC } from 'react'
+import { Tab, Typography } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
+import { memo } from 'react'
 
 interface SelectReferrerTypeWidgetProps {
   referrerType: ReferrerType

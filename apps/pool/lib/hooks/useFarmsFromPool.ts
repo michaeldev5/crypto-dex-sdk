@@ -1,5 +1,5 @@
-import { Token } from '@crypto-dex-sdk/currency'
 import type { Pool, PoolFarm } from '@crypto-dex-sdk/graph-client'
+import { Token } from '@crypto-dex-sdk/currency'
 import { useMemo } from 'react'
 
 export interface Incentive {

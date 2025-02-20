@@ -1,8 +1,8 @@
-import type { PaginationState, SortingState } from '@tanstack/react-table'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
-import { Table, useBreakpoint } from '@crypto-dex-sdk/ui'
+import type { PaginationState, SortingState } from '@tanstack/react-table'
 import type { FC } from 'react'
+import { Table, useBreakpoint } from '@crypto-dex-sdk/ui'
 import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
 import { GenericTable, PAGE_SIZE, usePoolFilters } from 'components'
 import {

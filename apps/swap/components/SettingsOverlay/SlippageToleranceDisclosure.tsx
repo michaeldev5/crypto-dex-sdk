@@ -1,9 +1,9 @@
-import { ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
-import { Trans, t } from '@lingui/macro'
-import { useSettings } from '@crypto-dex-sdk/shared'
-import { DEFAULT_INPUT_UNSTYLED, Input, Tab, Tooltip, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { useSettings } from '@crypto-dex-sdk/shared'
+import { classNames, DEFAULT_INPUT_UNSTYLED, Input, Tab, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
+import { ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
+import { t, Trans } from '@lingui/macro'
 
 export const SlippageToleranceDisclosure: FC = () => {
   const [

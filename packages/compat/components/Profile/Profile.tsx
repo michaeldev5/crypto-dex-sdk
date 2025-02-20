@@ -1,7 +1,7 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
-import { Profile as WagmiProfile } from '@crypto-dex-sdk/wagmi'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { useSettings } from '@crypto-dex-sdk/shared'
+import { Profile as WagmiProfile } from '@crypto-dex-sdk/wagmi'
 import { isEvmNetwork, isSubstrateNetwork } from '../../config'
 
 interface ProfileProps {

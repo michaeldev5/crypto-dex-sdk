@@ -1,9 +1,9 @@
+import type { Currency } from '@crypto-dex-sdk/currency'
 import type { ImageProps } from 'next/legacy/image'
 import type { FC } from 'react'
-import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid'
 import chains, { ParachainId } from '@crypto-dex-sdk/chain'
-import type { Currency } from '@crypto-dex-sdk/currency'
 import { WrappedTokenInfo } from '@crypto-dex-sdk/token-lists'
+import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid'
 import Image from 'next/legacy/image'
 import { useEffect, useMemo, useState } from 'react'
 

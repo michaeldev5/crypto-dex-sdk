@@ -1,9 +1,9 @@
+import type { Token } from './Token'
+import type { Type } from './Type'
 import CHAIN from '@crypto-dex-sdk/chain'
 import invariant from 'tiny-invariant'
 import { WNATIVE } from './constants'
 import { Currency } from './Currency'
-import type { Token } from './Token'
-import type { Type } from './Type'
 
 export class Native extends Currency {
   public readonly isNative = true as const

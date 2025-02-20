@@ -1,11 +1,12 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { PairState } from '@crypto-dex-sdk/wagmi'
 import type { Dispatch, SetStateAction } from 'react'
-import { useMemo } from 'react'
-import { PairState, useAddLiquidityStandardReview as useWagmiAddLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import {
   useAddLiquidityStandardReview as useAmplitudeAddLiquidityStandardReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
+import { useAddLiquidityStandardReview as useWagmiAddLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
+import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'
 
 interface UseAddLiquidityStandardReviewParams {

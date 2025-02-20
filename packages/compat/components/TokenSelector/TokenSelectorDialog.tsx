@@ -1,8 +1,12 @@
 import type { Token, Type } from '@crypto-dex-sdk/currency'
-import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
 import type { Fraction } from '@crypto-dex-sdk/math'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import type { FC } from 'react'
+import type { BalanceMap } from '../../hooks/useBalance/types'
+import type { TokenSelectorProps } from './TokenSelector'
 import chain from '@crypto-dex-sdk/chain'
+import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
+import { uuid } from '@crypto-dex-sdk/math'
+import { COMMON_BASES } from '@crypto-dex-sdk/router-config'
 import {
   classNames,
   Currency,
@@ -16,16 +20,14 @@ import {
   Typography,
   Currency as UICurrency,
 } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { useCallback } from 'react'
-import { XCircleIcon } from '@heroicons/react/24/solid'
+import { TokenSelectorSettingsOverlay } from '@crypto-dex-sdk/wagmi'
 import { AddressZero } from '@ethersproject/constants'
-import { TokenListFilterByQuery, TokenSelectorProps, TokenSelectorSettingsOverlay } from '@crypto-dex-sdk/wagmi'
-import { COMMON_BASES } from '@crypto-dex-sdk/router-config'
-import { Trans, t } from '@lingui/macro'
-import { uuid } from '@crypto-dex-sdk/math'
-import type { BalanceMap } from '../../hooks/useBalance/types'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { XCircleIcon } from '@heroicons/react/24/solid'
+import { t, Trans } from '@lingui/macro'
+import { useCallback } from 'react'
 import { isEvmNetwork } from '../../config'
+import { TokenListFilterByQuery } from '../TokenListFilterByQuery'
 import { TokenSelectorImportRow } from './TokenSelectorImportRow'
 import { TokenSelectorRow } from './TokenSelectorRow'
 

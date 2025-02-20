@@ -1,3 +1,3 @@
-import eslintConfig from '@zenlink-interface/eslint-config/index.mjs'
+import eslintConfig from '@crypto-dex-sdkonfig/index.mjs'
 
 export default eslintConfig

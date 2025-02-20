@@ -1,6 +1,6 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CellProps } from './types'
+import { Typography } from '@crypto-dex-sdk/ui'
 import { CheckBadgeIcon } from '@heroicons/react/24/solid'
 
 export const PositionSizeCell: FC<CellProps> = ({ row }) => {

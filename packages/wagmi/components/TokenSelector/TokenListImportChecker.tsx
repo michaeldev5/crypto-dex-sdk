@@ -1,7 +1,7 @@
+import type { FC, ReactNode } from 'react'
 import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { Token } from '@crypto-dex-sdk/currency'
 import { Dialog } from '@crypto-dex-sdk/ui'
-import type { FC, ReactNode } from 'react'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import { useTokens } from '../../hooks'
 import { TokenSelectorImportRow } from './TokenSelectorImportRow'

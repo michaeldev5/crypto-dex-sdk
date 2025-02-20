@@ -1,6 +1,6 @@
-import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { Switch, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { classNames, Switch, Typography } from '@crypto-dex-sdk/ui'
+import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
 import { useMarketFilters } from 'components/MarketsFiltersProvider'
 import { TableFiltersSearchMarket } from './TableFiltersSearchMarket'

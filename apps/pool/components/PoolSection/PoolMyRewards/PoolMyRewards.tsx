@@ -1,10 +1,10 @@
 import type { Pool } from '@crypto-dex-sdk/graph-client'
-import { Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
-import { useFarmsFromPool } from 'lib/hooks'
 import type { FC } from 'react'
-import { Trans } from '@lingui/macro'
 import { useAverageBlockTime } from '@crypto-dex-sdk/compat'
 import { formatUSD } from '@crypto-dex-sdk/format'
+import { Typography, useBreakpoint } from '@crypto-dex-sdk/ui'
+import { Trans } from '@lingui/macro'
+import { useFarmsFromPool } from 'lib/hooks'
 import { usePoolPositionRewards } from '../../PoolPositionRewardsProvider'
 import { PoolMyRewardsDesktop } from './PoolMyRewardsDesktop'
 

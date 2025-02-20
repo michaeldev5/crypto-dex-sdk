@@ -1,5 +1,5 @@
-import type { BigNumber } from '@ethersproject/bignumber'
 import type { BaseToken } from '@crypto-dex-sdk/amm'
+import type { BigNumber } from '@ethersproject/bignumber'
 import { BasePool } from './BasePool'
 
 export class StandardPool extends BasePool {

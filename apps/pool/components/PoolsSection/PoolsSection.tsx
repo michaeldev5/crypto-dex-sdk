@@ -1,12 +1,12 @@
-import type { FC } from 'react'
-import { useState } from 'react'
-import useSWR from 'swr'
 import type { LiquidityPosition, POOL_TYPE } from '@crypto-dex-sdk/graph-client'
-import { Tab } from '@headlessui/react'
-import { Chip, classNames } from '@crypto-dex-sdk/ui'
+import type { FC } from 'react'
 import { useAccount } from '@crypto-dex-sdk/compat'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { Chip, classNames } from '@crypto-dex-sdk/ui'
+import { Tab } from '@headlessui/react'
 import { Trans } from '@lingui/macro'
+import { useState } from 'react'
+import useSWR from 'swr'
 import { PoolsTable, PositionsTable, TableFilters } from './Tables'
 
 export const PoolsSection: FC = () => {

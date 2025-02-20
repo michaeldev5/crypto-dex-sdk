@@ -1,9 +1,9 @@
-import { Trans, t } from '@lingui/macro'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { Checker } from '@crypto-dex-sdk/compat'
-import { Button, DEFAULT_INPUT_PADDING, DEFAULT_INPUT_UNSTYLED, Dialog, Dots, Typography, classNames } from '@crypto-dex-sdk/ui'
-import { useCodeCheck, useGenerateCodeReview } from '@crypto-dex-sdk/wagmi'
 import type { Dispatch, FC, SetStateAction } from 'react'
+import { Checker } from '@crypto-dex-sdk/compat'
+import { Button, classNames, DEFAULT_INPUT_PADDING, DEFAULT_INPUT_UNSTYLED, Dialog, Dots, Typography } from '@crypto-dex-sdk/ui'
+import { useCodeCheck, useGenerateCodeReview } from '@crypto-dex-sdk/wagmi'
+import { t, Trans } from '@lingui/macro'
 import { REFERRALS_ENABLED_NETWORKS } from 'config'
 import { useCallback, useState } from 'react'
 

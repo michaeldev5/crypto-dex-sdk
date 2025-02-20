@@ -1,7 +1,7 @@
 import type { RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
 import type { UniV3Pool } from '../pools/UniV3Pool'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import invariant from 'tiny-invariant'
 import { encodeAbiParameters, parseAbiParameters } from 'viem'
 import { HEXer } from '../../HEXer'

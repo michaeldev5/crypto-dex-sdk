@@ -1,6 +1,6 @@
+import type { Token } from '@crypto-dex-sdk/currency'
 import { getCreate2Address } from '@ethersproject/address'
 import { keccak256, pack } from '@ethersproject/solidity'
-import type { Token } from '@crypto-dex-sdk/currency'
 import { INIT_CODE_HASH } from './constants'
 
 export function computePairAddress({

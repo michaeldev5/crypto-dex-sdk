@@ -1,6 +1,6 @@
+import type { Market } from '../Market'
 import { JSBI } from '@crypto-dex-sdk/math'
 import { addWeeks, format, getUnixTime, startOfWeek } from 'date-fns'
-import { Market } from '../Market'
 
 export function isExpired(expiry: number, currentTime: number): boolean {
   return expiry <= currentTime

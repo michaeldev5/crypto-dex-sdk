@@ -1,7 +1,8 @@
+import type { PoolFarm, SingleTokenLock, SingleTokenLockQueryData } from '../../types'
 import { chainName, chainShortNameToChainId } from '@crypto-dex-sdk/chain'
 import omit from 'lodash.omit'
 import { fetchSingleTokenLockById } from '../../queries'
-import { POOL_TYPE, PoolFarm, SingleTokenLock, SingleTokenLockQueryData } from '../../types'
+import { POOL_TYPE } from '../../types'
 
 export async function singleTokenLockById(id: string): Promise<SingleTokenLock | undefined> {
   const [chainShortName, address] = id.split(':') as [string, string]

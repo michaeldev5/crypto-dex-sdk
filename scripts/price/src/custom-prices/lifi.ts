@@ -1,5 +1,5 @@
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import type { TokenPrice } from 'src/types'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 
 export async function fetchTokenPricesFromLifiApi(chainId: number) {
   const ethereumChainId = chainsParachainIdToChainId[chainId]

@@ -1,6 +1,7 @@
 import type { Amount, Currency } from '@crypto-dex-sdk/currency'
+import type { JSBI } from '@crypto-dex-sdk/math'
 import { Token } from '@crypto-dex-sdk/currency'
-import { type JSBI, ZERO } from '@crypto-dex-sdk/math'
+import { ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 
 export abstract class SYBase extends Token {

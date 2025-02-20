@@ -1,5 +1,5 @@
-import { classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { classNames } from '@crypto-dex-sdk/ui'
 import React from 'react'
 
 export interface DefaultButtonProps {

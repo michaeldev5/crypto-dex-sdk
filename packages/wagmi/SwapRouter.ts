@@ -1,9 +1,9 @@
-import type { Percent } from '@crypto-dex-sdk/math'
-import { AddressZero } from '@ethersproject/constants'
-import { Trade } from '@crypto-dex-sdk/amm'
 import type { AggregatorTrade } from '@crypto-dex-sdk/amm'
-import type { Address } from 'viem'
+import type { Percent } from '@crypto-dex-sdk/math'
 import type { PermitSingle } from '@uniswap/permit2-sdk'
+import type { Address } from 'viem'
+import { Trade } from '@crypto-dex-sdk/amm'
+import { AddressZero } from '@ethersproject/constants'
 import { encodeAbiParameters, parseAbiParameters } from 'viem'
 
 export interface TradeOptions {

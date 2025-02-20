@@ -1,24 +1,23 @@
-import '@crypto-dex-sdk/ui/index.css'
-
-import { App, ToastContainer } from '@crypto-dex-sdk/ui'
-import { config } from '@crypto-dex-sdk/wagmi'
 import type { AppProps } from 'next/app'
+
 import type { FC } from 'react'
-import { configureStore } from '@reduxjs/toolkit'
-import { ThemeProvider } from 'next-themes'
 import { PolkadotApiProvider } from '@crypto-dex-sdk/polkadot'
 import { parachains } from '@crypto-dex-sdk/polkadot-config'
-import { DefaultSeo } from 'next-seo'
-import { Header } from 'components'
 import { LanguageProvider, storage, storageMiddleware } from '@crypto-dex-sdk/shared'
+import { App, ToastContainer } from '@crypto-dex-sdk/ui'
+import { config } from '@crypto-dex-sdk/wagmi'
+import { configureStore } from '@reduxjs/toolkit'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Analytics } from '@vercel/analytics/react'
+import { Header } from 'components'
 import { SUPPORTED_CHAIN_IDS } from 'config'
+import { DefaultSeo } from 'next-seo'
+import { ThemeProvider } from 'next-themes'
 import { Provider } from 'react-redux'
-
 import { WagmiProvider } from 'wagmi'
+
 import SEO from '../next-seo.config.mjs'
-import '@zenlink-interface/ui/index.css'
+import '@crypto-dex-sdk/ui/index.css'
 
 const store = configureStore({
   reducer: {

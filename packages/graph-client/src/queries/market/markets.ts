@@ -1,4 +1,3 @@
-import { gql } from '@apollo/client'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type {
   MarketByIdQuery,
@@ -8,6 +7,7 @@ import type {
   MarketsQueryVariables,
 } from '../../__generated__/market-types'
 import type { MarketQueryData } from '../../types'
+import { gql } from '@apollo/client'
 import { wrapResultData } from '..'
 import { MarketDayDataOrderByInput, MarketHourDataOrderByInput } from '../../__generated__/market-types'
 import { MARKET_CLIENTS } from '../../appolo'

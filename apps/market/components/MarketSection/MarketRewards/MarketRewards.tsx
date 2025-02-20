@@ -1,11 +1,11 @@
-import { Trans } from '@lingui/macro'
 import type { Market } from '@crypto-dex-sdk/market'
+import type { FC } from 'react'
 import { Button, Dots, Typography } from '@crypto-dex-sdk/ui'
 import { useMarketRewards, useYtInterestAndRewards } from '@crypto-dex-sdk/wagmi'
-import type { FC } from 'react'
-import { YtInterestAndRewards } from './YtInterestAndRewards'
-import { MarketRewardsReviewModal } from './MarketRewardsReviewModal'
+import { Trans } from '@lingui/macro'
 import { MarketLPRewards } from './MarketLPRewards'
+import { MarketRewardsReviewModal } from './MarketRewardsReviewModal'
+import { YtInterestAndRewards } from './YtInterestAndRewards'
 
 interface MarketRewardsProps {
   market: Market

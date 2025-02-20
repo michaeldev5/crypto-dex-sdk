@@ -1,3 +1,4 @@
+import type { Pair, PairQueryData, PoolFarm } from '../../types'
 import { STANDARD_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
 import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
 import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'

@@ -5,11 +5,11 @@ import type {
   RouteLeg,
   SplitMultiRoute,
 } from '@crypto-dex-sdk/amm'
-import { PoolType, RouteStatus } from '@crypto-dex-sdk/amm'
-import { ASSERT, DEBUG, getBigNumber } from '../util'
 import type { BasePool } from './pools'
+import { PoolType, RouteStatus } from '@crypto-dex-sdk/amm'
 import { BigNumber } from '@ethersproject/bignumber'
 import invariant from 'tiny-invariant'
+import { ASSERT, DEBUG, getBigNumber } from '../util'
 import { Edge } from './Edge'
 import {
   DodoV2Pool,

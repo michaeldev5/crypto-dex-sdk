@@ -1,8 +1,9 @@
-import { Pair, STANDARD_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
+import type { Pair, PairQueryData, PoolFarm } from '../../types'
+import { STANDARD_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
 import { chainName, chainShortNameToChainId } from '@crypto-dex-sdk/chain'
 import omit from 'lodash.omit'
 import { fetchPairById } from '../../queries'
-import { PairQueryData, POOL_TYPE, PoolFarm } from '../../types'
+import { POOL_TYPE } from '../../types'
 
 export async function pairById(id: string): Promise<Pair | undefined> {
   const [chainShortName, address] = id.split(':') as [string, string]

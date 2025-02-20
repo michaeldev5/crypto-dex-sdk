@@ -1,6 +1,7 @@
+import type { FC } from 'react'
 import { formatUSD } from '@crypto-dex-sdk/format'
 import { Currency, Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
+import { Trans } from '@lingui/macro'
 import React from 'react'
 import { usePoolPositionStaked } from '../../PoolPositionStakedProvider'
 

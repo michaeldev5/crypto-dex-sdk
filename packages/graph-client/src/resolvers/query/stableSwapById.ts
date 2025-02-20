@@ -1,8 +1,9 @@
-import { STABLE_SWAP_FEE_NUMBER, StableSwap } from '@crypto-dex-sdk/amm'
+import type { PoolFarm, StableSwap, StableSwapQueryData, TokenQueryData } from '../../types'
+import { STABLE_SWAP_FEE_NUMBER } from '@crypto-dex-sdk/amm'
 import { chainName, chainShortNameToChainId } from '@crypto-dex-sdk/chain'
 import omit from 'lodash.omit'
 import { fetchStableSwapById, fetchTokensByIds } from '../../queries'
-import { POOL_TYPE, PoolFarm, StableSwapQueryData, TokenQueryData } from '../../types'
+import { POOL_TYPE } from '../../types'
 
 export async function stableSwapById(id: string): Promise<StableSwap | undefined> {
   const [chainShortName, address] = id.split(':') as [string, string]

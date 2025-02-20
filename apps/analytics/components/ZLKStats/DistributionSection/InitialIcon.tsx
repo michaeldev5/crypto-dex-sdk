@@ -1,5 +1,5 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { Typography } from '@crypto-dex-sdk/ui'
 import React from 'react'
 
 function Icon({ fill = '#6BDF9E', ...other }: React.ComponentProps<'svg'>) {

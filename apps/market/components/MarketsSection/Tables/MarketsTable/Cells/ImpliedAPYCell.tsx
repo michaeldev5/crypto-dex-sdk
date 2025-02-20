@@ -1,8 +1,8 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { useMarketFilters } from 'components/MarketsFiltersProvider'
-import { formatPercent } from '@crypto-dex-sdk/format'
 import type { CellProps } from './types'
+import { formatPercent } from '@crypto-dex-sdk/format'
+import { Typography } from '@crypto-dex-sdk/ui'
+import { useMarketFilters } from 'components/MarketsFiltersProvider'
 
 export const ImpliedAPYCell: FC<CellProps> = ({ row }) => {
   const { marketsGraphDataMap, isGraphDataLoading } = useMarketFilters()

@@ -1,16 +1,16 @@
+import type { NotificationData } from '@crypto-dex-sdk/ui'
 import type { SubmittableExtrinsic } from '@polkadot/api/types'
 import type { ExtrinsicStatus } from '@polkadot/types/interfaces'
-import type { NotificationData } from '@crypto-dex-sdk/ui'
+import type { Dispatch, SetStateAction } from 'react'
+import type { Account } from './useAccounts'
 import {
   createErrorToast,
   createFailedToast,
   createSuccessToast,
   toast,
 } from '@crypto-dex-sdk/ui'
-import type { Dispatch, SetStateAction } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import { useApi } from './useApi'
-import { Account } from '@polkadot-onboard/core'
 
 export interface TransactionRequest {
   extrinsic?: SubmittableExtrinsic<'promise'>[] | null

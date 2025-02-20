@@ -1,14 +1,14 @@
-import type { FC } from 'react'
-import { useCallback, useMemo, useState } from 'react'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { FC } from 'react'
 import chains, { chainsChainIdToParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import { Popover } from '@headlessui/react'
-import { DEFAULT_INPUT_UNSTYLED, NetworkIcon, Typography, classNames } from '@crypto-dex-sdk/ui'
 import { useSettings } from '@crypto-dex-sdk/shared'
-import { useAccount, useConnectorClient, useSwitchChain } from 'wagmi'
+import { classNames, DEFAULT_INPUT_UNSTYLED, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
 import { useWalletState } from '@crypto-dex-sdk/wagmi'
-import { SUPPORTED_CHAIN_IDS, isEvmNetwork } from '../../config'
+import { Popover } from '@headlessui/react'
+import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
+import { useCallback, useMemo, useState } from 'react'
+import { useAccount, useConnectorClient, useSwitchChain } from 'wagmi'
+import { isEvmNetwork, SUPPORTED_CHAIN_IDS } from '../../config'
 
 interface NetworkSelectorProps {
   supportedNetworks?: ParachainId[]

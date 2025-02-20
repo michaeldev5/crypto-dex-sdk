@@ -1,7 +1,7 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
 import type { useReadContracts } from 'wagmi'
+import { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
 import { useEffect, useMemo } from 'react'
 import { stringToHex, zeroAddress } from 'viem'
 import { useReadContract } from 'wagmi'

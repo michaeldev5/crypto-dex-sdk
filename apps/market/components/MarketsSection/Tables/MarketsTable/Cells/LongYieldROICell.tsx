@@ -1,7 +1,7 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CellProps } from './types'
 import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
+import { Typography } from '@crypto-dex-sdk/ui'
 import { useMarketFilters } from 'components'
 
 export const LongYieldROICell: FC<CellProps> = ({ row }) => {

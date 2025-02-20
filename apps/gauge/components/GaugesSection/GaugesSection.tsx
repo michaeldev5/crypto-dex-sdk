@@ -1,7 +1,7 @@
 import type { FC } from 'react'
-import { Trans } from '@lingui/macro'
 import { Button, Dots, Typography } from '@crypto-dex-sdk/ui'
-import { VoteMode, useGaugeVotes } from 'components'
+import { Trans } from '@lingui/macro'
+import { useGaugeVotes, VoteMode } from 'components'
 
 import { GaugesTable } from './Tables'
 

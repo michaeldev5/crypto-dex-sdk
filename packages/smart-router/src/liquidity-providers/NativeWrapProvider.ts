@@ -1,8 +1,8 @@
 import type { BaseToken } from '@crypto-dex-sdk/amm'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { Native, WNATIVE, WNATIVE_ADDRESS } from '@crypto-dex-sdk/currency'
 import type { PublicClient } from 'viem'
 import type { PoolCode } from '../entities'
+import { Native, WNATIVE, WNATIVE_ADDRESS } from '@crypto-dex-sdk/currency'
 import { NativeWrapPoolCode, NatvieWrapPool } from '../entities'
 import { LiquidityProvider, LiquidityProviders } from './LiquidityProvider'
 

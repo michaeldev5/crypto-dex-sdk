@@ -1,8 +1,8 @@
 import type { FC } from 'react'
+import type { CellProps } from './types'
+import { formatUSD } from '@crypto-dex-sdk/format'
 import { Typography } from '@crypto-dex-sdk/ui'
 import { useMarketFilters } from 'components'
-import { formatUSD } from '@crypto-dex-sdk/format'
-import type { CellProps } from './types'
 
 export const PositionYtBalanceCell: FC<CellProps> = ({ row }) => {
   const { marketsGraphDataMap } = useMarketFilters()

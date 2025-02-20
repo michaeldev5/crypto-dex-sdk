@@ -1,16 +1,19 @@
-import { gql } from '@apollo/client'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { LEGACY_CLIENTS } from '../appolo'
+import type {
+  UserPoolsQuery,
+  UserPoolsQueryVariables } from '../__generated__/types-and-hooks'
 import type {
   PairLiquidityPositionQueryData,
   StableSwapLiquidityPositionQueryData,
   StakePositionQueryData,
 } from '../types'
+import { gql } from '@apollo/client'
 import { wrapResultData } from '.'
 import {
   PairDayDataOrderByInput,
   StableSwapDayDataOrderByInput,
 } from '../__generated__/types-and-hooks'
+import { LEGACY_CLIENTS } from '../appolo'
 import { encodeChainAddress } from '../utils'
 
 const USER_POOLS_FETCH = gql`

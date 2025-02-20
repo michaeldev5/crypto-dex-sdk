@@ -1,12 +1,12 @@
-import { GenericTable, useBreakpoint } from '@crypto-dex-sdk/ui'
+import type { LiquidityPosition, POOL_TYPE } from '@crypto-dex-sdk/graph-client'
 import type { SortingState } from '@tanstack/react-table'
 import type { FC } from 'react'
+import { useAccount } from '@crypto-dex-sdk/compat'
+import { GenericTable, useBreakpoint } from '@crypto-dex-sdk/ui'
 import { getCoreRowModel, getSortedRowModel, useReactTable } from '@tanstack/react-table'
 import { usePoolFilters } from 'components/PoolsFiltersProvider'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import useSWR from 'swr'
-import type { LiquidityPosition, POOL_TYPE } from '@crypto-dex-sdk/graph-client'
-import { useAccount } from '@crypto-dex-sdk/compat'
 import { APR_COLUMN, NAME_COLUMN, NETWORK_COLUMN, VALUE_COLUMN } from './Cells/columns'
 
 const COLUMNS = [NETWORK_COLUMN, NAME_COLUMN, VALUE_COLUMN, APR_COLUMN]

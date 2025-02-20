@@ -1,9 +1,9 @@
-import { Trans } from '@lingui/macro'
-import { Network, classNames } from '@crypto-dex-sdk/ui'
-import { PoolTable, TableFilters, ZLKStats, usePoolFilters } from 'components'
-import { SUPPORTED_CHAIN_IDS } from 'config'
 import type { FC } from 'react'
+import { classNames, Network } from '@crypto-dex-sdk/ui'
 import { Tab, TabGroup, TabPanel, TabPanels } from '@headlessui/react'
+import { Trans } from '@lingui/macro'
+import { PoolTable, TableFilters, usePoolFilters, ZLKStats } from 'components'
+import { SUPPORTED_CHAIN_IDS } from 'config'
 
 export const TableSection: FC = () => {
   const { selectedNetworks, setFilters } = usePoolFilters()

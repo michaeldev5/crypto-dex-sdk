@@ -1,6 +1,6 @@
 import type { Token } from '@crypto-dex-sdk/currency'
-import { Amount } from '@crypto-dex-sdk/currency'
 import type { Address } from 'viem'
+import { Amount } from '@crypto-dex-sdk/currency'
 import { useEffect, useMemo } from 'react'
 import { erc20Abi, zeroAddress } from 'viem'
 import { useReadContract } from 'wagmi'

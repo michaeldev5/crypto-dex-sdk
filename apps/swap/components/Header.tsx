@@ -1,9 +1,9 @@
-import { App, AppType } from '@crypto-dex-sdk/ui'
-import { AppSettings, NetworkSelector, Profile, useAccount } from '@crypto-dex-sdk/compat'
 import type { FC } from 'react'
-import React from 'react'
+import { AppSettings, NetworkSelector, Profile, useAccount } from '@crypto-dex-sdk/compat'
 import { useNotifications } from '@crypto-dex-sdk/shared'
+import { App, AppType } from '@crypto-dex-sdk/ui'
 import { SUPPORTED_CHAIN_IDS } from 'config'
+import React from 'react'
 
 export const Header: FC = () => {
   const { address } = useAccount()

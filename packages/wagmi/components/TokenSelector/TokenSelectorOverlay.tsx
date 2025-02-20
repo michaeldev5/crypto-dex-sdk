@@ -1,12 +1,9 @@
-
-import type { BalanceMap } from '../../hooks/useBalance/types'
-import type { TokenSelectorProps } from './TokenSelector'
-import { AddressZero } from '@ethersproject/constants'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
-import { XCircleIcon } from '@heroicons/react/24/solid'
-import chain from '@crypto-dex-sdk/chain'
 import type { Token, Type } from '@crypto-dex-sdk/currency'
 import type { Fraction } from '@crypto-dex-sdk/math'
+import type { FC } from 'react'
+import type { BalanceMap } from '../../hooks/useBalance/types'
+import type { TokenSelectorProps } from './TokenSelector'
+import chain from '@crypto-dex-sdk/chain'
 import {
   classNames,
   Currency,
@@ -19,7 +16,10 @@ import {
   SlideIn,
   Typography,
 } from '@crypto-dex-sdk/ui'
-import { FC, useCallback } from 'react'
+import { AddressZero } from '@ethersproject/constants'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { XCircleIcon } from '@heroicons/react/24/solid'
+import { useCallback } from 'react'
 import { TokenListFilterByQuery } from '../TokenListFilterByQuery'
 import { TokenSelectorImportRow } from './TokenSelectorImportRow'
 import { TokenSelectorRow } from './TokenSelectorRow'

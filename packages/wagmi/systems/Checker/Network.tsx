@@ -1,11 +1,11 @@
-import { Trans } from '@lingui/macro'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { FC, ReactElement } from 'react'
+import type { CheckerButton } from './types'
 import { Chain, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { Button } from '@crypto-dex-sdk/ui'
-import type { FC, ReactElement } from 'react'
+import { Trans } from '@lingui/macro'
 import { useCallback } from 'react'
-import type { CheckerButton } from './types'
 import { useAccount, useSwitchChain } from 'wagmi'
 
 export interface NetworkProps extends CheckerButton {

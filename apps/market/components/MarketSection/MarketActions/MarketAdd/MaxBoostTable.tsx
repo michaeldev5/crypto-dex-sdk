@@ -1,13 +1,14 @@
-import { type FC, useMemo } from 'react'
-import { InformationCircleIcon } from '@heroicons/react/24/outline'
-import { Trans } from '@lingui/macro'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Token } from '@crypto-dex-sdk/currency'
-import { Amount, ZLK } from '@crypto-dex-sdk/currency'
 import type { Market } from '@crypto-dex-sdk/market'
+import type { FC } from 'react'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Amount, ZLK } from '@crypto-dex-sdk/currency'
 import { ZERO } from '@crypto-dex-sdk/math'
 import { Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { useVotingEscrow } from '@crypto-dex-sdk/wagmi'
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
+import { Trans } from '@lingui/macro'
+import { useMemo } from 'react'
 
 interface MaxBoostTableProps {
   market: Market

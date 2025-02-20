@@ -1,11 +1,11 @@
 import type { StableSwap } from '@crypto-dex-sdk/amm'
 import type { Token } from '@crypto-dex-sdk/currency'
-import { useGetStablePools as useWagmiGetStablePools } from '@crypto-dex-sdk/wagmi'
-import { useGetStablePools as useAmplitudeGetStablePools } from '@crypto-dex-sdk/parachains-amplitude'
-import { useMemo } from 'react'
-import { ParachainId } from '@crypto-dex-sdk/chain'
-import { isEvmNetwork } from '../config'
 import type { StableSwapWithBase } from '../types'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { useGetStablePools as useAmplitudeGetStablePools } from '@crypto-dex-sdk/parachains-amplitude'
+import { useGetStablePools as useWagmiGetStablePools } from '@crypto-dex-sdk/wagmi'
+import { useMemo } from 'react'
+import { isEvmNetwork } from '../config'
 
 export enum StablePoolState {
   LOADING,

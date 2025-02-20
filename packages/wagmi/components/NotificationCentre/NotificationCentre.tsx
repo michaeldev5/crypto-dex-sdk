@@ -1,7 +1,7 @@
-import { BellIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { Button, Drawer, IconButton, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CreateNotificationParams, NotificationType } from './types'
+import { Button, Drawer, IconButton, Typography } from '@crypto-dex-sdk/ui'
+import { BellIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
 import { NotificationGroup } from './NotificationGroup'
 

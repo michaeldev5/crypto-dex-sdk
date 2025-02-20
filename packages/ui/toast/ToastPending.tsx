@@ -1,6 +1,6 @@
-import { Chain } from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
 import type { NotificationData } from '.'
+import { Chain } from '@crypto-dex-sdk/chain'
 import { Trans } from '@lingui/react/macro'
 import { Loader } from '..'
 import { ToastButtons } from './ToastButtons'

@@ -1,7 +1,7 @@
-import { formatPercent } from '@crypto-dex-sdk/format'
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CellProps } from './types'
+import { formatPercent } from '@crypto-dex-sdk/format'
+import { Typography } from '@crypto-dex-sdk/ui'
 
 export const PairAPRCell: FC<CellProps> = ({ row }) => {
   return (

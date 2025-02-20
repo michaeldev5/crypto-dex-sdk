@@ -1,11 +1,11 @@
 import type { AggregatorTrade } from '@crypto-dex-sdk/amm'
 import type { Token, Type } from '@crypto-dex-sdk/currency'
-import { Amount } from '@crypto-dex-sdk/currency'
 import type { Market } from '@crypto-dex-sdk/market'
+import type { FC, ReactNode } from 'react'
+import { Amount } from '@crypto-dex-sdk/currency'
 import { ZERO } from '@crypto-dex-sdk/math'
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { getMarketActionRouterContract } from '@crypto-dex-sdk/wagmi'
-import type { FC, ReactNode } from 'react'
 import { useAggregationTrade } from 'lib/hooks'
 import { createContext, useContext, useMemo } from 'react'
 

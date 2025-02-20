@@ -1,8 +1,7 @@
-import { Disclosure, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { useAccount } from '@crypto-dex-sdk/compat'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { FC, ReactNode } from 'react'
+import { useAccount } from '@crypto-dex-sdk/compat'
 import { Native } from '@crypto-dex-sdk/currency'
 import { formatUSD } from '@crypto-dex-sdk/format'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
@@ -17,11 +16,12 @@ import {
   Currency as UICurrency,
 } from '@crypto-dex-sdk/ui'
 import { Widget } from '@crypto-dex-sdk/ui/widget'
-import type { FC, ReactNode } from 'react'
+import { Disclosure, DisclosurePanel, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { t, Trans } from '@lingui/macro'
 import { Fragment, useState } from 'react'
 import { usePoolPosition } from '../PoolPositionProvider'
 import { SettingsOverlay } from '../SettingsOverlay'
-import { Trans } from '@lingui/react'
 
 interface RemoveSectionWidgetStandardProps {
   isFarm: boolean

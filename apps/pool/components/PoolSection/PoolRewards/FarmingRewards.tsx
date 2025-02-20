@@ -1,9 +1,9 @@
-import { formatPercent } from '@crypto-dex-sdk/format'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
-import { Currency, Table, Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { Trans, t } from '@lingui/macro'
 import type { Incentive, PoolFarmWithIncentives } from 'lib/hooks'
+import type { FC } from 'react'
+import { formatPercent } from '@crypto-dex-sdk/format'
+import { Currency, Table, Typography } from '@crypto-dex-sdk/ui'
+import { t, Trans } from '@lingui/macro'
 
 interface FarmingRewardsProps {
   incentives: Incentive[]

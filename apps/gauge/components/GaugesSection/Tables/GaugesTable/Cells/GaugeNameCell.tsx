@@ -1,7 +1,7 @@
-import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CellProps } from './types'
 import { getMaturityFormatDate } from '@crypto-dex-sdk/market'
+import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import { ICON_SIZE } from '../../constants'
 
 export const GaugeNameCell: FC<CellProps> = ({ row }) => {

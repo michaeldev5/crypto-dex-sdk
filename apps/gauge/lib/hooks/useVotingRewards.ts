@@ -1,11 +1,11 @@
-import type { Token } from '@zenlink-interface/currency'
+import type { Token } from '@crypto-dex-sdk/currency'
 import type { Address } from 'viem'
 import type { z } from 'zod'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Amount, DOT } from '@crypto-dex-sdk/currency'
+import { JSBI, ZERO } from '@crypto-dex-sdk/math'
+import { useCheckVotingRewards, votingResultValidator } from '@crypto-dex-sdk/wagmi'
 import { useQuery } from '@tanstack/react-query'
-import { ParachainId } from '@zenlink-interface/chain'
-import { Amount, DOT } from '@zenlink-interface/currency'
-import { JSBI, ZERO } from '@zenlink-interface/math'
-import { useCheckVotingRewards, votingResultValidator } from '@zenlink-interface/wagmi'
 import { useMemo } from 'react'
 
 interface UseVotingRewardsReturn {

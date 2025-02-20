@@ -1,9 +1,9 @@
-import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk'
 import type { Token } from '@crypto-dex-sdk/currency'
-import { BigNumber } from 'ethers'
-import { useReadContract } from 'wagmi'
 import type { Address } from 'viem'
+import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk'
+import { BigNumber } from 'ethers'
 import { useEffect, useMemo } from 'react'
+import { useReadContract } from 'wagmi'
 import { permit2 } from '../abis'
 import { useBlockNumber } from './useBlockNumber'
 

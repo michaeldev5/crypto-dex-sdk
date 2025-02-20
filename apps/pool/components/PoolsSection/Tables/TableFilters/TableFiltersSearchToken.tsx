@@ -1,10 +1,10 @@
 import type { FC } from 'react'
+import { useDebounce } from '@crypto-dex-sdk/hooks'
+import { classNames, DEFAULT_INPUT_UNSTYLED, IconButton } from '@crypto-dex-sdk/ui'
 import { Transition } from '@headlessui/react'
 import { MagnifyingGlassIcon, XCircleIcon } from '@heroicons/react/24/solid'
-import { useDebounce } from '@crypto-dex-sdk/hooks'
-import { DEFAULT_INPUT_UNSTYLED, IconButton, classNames } from '@crypto-dex-sdk/ui'
-import React, { useEffect, useState } from 'react'
 import { t } from '@lingui/macro'
+import React, { useEffect, useState } from 'react'
 
 import { usePoolFilters } from '../../../PoolsFiltersProvider'
 

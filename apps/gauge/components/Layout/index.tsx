@@ -1,5 +1,5 @@
 import type { BreadcrumbLink, MaxWidth } from '@crypto-dex-sdk/ui'
-import { Backdrop, Breadcrumb, Container, classNames } from '@crypto-dex-sdk/ui'
+import { Backdrop, Breadcrumb, classNames, Container } from '@crypto-dex-sdk/ui'
 import React from 'react'
 
 interface Props {

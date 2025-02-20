@@ -1,9 +1,8 @@
 import type { Token, Type } from '@crypto-dex-sdk/currency'
-import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
 import type { Fraction } from '@crypto-dex-sdk/math'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
-import { XCircleIcon } from '@heroicons/react/24/solid'
-import { Trans } from '@lingui/macro'
+import type { FC } from 'react'
+import type { TokenSelectorProps } from './TokenSelector'
+import { useIsSmScreen } from '@crypto-dex-sdk/hooks'
 import {
   classNames,
   Currency,
@@ -15,7 +14,9 @@ import {
   SlideIn,
   Typography,
 } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { XCircleIcon } from '@heroicons/react/24/solid'
+import { Trans } from '@lingui/macro'
 import { useCallback } from 'react'
 import { TokenListFilterByQuery } from './TokenListFilterByQuery'
 import { TokenSelectorRow } from './TokenSelectorRow'

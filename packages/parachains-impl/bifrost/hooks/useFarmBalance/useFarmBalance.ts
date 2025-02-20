@@ -1,8 +1,8 @@
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Type } from '@crypto-dex-sdk/currency'
 import type { QueryableStorageEntry } from '@polkadot/api/types'
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { Type } from '@zenlink-interface/currency'
-import { JSBI } from '@zenlink-interface/math'
-import { useAccount, useApi, useCallMulti } from '@zenlink-interface/polkadot'
+import { JSBI } from '@crypto-dex-sdk/math'
+import { useAccount, useApi, useCallMulti } from '@crypto-dex-sdk/polkadot'
 import { useMemo } from 'react'
 
 export type FarmBalanceMap = Record<string, string>

@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import type { TokenSelectorProps } from './TokenSelector'
-import { CogIcon } from '@heroicons/react/24/outline'
 import { IconButton, Overlay, SlideIn } from '@crypto-dex-sdk/ui'
+import { CogIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react'
 import { TokenSelectorCustomTokensOverlay } from './TokenSelectorCustomTokensOverlay'
 

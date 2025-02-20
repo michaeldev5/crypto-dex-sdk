@@ -1,11 +1,12 @@
-import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import type { Address, PublicClient } from 'viem'
 import type { Token } from '@crypto-dex-sdk/currency'
-import { BigNumber } from '@ethersproject/bignumber'
+import type { Address, PublicClient } from 'viem'
+import type { PoolCode } from '../entities'
+import { chainsParachainIdToChainId, ParachainId } from '@crypto-dex-sdk/chain'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
-import { type PoolCode, SyncPool, SyncPoolCode } from '../entities'
-import { formatAddress } from '../util'
+import { BigNumber } from '@ethersproject/bignumber'
 import { syncswapStateMulticall } from '../abis'
+import { SyncPool, SyncPoolCode } from '../entities'
+import { formatAddress } from '../util'
 import { LiquidityProvider, LiquidityProviders } from './LiquidityProvider'
 
 export class SyncswapProvider extends LiquidityProvider {

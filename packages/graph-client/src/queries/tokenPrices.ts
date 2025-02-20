@@ -1,9 +1,9 @@
-import { gql } from '@apollo/client'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type {
   TokenPricesQuery,
   TokenPricesQueryVariables,
 } from '../__generated__/types-and-hooks'
+import { gql } from '@apollo/client'
 import { wrapResultData } from '.'
 import { LEGACY_CLIENTS } from '../appolo'
 

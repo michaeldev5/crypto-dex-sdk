@@ -1,9 +1,9 @@
-import { Trans } from '@lingui/macro'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { ZERO } from '@crypto-dex-sdk/math'
-import { Button } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CheckerButton } from './types'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { Button } from '@crypto-dex-sdk/ui'
+import { Trans } from '@lingui/macro'
 import { useMemo } from 'react'
 
 import { zeroAddress } from 'viem'

@@ -8,9 +8,9 @@ import {
   stableSwapById,
   stableSwapsByChainIds,
 } from '@crypto-dex-sdk/graph-client'
-import stringify from 'fast-json-stable-stringify'
-import { SUPPORTED_CHAIN_IDS } from 'config'
 import { isPoolEnabledFarms } from '@crypto-dex-sdk/shared'
+import { SUPPORTED_CHAIN_IDS } from 'config'
+import stringify from 'fast-json-stable-stringify'
 
 export interface Pagination {
   pageIndex: number

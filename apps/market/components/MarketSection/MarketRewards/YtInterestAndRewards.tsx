@@ -1,8 +1,9 @@
-import { Trans } from '@lingui/macro'
 import type { Market } from '@crypto-dex-sdk/market'
-import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { YtInterestAndRewardsResult } from '@crypto-dex-sdk/wagmi'
-import { type FC, useMemo } from 'react'
+import type { FC } from 'react'
+import { Currency, Typography } from '@crypto-dex-sdk/ui'
+import { Trans } from '@lingui/macro'
+import { useMemo } from 'react'
 
 interface YtInterestAndRewardsProps {
   isLoading: boolean

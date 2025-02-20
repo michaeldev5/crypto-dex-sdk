@@ -1,10 +1,10 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Token, Type } from '@crypto-dex-sdk/currency'
 import type { Fraction } from '@crypto-dex-sdk/math'
-import type { FC, RefObject } from 'react'
+import type { FC, JSX, RefObject } from 'react'
+import type { BalanceMap } from '../../hooks/useBalance/types'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { TokenListFilterByQuery as WagmiTokenListFilterByQuery } from '@crypto-dex-sdk/wagmi'
 import { isEvmNetwork } from '../../config'
-import type { BalanceMap } from '../../hooks/useBalance/types'
 
 interface RenderProps {
   currencies: Type[]

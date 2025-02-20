@@ -1,6 +1,6 @@
-import { ChevronLeftIcon } from '@heroicons/react/24/solid'
-import { Button, IconButton, Typography } from '@crypto-dex-sdk/ui'
 import type { Dispatch, FC, SetStateAction } from 'react'
+import { Button, IconButton, Typography } from '@crypto-dex-sdk/ui'
+import { ChevronLeftIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
 import { NotificationGroup } from '../../NotificationCentre'
 import { ProfileView } from './Profile'

@@ -1,11 +1,12 @@
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { FC, ReactNode } from 'react'
 import { Price } from '@crypto-dex-sdk/currency'
 import { Dialog, Typography } from '@crypto-dex-sdk/ui'
 import { Icon } from '@crypto-dex-sdk/ui/currency/Icon'
-import type { FC, ReactNode } from 'react'
-import { useMemo } from 'react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { t } from '@lingui/macro'
 import { useTokenAmountDollarValues } from 'lib/hooks'
+import { useMemo } from 'react'
 import { Rate } from '../Rate'
 
 interface SwapReviewModalBaseProps {

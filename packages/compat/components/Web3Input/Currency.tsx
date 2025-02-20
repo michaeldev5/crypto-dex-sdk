@@ -1,6 +1,8 @@
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import type { Type } from '@crypto-dex-sdk/currency'
+import type { FC } from 'react'
+import type { TokenSelectorProps } from '../TokenSelector'
 import { tryParseAmount } from '@crypto-dex-sdk/currency'
+import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { usePrices } from '@crypto-dex-sdk/shared'
 import {
@@ -11,10 +13,9 @@ import {
   Typography,
   Currency as UICurrency,
 } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Trans } from '@lingui/macro'
-import { formatTransactionAmount } from '@crypto-dex-sdk/format'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import { useAccount, useBalance } from '../../hooks'
 import { TokenSelector } from '../TokenSelector'
 

@@ -1,6 +1,5 @@
 import type { PublicClient } from 'viem'
-import { ParachainId } from '@zenlink-interface/chain'
-
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { AlgebraBaseProvider } from './AlgebraBase'
 import { LiquidityProviders } from './LiquidityProvider'
 

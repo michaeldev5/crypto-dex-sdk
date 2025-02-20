@@ -1,5 +1,5 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC, ReactNode } from 'react'
+import { Typography } from '@crypto-dex-sdk/ui'
 import React from 'react'
 
 interface StatsCardProps {

@@ -1,5 +1,18 @@
+import type { NotificationData } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { Address } from 'viem'
+import chains, { chainsChainIdToParachainId, chainsParachainIdToChainId, ParachainId } from '@crypto-dex-sdk/chain'
+import {
+  Badge,
+  classNames,
+  Dots,
+  IconButton,
+  Link,
+  Loader,
+  NetworkIcon,
+  TimeAgo,
+  Typography,
+} from '@crypto-dex-sdk/ui'
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {
@@ -14,19 +27,6 @@ import {
   UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid'
-import chains, { ParachainId, chainsChainIdToParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import type { NotificationData } from '@crypto-dex-sdk/ui'
-import {
-  Badge,
-  classNames,
-  Dots,
-  IconButton,
-  Link,
-  Loader,
-  NetworkIcon,
-  TimeAgo,
-  Typography,
-} from '@crypto-dex-sdk/ui'
 import { useWaitForTransactionReceipt } from 'wagmi'
 
 export const Notification: FC<{ data: string, showExtra?: boolean, hideStatus?: boolean }> = ({
@@ -98,12 +98,12 @@ export const Notification: FC<{ data: string, showExtra?: boolean, hideStatus?: 
           <Badge badgeContent={<NetworkIcon chainId={notification.chainId} height={18} width={18} />}>
             <div className="p-2 bg-slate-200 dark:bg-slate-600 rounded-full h-[36px] w-[36px] flex justify-center items-center">
               {!hideStatus
-              && (status === 'pending'
-                ? <Loader size={18} />
-                : status === 'error'
-                  ? <XMarkIcon className="text-red-400" height={20} width={20} />
-                  : <></>
-              )}
+                && (status === 'pending'
+                  ? <Loader size={18} />
+                  : status === 'error'
+                    ? <XMarkIcon className="text-red-400" height={20} width={20} />
+                    : <></>
+                )}
               {(status === 'success' || notification.summary.info) && notification.type === 'send' && (
                 <ArrowRightIcon height={20} width={20} />
               )}

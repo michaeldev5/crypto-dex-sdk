@@ -1,6 +1,6 @@
-import { useQuery } from '@tanstack/react-query'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { ZLK_ADDRESS } from '@crypto-dex-sdk/currency'
+import { useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
 
 export function useZLKPrice() {

@@ -1,6 +1,6 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CellProps } from './types'
+import { Typography } from '@crypto-dex-sdk/ui'
 
 export const TierCell: FC<CellProps> = ({ row }) => {
   return (

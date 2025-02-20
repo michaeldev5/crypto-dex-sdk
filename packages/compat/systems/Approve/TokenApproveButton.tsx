@@ -1,10 +1,10 @@
 import type { Amount, Currency } from '@crypto-dex-sdk/currency'
-import type { FC } from 'react'
 import type { Permit2Actions } from '@crypto-dex-sdk/wagmi'
-import { Approve as WagmiApprove } from '@crypto-dex-sdk/wagmi'
-import { ParachainId } from '@crypto-dex-sdk/chain'
-import { isEvmNetwork } from '../../config'
+import type { FC } from 'react'
 import type { ApprovalButtonRenderProp, ApproveButton } from './types'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Approve as WagmiApprove } from '@crypto-dex-sdk/wagmi'
+import { isEvmNetwork } from '../../config'
 
 type RenderPropPayload = ApprovalButtonRenderProp
 

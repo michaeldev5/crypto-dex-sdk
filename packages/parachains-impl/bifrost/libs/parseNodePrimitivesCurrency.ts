@@ -1,8 +1,9 @@
-import { type ZenlinkProtocolPrimitivesAssetId, zenlinkAssetIdToAddress } from '@crypto-dex-sdk/format'
-import { ParachainId } from '@crypto-dex-sdk/chain'
+import type { ZenlinkProtocolPrimitivesAssetId } from '@crypto-dex-sdk/format'
 import type { NodePrimitivesCurrency } from '../types'
-import { parseNodePrimitivesCurrency as bifrostParseNodePrimitivesCurrency } from './formats/currency'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { zenlinkAssetIdToAddress } from '@crypto-dex-sdk/format'
 import { pairAddressToAssets } from './constants'
+import { parseNodePrimitivesCurrency as bifrostParseNodePrimitivesCurrency } from './formats/currency'
 
 export const NodeCurrencyId: Record<number, string> = {
   0: 'Native',

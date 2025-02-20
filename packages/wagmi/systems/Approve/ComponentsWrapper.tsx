@@ -1,7 +1,7 @@
-import { Transition } from '@headlessui/react'
-import { classNames } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement } from 'react'
 import type { DefaultButtonProps } from './DefaultButton'
+import { classNames } from '@crypto-dex-sdk/ui'
+import { Transition } from '@headlessui/react'
 
 interface ComponentsWrapperProps {
   className?: string

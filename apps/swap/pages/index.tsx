@@ -1,21 +1,18 @@
-import type { FC } from 'react'
+import type { Type } from '@crypto-dex-sdk/currency'
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import type { FC } from 'react'
 import { TradeType } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import type { Type } from '@crypto-dex-sdk/currency'
-import { DOT, FRAX, KSM, Native, USDC, USDT, tryParseAmount } from '@crypto-dex-sdk/currency'
+import { Checker, isEvmNetwork, TokenListImportChecker } from '@crypto-dex-sdk/compat'
+import { DOT, FRAX, KSM, Native, tryParseAmount, USDC, USDT } from '@crypto-dex-sdk/currency'
+import { isAddress } from '@crypto-dex-sdk/format'
 import { useIsMounted, usePrevious } from '@crypto-dex-sdk/hooks'
-import { Button, Dots, Tab, Widget } from '@crypto-dex-sdk/ui'
-import { WrapType } from '@crypto-dex-sdk/wagmi'
-import { useRouter } from 'next/router'
-import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Percent, ZERO } from '@crypto-dex-sdk/math'
 import { useCustomTokens, useSettings } from '@crypto-dex-sdk/shared'
-import { Checker, TokenListImportChecker, isEvmNetwork } from '@crypto-dex-sdk/compat'
-import { isAddress } from '@crypto-dex-sdk/format'
-import { warningSeverity } from 'lib/functions'
-import { useTokens } from 'lib/state/token-lists'
+import { Button, Dots, Tab, Widget } from '@crypto-dex-sdk/ui'
+import { WrapType } from '@crypto-dex-sdk/wagmi'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { t, Trans } from '@lingui/macro'
 import {
   CurrencyInput,
   Layout,
@@ -28,6 +25,10 @@ import {
   WrapReviewModal,
 } from 'components'
 import { CrossTransfer } from 'components/CrossTransfer'
+import { warningSeverity } from 'lib/functions'
+import { useTokens } from 'lib/state/token-lists'
+import { useRouter } from 'next/router'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 export const getServerSideProps: GetServerSideProps = async ({ query, res }) => {
   res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=59')

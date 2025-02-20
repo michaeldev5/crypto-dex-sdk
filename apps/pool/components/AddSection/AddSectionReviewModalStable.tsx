@@ -1,14 +1,15 @@
-import { PlusIcon } from '@heroicons/react/24/solid'
-import type { StableSwap as GraphStableSwap } from '@crypto-dex-sdk/graph-client'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Amount, Token } from '@crypto-dex-sdk/currency'
+import type { StableSwap as GraphStableSwap } from '@crypto-dex-sdk/graph-client'
 import type { CalculatedStbaleSwapLiquidity, StableSwapWithBase } from '@crypto-dex-sdk/wagmi'
 import type { FC, ReactNode } from 'react'
-import { useMemo, useState } from 'react'
-import { Button, Currency, Dialog, Dots, Typography } from '@crypto-dex-sdk/ui'
-import type { Amount, Token } from '@crypto-dex-sdk/currency'
-import { useNotifications } from '@crypto-dex-sdk/shared'
 import { Approve, useAccount, useAddLiquidityStableReview } from '@crypto-dex-sdk/compat'
+import { useNotifications } from '@crypto-dex-sdk/shared'
+import { Button, Currency, Dialog, Dots, Typography } from '@crypto-dex-sdk/ui'
+import { PlusIcon } from '@heroicons/react/24/solid'
+import { t, Trans } from '@lingui/macro'
 import { useTokenAmountDollarValues } from 'lib/hooks'
+import { useMemo, useState } from 'react'
 
 interface AddSectionReviewModalStableProps {
   swap: StableSwapWithBase | undefined

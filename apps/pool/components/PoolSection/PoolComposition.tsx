@@ -1,8 +1,8 @@
-import { formatUSD } from '@crypto-dex-sdk/format'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
+import type { FC } from 'react'
+import { formatUSD } from '@crypto-dex-sdk/format'
 import { usePrices, useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { AppearOnMount, Currency, Table, Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
 import { Trans } from '@lingui/macro'
 
 interface PoolCompositionProps {

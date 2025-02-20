@@ -1,14 +1,14 @@
-import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import { useEffect, useMemo } from 'react'
 import type { Address } from 'viem'
-import { useAccount, useReadContract } from 'wagmi'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { Amount, ZLK } from '@crypto-dex-sdk/currency'
 import { VotingEscrow } from '@crypto-dex-sdk/market'
 import { JSBI } from '@crypto-dex-sdk/math'
+import { useEffect, useMemo } from 'react'
 import { erc20Abi } from 'viem'
+import { useAccount, useReadContract } from 'wagmi'
 import { votingEscrow } from '../../abis'
 import { useBlockNumber } from '../useBlockNumber'
 import { veContract } from './config'
-import { ZLK } from '@crypto-dex-sdk/currency'
 
 interface UseVotingEscrowReturn {
   isLoading: boolean

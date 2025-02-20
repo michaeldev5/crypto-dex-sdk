@@ -1,6 +1,6 @@
-import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
 import type { CellProps } from './types'
+import { Currency, Typography } from '@crypto-dex-sdk/ui'
 import { ICON_SIZE } from '../../constants'
 
 export const PositionNameCell: FC<CellProps> = ({ row }) => {

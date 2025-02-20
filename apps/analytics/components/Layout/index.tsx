@@ -1,5 +1,5 @@
 import type { MaxWidth } from '@crypto-dex-sdk/ui'
-import { Backdrop, Container, classNames } from '@crypto-dex-sdk/ui'
+import { Backdrop, classNames, Container } from '@crypto-dex-sdk/ui'
 import React from 'react'
 
 interface Props {

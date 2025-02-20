@@ -1,14 +1,14 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Address, PublicClient } from 'viem'
+import type { PoolCode } from '../entities'
+import { StableSwap } from '@crypto-dex-sdk/amm'
 import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { Amount, Token } from '@crypto-dex-sdk/currency'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST } from '@crypto-dex-sdk/router-config'
 import { BigNumber } from '@ethersproject/bignumber'
 import JSBI from 'jsbi'
-import { StableSwap } from '@crypto-dex-sdk/amm'
-import type { Address, PublicClient } from 'viem'
-import type { PoolCode } from '../entities'
-import { MetaPool, MetaPoolCode, StablePool, StablePoolCode } from '../entities'
 import { saddleBase } from '../abis'
+import { MetaPool, MetaPoolCode, StablePool, StablePoolCode } from '../entities'
 import { LiquidityProvider } from './LiquidityProvider'
 
 export abstract class SaddleBaseProvider extends LiquidityProvider {

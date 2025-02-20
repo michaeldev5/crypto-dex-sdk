@@ -32,7 +32,6 @@
     "@crypto-dex-sdk/currency": "workspace:*",
     "@crypto-dex-sdk/format": "workspace:*",
     "@crypto-dex-sdk/math": "workspace:*",
-    "@zenlink-types/bifrost": "1.7.6",
     "@headlessui/react": "2.2.0",
     "@heroicons/react": "2.2.0",
     "@lingui/core": "5.2.0",
@@ -42,7 +41,8 @@
     "@polkadot/api": "^12.3.1",
     "@polkadot/api-augment": "^12.3.1",
     "@polkadot/types": "^12.3.1",
-    "@polkadot/types-codec": "^12.3.1"
+    "@polkadot/types-codec": "^12.3.1",
+    "@zenlink-types/bifrost": "1.7.6"
   },
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",

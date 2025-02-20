@@ -1,14 +1,15 @@
-import { type FC, type ReactNode, useState } from 'react'
+import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { Market } from '@crypto-dex-sdk/market'
+import type { FC, ReactNode } from 'react'
 import { Approve, useAccount } from '@crypto-dex-sdk/compat'
 import { useNotifications } from '@crypto-dex-sdk/shared'
-import { useMarketWrapReview } from '@crypto-dex-sdk/wagmi'
-import type { Market } from '@crypto-dex-sdk/market'
 import { Button, Dialog, Dots, Typography } from '@crypto-dex-sdk/ui'
-import { Trans } from '@lingui/macro'
 import { Icon } from '@crypto-dex-sdk/ui/currency/Icon'
+import { useMarketWrapReview } from '@crypto-dex-sdk/wagmi'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
-import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import { Trans } from '@lingui/macro'
 import { useTokenAmountDollarValues } from 'lib/hooks'
+import { useState } from 'react'
 
 interface MarketWrapReviewModalProps {
   chainId: number

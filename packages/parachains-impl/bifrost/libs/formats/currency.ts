@@ -1,7 +1,7 @@
 import type { ZenlinkProtocolPrimitivesAssetId } from '@crypto-dex-sdk/format'
-import { addressToZenlinkAssetId, zenlinkAssetIdToAddress } from '@crypto-dex-sdk/format'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { NodePrimitivesCurrency } from '../../types'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { addressToZenlinkAssetId, zenlinkAssetIdToAddress } from '@crypto-dex-sdk/format'
 import { pairAddressToAssets } from '../constants'
 import { parseNodePrimitivesCurrency as amplitudeParseNodePrimitivesCurrency } from '../parseNodePrimitivesCurrency'
 

@@ -1,8 +1,8 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import chains from '@crypto-dex-sdk/chain'
-import { Network, NetworkIcon, Typography, classNames } from '@crypto-dex-sdk/ui'
-import { Widget } from '@crypto-dex-sdk/ui/widget'
 import type { FC } from 'react'
+import chains from '@crypto-dex-sdk/chain'
+import { classNames, Network, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
+import { Widget } from '@crypto-dex-sdk/ui/widget'
 import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@headlessui/react'
 import { Trans } from '@lingui/macro'
 

@@ -1,8 +1,8 @@
-import { Trans } from '@lingui/macro'
 import type { Price, Type } from '@crypto-dex-sdk/currency'
-import { usePrices } from '@crypto-dex-sdk/shared'
-import { Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC, ReactElement, ReactNode } from 'react'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { classNames, Typography } from '@crypto-dex-sdk/ui'
+import { Trans } from '@lingui/macro'
 import { useCallback, useState } from 'react'
 
 interface RenderPayload {

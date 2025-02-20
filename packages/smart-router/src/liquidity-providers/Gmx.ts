@@ -1,7 +1,6 @@
 import type { Address, PublicClient } from 'viem'
 import type { PoolCode } from '../entities'
-import { BigNumber } from '@ethersproject/bignumber'
-import { ParachainId, chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
+import { chainsParachainIdToChainId, ParachainId } from '@crypto-dex-sdk/chain'
 import {
   DAI,
   DAI_ADDRESS,
@@ -17,6 +16,7 @@ import {
   WBTC,
   WETH9,
 } from '@crypto-dex-sdk/currency'
+import { BigNumber } from '@ethersproject/bignumber'
 import { gmxVault } from '../abis'
 import { GmxPool, GmxPoolCode } from '../entities'
 import { formatAddress } from '../util'

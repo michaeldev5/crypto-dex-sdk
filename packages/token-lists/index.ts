@@ -1,8 +1,8 @@
-import { getAddress, isAddress } from '@ethersproject/address'
 import type { Token, Type } from '@crypto-dex-sdk/currency'
+import type { Tags, TokenInfo, TokenList } from './types'
 import { addressToZenlinkAssetId, isZenlinkAddress } from '@crypto-dex-sdk/format'
 import { JSBI } from '@crypto-dex-sdk/math'
-import type { Tags, TokenInfo, TokenList } from './types'
+import { getAddress, isAddress } from '@ethersproject/address'
 
 export * from './lists'
 export * from './types'

@@ -1,8 +1,8 @@
 import type { BigintIsh, Rounding } from '@crypto-dex-sdk/math'
+import type { Type } from './Type'
 import { Fraction, JSBI } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 import { Amount } from './Amount'
-import type { Type } from './Type'
 
 export class Price<TBase extends Type, TQuote extends Type> extends Fraction {
   public readonly baseCurrency: TBase // input i.e. denominator

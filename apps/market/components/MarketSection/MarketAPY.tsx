@@ -1,14 +1,15 @@
-import type { FC } from 'react'
-import { InformationCircleIcon } from '@heroicons/react/24/outline'
-import { Trans } from '@lingui/macro'
-import { Amount, ZLK } from '@crypto-dex-sdk/currency'
-import { formatPercent } from '@crypto-dex-sdk/format'
 import type { MarketGraphData } from '@crypto-dex-sdk/graph-client'
 import type { Market } from '@crypto-dex-sdk/market'
+import type { FC } from 'react'
+import { Amount, ZLK } from '@crypto-dex-sdk/currency'
+import { formatPercent } from '@crypto-dex-sdk/format'
 import { JSBI, Percent, ZERO } from '@crypto-dex-sdk/math'
 import { usePrices } from '@crypto-dex-sdk/shared'
 import { AppearOnMount, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import { useRewardData } from '@crypto-dex-sdk/wagmi'
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
+import { Trans } from '@lingui/macro'
+import { useMemo } from 'react'
 
 interface MarketAPYProps {
   market: Market

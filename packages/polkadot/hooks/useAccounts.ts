@@ -2,9 +2,9 @@
 import type { BaseWallet, Account as OnBoardAccount } from '@polkadot-onboard/core'
 import type { Signer } from '@polkadot/types/types'
 import type { Connector } from '../types'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { u8aToHex } from '@polkadot/util'
 import { decodeAddress } from '@polkadot/util-crypto'
-import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { useEffect, useState } from 'react'
 import { useProviderAccounts } from './useApi'
 

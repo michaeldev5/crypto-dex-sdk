@@ -1,9 +1,9 @@
-import { Trans } from '@lingui/macro'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { FC, ReactNode } from 'react'
 import { useNotifications } from '@crypto-dex-sdk/shared'
 import { Button, Dots } from '@crypto-dex-sdk/ui'
-import { WrapType, useWrapCallback } from '@crypto-dex-sdk/wagmi'
-import type { FC, ReactNode } from 'react'
+import { useWrapCallback, WrapType } from '@crypto-dex-sdk/wagmi'
+import { Trans } from '@lingui/macro'
 import React, { useState } from 'react'
 import { useAccount } from 'wagmi'
 

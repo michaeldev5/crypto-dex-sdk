@@ -1,11 +1,11 @@
+import type { Pool } from '@crypto-dex-sdk/graph-client'
+import type { FC } from 'react'
 import chains from '@crypto-dex-sdk/chain'
 import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
-import type { Pool } from '@crypto-dex-sdk/graph-client'
 import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
-import { AppearOnMount, Currency, Link, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import { usePrices, useTokensFromPool } from '@crypto-dex-sdk/shared'
+import { AppearOnMount, Currency, Link, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
 
 interface PoolHeaderProps {

@@ -1,17 +1,18 @@
-import { GenericTable, Table, useBreakpoint } from '@crypto-dex-sdk/ui'
-import { useMarketFilters } from 'components/MarketsFiltersProvider'
-import { type FC, useCallback, useEffect, useMemo, useState } from 'react'
+import type { MarketGraphData } from '@crypto-dex-sdk/graph-client'
+import type { Market } from '@crypto-dex-sdk/market'
 import type { PaginationState, SortingState } from '@tanstack/react-table'
+import type { FC } from 'react'
+import { JSBI } from '@crypto-dex-sdk/math'
+import { GenericTable, Table, useBreakpoint } from '@crypto-dex-sdk/ui'
 import {
   getCoreRowModel,
   getSortedRowModel,
 
   useReactTable,
 } from '@tanstack/react-table'
-import type { Market } from '@crypto-dex-sdk/market'
-import { JSBI } from '@crypto-dex-sdk/math'
+import { useMarketFilters } from 'components/MarketsFiltersProvider'
 import { getUnixTime } from 'date-fns'
-import type { MarketGraphData } from '@crypto-dex-sdk/graph-client'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { PAGE_SIZE } from '../constants'
 import {
   FIXED_ROI_COLUMN,

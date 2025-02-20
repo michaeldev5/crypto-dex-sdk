@@ -1,7 +1,7 @@
 import type { Pair } from '@crypto-dex-sdk/graph-client'
-import { useMemo } from 'react'
-import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
 import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Amount, Native, Token } from '@crypto-dex-sdk/currency'
+import { useMemo } from 'react'
 
 export function useTokensFromPair(pair: Pair) {
   return useMemo(() => {

@@ -1,6 +1,6 @@
 import type { FC } from 'react'
-import { CheckIcon, DocumentDuplicateIcon } from '@heroicons/react/24/outline'
 import { useCopyClipboard } from '@crypto-dex-sdk/hooks'
+import { CheckIcon, DocumentDuplicateIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 import React from 'react'
 

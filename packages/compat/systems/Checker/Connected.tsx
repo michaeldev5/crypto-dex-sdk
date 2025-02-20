@@ -1,8 +1,8 @@
 import type { FC } from 'react'
+import type { CheckerButton } from './types'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { Checker as WagmiChecker } from '@crypto-dex-sdk/wagmi'
 import { isEvmNetwork } from '../../config'
-import type { CheckerButton } from './types'
 
 export interface ConnectedProps extends CheckerButton {
   chainId: number | undefined

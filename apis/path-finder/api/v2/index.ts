@@ -1,7 +1,7 @@
+import type { LiquidityProviders } from '@crypto-dex-sdk/smart-router'
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { Native } from '@crypto-dex-sdk/currency'
-import type { LiquidityProviders } from '@crypto-dex-sdk/smart-router'
 import {
   getAggregationExecutorAddressForChainId,
   getAggregationRouterAddressForChainId,

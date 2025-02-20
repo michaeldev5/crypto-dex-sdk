@@ -1,5 +1,5 @@
-import type { ColumnDef } from '@tanstack/react-table'
 import type { MarketPosition } from '@crypto-dex-sdk/wagmi'
+import type { ColumnDef } from '@tanstack/react-table'
 import { JSBI } from '@crypto-dex-sdk/math'
 import { Trans } from '@lingui/macro'
 import { PositionLpBalanceCell } from './PositionLpBalanceCell'

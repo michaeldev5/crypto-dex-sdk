@@ -1,10 +1,10 @@
+import type { StableSwap } from '@crypto-dex-sdk/graph-client'
 import type { FC } from 'react'
+import { Token } from '@crypto-dex-sdk/currency'
+import { classNames, Currency, Loader, Typography, Widget } from '@crypto-dex-sdk/ui'
 import { Description, Disclosure, DisclosureButton, DisclosurePanel, Label, Radio, RadioGroup, Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
-import { Token } from '@crypto-dex-sdk/currency'
-import type { StableSwap } from '@crypto-dex-sdk/graph-client'
-import { Currency, Loader, Typography, Widget, classNames } from '@crypto-dex-sdk/ui'
 import { memo } from 'react'
 
 interface SelectStablePoolWidgetProps {

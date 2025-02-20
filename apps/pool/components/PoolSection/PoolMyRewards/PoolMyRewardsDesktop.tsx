@@ -1,14 +1,14 @@
-import { formatUSD } from '@crypto-dex-sdk/format'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
-import { Button, Currency, Dots, Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { useMemo } from 'react'
-import { Checker, useBlockNumber, useClaimFarmingRewardsReview } from '@crypto-dex-sdk/compat'
-import { Trans, t } from '@lingui/macro'
-import { ZERO } from '@crypto-dex-sdk/math'
 import type { PoolFarmWithIncentives } from 'lib/hooks'
+import type { FC } from 'react'
+import { Checker, useBlockNumber, useClaimFarmingRewardsReview } from '@crypto-dex-sdk/compat'
+import { formatUSD } from '@crypto-dex-sdk/format'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { Button, Currency, Dots, Typography } from '@crypto-dex-sdk/ui'
+import { t, Trans } from '@lingui/macro'
 import { usePoolPositionRewards } from 'components/PoolPositionRewardsProvider'
 import { useTokenAmountDollarValues } from 'lib/hooks'
+import { useMemo } from 'react'
 
 interface PoolMyRewardsProps {
   averageBlockTime?: number

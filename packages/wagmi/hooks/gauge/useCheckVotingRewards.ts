@@ -1,5 +1,5 @@
 import type { Address } from 'viem'
-import { chainsParachainIdToChainId } from '@zenlink-interface/chain'
+import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
 import { useMemo } from 'react'
 import { useReadContracts } from 'wagmi'
 import { z } from 'zod'

@@ -1,9 +1,9 @@
 import type { Pair } from '@crypto-dex-sdk/amm'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { PairStatus as _PairStatus, ZenlinkAssetBalance } from '@zenlink-types/bifrost/interfaces'
 import { Amount } from '@crypto-dex-sdk/currency'
 import { addressToZenlinkAssetId } from '@crypto-dex-sdk/format'
 import { useApi, useCall } from '@crypto-dex-sdk/polkadot'
-import type { ZenlinkAssetBalance, PairStatus as _PairStatus } from '@zenlink-types/bifrost/interfaces'
 import { useMemo } from 'react'
 
 interface PairStatus extends Omit<_PairStatus, 'asTrading'> {

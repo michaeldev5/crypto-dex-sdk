@@ -1,9 +1,9 @@
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { useInViewport } from '@crypto-dex-sdk/hooks'
 import type { Fraction } from '@crypto-dex-sdk/math'
-import { ZERO } from '@crypto-dex-sdk/math'
-import { Currency, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { CSSProperties, FC } from 'react'
+import { useInViewport } from '@crypto-dex-sdk/hooks'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { classNames, Currency, Typography } from '@crypto-dex-sdk/ui'
 import { memo, useCallback, useRef } from 'react'
 
 interface TokenSelectorRowProps {

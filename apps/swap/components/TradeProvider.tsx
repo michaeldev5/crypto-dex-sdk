@@ -1,12 +1,12 @@
 import type { TradeType } from '@crypto-dex-sdk/amm'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import type { FC, ReactNode } from 'react'
-import { createContext, useContext, useMemo } from 'react'
-import { useAggregatorTrade, useTrade as useSingleTrade } from 'lib/hooks'
 import type { UseTradeOutput } from 'lib/hooks'
-import { AGGREGATOR_ENABLED_NETWORKS } from 'config'
+import type { FC, ReactNode } from 'react'
 import { useAccount } from '@crypto-dex-sdk/compat'
 import { useSettings } from '@crypto-dex-sdk/shared'
+import { AGGREGATOR_ENABLED_NETWORKS } from 'config'
+import { useAggregatorTrade, useTrade as useSingleTrade } from 'lib/hooks'
+import { createContext, useContext, useMemo } from 'react'
 
 interface TradeContext extends UseTradeOutput {
   isLoading: boolean

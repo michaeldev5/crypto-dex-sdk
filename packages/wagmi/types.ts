@@ -1,6 +1,6 @@
-import type { UseMutationOptions } from '@tanstack/react-query'
 import type { StableSwap } from '@crypto-dex-sdk/amm'
 import type { Amount, Token } from '@crypto-dex-sdk/currency'
+import type { UseMutationOptions } from '@tanstack/react-query'
 import type { Account, Address } from 'viem'
 
 export interface MutationConfig<Data, Error, Variables = void> {

@@ -1,6 +1,6 @@
-import { Chain } from '@crypto-dex-sdk/chain'
 import type { FC } from 'react'
 import type { NotificationData } from './index'
+import { Chain } from '@crypto-dex-sdk/chain'
 import { Trans } from '@lingui/react/macro'
 import { HalfCircleIcon } from '../icons'
 import { ToastButtons } from './ToastButtons'

@@ -1,5 +1,5 @@
-import { Link } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { Link } from '@crypto-dex-sdk/ui'
 import Image from 'next/legacy/image'
 
 interface CrossTransferAppProps {

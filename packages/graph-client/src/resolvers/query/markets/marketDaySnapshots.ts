@@ -1,8 +1,8 @@
+import type { MarketDaySnapshot, MarketDaySnapshotsQueryData } from '../../../types'
 import { chainName, chainShortName } from '@crypto-dex-sdk/chain'
 import { ZENLINK_ENABLED_NETWORKS } from '@crypto-dex-sdk/graph-config'
 import { FactoryDayDataOrderByInput } from '../../../__generated__/market-types'
 import { fetchMarketDaySnapshots } from '../../../queries'
-import { MarketDaySnapshotsQueryData, MarketDaySnapshot } from '../../../types'
 
 interface QueryDaySnapshotsByChainIdsArgs {
   chainIds: number[]

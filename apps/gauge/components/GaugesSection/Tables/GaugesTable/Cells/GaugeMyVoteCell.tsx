@@ -1,8 +1,8 @@
-import { Percent } from '@crypto-dex-sdk/math'
-import { DEFAULT_INPUT_UNSTYLED, Input, Typography, classNames } from '@crypto-dex-sdk/ui'
-import { VoteMode, useGaugeVotes } from 'components'
 import type { FC } from 'react'
 import type { CellProps } from './types'
+import { Percent } from '@crypto-dex-sdk/math'
+import { classNames, DEFAULT_INPUT_UNSTYLED, Input, Typography } from '@crypto-dex-sdk/ui'
+import { useGaugeVotes, VoteMode } from 'components'
 
 export const GaugeMyVoteCell: FC<CellProps> = ({ row }) => {
   const { votedPercentMap, voteMode, onInputVote, voteInputMap } = useGaugeVotes()

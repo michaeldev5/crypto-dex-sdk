@@ -1,5 +1,5 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Type } from '@crypto-dex-sdk/currency'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { ARB, DAI, DOT, FRAX, KSM, Native, Token, USDC, USDT, WBTC, WNATIVE } from '@crypto-dex-sdk/currency'
 
 export const BASES_TO_CHECK_TRADES_AGAINST: { readonly [chainId: number]: Token[] } = {

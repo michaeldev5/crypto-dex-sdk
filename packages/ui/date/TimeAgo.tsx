@@ -1,5 +1,5 @@
-import { useInterval } from '@crypto-dex-sdk/hooks'
 import type { FC } from 'react'
+import { useInterval } from '@crypto-dex-sdk/hooks'
 import { formatDistanceToNow } from 'date-fns'
 import { useState } from 'react'
 

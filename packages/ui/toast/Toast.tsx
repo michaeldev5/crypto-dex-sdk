@@ -1,7 +1,7 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
-import { nanoid } from 'nanoid'
 import type { ReactNode } from 'react'
 import type { ToastOptions } from 'react-toastify'
+import { nanoid } from 'nanoid'
 import { toast } from 'react-toastify'
 
 import { ToastButtons } from './ToastButtons'

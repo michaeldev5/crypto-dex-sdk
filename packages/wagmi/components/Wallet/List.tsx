@@ -1,5 +1,5 @@
-import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import type { FC, ReactNode } from 'react'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { useAccount, useConnect } from 'wagmi'
 
 export type RenderProps = ReturnType<typeof useConnect> & { isMounted: boolean }

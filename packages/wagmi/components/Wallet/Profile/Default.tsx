@@ -1,17 +1,17 @@
+import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Dispatch, FC, SetStateAction } from 'react'
 import type { Address } from 'viem'
+import chains, { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
+import { Amount, Native } from '@crypto-dex-sdk/currency'
+import { shortenAddress } from '@crypto-dex-sdk/format'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { CopyHelper, IconButton, JazzIcon, Typography } from '@crypto-dex-sdk/ui'
 import {
   ArrowLeftEndOnRectangleIcon,
   ArrowTopRightOnSquareIcon,
   DocumentDuplicateIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
-import type { ParachainId } from '@crypto-dex-sdk/chain'
-import chains, { chainsParachainIdToChainId, isEvmNetwork } from '@crypto-dex-sdk/chain'
-import { Amount, Native } from '@crypto-dex-sdk/currency'
-import { shortenAddress } from '@crypto-dex-sdk/format'
-import { usePrices } from '@crypto-dex-sdk/shared'
-import { CopyHelper, IconButton, JazzIcon, Typography } from '@crypto-dex-sdk/ui'
 import { t, Trans } from '@lingui/macro'
 import Image from 'next/legacy/image'
 

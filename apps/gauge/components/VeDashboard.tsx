@@ -1,11 +1,15 @@
+import type { FC } from 'react'
+import { ParachainId } from '@crypto-dex-sdk/chain'
+import { Checker, useAccount } from '@crypto-dex-sdk/compat'
+import { Amount, DOT, ZLK } from '@crypto-dex-sdk/currency'
+import { formatFullNumber } from '@crypto-dex-sdk/format'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { Button, Currency, Dots, Tooltip, Typography } from '@crypto-dex-sdk/ui'
+import { useClaimVotingRewardsReview, useVotingEscrow } from '@crypto-dex-sdk/wagmi'
 import { BuildingLibraryIcon, HandRaisedIcon, InformationCircleIcon, WalletIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
-import { ParachainId } from '@crypto-dex-sdk/chain'
-import { Amount, DOT, ZLK } from '@crypto-dex-sdk/currency'
-import { Button, Currency, Tooltip, Typography } from '@crypto-dex-sdk/ui'
-import { useVotingEscrow } from '@crypto-dex-sdk/wagmi'
-import { type FC, useMemo } from 'react'
 import { useVotingRewards } from 'lib/hooks'
+import { useMemo } from 'react'
 
 export const VeDashboard: FC = () => {
   const { address } = useAccount()

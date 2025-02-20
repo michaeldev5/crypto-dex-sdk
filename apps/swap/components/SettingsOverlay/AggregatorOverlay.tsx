@@ -1,11 +1,11 @@
 import type { FC } from 'react'
-import { ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { useSettings } from '@crypto-dex-sdk/shared'
-import { CpuChipIcon } from '@heroicons/react/24/solid'
-import { useState } from 'react'
 import { Overlay, SlideIn, Switch, Tooltip, Typography } from '@crypto-dex-sdk/ui'
-import { Trans, t } from '@lingui/macro'
+import { ChevronRightIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
+import { CpuChipIcon } from '@heroicons/react/24/solid'
+import { t, Trans } from '@lingui/macro'
+import { useState } from 'react'
 
 export const AggregatorOverlay: FC = () => {
   const isMounted = useIsMounted()

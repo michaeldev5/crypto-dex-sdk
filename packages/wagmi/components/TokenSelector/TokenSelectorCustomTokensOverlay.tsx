@@ -1,11 +1,11 @@
-import type { TokenSelectorProps } from './TokenSelector'
-import { ArrowTopRightOnSquareIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
-import { CurrencyDollarIcon, XCircleIcon } from '@heroicons/react/24/solid'
-import chain from '@crypto-dex-sdk/chain'
 import type { Token, Type } from '@crypto-dex-sdk/currency'
+import type { CSSProperties, FC } from 'react'
+import type { TokenSelectorProps } from './TokenSelector'
+import chain from '@crypto-dex-sdk/chain'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { Currency, IconButton, NetworkIcon, Overlay, SlideIn, Typography } from '@crypto-dex-sdk/ui'
-import type { CSSProperties, FC } from 'react'
+import { ArrowTopRightOnSquareIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
+import { CurrencyDollarIcon, XCircleIcon } from '@heroicons/react/24/solid'
 import { useMemo, useState } from 'react'
 
 export const TokenSelectorCustomTokenRow: FC<{ style: CSSProperties, currency: Type, onRemove: () => void }> = ({

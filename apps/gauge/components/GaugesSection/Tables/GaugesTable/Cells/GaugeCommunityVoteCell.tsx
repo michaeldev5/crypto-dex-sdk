@@ -1,8 +1,8 @@
+import type { FC } from 'react'
+import type { CellProps } from './types'
 import { Percent } from '@crypto-dex-sdk/math'
 import { Typography } from '@crypto-dex-sdk/ui'
 import { useGaugeVotes } from 'components'
-import type { FC } from 'react'
-import type { CellProps } from './types'
 
 export const GaugeCommunityVoteCell: FC<CellProps> = ({ row }) => {
   const { communityVotedPercentMap } = useGaugeVotes()

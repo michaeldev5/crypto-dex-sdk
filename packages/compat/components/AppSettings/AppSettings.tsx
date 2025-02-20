@@ -1,6 +1,6 @@
 import type { FC } from 'react'
+import { classNames, DEFAULT_INPUT_UNSTYLED } from '@crypto-dex-sdk/ui'
 import { Popover } from '@headlessui/react'
-import { DEFAULT_INPUT_UNSTYLED, classNames } from '@crypto-dex-sdk/ui'
 import { Cog6ToothIcon } from '@heroicons/react/20/solid'
 import { useState } from 'react'
 import { DefaultPanel } from './DefaultPanel'

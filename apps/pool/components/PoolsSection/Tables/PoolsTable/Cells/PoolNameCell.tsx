@@ -1,10 +1,10 @@
+import type { FC } from 'react'
+import type { CellProps } from './types'
 import { formatNumber } from '@crypto-dex-sdk/format'
 import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
-import { Currency, NetworkIcon, RewardIcon, Typography } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
 import { isPoolEnabledFarms, useTokensFromPool } from '@crypto-dex-sdk/shared'
+import { Currency, NetworkIcon, RewardIcon, Typography } from '@crypto-dex-sdk/ui'
 import { ICON_SIZE } from '../../constants'
-import { CellProps } from './types'
 
 export const PoolNameCell: FC<CellProps> = ({ row }) => {
   const { tokens, liquidityToken } = useTokensFromPool(row)

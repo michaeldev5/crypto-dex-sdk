@@ -1,8 +1,9 @@
 import type { Token } from '@crypto-dex-sdk/currency'
-import { Amount } from '@crypto-dex-sdk/currency'
-import { type VotingEscrow, getWeekStartUnixTime } from '@crypto-dex-sdk/market'
-import { JSBI, ZERO } from '@crypto-dex-sdk/math'
+import type { VotingEscrow } from '@crypto-dex-sdk/market'
 import type { Duration } from 'lib/types'
+import { Amount } from '@crypto-dex-sdk/currency'
+import { getWeekStartUnixTime } from '@crypto-dex-sdk/market'
+import { JSBI, ZERO } from '@crypto-dex-sdk/math'
 import { addWeeks, fromUnixTime, getUnixTime } from 'date-fns'
 import { useMemo } from 'react'
 

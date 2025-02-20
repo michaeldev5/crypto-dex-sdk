@@ -1,11 +1,11 @@
 import type { AggregatorTrade, Trade } from '@crypto-dex-sdk/amm'
-import { TradeVersion } from '@crypto-dex-sdk/amm'
-import type { Dispatch, SetStateAction } from 'react'
-import { useMemo } from 'react'
 import type { Permit2Actions } from '@crypto-dex-sdk/wagmi'
-import { useSwapReview as useWagmiSwapReview } from '@crypto-dex-sdk/wagmi'
-import { useSwapReview as useAmplitudeSwapReview } from '@crypto-dex-sdk/parachains-amplitude'
+import type { Dispatch, SetStateAction } from 'react'
+import { TradeVersion } from '@crypto-dex-sdk/amm'
 import { ParachainId } from '@crypto-dex-sdk/chain'
+import { useSwapReview as useAmplitudeSwapReview } from '@crypto-dex-sdk/parachains-amplitude'
+import { useSwapReview as useWagmiSwapReview } from '@crypto-dex-sdk/wagmi'
+import { useMemo } from 'react'
 import { EVM_NETWORKS, isEvmNetwork } from '../config'
 
 interface UseSwapReviewParams {

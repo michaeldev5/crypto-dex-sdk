@@ -1,10 +1,11 @@
 import type { CurrencyInputProps } from '@crypto-dex-sdk/compat'
+import type { FC } from 'react'
 import { tryParseAmount } from '@crypto-dex-sdk/currency'
 import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { usePrices } from '@crypto-dex-sdk/shared'
-import { Skeleton, Typography, classNames } from '@crypto-dex-sdk/ui'
-import { type FC, useMemo } from 'react'
+import { classNames, Skeleton, Typography } from '@crypto-dex-sdk/ui'
+import { useMemo } from 'react'
 
 type PricePanelProps = Pick<CurrencyInputProps, 'currency' | 'value' | 'usdPctChange'>
 export const PricePanel: FC<PricePanelProps> = ({ currency, usdPctChange, value }) => {

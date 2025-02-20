@@ -1,5 +1,5 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Address } from 'viem'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 
 export const veContract: Record<number, Address> = {
   [ParachainId.MOONBEAM]: '0x7310468a0607003AB7DBc23af44c88565E945a3e',

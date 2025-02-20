@@ -1,6 +1,7 @@
 import type { Currency, Token } from '@crypto-dex-sdk/currency'
-import { Amount, Price } from '@crypto-dex-sdk/currency'
 import type { JSBI, Percent } from '@crypto-dex-sdk/math'
+import type { Market } from '../Market'
+import { Amount, Price } from '@crypto-dex-sdk/currency'
 import { Fraction, ONE, ZERO } from '@crypto-dex-sdk/math'
 import invariant from 'tiny-invariant'
 import { TradeType } from './TradeType'

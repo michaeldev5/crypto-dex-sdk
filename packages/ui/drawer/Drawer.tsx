@@ -1,5 +1,3 @@
-import { useIsMounted } from '@crypto-dex-sdk/hooks'
-import classNames from 'classnames'
 import type {
   Dispatch,
   FC,
@@ -8,7 +6,9 @@ import type {
   SetStateAction,
 } from 'react'
 import type { ButtonComponent } from '../button'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { Transition, TransitionChild } from '@headlessui/react'
+import classNames from 'classnames'
 import {
   createContext,
   Fragment,

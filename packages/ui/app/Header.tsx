@@ -1,11 +1,11 @@
 import type { JSX } from 'react'
 import type { MaxWidth } from '..'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { ListboxButton, Transition } from '@headlessui/react'
 import { ArrowTopRightOnSquareIcon, EllipsisHorizontalIcon } from '@heroicons/react/24/outline'
 import { Trans } from '@lingui/macro'
 import useScrollPosition from '@react-hook/window-scroll'
-import { useIsMounted } from '@crypto-dex-sdk/hooks'
-import React, from 'react'
+import React from 'react'
 import {
   classNames,
   Container,

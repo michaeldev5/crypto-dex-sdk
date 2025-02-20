@@ -1,9 +1,9 @@
-import { useAccount, useBalance } from '@crypto-dex-sdk/compat'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
 import type { FC, ReactNode } from 'react'
-import { createContext, useContext, useMemo } from 'react'
+import { useAccount, useBalance } from '@crypto-dex-sdk/compat'
 import { useTokensFromPool } from '@crypto-dex-sdk/shared'
+import { createContext, useContext, useMemo } from 'react'
 import { useTokenAmountDollarValues, useUnderlyingTokenBalanceFromPool } from '../lib/hooks'
 
 interface PoolPositionContext {

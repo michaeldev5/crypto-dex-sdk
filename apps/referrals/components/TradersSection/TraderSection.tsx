@@ -1,12 +1,13 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Dispatch, FC, SetStateAction } from 'react'
 import { Checker, useAccount } from '@crypto-dex-sdk/compat'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { Button, Chip, Skeleton, Typography } from '@crypto-dex-sdk/ui'
 import { useOwnedCodes, useReferralInfo } from '@crypto-dex-sdk/wagmi'
+import { t, Trans } from '@lingui/macro'
 import { REFERRALS_ENABLED_NETWORKS } from 'config'
-import { Dispatch, FC, SetStateAction, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { SetCodeModal } from './SetCodeModal'
-import { Trans, t } from '@lingui/macro'
 
 interface TradersSectionProps {
   chainId?: ParachainId

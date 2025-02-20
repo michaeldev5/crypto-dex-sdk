@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import type { Code } from './Cells/types'
-import { getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { GenericTable } from '@crypto-dex-sdk/ui'
+import { getCoreRowModel, useReactTable } from '@tanstack/react-table'
 import { useMemo } from 'react'
 import { CODES_COLUMN } from './Cells/columns'
 

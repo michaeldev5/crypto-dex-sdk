@@ -1,6 +1,6 @@
-import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { Network, Select, Switch, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { classNames, Network, Select, Switch, Typography } from '@crypto-dex-sdk/ui'
+import { CheckIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
 import { usePoolFilters } from 'components/PoolsFiltersProvider'
 import { SUPPORTED_CHAIN_IDS } from 'config'
@@ -59,7 +59,7 @@ export const TableFilters: FC<{ showAllFilters?: boolean }> = ({ showAllFilters 
                     </div>
                     <div className="flex justify-end">
                       {selectedPoolTypes.includes(k)
-                      && selectedPoolTypes.length !== Object.keys(AVAILABLE_POOL_TYPE_MAP).length
+                        && selectedPoolTypes.length !== Object.keys(AVAILABLE_POOL_TYPE_MAP).length
                         ? <CheckIcon className="text-blue" height={20} width={20} />
                         : <></>}
                     </div>

@@ -1,6 +1,6 @@
 import type { Amount, Token, Type } from '@crypto-dex-sdk/currency'
-import { isAddress } from '@crypto-dex-sdk/format'
 import type { Fraction } from '@crypto-dex-sdk/math'
+import { isAddress } from '@crypto-dex-sdk/format'
 import { useMemo } from 'react'
 
 const alwaysTrue = () => true

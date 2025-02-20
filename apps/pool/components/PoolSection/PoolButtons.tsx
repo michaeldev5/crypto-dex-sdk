@@ -1,10 +1,10 @@
 import type { Pool } from '@crypto-dex-sdk/graph-client'
-import { ZERO } from '@crypto-dex-sdk/math'
-import { Button, Link } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { useTokensFromPool } from '@crypto-dex-sdk/shared'
+import { Button, Link } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
 import { usePoolPositionStaked } from 'components/PoolPositionStakedProvider'
-import { useTokensFromPool } from '@crypto-dex-sdk/shared'
 import { usePoolPosition } from '../PoolPositionProvider'
 
 interface PoolButtonsProps {

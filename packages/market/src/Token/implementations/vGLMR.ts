@@ -1,6 +1,6 @@
 import type { Currency, Token } from '@crypto-dex-sdk/currency'
-import { Amount } from '@crypto-dex-sdk/currency'
 import type { JSBI } from '@crypto-dex-sdk/math'
+import { Amount } from '@crypto-dex-sdk/currency'
 import { SYBase } from '../SYBase'
 
 export class VGLMR extends SYBase {

@@ -1,10 +1,11 @@
-import { ArrowTopRightOnSquareIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-import { Trans, t } from '@lingui/macro'
-import chain from '@crypto-dex-sdk/chain'
 import type { Token } from '@crypto-dex-sdk/currency'
-import { shortenAddress } from '@crypto-dex-sdk/format'
-import { Button, CopyHelper, Currency, Overlay, SlideIn, Typography, classNames } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import chain from '@crypto-dex-sdk/chain'
+import { shortenAddress } from '@crypto-dex-sdk/format'
+import { Button, classNames, CopyHelper, Currency, Overlay, SlideIn, Typography } from '@crypto-dex-sdk/ui'
+import { ArrowTopRightOnSquareIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import { t, Trans } from '@lingui/macro'
+import { useMemo, useState } from 'react'
 
 interface TokenSelectorImportRowProps {
   hideIcons?: boolean

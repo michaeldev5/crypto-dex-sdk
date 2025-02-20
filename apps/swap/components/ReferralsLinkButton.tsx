@@ -1,8 +1,8 @@
 import type { FC } from 'react'
+import { chainName } from '@crypto-dex-sdk/chain'
+import { AppearOnMount, classNames, DEFAULT_INPUT_UNSTYLED, Link, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid'
 import { Trans } from '@lingui/macro'
-import { chainName } from '@crypto-dex-sdk/chain'
-import { AppearOnMount, DEFAULT_INPUT_UNSTYLED, Link, NetworkIcon, Typography, classNames } from '@crypto-dex-sdk/ui'
 import { REFERRALS_ENABLED_NETWORKS } from 'config'
 
 interface ReferralsLinkButtonProps {

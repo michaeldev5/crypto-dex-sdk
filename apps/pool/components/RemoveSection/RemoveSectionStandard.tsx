@@ -1,3 +1,5 @@
+import type { Pair } from '@crypto-dex-sdk/graph-client'
+import type { FC } from 'react'
 import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import {
   Approve,
@@ -9,17 +11,15 @@ import {
   useRemoveLiquidityStandardReview,
 } from '@crypto-dex-sdk/compat'
 import { Amount } from '@crypto-dex-sdk/currency'
-import type { Pair } from '@crypto-dex-sdk/graph-client'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { Percent } from '@crypto-dex-sdk/math'
 import { useNotifications, useSettings } from '@crypto-dex-sdk/shared'
 import { Button, Dots } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
+import { Trans } from '@lingui/macro'
 import { useMemo, useState } from 'react'
 import { useTokensFromPair, useUnderlyingTokenBalanceFromPool } from '../../lib/hooks'
 import { usePoolPosition } from '../PoolPositionProvider'
 import { RemoveSectionWidgetStandard } from './RemoveSectionWidgetStandard'
-import { Trans } from '@lingui/react'
 
 interface RemoveSectionLegacyProps {
   pair: Pair

@@ -1,8 +1,10 @@
-import { type CurrencyInputProps, Web3Input } from '@crypto-dex-sdk/compat'
+import type { CurrencyInputProps } from '@crypto-dex-sdk/compat'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { type FC, useMemo } from 'react'
+import type { FC } from 'react'
+import { Web3Input } from '@crypto-dex-sdk/compat'
 import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { useUsdPctChange } from 'lib/hooks'
+import { useMemo } from 'react'
 import { useTrade } from './TradeProvider'
 
 interface _CurrencyInputProps extends CurrencyInputProps {

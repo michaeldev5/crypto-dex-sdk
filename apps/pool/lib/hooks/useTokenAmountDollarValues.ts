@@ -1,7 +1,7 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { usePrices } from '@crypto-dex-sdk/shared'
 import { ZERO } from '@crypto-dex-sdk/math'
+import { usePrices } from '@crypto-dex-sdk/shared'
 import { useMemo } from 'react'
 
 interface Params {

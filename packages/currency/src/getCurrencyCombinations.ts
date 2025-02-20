@@ -1,3 +1,4 @@
+import type { Type } from './Type'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import flatMap from 'lodash.flatmap'
 import { DAI, DOT, FRAX, KSM, USDC, USDT, WNATIVE, XCAUSD, ZLK } from './constants'

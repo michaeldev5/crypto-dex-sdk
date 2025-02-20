@@ -1,13 +1,13 @@
 import type { Token } from '@crypto-dex-sdk/currency'
-import { Amount } from '@crypto-dex-sdk/currency'
 import type { Market } from '@crypto-dex-sdk/market'
 import type { Address } from 'viem'
-import { useEffect, useMemo } from 'react'
 import { chainsParachainIdToChainId } from '@crypto-dex-sdk/chain'
-import { useAccount, useReadContracts } from 'wagmi'
+import { Amount } from '@crypto-dex-sdk/currency'
 import { JSBI } from '@crypto-dex-sdk/math'
-import { useBlockNumber } from '../useBlockNumber'
+import { useEffect, useMemo } from 'react'
+import { useAccount, useReadContracts } from 'wagmi'
 import { yt as ytABI } from '../../abis'
+import { useBlockNumber } from '../useBlockNumber'
 import { REFETCH_BLOCKS } from './constants'
 
 export interface YtInterestAndRewardsResult {

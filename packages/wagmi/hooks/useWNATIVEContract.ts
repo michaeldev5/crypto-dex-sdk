@@ -1,5 +1,5 @@
-import { WNATIVE_ADDRESS } from '@crypto-dex-sdk/currency'
 import type { Address } from 'viem'
+import { WNATIVE_ADDRESS } from '@crypto-dex-sdk/currency'
 import { wnative } from '../abis'
 
 export function getWNATIVEContractConfig(chainId: number | undefined) {

@@ -1,18 +1,20 @@
-import { useMemo, type FC } from 'react'
-import { HandRaisedIcon, InformationCircleIcon, WalletIcon } from '@heroicons/react/24/outline'
-import { Trans } from '@lingui/macro'
+import type {
+
+  MarketPosition } from '@crypto-dex-sdk/wagmi'
+import type { FC } from 'react'
 import { ParachainId } from '@crypto-dex-sdk/chain'
 import { formatTransactionAmount } from '@crypto-dex-sdk/format'
 import { usePrices } from '@crypto-dex-sdk/shared'
 import { Button, Dots, Tooltip, Typography } from '@crypto-dex-sdk/ui'
 import {
-
-  MarketPosition,
   useBoostMarketsReview,
   useMarketRewards,
   useRedeemRewardsReview,
   useYtInterestAndRewards,
 } from '@crypto-dex-sdk/wagmi'
+import { HandRaisedIcon, InformationCircleIcon, WalletIcon } from '@heroicons/react/24/outline'
+import { Trans } from '@lingui/macro'
+import { useMemo } from 'react'
 
 interface PositionDashboardParams {
   positions: MarketPosition[]

@@ -1,8 +1,8 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
-import { useMarketFilters } from 'components/MarketsFiltersProvider'
-import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
 import type { CellProps } from './types'
+import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
+import { Typography } from '@crypto-dex-sdk/ui'
+import { useMarketFilters } from 'components/MarketsFiltersProvider'
 
 export const FixedROICell: FC<CellProps> = ({ row }) => {
   const { marketsGraphDataMap, isGraphDataLoading } = useMarketFilters()

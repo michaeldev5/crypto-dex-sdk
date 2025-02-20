@@ -1,5 +1,5 @@
-import { otherChains } from '@crypto-dex-sdk/wagmi-config'
 import type { Address } from 'viem'
+import { otherChains } from '@crypto-dex-sdk/wagmi-config'
 import { mainnet } from 'wagmi/chains'
 
 const chains = [mainnet, ...otherChains]

@@ -1,4 +1,5 @@
 import type { AggregatorTrade, Pair, StableSwap } from '@crypto-dex-sdk/amm'
+import type { Amount, Type as Currency } from '@crypto-dex-sdk/currency'
 import { FACTORY_ADDRESS, Trade, TradeType } from '@crypto-dex-sdk/amm'
 import {
   isSubstrateNetwork,
@@ -7,7 +8,6 @@ import {
   useGetStablePools,
   usePairs,
 } from '@crypto-dex-sdk/compat'
-import type { Amount, Type as Currency } from '@crypto-dex-sdk/currency'
 import { useCurrencyCombinations } from '@crypto-dex-sdk/currency'
 import { useDebounce } from '@crypto-dex-sdk/hooks'
 import { AMM_ENABLED_NETWORKS } from 'config'

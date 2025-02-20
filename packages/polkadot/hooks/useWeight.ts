@@ -1,8 +1,8 @@
 import type { Call } from '@polkadot/types/interfaces'
 import type { ICompact, INumber } from '@polkadot/types/types'
 import type { BN } from '@polkadot/util'
-import { BN_ZERO, isFunction, nextTick, objectSpread } from '@polkadot/util'
 import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { BN_ZERO, isFunction, nextTick, objectSpread } from '@polkadot/util'
 import { useEffect, useState } from 'react'
 
 import { useApi } from './useApi'

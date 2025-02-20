@@ -1,8 +1,8 @@
 import type { FC } from 'react'
 import type { CheckerButton } from './types'
-import { useIsMounted } from '@zenlink-interface/hooks'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 
-import { useAccount } from '@zenlink-interface/polkadot'
+import { useAccount } from '@crypto-dex-sdk/polkadot'
 import { Wallet } from '../../components'
 
 export const Connected: FC<CheckerButton> = ({ children, ...rest }) => {

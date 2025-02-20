@@ -1,12 +1,12 @@
-import { Disclosure, Transition } from '@headlessui/react'
+import type { Token } from '@crypto-dex-sdk/currency'
+import type { StableSwap } from '@crypto-dex-sdk/graph-client'
+import type { FC } from 'react'
 import { calculateSlippageAmount } from '@crypto-dex-sdk/amm'
 import { Approve, Checker, useAccount, useRemoveLiquidityStableReview, useStableSwapWithBase } from '@crypto-dex-sdk/compat'
-import type { Token } from '@crypto-dex-sdk/currency'
 import { Amount } from '@crypto-dex-sdk/currency'
 import { formatUSD } from '@crypto-dex-sdk/format'
-import type { StableSwap } from '@crypto-dex-sdk/graph-client'
-import { useNotifications, usePrices, useSettings } from '@crypto-dex-sdk/shared'
 import { Percent, ZERO } from '@crypto-dex-sdk/math'
+import { useNotifications, usePrices, useSettings } from '@crypto-dex-sdk/shared'
 import {
   AppearOnMount,
   Button,
@@ -18,11 +18,12 @@ import {
   Currency as UICurrency,
   Widget,
 } from '@crypto-dex-sdk/ui'
-import type { FC } from 'react'
-import { Fragment, useCallback, useMemo, useState } from 'react'
+import { Disclosure, DisclosurePanel, Transition } from '@headlessui/react'
+import { t, Trans } from '@lingui/macro'
 import { usePoolPosition } from 'components'
 import { useRemoveStableSwapLiquidity, useTokensFromStableSwap } from 'lib/hooks'
 import { useTokens } from 'lib/state/token-lists'
+import { Fragment, useCallback, useMemo, useState } from 'react'
 
 interface RemoveSectionStableProps {
   pool: StableSwap

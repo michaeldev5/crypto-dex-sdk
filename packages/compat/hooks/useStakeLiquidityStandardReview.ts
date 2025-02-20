@@ -1,9 +1,9 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { useStakeLiquidityReview as useWagmiStakeLiquidityReview } from '@crypto-dex-sdk/wagmi'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import {
   useStakeLiquidityStandardReview as useAmplitudeStakeLiquidityStandardReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
+import { useStakeLiquidityReview as useWagmiStakeLiquidityReview } from '@crypto-dex-sdk/wagmi'
 import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'
 

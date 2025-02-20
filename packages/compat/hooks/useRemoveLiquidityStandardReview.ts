@@ -1,11 +1,11 @@
 import type { Pair } from '@crypto-dex-sdk/amm'
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
 import type { Percent } from '@crypto-dex-sdk/math'
-import { useRemoveLiquidityStandardReview as useWagmiRemoveLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import {
   useRemoveLiquidityStandardReview as useAmplitudeRemoveLiquidityStandardReview,
 } from '@crypto-dex-sdk/parachains-amplitude'
+import { useRemoveLiquidityStandardReview as useWagmiRemoveLiquidityStandardReview } from '@crypto-dex-sdk/wagmi'
 import { useMemo } from 'react'
 import { isEvmNetwork } from '../config'
 

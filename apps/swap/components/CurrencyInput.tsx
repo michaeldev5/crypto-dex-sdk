@@ -1,12 +1,12 @@
-import { TradeType } from '@crypto-dex-sdk/amm'
 import type { CurrencyInputProps } from '@crypto-dex-sdk/compat'
-import { Web3Input } from '@crypto-dex-sdk/compat'
-import { usePrices } from '@crypto-dex-sdk/shared'
-import { ZERO } from '@crypto-dex-sdk/math'
-import type { FC } from 'react'
-import { useMemo } from 'react'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
+import type { FC } from 'react'
+import { TradeType } from '@crypto-dex-sdk/amm'
+import { Web3Input } from '@crypto-dex-sdk/compat'
 import { formatTransactionAmount } from '@crypto-dex-sdk/format'
+import { ZERO } from '@crypto-dex-sdk/math'
+import { usePrices } from '@crypto-dex-sdk/shared'
+import { useMemo } from 'react'
 import { useTrade } from './TradeProvider'
 
 interface _CurrencyInputProps extends CurrencyInputProps {

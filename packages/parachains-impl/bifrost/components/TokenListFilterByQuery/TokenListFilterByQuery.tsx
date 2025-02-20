@@ -1,9 +1,9 @@
-import type { ParachainId } from '@zenlink-interface/chain'
-import type { Token, Type } from '@zenlink-interface/currency'
-import type { Fraction } from '@zenlink-interface/math'
+import type { ParachainId } from '@crypto-dex-sdk/chain'
+import type { Token, Type } from '@crypto-dex-sdk/currency'
+import type { Fraction } from '@crypto-dex-sdk/math'
 import type { FC, JSX, RefObject } from 'react'
 import type { BalanceMap } from '../../hooks/useBalance/types'
-import { filterTokens, tokenComparator, useDebounce, useSortedTokensByQuery } from '@zenlink-interface/hooks'
+import { filterTokens, tokenComparator, useDebounce, useSortedTokensByQuery } from '@crypto-dex-sdk/hooks'
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 interface RenderProps {

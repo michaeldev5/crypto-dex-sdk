@@ -1,6 +1,6 @@
-import { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Token } from '@crypto-dex-sdk/currency'
 import type { FC, ReactNode } from 'react'
+import { ParachainId } from '@crypto-dex-sdk/chain'
 import { TokenListImportChecker as WagmiTokenListImportChecker } from '@crypto-dex-sdk/wagmi'
 import { isEvmNetwork } from '../../config'
 

@@ -1,13 +1,14 @@
-import { useMemo, useState, type FC } from 'react'
-import { Tab } from '@headlessui/react'
-import { Chip, classNames } from '@crypto-dex-sdk/ui'
-import { useIsMounted } from '@crypto-dex-sdk/hooks'
-import { Trans } from '@lingui/macro'
-import { useAccount } from '@crypto-dex-sdk/compat'
-import { useMarketPositions, useMarkets } from '@crypto-dex-sdk/wagmi'
+import type { FC } from 'react'
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import { MarketsTable, PositionsTable, TableFilters } from './Tables'
+import { useAccount } from '@crypto-dex-sdk/compat'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
+import { Chip, classNames } from '@crypto-dex-sdk/ui'
+import { useMarketPositions, useMarkets } from '@crypto-dex-sdk/wagmi'
+import { Tab } from '@headlessui/react'
+import { Trans } from '@lingui/macro'
+import { useMemo, useState } from 'react'
 import { PositionDashboard } from './PositionDashboard'
+import { MarketsTable, PositionsTable, TableFilters } from './Tables'
 
 export const MarketsSection: FC = () => {
   const { address } = useAccount()

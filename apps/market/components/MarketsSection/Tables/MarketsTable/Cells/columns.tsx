@@ -1,15 +1,15 @@
-import type { ColumnDef } from '@tanstack/react-table'
 import type { Market } from '@crypto-dex-sdk/market'
+import type { ColumnDef } from '@tanstack/react-table'
 import { JSBI } from '@crypto-dex-sdk/math'
 import { Tooltip, Typography } from '@crypto-dex-sdk/ui'
-import { MarketLiquidityCell } from './MarketLiquidityCell'
-import { MarketNameCell } from './MarketNameCell'
-import { MarketMaturityCell } from './MarketMaturityCell'
-import { UnderlyingAPYCell } from './UnderlyingAPYCell'
-import { ImpliedAPYCell } from './ImpliedAPYCell'
-import { LongYieldROICell } from './LongYieldROICell'
 import { Trans } from '@lingui/macro'
 import { FixedROICell } from './FiexedROICell'
+import { ImpliedAPYCell } from './ImpliedAPYCell'
+import { LongYieldROICell } from './LongYieldROICell'
+import { MarketLiquidityCell } from './MarketLiquidityCell'
+import { MarketMaturityCell } from './MarketMaturityCell'
+import { MarketNameCell } from './MarketNameCell'
+import { UnderlyingAPYCell } from './UnderlyingAPYCell'
 
 export const NAME_COLUMN: ColumnDef<Market, unknown> = {
   id: 'market',

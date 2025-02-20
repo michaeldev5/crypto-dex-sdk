@@ -1,10 +1,12 @@
-import { ChevronDownIcon } from '@heroicons/react/24/solid'
-import { Checker, CurrencyInput } from '@crypto-dex-sdk/compat'
-import { type Type, tryParseAmount } from '@crypto-dex-sdk/currency'
+import type { Type } from '@crypto-dex-sdk/currency'
 import type { Market } from '@crypto-dex-sdk/market'
-import { type FC, useCallback, useMemo, useState } from 'react'
+import type { FC } from 'react'
+import { Checker, CurrencyInput } from '@crypto-dex-sdk/compat'
+import { tryParseAmount } from '@crypto-dex-sdk/currency'
 import { Button, Dots } from '@crypto-dex-sdk/ui'
+import { ChevronDownIcon } from '@heroicons/react/24/solid'
 import { Trans } from '@lingui/macro'
+import { useCallback, useMemo, useState } from 'react'
 import { MarketWrapReviewModal } from './MarketWrapReviewModal'
 
 interface MarketWrapPanelProps {

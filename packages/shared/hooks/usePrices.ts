@@ -1,6 +1,6 @@
-import { useQuery } from '@tanstack/react-query'
 import { getAddress, isAddress } from '@crypto-dex-sdk/format'
 import { Fraction } from '@crypto-dex-sdk/math'
+import { useQuery } from '@tanstack/react-query'
 import { useMemo } from 'react'
 import { parseUnits } from 'viem'
 

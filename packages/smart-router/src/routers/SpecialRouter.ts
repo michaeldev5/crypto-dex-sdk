@@ -1,7 +1,7 @@
-import type { BigNumber } from '@ethersproject/bignumber'
-import { RouteStatus } from '@crypto-dex-sdk/amm'
 import type { Type } from '@crypto-dex-sdk/currency'
+import type { BigNumber } from '@ethersproject/bignumber'
 import type { DataFetcher } from '../fetchers'
+import { RouteStatus } from '@crypto-dex-sdk/amm'
 import { LiquidityProviders } from '../liquidity-providers'
 import { Router } from './Router'
 

@@ -1,10 +1,12 @@
-import { useAccount } from '@crypto-dex-sdk/compat'
 import type { Amount, Type } from '@crypto-dex-sdk/currency'
-import { type Market, Trade } from '@crypto-dex-sdk/market'
+import type { Market } from '@crypto-dex-sdk/market'
+import type { UseTradeOutput } from 'lib/hooks'
+import type { FC, ReactNode } from 'react'
+import { useAccount } from '@crypto-dex-sdk/compat'
+import { Trade } from '@crypto-dex-sdk/market'
 import { useSettings } from '@crypto-dex-sdk/shared'
 import { getMarketActionRouterContract } from '@crypto-dex-sdk/wagmi'
-import { type UseTradeOutput, useAggregationTrade, useTrade as useMarketTrade } from 'lib/hooks'
-import type { FC, ReactNode } from 'react'
+import { useAggregationTrade, useTrade as useMarketTrade } from 'lib/hooks'
 import { createContext, useContext, useMemo } from 'react'
 
 interface TradeContext extends UseTradeOutput {

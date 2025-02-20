@@ -1,3 +1,4 @@
+import type { ParaChain } from '@crypto-dex-sdk/polkadot-config'
 import type { Account, BaseWallet } from '@polkadot-onboard/core'
 import type { ApiOptions } from '@polkadot/api/types'
 import type { RegistryTypes } from '@polkadot/types/types'
@@ -7,7 +8,6 @@ import { ApiPromise, WsProvider } from '@polkadot/api'
 import { keyring } from '@polkadot/ui-keyring'
 import { formatBalance, objectSpread } from '@polkadot/util'
 import { defaults as addressDefaults } from '@polkadot/util-crypto/address/defaults'
-import type { ParaChain } from '@crypto-dex-sdk/polkadot-config'
 import React, { createContext, useEffect, useMemo, useState } from 'react'
 import { ConnectContainer } from './ConnectContainer'
 

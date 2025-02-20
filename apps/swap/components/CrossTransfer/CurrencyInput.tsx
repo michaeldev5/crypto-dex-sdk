@@ -1,10 +1,11 @@
 import type { Type } from '@crypto-dex-sdk/currency'
 import type { FC } from 'react'
-import { useCallback, useState } from 'react'
-import { Currency as UICurrency, classNames } from '@crypto-dex-sdk/ui'
+import type { TokenSelectorProps } from './TokenSelector/TokenSelector'
+import { classNames, Currency as UICurrency } from '@crypto-dex-sdk/ui'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Trans } from '@lingui/macro'
-import { TokenSelector, TokenSelectorProps } from './TokenSelector/TokenSelector'
+import { useCallback, useState } from 'react'
+import { TokenSelector } from './TokenSelector/TokenSelector'
 
 export interface CurrencyInputProps extends Pick<TokenSelectorProps, 'onSelect' | 'tokenMap'> {
   value: string

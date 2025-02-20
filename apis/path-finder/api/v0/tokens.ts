@@ -1,9 +1,9 @@
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import type { Currency } from '@crypto-dex-sdk/currency'
+import type { Address } from 'viem'
 import { Native, Token } from '@crypto-dex-sdk/currency'
 import { NATIVE_ADDRESS } from '@crypto-dex-sdk/smart-router'
 import { ZENLINK_DEFAULT_TOKEN_LIST } from '@crypto-dex-sdk/token-lists'
-import type { Address } from 'viem'
 
 import { erc20ABI } from '../../abis/erc20'
 import { getClient, SUPPORTED_CHAINS } from './config'

@@ -1,6 +1,6 @@
 import { ParachainId } from '@crypto-dex-sdk/chain'
-import { Token } from '../Token'
 import { addressMapToTokenMap } from '../addressMapToTokenMap'
+import { Token } from '../Token'
 import {
   ARB_ADDRESS,
   DAI_ADDRESS,

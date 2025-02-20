@@ -1,9 +1,9 @@
-import type { FC } from 'react'
-import { Trans } from '@lingui/macro'
-import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
 import type { Pool } from '@crypto-dex-sdk/graph-client'
+import type { FC } from 'react'
+import { formatPercent, formatUSD } from '@crypto-dex-sdk/format'
 import { POOL_TYPE } from '@crypto-dex-sdk/graph-client'
 import { Typography } from '@crypto-dex-sdk/ui'
+import { Trans } from '@lingui/macro'
 import { useMemo } from 'react'
 
 interface PoolStatsProps {

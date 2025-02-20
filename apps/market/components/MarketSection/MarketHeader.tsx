@@ -1,11 +1,13 @@
+import type { Market } from '@crypto-dex-sdk/market'
 import type { FC } from 'react'
-import { ArrowTopRightOnSquareIcon, GlobeAltIcon } from '@heroicons/react/24/solid'
-import { Trans } from '@lingui/macro'
 import chains from '@crypto-dex-sdk/chain'
 import { formatUSD } from '@crypto-dex-sdk/format'
-import { type Market, getMaturityFormatDate } from '@crypto-dex-sdk/market'
+import { getMaturityFormatDate } from '@crypto-dex-sdk/market'
+import { JSBI } from '@crypto-dex-sdk/math'
 import { usePrices } from '@crypto-dex-sdk/shared'
-import { AppearOnMount, Currency, Link, NetworkIcon, Typography } from '@crypto-dex-sdk/ui'
+import { AppearOnMount, Currency, Link, NetworkIcon, Tooltip, Typography } from '@crypto-dex-sdk/ui'
+import { ArrowTopRightOnSquareIcon, GlobeAltIcon } from '@heroicons/react/24/solid'
+import { Trans } from '@lingui/macro'
 import { formatDistanceToNow } from 'date-fns'
 
 interface MarketHeaderProps {

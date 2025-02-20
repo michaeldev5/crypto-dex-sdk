@@ -1,6 +1,6 @@
+import type { BaseToken, RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import type { ParachainId } from '@crypto-dex-sdk/chain'
 import { RouteStatus } from '@crypto-dex-sdk/amm'
-import type { BaseToken, RouteLeg, SplitMultiRoute } from '@crypto-dex-sdk/amm'
 import { PoolCode } from '../entities'
 import { HEXer } from '../HEXer'
 import { NATIVE_ADDRESS } from './Router'

@@ -1,5 +1,5 @@
-import { Typography } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import { Typography } from '@crypto-dex-sdk/ui'
 import { Trans } from '@lingui/macro'
 import InitialIcon, { RateDesc } from './InitialIcon'
 

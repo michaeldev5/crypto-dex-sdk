@@ -1,5 +1,18 @@
-import type { NotificationData } from '@zenlink-interface/ui'
+import type { NotificationData } from '@crypto-dex-sdk/ui'
 import type { FC } from 'react'
+import chains, { chainsChainIdToParachainId, ParachainId } from '@crypto-dex-sdk/chain'
+import { useWaitForTransaction } from '@crypto-dex-sdk/polkadot'
+import {
+  Badge,
+  classNames,
+  Dots,
+  IconButton,
+  Link,
+  Loader,
+  NetworkIcon,
+  TimeAgo,
+  Typography,
+} from '@crypto-dex-sdk/ui'
 import { Disclosure } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import {
@@ -14,19 +27,6 @@ import {
   UsersIcon,
   XMarkIcon,
 } from '@heroicons/react/24/solid'
-import chains, { chainsChainIdToParachainId, ParachainId } from '@zenlink-interface/chain'
-import { useWaitForTransaction } from '@zenlink-interface/polkadot'
-import {
-  Badge,
-  classNames,
-  Dots,
-  IconButton,
-  Link,
-  Loader,
-  NetworkIcon,
-  TimeAgo,
-  Typography,
-} from '@zenlink-interface/ui'
 
 export const Notification: FC<{ data: string, showExtra?: boolean, hideStatus?: boolean }> = ({
   data,
@@ -91,12 +91,12 @@ export const Notification: FC<{ data: string, showExtra?: boolean, hideStatus?: 
           <Badge badgeContent={<NetworkIcon chainId={notification.chainId} height={18} width={18} />}>
             <div className="p-2 bg-slate-200 dark:bg-slate-600 rounded-full h-[36px] w-[36px] flex justify-center items-center">
               {!hideStatus
-              && (status === 'loading'
-                ? <Loader size={18} />
-                : status === 'error'
-                  ? <XMarkIcon className="text-red-400" height={20} width={20} />
-                  : <></>
-              )}
+                && (status === 'loading'
+                  ? <Loader size={18} />
+                  : status === 'error'
+                    ? <XMarkIcon className="text-red-400" height={20} width={20} />
+                    : <></>
+                )}
               {(status === 'success' || notification.summary.info) && notification.type === 'send' && (
                 <ArrowRightIcon height={20} width={20} />
               )}

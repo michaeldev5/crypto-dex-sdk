@@ -1,6 +1,6 @@
 import type { Token, Type } from '@crypto-dex-sdk/currency'
-import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import type { FC } from 'react'
+import { useIsMounted } from '@crypto-dex-sdk/hooks'
 import { memo, useMemo } from 'react'
 import { TokenSelectorDialog } from './TokenSelectorDialog'
 
