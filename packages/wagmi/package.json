@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/wagmi",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Zenlink Wagmi",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",

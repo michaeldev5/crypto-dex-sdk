@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/path-finder-api",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Zenlink Interface Path Finder Api",
   "license": "LGPL-2.1-or-later",
   "keywords": [

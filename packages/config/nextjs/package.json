@@ -1,6 +1,6 @@
 {
   "name": "@crypto-dex-sdk/nextjs-config",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Zenklink Next.js Config",
   "author": "zenlinkpro",
   "license": "LGPL-2.1-or-later",
