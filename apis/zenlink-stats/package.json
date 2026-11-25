@@ -14,19 +14,19 @@
     "@crypto-dex-sdk/token-lists": "workspace:*",
     "@crypto-dex-sdk/wagmi-config": "workspace:*",
     "@polkadot/api": "^12.3.1",
-    "@vercel/node": "^5.1.7",
+    "@vercel/node": "^5.1.14",
     "@wagmi/core": "1.1.1-cjs",
-    "axios": "^1.7.9",
+    "axios": "^1.8.1",
     "date-fns": "^4.1.0",
     "esno": "^4.8.0",
-    "ethers": "^5.7.2",
+    "ethers": "^5.8.0",
     "fast-json-stable-stringify": "^2.1.0",
-    "ioredis": "^5.5.0",
-    "viem": "2.23.3"
+    "ioredis": "^5.6.0",
+    "viem": "2.23.14"
   },
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "eslint": "^9.20.1"
+    "eslint": "^9.23.0"
   }
 }

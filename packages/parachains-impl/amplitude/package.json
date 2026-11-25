@@ -32,9 +32,9 @@
     "@crypto-dex-sdk/ui": "workspace:*",
     "@headlessui/react": "2.2.0",
     "@heroicons/react": "2.2.0",
-    "@lingui/core": "5.2.0",
-    "@lingui/macro": "5.2.0",
-    "@lingui/react": "5.2.0",
+    "@lingui/core": "5.3.0",
+    "@lingui/macro": "5.3.0",
+    "@lingui/react": "5.3.0",
     "@pendulum-chain/types": "0.3.4",
     "@polkadot/api": "^12.3.1",
     "@polkadot/api-augment": "^12.3.1",
@@ -45,13 +45,13 @@
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "@types/react": "19.0.10",
+    "@types/react": "19.0.12",
     "@types/react-dom": "^19.0.4",
-    "eslint": "^9.20.1",
+    "eslint": "^9.23.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "tsup": "^8.3.6",
-    "typescript": "5.7.3"
+    "tsup": "^8.4.0",
+    "typescript": "5.8.2"
   },
   "nextBundleAnalysis": {
     "budget": 460800,
