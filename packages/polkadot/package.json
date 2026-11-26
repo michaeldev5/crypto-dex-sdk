@@ -32,7 +32,7 @@
     "@polkadot/api": "^12.3.1",
     "@polkadot/api-augment": "^12.3.1",
     "@polkadot/api-derive": "^12.3.1",
-    "@polkadot/apps-config": "^0.150.1",
+    "@polkadot/apps-config": "^0.151.1",
     "@polkadot/extension-dapp": "^0.52.1",
     "@polkadot/extension-inject": "^0.52.1",
     "@polkadot/keyring": "^13.0.2",
@@ -50,10 +50,10 @@
   "devDependencies": {
     "@crypto-dex-sdk/eslint-config": "workspace:*",
     "@crypto-dex-sdk/typescript-config": "workspace:*",
-    "@types/react": "19.0.10",
+    "@types/react": "19.0.12",
     "@types/react-dom": "^19.0.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "typescript": "5.7.3"
+    "typescript": "5.8.2"
   }
 }

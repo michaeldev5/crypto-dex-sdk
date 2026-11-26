@@ -45,13 +45,11 @@ export const moonbeam = {
   rpcUrls: {
     default: {
       http: [
-        'https://moonbeam.public.blastapi.io',
         'https://rpc.api.moonbeam.network',
       ],
     },
     public: {
       http: [
-        'https://moonbeam.public.blastapi.io',
         'https://rpc.api.moonbeam.network',
       ],
     },
@@ -211,19 +209,17 @@ export const base = {
   name: 'Base',
   nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
   rpcUrls: {
-    alchemy: {
-      http: ['https://base-mainnet.g.alchemy.com/v2'],
-      webSocket: ['wss://base-mainnet.g.alchemy.com/v2'],
-    },
-    infura: {
-      http: ['https://base-mainnet.infura.io/v3'],
-      webSocket: ['wss://base-mainnet.infura.io/ws/v3'],
-    },
     default: {
-      http: ['https://mainnet.base.org'],
+      http: [
+        'https://base-mainnet.public.blastapi.io',
+        'https://mainnet.base.org',
+      ],
     },
     public: {
-      http: ['https://mainnet.base.org'],
+      http: [
+        'https://base-mainnet.public.blastapi.io',
+        'https://mainnet.base.org',
+      ],
     },
   },
   blockExplorers: {
